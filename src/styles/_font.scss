@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@350;400;500;600;700;800;900&display=swap");
+
+@mixin base-font {
+    font-family: "Poppins", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.5em;
+    letter-spacing: 0.25px;
+    color: var(--primFg);
+    @include font-size-normal;
+}
+
+// Sizes
+@mixin font-size-smallest {
+    font-size: 10px;
+}
+
+@mixin font-size-small {
+    font-size: 12px;
+}
+
+@mixin font-size-normal {
+    font-size: 16px;
+}
+
+@mixin font-size-large {
+    font-size: 18px;
+}
+
+@mixin font-size-larger {
+    font-size: 28px;
+}
+
+@mixin font-size-largest {
+    font-size: 44px;
+    line-height: 1.2em;
+}
+
+// Weights
+@mixin font-weight-light {
+    font-weight: 350;
+}
+
+@mixin font-weight-regular {
+    font-weight: 500;
+}
+
+@mixin font-weight-bold {
+    font-weight: 700;
+}
+
+@mixin font-weight-black {
+    font-weight: 900;
+}
