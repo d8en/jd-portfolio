@@ -1,8 +1,10 @@
 @use "./font" as *;
 
 p,
-li {
+li,
+ul,
+ol {
     @include font-weight-light;
     color: var(--greyText);
-    margin: 8px 0 12px 0;
+    margin: 0;
 }
