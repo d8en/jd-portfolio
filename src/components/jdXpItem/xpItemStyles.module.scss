@@ -1,5 +1,22 @@
 @use "../../styles/" as *;
 
+$iconSize: 24px;
+
 .xpItemContainer {
     @include flexCentered;
+}
+
+.xpColumn {
+    @include flexCentered;
+}
+
+.xpIcon {
+    @include flexCentered;
+    height: $iconSize;
+    width: $iconSize;
+}
+
+.xpConnector {
+    width: 1.5px;
+    height: 100%;
 }
