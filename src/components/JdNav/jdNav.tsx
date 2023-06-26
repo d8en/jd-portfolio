@@ -5,11 +5,15 @@ import styles from './navStyles.module.scss';
 export function JdNav(): React.JSX.Element {
     return (
         <div className={styles.navContainer}>
-            {jdRoutes.visibleRoutes.map((route: IJdRouteObj) => {
-                return (
-                    <JdNavItem {...route} key={route.path} />
-                )
-            })}
+
+            {/* ROUTES */}
+            <div>
+                {jdRoutes.visibleRoutes.map((route: IJdRouteObj) => {
+                    return (
+                        <JdNavItem {...route} key={route.path} />
+                    )
+                })}
+            </div>
         </div>
     );
 }

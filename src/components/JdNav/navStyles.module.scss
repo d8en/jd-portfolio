@@ -1,6 +1,7 @@
 @use "../../styles/" as *;
 
 .navContainer {
+    @include baseBlur;
     z-index: 2;
     position: absolute;
     bottom: 0;
@@ -8,11 +9,14 @@
     padding: 4px;
     @include flexCentered;
     justify-content: space-between;
-    gap: 12px;
+    gap: 20px;
     flex-wrap: wrap;
-    width: 500px;
+    // width: 400px;
+    width: 100%;
+    padding: 8px 12px;
 
     @include media-phone {
-        width: 100%;
+        border-radius: 0;
+        // width: 90%;
     }
 }

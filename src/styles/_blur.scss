@@ -1,0 +1,5 @@
+@mixin baseBlur {
+    background-color: var(--blurBg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(4px);
+}
