@@ -10,7 +10,11 @@
 
 .homeBlob {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    top: 50%;
+    left: -240px;
+    @include media-desktop {
+        scale: 130%;
+    }
+    transform: translateY(-50%);
+    z-index: -1;
 }
