@@ -1,0 +1,6 @@
+@use "../../styles/" as *;
+
+.viewContainer {
+    @include flexCentered;
+    background-color: red;
+}

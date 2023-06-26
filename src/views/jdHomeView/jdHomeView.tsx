@@ -1,5 +1,9 @@
+import { JdViewWrapper } from '../../components/jdViewWrapper/jdViewWrapper';
+
 export function JdHomeView(): React.JSX.Element {
     return (
-        <p>Home</p>
+        <JdViewWrapper>
+            <h1>Jeff Dayton</h1>
+        </JdViewWrapper>
     )
 }

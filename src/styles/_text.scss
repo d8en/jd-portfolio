@@ -8,3 +8,8 @@ ol {
     color: var(--greyText);
     margin: 0;
 }
+
+h1 {
+    @include font-size-largest;
+    @include font-weight-black;
+}
