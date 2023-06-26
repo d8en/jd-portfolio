@@ -11,5 +11,5 @@ export function JdNav(): React.JSX.Element {
                 )
             })}
         </div>
-    )
+    );
 }

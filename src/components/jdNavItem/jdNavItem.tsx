@@ -7,5 +7,5 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
             {props.icon}
             <p className={styles.navItemText}>{props.name}</p>
         </div>
-    )
+    );
 }

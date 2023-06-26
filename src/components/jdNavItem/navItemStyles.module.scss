@@ -4,9 +4,11 @@
     @include flexCentered;
     flex-direction: column;
     gap: 12px;
+
     &:hover {
         cursor: pointer;
-        path {
+        path,
+        rect {
             stroke: var(--link);
         }
     }

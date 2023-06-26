@@ -12,5 +12,5 @@ export function JdHomeView(): React.JSX.Element {
             </div>
 
         </JdViewWrapper>
-    )
+    );
 }
