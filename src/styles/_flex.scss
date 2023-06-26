@@ -4,8 +4,14 @@
     justify-content: center;
 }
 
-@mixin flexStart {
+@mixin flexJustifyStart {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+@mixin flexAlignStart {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }

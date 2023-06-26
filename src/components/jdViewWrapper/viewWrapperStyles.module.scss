@@ -1,10 +1,9 @@
 @use "../../styles/" as *;
 
 .viewContainer {
-    @include flexStart;
+    @include flexJustifyStart;
     flex-direction: column;
-    @include fullVh;
-    @include fullVw;
+    // @include fullVh;
+    // @include fullVw;
     overflow-y: auto;
-    // background-color: blue;
 }

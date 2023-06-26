@@ -10,6 +10,7 @@ ol {
 }
 
 h1 {
+    margin: 12px 0;
     @include font-size-largest;
     @include font-weight-black;
 }
