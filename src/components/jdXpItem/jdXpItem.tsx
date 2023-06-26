@@ -25,7 +25,14 @@ export function JdXpItem(props: IJdXpItemProps): React.JSX.Element {
 
             {/* SECOND COLUMN */}
             <div className={styles.xpColumn}>
+
+                {/* TITLE */}
                 <h2>{props.title}</h2>
+
+                {/* CHILDREN */}
+                <p>Experience building full web and mobile applications using hooks and previously class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
+                <p>Experience building full web and mobile applications using hooks and previously class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
+                <p>Experience building full web and mobile applications using hooks and previously class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
             </div>
 
         </div>

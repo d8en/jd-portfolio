@@ -3,11 +3,16 @@
 $iconSize: 24px;
 
 .xpItemContainer {
-    @include flexCentered;
+    display: grid;
+    grid-template-columns: min-content auto;
+    place-items: start;
+    gap: 12px;
 }
 
 .xpColumn {
-    @include flexCentered;
+    @include flexAlignStart;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .xpIcon {
@@ -17,6 +22,10 @@ $iconSize: 24px;
 }
 
 .xpConnector {
+    // align-self: center;
     width: 1.5px;
-    height: 100%;
+    // height: 40px;
+    // height: 100%;
+    height: 100px;
+    background-color: var(--greyBg);
 }

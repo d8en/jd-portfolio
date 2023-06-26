@@ -16,13 +16,13 @@ h1 {
 }
 
 h2 {
-    margin: 12px 0;
+    margin: 0;
     @include font-size-large;
     @include font-weight-bold;
 }
 
 h3 {
-    margin: 12px 0;
+    margin: 0;
     @include font-size-normal;
     @include font-weight-bold;
 }
