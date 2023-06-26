@@ -1,4 +1,5 @@
 @use "./responsive" as *;
+@use "./font" as *;
 
 @mixin fullVh {
     height: 100vh;
@@ -21,4 +22,5 @@ body {
 
 html {
     @include fullVh;
+    @include base-font;
 }
