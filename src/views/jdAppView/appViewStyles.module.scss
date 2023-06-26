@@ -1,5 +1,9 @@
 @use "../../styles/" as *;
 
 .appContainer {
+    @include flexCentered;
+    // height: 100vh;
+    @include fullVh;
+    margin: 0 auto;
     background-color: red;
 }
