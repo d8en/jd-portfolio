@@ -1,6 +1,5 @@
 import { JdViewWrapper } from '../../components/jdViewWrapper/jdViewWrapper';
 import styles from './homeStyles.module.scss';
-import { ReactComponent as HomeBlob } from '../../assets/svg/blobs/homeBlob.svg';
 
 export function JdHomeView(): React.JSX.Element {
     return (

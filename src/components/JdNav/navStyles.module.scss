@@ -1,0 +1,12 @@
+@use "../../styles/" as *;
+
+.navContainer {
+    padding: 12px;
+    background-color: var(--primBg);
+    @include flexCentered;
+    gap: 32px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

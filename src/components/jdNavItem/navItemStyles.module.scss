@@ -1,0 +1,11 @@
+@use "../../styles/" as *;
+
+.navItemContainer {
+    @include flexCentered;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navItemText {
+    @include font-size-small;
+}
