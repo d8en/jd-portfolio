@@ -4,7 +4,5 @@
     z-index: 1;
     @include flexJustifyStart;
     flex-direction: column;
-    // @include fullVh;
-    // @include fullVw;
     overflow-y: auto;
 }

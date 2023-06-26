@@ -25,6 +25,11 @@ $iconHeight: 48px;
             @include aniHoverBg;
             background-color: var(--link);
         }
+
+        .navItemText {
+            color: var(--link);
+        }
+        background-color: var(--greyBg);
     }
 }
 

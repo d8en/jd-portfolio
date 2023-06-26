@@ -7,7 +7,7 @@ export function JdNav(): React.JSX.Element {
         <div className={styles.navContainer}>
             {jdRoutes.visibleRoutes.map((route: IJdRouteObj) => {
                 return (
-                    <JdNavItem {...route} />
+                    <JdNavItem {...route} key={route.path} />
                 )
             })}
         </div>

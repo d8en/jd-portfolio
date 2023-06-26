@@ -1,4 +1,4 @@
-$hoverDuration: 0.2s;
+$hoverDuration: 0.5s;
 
 @mixin aniHoverBg {
     transition: background-color $hoverDuration ease-out, color $hoverDuration ease-out;
