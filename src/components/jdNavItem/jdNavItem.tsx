@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { IJdRouteObj } from "../../utils/jdRoutes";
 import styles from './navItemStyles.module.scss';
 
-export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
+export function JdNavItem(props: IJdRouteObj & { isActive: boolean }): React.JSX.Element {
     return (
-        <Link to={props.path!} className={styles.navItemContainer}>
+        <Link to={props.path!} className={`${styles.navItemContainer} ${props.isActive ? styles.navItemActive : ''}`}>
 
             {/* ICON */}
             <div className={styles.navItemIcon}>

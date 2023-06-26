@@ -6,11 +6,9 @@
     position: absolute;
     bottom: 0;
     box-sizing: border-box;
-    padding: 4px;
     @include flexCentered;
     // width: 400px;
     width: 100%;
-    padding: 8px 12px;
 
     @include media-phone {
         border-radius: 0;

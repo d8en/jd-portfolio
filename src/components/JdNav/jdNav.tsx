@@ -10,7 +10,7 @@ export function JdNav(): React.JSX.Element {
             <div className={styles.navRoutes}>
                 {jdRoutes.visibleRoutes.map((route: IJdRouteObj) => {
                     return (
-                        <JdNavItem {...route} key={route.path} />
+                        <JdNavItem {...route} key={route.path} isActive={jdRoutes.activeRoute === route} />
                     )
                 })}
             </div>

@@ -3,10 +3,8 @@
 $iconHeight: 32px;
 
 .navItemContainer {
-    // @include baseBlur;
     @include flexCentered;
     flex-direction: column;
-    border-radius: 12px;
     flex: 1 1 0;
     @include aniHoverBg;
     padding: 8px;
@@ -18,7 +16,7 @@ $iconHeight: 32px;
             @include aniHoverBg;
             path,
             rect {
-                stroke: var(--primBg);
+                stroke: var(--link);
             }
 
             color: var(--link);
@@ -26,10 +24,14 @@ $iconHeight: 32px;
         }
 
         .navItemText {
-            color: var(--primBg);
+            color: var(--link);
         }
-        background-color: var(--link);
+        // background-color: var(--link);
     }
+}
+
+.navItemActive {
+    border-top: 2px solid var(--primFg);
 }
 
 .navItemIcon {
