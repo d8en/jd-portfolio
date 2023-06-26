@@ -1,6 +1,16 @@
 @use "./responsive" as *;
 @use "./font" as *;
 
+$globalPadding: 20px;
+
+@mixin bodyPadding {
+    padding: 0 $globalPadding;
+}
+
+@mixin bodyMargin {
+    margin: 0 $globalPadding;
+}
+
 @mixin fullVh {
     height: 100vh;
     @include media-phone {
