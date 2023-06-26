@@ -3,9 +3,16 @@
 .navItemContainer {
     @include flexCentered;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    &:hover {
+        cursor: pointer;
+        path {
+            stroke: var(--link);
+        }
+    }
 }
 
 .navItemText {
     @include font-size-small;
+    color: var(--primFg);
 }

@@ -4,6 +4,8 @@ import { JdAppView } from "../views/jdAppView/jdAppView";
 import { JdErrorView } from "../views/jdErrorView/jdErrorView";
 import { ReactComponent as HomeIcon } from '../assets/svg/icons/house.svg';
 import { ReactComponent as ProjectsIcon } from '../assets/svg/icons/checklist.svg';
+import { ReactComponent as SkillsIcon } from '../assets/svg/icons/tools.svg';
+import { ReactComponent as BriefcaseIcon } from '../assets/svg/icons/briefcase.svg';
 
 export type IJdRouteObj = RouteObject & {
     name: string;
@@ -22,10 +24,26 @@ class JdRoutes {
 
     public projects: IJdRouteObj = {
         name: 'projects',
-        path: '/',
+        path: '/projects',
         element: <></>,
         errorElement: <JdErrorView />,
         icon: <ProjectsIcon />,
+    }
+
+    public skills: IJdRouteObj = {
+        name: 'skills',
+        path: '/skills',
+        element: <></>,
+        errorElement: <JdErrorView />,
+        icon: <SkillsIcon />,
+    }
+
+    public experience: IJdRouteObj = {
+        name: 'experience',
+        path: '/experience',
+        element: <></>,
+        errorElement: <JdErrorView />,
+        icon: <BriefcaseIcon />,
     }
 
     public registerRoutes: RouteObject = {
