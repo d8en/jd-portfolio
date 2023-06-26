@@ -76,6 +76,11 @@ class JdRoutes {
         }
         return routes;
     }
+
+    public get activeRoute(): IJdRouteObj {
+        const activeRoute: IJdRouteObj | undefined = this.allRoutes.find((route: IJdRouteObj) => route.path === window.location.pathname);
+        return activeRoute ?? this.home;
+    }
 }
 
 const jdRoutes: JdRoutes = new JdRoutes();
