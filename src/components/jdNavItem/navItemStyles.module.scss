@@ -1,8 +1,10 @@
 @use "../../styles/" as *;
 
 $iconHeight: 32px;
+$activeBorder: 2px;
 
 .navItemContainer {
+    border-top: $activeBorder solid transparent;
     @include flexCentered;
     flex-direction: column;
     flex: 1 1 0;
@@ -31,7 +33,7 @@ $iconHeight: 32px;
 }
 
 .navItemActive {
-    border-top: 2px solid var(--primFg);
+    border-top: $activeBorder solid var(--primFg);
 }
 
 .navItemIcon {
