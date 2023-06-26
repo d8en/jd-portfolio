@@ -66,7 +66,12 @@ class JdRoutes {
         const routes: IJdRouteObj[] = [];
         for (const route of Object.entries(this)) {
             const routeObj: IJdRouteObj = route[1];
-            if (routeObj.element && !routeObj.isHidden) routes.push(routeObj);
+            if (
+                !routeObj.name ||
+                routeObj.isHidden
+            ) continue;
+
+            routes.push(routeObj);
         }
         return routes;
     }

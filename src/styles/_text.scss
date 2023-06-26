@@ -14,3 +14,10 @@ h1 {
     @include font-size-largest;
     @include font-weight-black;
 }
+
+a {
+    all: unset;
+    &:hover {
+        color: var(--link);
+    }
+}

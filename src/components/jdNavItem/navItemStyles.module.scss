@@ -1,17 +1,40 @@
 @use "../../styles/" as *;
 
+$iconHeight: 48px;
+
 .navItemContainer {
     @include flexCentered;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 12px;
+    flex: 1 1 0;
+    @include aniHoverBg;
 
     &:hover {
         cursor: pointer;
-        path,
-        rect {
-            stroke: var(--link);
+
+        .navItemIcon {
+            @include aniHoverBg;
+            path,
+            rect {
+                stroke: var(--primBg);
+            }
+
+            color: var(--primBg);
+            @include aniHoverBg;
+            background-color: var(--link);
         }
     }
+}
+
+.navItemIcon {
+    height: $iconHeight;
+    width: $iconHeight;
+    border-radius: 200px;
+    @include flexCentered;
+    @include baseShadow;
+    background-color: var(--primBg);
 }
 
 .navItemText {

@@ -3,9 +3,15 @@ import styles from './navItemStyles.module.scss';
 
 export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
     return (
-        <div className={styles.navItemContainer}>
-            {props.icon}
+        <a href="" className={styles.navItemContainer}>
+
+            {/* ICON */}
+            <div className={styles.navItemIcon}>
+                {props.icon}
+            </div>
+
+            {/* NAME */}
             <p className={styles.navItemText}>{props.name}</p>
-        </div>
+        </a>
     );
 }

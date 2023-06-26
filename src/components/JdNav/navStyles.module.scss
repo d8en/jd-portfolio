@@ -1,12 +1,18 @@
 @use "../../styles/" as *;
 
 .navContainer {
+    box-sizing: border-box;
     padding: 12px;
     background-color: var(--primBg);
     @include flexCentered;
-    gap: 32px;
+    justify-content: space-between;
+    gap: 12px;
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
+    flex-wrap: wrap;
+    width: 500px;
+
+    @include media-phone {
+        width: 100%;
+    }
 }
