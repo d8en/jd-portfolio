@@ -1,13 +1,20 @@
+@use "./responsive" as *;
+
 @mixin fullVh {
-    height: -webkit-fill-available;
+    height: 100vh;
+    @include media-phone {
+        height: -webkit-fill-available;
+        height: -moz-available;
+    }
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 @mixin fullVw {
-    width: -webkit-fill-available;
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     background-color: var(--primBg);
     @include fullVh;
 }
