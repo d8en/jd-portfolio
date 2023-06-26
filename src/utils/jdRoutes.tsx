@@ -1,6 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import { JdHomeView } from "../views/jdHomeView/jdHomeView";
 import { JdAppView } from "../views/jdAppView/jdAppView";
+import { JdErrorView } from "../views/jdErrorView/jdErrorView";
 
 export type IJdRouteObj = RouteObject & {
     name: string;
@@ -11,11 +12,13 @@ class JdRoutes {
         name: 'Home',
         path: '/',
         element: <JdHomeView />,
+        errorElement: <JdErrorView />,
     }
 
     public registerRoutes: RouteObject = {
         path: '/',
         element: <JdAppView />,
+        errorElement: <JdErrorView />,
         children: this.allRoutes,
     }
 

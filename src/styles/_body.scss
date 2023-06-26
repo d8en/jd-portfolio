@@ -1,9 +1,17 @@
-body {
-    margin: 0;
-    background-color: var(--primBg);
+@mixin fullVh {
     height: -webkit-fill-available;
 }
 
+@mixin fullVw {
+    width: -webkit-fill-available;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primBg);
+    @include fullVh;
+}
+
 html {
-    height: -webkit-fill-available;
+    @include fullVh;
 }
