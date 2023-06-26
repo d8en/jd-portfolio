@@ -1,6 +1,7 @@
 @use "../../styles/" as *;
 
 .viewContainer {
+    z-index: 1;
     @include flexJustifyStart;
     flex-direction: column;
     // @include fullVh;
