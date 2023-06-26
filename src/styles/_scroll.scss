@@ -1,12 +1,13 @@
 @mixin scroll-bar {
-    &::-webkit-scrollbar {
+    scrollbar-color: var(--greyText) transparent;
+    &::-webkit-scrollbar,
+    -moz-scrollbar {
         width: 8px;
-        display: none;
 
         /* width of the entire scrollbar */
-        &:hover {
-            background-color: transparent;
-        }
+        // &:hover {
+        // }
+        background-color: transparent;
     }
 
     &::-webkit-scrollbar-track {
@@ -21,7 +22,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: red;
+        background-color: var(--greyBg);
         /* color of the scroll thumb */
         border-radius: 20px;
         /* roundness of the scroll thumb */
@@ -29,7 +30,7 @@
 
         /* creates padding around scroll thumb */
         &:hover {
-            background-color: orange;
+            background-color: var(--primWhite);
         }
     }
 }

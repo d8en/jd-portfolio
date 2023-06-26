@@ -1,14 +1,14 @@
 @use "../../styles/" as *;
 
 .navContainer {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
     box-sizing: border-box;
-    padding: 12px;
-    background-color: var(--primBg);
+    padding: 4px;
     @include flexCentered;
     justify-content: space-between;
     gap: 12px;
-    position: absolute;
-    bottom: 0;
     flex-wrap: wrap;
     width: 500px;
 

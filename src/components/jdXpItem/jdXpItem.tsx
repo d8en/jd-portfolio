@@ -12,7 +12,7 @@ export function JdXpItem(props: IJdXpItemProps): React.JSX.Element {
         <div className={styles.xpItemContainer}>
 
             {/* FIRST COLUMN  */}
-            <div className={styles.xpColumn}>
+            <div className={styles.xpColumn} style={{ height: '100%' }}>
 
                 {/* ICON */}
                 <div className={styles.xpIcon}>
