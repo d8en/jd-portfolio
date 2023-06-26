@@ -11,6 +11,16 @@
     overflow-x: hidden;
 }
 
+@mixin fullVw {
+    width: 100vw;
+    @include media-phone {
+        width: -webkit-fill-available;
+        width: -moz-available;
+    }
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0 auto;
     background-color: var(--primBg);
