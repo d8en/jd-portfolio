@@ -1,8 +1,10 @@
+import { JdImg } from '../jdImg/jdImg';
 import styles from './xpItemStyles.module.scss';
 
 export interface IJdXpItemProps {
     title: string;
-    icon: React.JSX.Element;
+    icon?: React.JSX.Element;
+    imgSrcSet?: string;
     xp: string;
     fillAmt: number;
 }
@@ -16,7 +18,17 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
 
                 {/* ICON */}
                 <div className={styles.xpIcon}>
-                    {props.icon}
+                    {props.icon ?
+                        props.icon
+                        :
+                        props.imgSrcSet ?
+                            <JdImg
+                                srcSet={props.imgSrcSet}
+                                className={styles.xpImage}
+                            />
+                            :
+                            undefined
+                    }
                 </div>
 
                 {/* CONNECTOR */}

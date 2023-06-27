@@ -3,6 +3,7 @@ import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
 import { ReactComponent as TypescriptIcon } from '../../assets/svg/brands/typescirpt.svg';
 import { ReactComponent as ReactIcon } from '../../assets/svg/brands/react.svg';
 import styles from './skillsViewStyles.module.scss';
+import { JdImg } from "../../components/jdImg/jdImg";
 
 export function JdSkillsView(): React.JSX.Element {
     return (
@@ -23,12 +24,22 @@ export function JdSkillsView(): React.JSX.Element {
 
                 {/* REACT */}
                 <JdXpItem
-                    title="React & React Native"
+                    title="React / React Native"
                     icon={<ReactIcon />}
                     xp="4 Years"
                     fillAmt={1}
                 >
                     <p>Experience building full web and mobile applications using hooks and previously class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
+                </JdXpItem>
+
+                {/* MOBX */}
+                <JdXpItem
+                    title="MobX"
+                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media&token=8ff6afbf-f4d9-408c-bd5b-e100dd9dce7b"
+                    xp="4 Years"
+                    fillAmt={1}
+                >
+                    <p>By far my favorite state management library, I have 4 years of experience using it with the React lite bindings. The simplicity and familiar architecture makes this my go to for all projects.</p>
                 </JdXpItem>
 
 

@@ -12,8 +12,9 @@ $iconSize: 27px;
 }
 
 .xpRow {
-    @include flexCentered;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
     gap: 12px;
 }
 
@@ -31,7 +32,6 @@ $iconSize: 27px;
     display: grid;
     grid-template-rows: min-content auto;
     place-items: start;
-    flex-direction: column;
     height: 100%;
     gap: 8px;
 }
@@ -41,6 +41,12 @@ $iconSize: 27px;
     place-items: center;
     height: $iconSize;
     width: $iconSize;
+}
+
+.xpImage {
+    height: $iconSize;
+    width: $iconSize;
+    object-fit: contain;
 }
 
 .xpBar {
