@@ -7,7 +7,7 @@ export interface IJdXpItemProps {
     fillAmt: number;
 }
 
-export function JdXpItem(props: IJdXpItemProps): React.JSX.Element {
+export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element {
     return (
         <div className={styles.xpItemContainer}>
 
@@ -30,9 +30,7 @@ export function JdXpItem(props: IJdXpItemProps): React.JSX.Element {
                 <h2>{props.title}</h2>
 
                 {/* CHILDREN */}
-                <p>Experience building full web and mobile applications using hooks and previously class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
-                <p>Experience building full web and mobile applications using hooks and previously class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
-                <p>Experience building full web and mobile applications using hooks and previously class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
+                {props.children}
             </div>
 
         </div>

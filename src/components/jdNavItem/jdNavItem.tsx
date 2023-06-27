@@ -1,5 +1,5 @@
 import { Link, useLocation, Location } from "react-router-dom";
-import jdRoutes, { IJdRouteObj } from "../../utils/jdRoutes";
+import { IJdRouteObj } from "../../utils/jdRoutes";
 import styles from './navItemStyles.module.scss';
 import { useEffect, useState } from "react";
 

@@ -15,42 +15,6 @@ export function JdSkillsView(): React.JSX.Element {
                     xp="4 Years"
                     fillAmt={1}
                 />
-                <JdXpItem
-                    title="React / React Native"
-                    icon={<ReactIcon />}
-                    xp="4 Years"
-                    fillAmt={1}
-                />
-                <JdXpItem
-                    title="React / React Native"
-                    icon={<ReactIcon />}
-                    xp="4 Years"
-                    fillAmt={1}
-                />
-                <JdXpItem
-                    title="React / React Native"
-                    icon={<ReactIcon />}
-                    xp="4 Years"
-                    fillAmt={1}
-                />
-                <JdXpItem
-                    title="React / React Native"
-                    icon={<ReactIcon />}
-                    xp="4 Years"
-                    fillAmt={1}
-                />
-                <JdXpItem
-                    title="React / React Native"
-                    icon={<ReactIcon />}
-                    xp="4 Years"
-                    fillAmt={1}
-                />
-                <JdXpItem
-                    title="React / React Native"
-                    icon={<ReactIcon />}
-                    xp="4 Years"
-                    fillAmt={1}
-                />
             </div>
         </JdViewWrapper>
     )
