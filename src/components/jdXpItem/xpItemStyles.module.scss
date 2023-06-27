@@ -16,7 +16,7 @@ $skillGap: 24px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     place-items: center;
-    gap: $skillGap;
+    gap: 8px;
 }
 
 .xpTotal {

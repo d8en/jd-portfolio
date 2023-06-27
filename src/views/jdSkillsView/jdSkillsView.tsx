@@ -6,6 +6,7 @@ import { ReactComponent as ReanimatedIcon } from '../../assets/svg/brands/swm.sv
 import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
 import { ReactComponent as ReduxIcon } from '../../assets/svg/brands/redux.svg';
 import { ReactComponent as NodeIcon } from '../../assets/svg/brands/node.svg';
+import { ReactComponent as FirebaseIcon } from '../../assets/svg/brands/firebase.svg';
 import styles from './skillsViewStyles.module.scss';
 
 export function JdSkillsView(): React.JSX.Element {
@@ -93,6 +94,26 @@ export function JdSkillsView(): React.JSX.Element {
                     fillAmt={.1}
                 >
                     <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>
+                </JdXpItem>
+
+                {/* NOSQL */}
+                <JdXpItem
+                    title="NoSQL"
+                    icon={<FirebaseIcon />}
+                    xp="1 year"
+                    fillAmt={.25}
+                >
+                    <p>Heavily debated amongst my DBA friends, I believe NoSQL is a super powerful architecture that has many use cases. I've used this to develop rapid prototypes but also plan on using it for a side project.</p>
+                </JdXpItem>
+
+                {/* SQL */}
+                <JdXpItem
+                    title="SQL"
+                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media&token=b6772dd0-0e41-4a13-b64e-e28cac6fb7e2"
+                    xp="2 years"
+                    fillAmt={.25}
+                >
+                    <p>In addition to experimenting with NoSQL dbs, I've also used MySQL to support one of my published apps as well as during my time as a product analyst.</p>
                 </JdXpItem>
 
             </div>
