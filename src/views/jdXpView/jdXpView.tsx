@@ -2,12 +2,13 @@ import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
 import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
 import { ReactComponent as BoomIcon } from '../../assets/svg/brands/boomerang.svg';
 import { ReactComponent as RekIcon } from '../../assets/svg/brands/rek.svg';
+import { ReactComponent as GravixIcon } from '../../assets/svg/brands/gravix.svg';
 import styles from './xpViewStyles.module.scss';
 import { JdATag } from "../../components/jdATag/jdATag";
 
 export function JdXpView(): React.JSX.Element {
     return (
-        <JdViewWrapper divProps={{ className: styles.xpContainer }}>
+        <JdViewWrapper divProps={{ className: styles.xpViewContainer }}>
 
             {/* BOOMERANG */}
             <JdXpItem
@@ -58,6 +59,16 @@ export function JdXpView(): React.JSX.Element {
                 <p>Designed 20+ third party integrations via API and SSO.</p>
                 <p>Grew annual revenue by 60% from managed products.</p>
                 <p>Presented product roadmaps to large crowds (200+ participants).</p>
+            </JdXpItem>
+
+            {/* GRAVIX */}
+            <JdXpItem
+                title="Co-Founder & Product Designer"
+                xp="4 years"
+                icon={<GravixIcon />}
+                fillAmt={.8}
+            >
+                <p>Created a digital agency with branding, UX, and marketing services for 10 clients across several industries.</p>
             </JdXpItem>
 
         </JdViewWrapper>
