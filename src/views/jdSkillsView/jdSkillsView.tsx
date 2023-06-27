@@ -49,7 +49,7 @@ export function JdSkillsView(): React.JSX.Element {
                 <JdXpItem
                     title="React Native Reanimated"
                     icon={<ReanimatedIcon />}
-                    xp="4 years"
+                    xp="3 years"
                     fillAmt={.75}
                 >
                     <p>An exceptional and powerful library that allowed me to do complex and performant native animations in my React Native projects (responsive pan responders, donut loaders, etc.).</p>
@@ -82,9 +82,18 @@ export function JdSkillsView(): React.JSX.Element {
                     xp="2 years"
                     fillAmt={.25}
                 >
-                    <p>I’ve spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>
+                    <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>
                 </JdXpItem>
 
+                {/* C# */}
+                <JdXpItem
+                    title="C#"
+                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media&token=91f7229e-f523-485f-afa8-72471a935628"
+                    xp="1 year"
+                    fillAmt={.1}
+                >
+                    <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>
+                </JdXpItem>
 
             </div>
         </JdViewWrapper>

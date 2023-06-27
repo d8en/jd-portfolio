@@ -1,12 +1,13 @@
 @use "../../styles/" as *;
 
 $iconSize: 27px;
+$skillGap: 24px;
 
 .xpContainer {
     display: grid;
     grid-template-columns: repeat(2, auto);
     place-items: start;
-    gap: 12px;
+    gap: $skillGap;
     border-radius: 12px;
     max-width: $desktopMaxWidth;
 }
@@ -15,7 +16,7 @@ $iconSize: 27px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     place-items: center;
-    gap: 12px;
+    gap: $skillGap;
 }
 
 .xpTotal {
