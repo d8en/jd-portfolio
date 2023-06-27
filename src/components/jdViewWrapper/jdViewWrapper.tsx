@@ -18,21 +18,19 @@ export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps
     }, []);
 
     return (
-        <div className={styles.viewContainer}>
-            <div
-                {...props.divProps}
-                className={`${styles.viewContent} ${props.divProps?.className ? props.divProps.className : ''}`}
-            >
-                {/* TITLE */}
-                {!props.removeHeader &&
-                    <div className={styles.viewHeader}>
-                        <h2>{title}</h2>
-                    </div>
-                }
+        <div
+            {...props.divProps}
+            className={`${styles.viewContent} ${props.divProps?.className ? props.divProps.className : ''}`}
+        >
+            {/* TITLE */}
+            {!props.removeHeader &&
+                <div className={styles.viewHeader}>
+                    <h2>{title}</h2>
+                </div>
+            }
 
-                {/* CHILDREN */}
-                {props.children}
-            </div>
+            {/* CHILDREN */}
+            {props.children}
         </div>
     )
 }

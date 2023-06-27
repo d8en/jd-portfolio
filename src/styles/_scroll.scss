@@ -1,5 +1,5 @@
 @mixin scroll-bar {
-    scrollbar-color: var(--greyBg) transparent;
+    scrollbar-color: var(--greyText) transparent;
     scrollbar-width: 24px;
     &::-webkit-scrollbar,
     -moz-scrollbar {
@@ -23,7 +23,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: var(--greyBg);
+        background-color: var(--greyText);
         /* color of the scroll thumb */
         border-radius: 20px;
         /* roundness of the scroll thumb */

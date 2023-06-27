@@ -14,10 +14,10 @@ $desktopMaxWidth: 600px;
 
 @mixin fullVh {
     height: 100vh;
-    // @include media-phone {
-    //     height: -webkit-fill-available;
-    //     height: -moz-available;
-    // }
+    @include media-phone {
+        height: -webkit-fill-available;
+        height: -moz-available;
+    }
     overflow-y: hidden;
     overflow-x: hidden;
 }
