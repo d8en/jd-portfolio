@@ -4,6 +4,7 @@ import { ReactComponent as TypescriptIcon } from '../../assets/svg/brands/typesc
 import { ReactComponent as ReactIcon } from '../../assets/svg/brands/react.svg';
 import { ReactComponent as ReanimatedIcon } from '../../assets/svg/brands/swm.svg';
 import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
+import { ReactComponent as ReduxIcon } from '../../assets/svg/brands/redux.svg';
 import styles from './skillsViewStyles.module.scss';
 
 export function JdSkillsView(): React.JSX.Element {
@@ -60,7 +61,17 @@ export function JdSkillsView(): React.JSX.Element {
                     xp="4 Years"
                     fillAmt={1}
                 >
-                    <p>I’m pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use. Sass is an incredibly useful pre-processing language that I use in all projects.</p>
+                    <p>I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use. Sass is an incredibly useful pre-processing language that I use in all projects.</p>
+                </JdXpItem>
+
+                {/* REDUX */}
+                <JdXpItem
+                    title="Redux Toolkit"
+                    icon={<ReduxIcon />}
+                    xp="1 Year"
+                    fillAmt={.25}
+                >
+                    <p>I took some time to rewrite about 60% of a production app in Redux to get a feel for how it compared to Mobx. While I prefer Mobx, I enjoyed using Redux and would love to use it in more projects.</p>
                 </JdXpItem>
 
 

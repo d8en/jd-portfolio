@@ -47,11 +47,11 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                     {/* XP BAR */}
                     <div className={styles.xpTotal}>
 
+                        {/* XP TEXT */}
+                        <p className={styles.xpText}>{props.xp}</p>
+
                         {/* BAR */}
                         <div className={styles.xpBar} style={{ width: `${(props.fillAmt / 1) * 100}%` }} />
-
-                        {/* XP TEXT */}
-                        <p>{props.xp}</p>
                     </div>
 
 

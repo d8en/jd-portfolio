@@ -2,7 +2,6 @@
 
 .viewContainer {
     box-sizing: border-box;
-    z-index: 1;
     @include flexJustifyStart;
     flex-direction: column;
     height: 100%;
@@ -14,5 +13,12 @@
 }
 
 .viewHeader {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
     padding: 20px 0;
+    background-color: var(--primBg);
 }

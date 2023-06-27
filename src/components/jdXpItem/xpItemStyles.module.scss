@@ -19,10 +19,10 @@ $iconSize: 27px;
 }
 
 .xpTotal {
+    position: relative;
     padding: 0 8px;
     display: grid;
     place-items: center;
-    position: relative;
     @include font-size-small;
     border: 1.5px solid var(--greyBg);
     border-radius: 4px;
@@ -50,12 +50,15 @@ $iconSize: 27px;
 }
 
 .xpBar {
-    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     background-color: var(--greyBg);
+}
+
+.xpText {
+    z-index: 1;
 }
 
 .xpConnector {
