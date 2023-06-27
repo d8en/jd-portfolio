@@ -7,6 +7,7 @@ import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
 import { ReactComponent as ReduxIcon } from '../../assets/svg/brands/redux.svg';
 import { ReactComponent as NodeIcon } from '../../assets/svg/brands/node.svg';
 import { ReactComponent as FirebaseIcon } from '../../assets/svg/brands/firebase.svg';
+import { ReactComponent as FigmaIcon } from '../../assets/svg/brands/figma.svg';
 import styles from './skillsViewStyles.module.scss';
 
 export function JdSkillsView(): React.JSX.Element {
@@ -114,6 +115,16 @@ export function JdSkillsView(): React.JSX.Element {
                     fillAmt={.25}
                 >
                     <p>In addition to experimenting with NoSQL dbs, I've also used MySQL to support one of my published apps as well as during my time as a product analyst.</p>
+                </JdXpItem>
+
+                {/* FIGMA */}
+                <JdXpItem
+                    title="Figma / Product Design"
+                    icon={<FigmaIcon />}
+                    xp="7 years"
+                    fillAmt={1}
+                >
+                    <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>
                 </JdXpItem>
 
             </div>
