@@ -43,6 +43,15 @@ $iconSize: 27px;
     width: $iconSize;
 }
 
+.xpBar {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--greyBg);
+}
+
 .xpConnector {
     display: grid;
     place-self: center;
