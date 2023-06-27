@@ -19,7 +19,6 @@ $iconSize: 27px;
 
 .xpTotal {
     padding: 0 8px;
-    // @include flexCentered;
     display: grid;
     place-items: center;
     position: relative;
@@ -29,7 +28,8 @@ $iconSize: 27px;
 }
 
 .xpColumn {
-    @include flexCentered;
+    display: grid;
+    grid-template-rows: min-content auto;
     place-items: start;
     flex-direction: column;
     height: 100%;
@@ -44,6 +44,7 @@ $iconSize: 27px;
 }
 
 .xpConnector {
+    display: grid;
     place-self: center;
     width: 1.5px;
     height: 100%;
