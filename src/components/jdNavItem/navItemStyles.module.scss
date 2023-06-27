@@ -12,8 +12,6 @@ $activeBorder: 2px;
     padding: 8px;
 
     &:hover {
-        cursor: pointer;
-
         .navItemIcon {
             @include aniHoverBg;
             path,

@@ -28,8 +28,13 @@ h3 {
 }
 
 a {
+    position: relative;
     all: unset;
+    color: var(--link);
+
     &:hover {
+        text-decoration: underline;
+        cursor: pointer;
         color: var(--link);
     }
 }
