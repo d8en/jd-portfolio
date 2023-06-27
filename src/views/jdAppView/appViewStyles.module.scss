@@ -1,7 +1,10 @@
 @use "../../styles/" as *;
 
 .appContainer {
-    @include flexCentered;
+    // @include flexCentered;
+    display: grid;
+    place-items: center;
     @include fullVh;
+    // overflow: hidden;
     margin: 0 auto;
 }

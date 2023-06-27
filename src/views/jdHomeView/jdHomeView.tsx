@@ -3,7 +3,7 @@ import styles from './homeStyles.module.scss';
 
 export function JdHomeView(): React.JSX.Element {
     return (
-        <JdViewWrapper>
+        <JdViewWrapper removeHeader>
 
             {/* H1 */}
             <div className={styles.homeContainer}>

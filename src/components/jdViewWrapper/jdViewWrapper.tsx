@@ -3,10 +3,11 @@ import styles from './viewWrapperStyles.module.scss';
 import jdRoutes from '../../utils/jdRoutes';
 
 export interface IJdViewWrapperProps {
-    removeMargin?: boolean;
+    divProps?: React.PropsWithChildren & React.HTMLAttributes<HTMLDivElement>;
+    removeHeader?: boolean;
 }
 
-export function JdViewWrapper(props: React.PropsWithChildren & IJdViewWrapperProps & React.HTMLAttributes<HTMLDivElement>): JSX.Element {
+export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps>): JSX.Element {
 
     // State
     const [title, setTitle] = useState<string>('home');
@@ -17,18 +18,21 @@ export function JdViewWrapper(props: React.PropsWithChildren & IJdViewWrapperPro
     }, []);
 
     return (
-        <div
-            {...props}
-            className={`${styles.viewContainer} ${props.className ? props.className : ''}`}
-            style={{ margin: props.removeMargin ? 0 : undefined }}
-        >
-            {/* TITLE */}
-            <div className={styles.viewHeader}>
-                <h2>{title}</h2>
-            </div>
+        <div className={styles.viewContainer}>
+            <div
+                {...props.divProps}
+                className={`${styles.viewContent} ${props.divProps?.className ? props.divProps.className : ''}`}
+            >
+                {/* TITLE */}
+                {!props.removeHeader &&
+                    <div className={styles.viewHeader}>
+                        <h2>{title}</h2>
+                    </div>
+                }
 
-            {/* CHILDREN */}
-            {props.children}
+                {/* CHILDREN */}
+                {props.children}
+            </div>
         </div>
     )
 }

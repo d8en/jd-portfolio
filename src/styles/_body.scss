@@ -32,6 +32,11 @@ $desktopMaxWidth: 600px;
     overflow-x: hidden;
 }
 
+@mixin boxSizingBorder {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
 body {
     margin: 0 auto;
     background-color: var(--primBg);

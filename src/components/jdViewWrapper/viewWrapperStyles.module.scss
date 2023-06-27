@@ -1,17 +1,30 @@
 @use "../../styles/" as *;
 
 .viewContainer {
-    box-sizing: border-box;
-    @include flexJustifyStart;
-    flex-direction: column;
+    @include boxSizingBorder;
+    display: grid;
+    place-items: center;
+    width: 100%;
     height: 100%;
+    // overflow: hidden;
+}
+
+.viewContent {
+    display: grid;
+    place-items: center;
+    @include boxSizingBorder;
+    padding: 0 0 240px 0;
+    margin: 0 20px;
+
+    // @include media-phone {
+    //     padding: 0 0 240px 0;
+    // }
+
+    @include fullVh;
+    width: 100%;
     overflow-y: scroll;
     @include scroll-bar;
-    margin: 0 20px;
-    padding: 0 12px 240px 12px;
-    @include media-phone {
-        padding: 0 0 240px 0;
-    }
+    // background-color: red;
 }
 
 .viewHeader {
@@ -22,5 +35,6 @@
     display: grid;
     place-items: center;
     padding: 20px 0;
-    background-color: var(--primBg);
+    // background-color: var(--primBg);
+    @include baseBlur;
 }

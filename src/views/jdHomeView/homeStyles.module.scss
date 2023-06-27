@@ -2,19 +2,5 @@
 
 .homeContainer {
     @include bodyPadding;
-    // @include flexAlignStart;
-    flex: 1;
-    flex-direction: column;
-    align-self: center;
-}
-
-.homeBlob {
-    position: absolute;
-    top: 50%;
-    left: -240px;
-    @include media-desktop {
-        scale: 130%;
-    }
-    transform: translateY(-50%);
-    z-index: -1;
+    display: grid;
 }

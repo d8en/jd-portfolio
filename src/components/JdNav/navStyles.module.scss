@@ -5,7 +5,7 @@
     z-index: 2;
     position: absolute;
     bottom: 0;
-    box-sizing: border-box;
+    @include boxSizingBorder;
     @include flexCentered;
     // width: 400px;
     width: 100%;
