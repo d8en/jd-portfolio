@@ -42,21 +42,11 @@ export function JdSkillsView(): React.JSX.Element {
                 {/* MOBX */}
                 <JdXpItem
                     title="MobX"
-                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media&token=8ff6afbf-f4d9-408c-bd5b-e100dd9dce7b"
+                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media&token=b5bb32ef-76f4-48d6-b9a6-6ddd4a6a105b"
                     xp="4 years"
                     fillAmt={1}
                 >
                     <p>By far my favorite state management library, I have 4 years of experience using it with the React lite bindings. The simplicity and familiar architecture makes this my go to for all projects.</p>
-                </JdXpItem>
-
-                {/* REANIMATED */}
-                <JdXpItem
-                    title="React Native Reanimated"
-                    icon={<ReanimatedIcon />}
-                    xp="3 years"
-                    fillAmt={.75}
-                >
-                    <p>An exceptional and powerful library that allowed me to do complex and performant native animations in my React Native projects (responsive pan responders, donut loaders, etc.).</p>
                 </JdXpItem>
 
                 {/* SASS */}
@@ -67,6 +57,26 @@ export function JdSkillsView(): React.JSX.Element {
                     fillAmt={1}
                 >
                     <p>I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use. Sass is an incredibly useful pre-processing language that I use in all projects.</p>
+                </JdXpItem>
+
+                {/* FIGMA */}
+                <JdXpItem
+                    title="Figma / Product Design"
+                    icon={<FigmaIcon />}
+                    xp="7 years"
+                    fillAmt={1}
+                >
+                    <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>
+                </JdXpItem>
+
+                {/* REANIMATED */}
+                <JdXpItem
+                    title="React Native Reanimated"
+                    icon={<ReanimatedIcon />}
+                    xp="3 years"
+                    fillAmt={.75}
+                >
+                    <p>An exceptional and powerful library that allowed me to do complex and performant native animations in my React Native projects (responsive pan responders, donut loaders, etc.).</p>
                 </JdXpItem>
 
                 {/* REDUX */}
@@ -92,7 +102,7 @@ export function JdSkillsView(): React.JSX.Element {
                 {/* C# */}
                 <JdXpItem
                     title="C#"
-                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media&token=91f7229e-f523-485f-afa8-72471a935628"
+                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media&token=55fa7bf3-979a-42c3-a7d4-7185365577e4"
                     xp="1 year"
                     fillAmt={.1}
                 >
@@ -112,21 +122,11 @@ export function JdSkillsView(): React.JSX.Element {
                 {/* SQL */}
                 <JdXpItem
                     title="SQL"
-                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media&token=b6772dd0-0e41-4a13-b64e-e28cac6fb7e2"
+                    imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media&token=dbf2c16c-d771-404b-8a4e-71d2fa7f06a7"
                     xp="2 years"
                     fillAmt={.25}
                 >
                     <p>In addition to experimenting with NoSQL dbs, I've also used MySQL to support one of my published apps as well as during my time as a product analyst.</p>
-                </JdXpItem>
-
-                {/* FIGMA */}
-                <JdXpItem
-                    title="Figma / Product Design"
-                    icon={<FigmaIcon />}
-                    xp="7 years"
-                    fillAmt={1}
-                >
-                    <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>
                 </JdXpItem>
 
                 {/* AFTER EFFECTS */}
