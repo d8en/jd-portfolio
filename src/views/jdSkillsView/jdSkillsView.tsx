@@ -2,8 +2,9 @@ import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
 import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
 import { ReactComponent as TypescriptIcon } from '../../assets/svg/brands/typescirpt.svg';
 import { ReactComponent as ReactIcon } from '../../assets/svg/brands/react.svg';
+import { ReactComponent as ReanimatedIcon } from '../../assets/svg/brands/swm.svg';
+import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
 import styles from './skillsViewStyles.module.scss';
-import { JdImg } from "../../components/jdImg/jdImg";
 
 export function JdSkillsView(): React.JSX.Element {
     return (
@@ -40,6 +41,26 @@ export function JdSkillsView(): React.JSX.Element {
                     fillAmt={1}
                 >
                     <p>By far my favorite state management library, I have 4 years of experience using it with the React lite bindings. The simplicity and familiar architecture makes this my go to for all projects.</p>
+                </JdXpItem>
+
+                {/* REANIMATED */}
+                <JdXpItem
+                    title="React Native Reanimated"
+                    icon={<ReanimatedIcon />}
+                    xp="4 Years"
+                    fillAmt={.75}
+                >
+                    <p>An exceptional and powerful library that allowed me to do complex and performant native animations in my React Native projects (responsive pan responders, donut loaders, etc.).</p>
+                </JdXpItem>
+
+                {/* SASS */}
+                <JdXpItem
+                    title="Sass (CSS)"
+                    icon={<SassIcon />}
+                    xp="4 Years"
+                    fillAmt={1}
+                >
+                    <p>I’m pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use. Sass is an incredibly useful pre-processing language that I use in all projects.</p>
                 </JdXpItem>
 
 
