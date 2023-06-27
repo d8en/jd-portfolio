@@ -7,7 +7,9 @@ import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
 import { ReactComponent as ReduxIcon } from '../../assets/svg/brands/redux.svg';
 import { ReactComponent as NodeIcon } from '../../assets/svg/brands/node.svg';
 import { ReactComponent as FirebaseIcon } from '../../assets/svg/brands/firebase.svg';
+import { ReactComponent as AdobeAeIcon } from '../../assets/svg/brands/ae.svg';
 import { ReactComponent as FigmaIcon } from '../../assets/svg/brands/figma.svg';
+import { ReactComponent as BrandIcon } from '../../assets/svg/brands/brand.svg';
 import styles from './skillsViewStyles.module.scss';
 
 export function JdSkillsView(): React.JSX.Element {
@@ -125,6 +127,26 @@ export function JdSkillsView(): React.JSX.Element {
                     fillAmt={1}
                 >
                     <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>
+                </JdXpItem>
+
+                {/* AFTER EFFECTS */}
+                <JdXpItem
+                    title="After Effects / Motion Design"
+                    icon={<AdobeAeIcon />}
+                    xp="4 years"
+                    fillAmt={.5}
+                >
+                    <p>Motion design is one of my favorite parts of UI design. After Effects paired with Body Movin and Lotte are extremely powerful tools for more complex svg animations.</p>
+                </JdXpItem>
+
+                {/* BRANDING */}
+                <JdXpItem
+                    title="Brand Design"
+                    icon={<BrandIcon />}
+                    xp="8 years"
+                    fillAmt={1}
+                >
+                    <p>My first design projects were logo and branding design. I enjoy word-mark and logo design even to this day, as I got to work on a branding refresh at my most recent gig.</p>
                 </JdXpItem>
 
             </div>
