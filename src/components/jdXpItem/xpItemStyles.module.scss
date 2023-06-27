@@ -1,7 +1,7 @@
 @use "../../styles/" as *;
 
 $iconSize: 27px;
-$skillGap: 24px;
+$skillGap: 16px;
 
 .xpContainer {
     display: grid;
@@ -16,7 +16,7 @@ $skillGap: 24px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     place-items: center;
-    gap: 12px;
+    gap: $skillGap;
 }
 
 .xpTotal {
@@ -57,6 +57,13 @@ $skillGap: 24px;
     left: 0;
     bottom: 0;
     background-color: var(--greyBg);
+}
+
+.xpHeader {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
 }
 
 .xpText {

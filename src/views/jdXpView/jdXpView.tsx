@@ -49,7 +49,7 @@ export function JdXpView(): React.JSX.Element {
 
             {/* COCC */}
             <JdXpItem
-                title="Product Manager"
+                title="Product Manager & Product Designer"
                 imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media&token=5c6866ea-4a5c-4c8b-b070-f2723b569009"
                 xp="7 years"
                 fillAmt={1}

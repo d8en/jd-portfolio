@@ -42,7 +42,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                 <div className={styles.xpRow}>
 
                     {/* TITLE */}
-                    <h2>{props.title}</h2>
+                    <h2 className={styles.xpHeader}>{props.title}</h2>
 
                     {/* XP BAR */}
                     <div className={styles.xpTotal}>
