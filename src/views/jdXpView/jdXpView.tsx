@@ -22,7 +22,7 @@ export function JdXpView(): React.JSX.Element {
                 <p>Constructed database architecture alongside backend engineers.</p>
             </JdXpItem>
 
-            {/* BOOMERANG */}
+            {/* REK */}
             <JdXpItem
                 title="Founder & Full Stack Dev"
                 icon={<RekIcon />}
@@ -34,6 +34,31 @@ export function JdXpView(): React.JSX.Element {
                 <p>Used user feedback to manage feature development.</p>
             </JdXpItem>
 
+            {/* PRIMACY */}
+            <JdXpItem
+                title="Product Designer"
+                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media&token=b546bf34-6398-40db-ac44-87e710579c0c"
+                xp="2 years"
+                fillAmt={.75}
+            >
+                <p>At <JdATag href="https://www.theprimacy.com/">Primacy</JdATag>, I was the sole designer on a $1.5 million end-to-end project management application.</p>
+                <p>I also designed a $3.2 million risk management application for a $22 billion insurance company.</p>
+                <p>For each of these products, I also led product roadmap and UX discussions with stakeholders.</p>
+            </JdXpItem>
+
+            {/* COCC */}
+            <JdXpItem
+                title="Product Manager"
+                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media&token=5c6866ea-4a5c-4c8b-b070-f2723b569009"
+                xp="7 years"
+                fillAmt={1}
+            >
+                <p>At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I managed, and retained a team of 5 analysts.</p>
+                <p>I designed and managed the implementation of 200+ features across 3 products for 120+ clients and 1.2 million users.</p>
+                <p>Designed 20+ third party integrations via API and SSO.</p>
+                <p>Grew annual revenue by 60% from managed products.</p>
+                <p>Presented product roadmaps to large crowds (200+ participants).</p>
+            </JdXpItem>
 
         </JdViewWrapper>
     )
