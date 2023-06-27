@@ -23,7 +23,11 @@ export function JdViewWrapper(props: React.PropsWithChildren & IJdViewWrapperPro
             style={{ margin: props.removeMargin ? 0 : undefined }}
         >
             {/* TITLE */}
-            <h2>{title}</h2>
+            <div className={styles.viewHeader}>
+                <h2>{title}</h2>
+            </div>
+
+            {/* CHILDREN */}
             {props.children}
         </div>
     )

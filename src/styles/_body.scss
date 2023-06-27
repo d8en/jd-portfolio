@@ -2,6 +2,7 @@
 @use "./font" as *;
 
 $globalPadding: 20px;
+$desktopMaxWidth: 600px;
 
 @mixin bodyPadding {
     padding: 0 $globalPadding;

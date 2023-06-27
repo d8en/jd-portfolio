@@ -9,10 +9,10 @@ export interface IJdXpItemProps {
 
 export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element {
     return (
-        <div className={styles.xpItemContainer}>
+        <div className={styles.xpContainer}>
 
             {/* FIRST COLUMN  */}
-            <div className={styles.xpColumn} style={{ height: '100%' }}>
+            <div className={styles.xpColumn}>
 
                 {/* ICON */}
                 <div className={styles.xpIcon}>
@@ -26,8 +26,19 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
             {/* SECOND COLUMN */}
             <div className={styles.xpColumn}>
 
-                {/* TITLE */}
-                <h2>{props.title}</h2>
+                {/* FIRST ROW */}
+                <div className={styles.xpRow}>
+
+                    {/* TITLE */}
+                    <h2>{props.title}</h2>
+
+                    {/* XP */}
+                    <div className={styles.xpTotal}>
+                        <p>{props.xp}</p>
+                    </div>
+
+
+                </div>
 
                 {/* CHILDREN */}
                 {props.children}

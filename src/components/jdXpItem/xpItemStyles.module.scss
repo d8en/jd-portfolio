@@ -1,24 +1,44 @@
 @use "../../styles/" as *;
 
-$iconSize: 24px;
+$iconSize: 27px;
 
-.xpItemContainer {
+.xpContainer {
     display: grid;
-    grid-template-columns: min-content auto;
+    grid-template-columns: repeat(2, auto);
     place-items: start;
     gap: 12px;
     border-radius: 12px;
+    max-width: $desktopMaxWidth;
+}
+
+.xpRow {
+    @include flexCentered;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.xpTotal {
+    padding: 0 8px;
+    // @include flexCentered;
+    display: grid;
+    place-items: center;
+    position: relative;
+    @include font-size-small;
+    border: 1.5px solid var(--greyBg);
+    border-radius: 4px;
 }
 
 .xpColumn {
     @include flexCentered;
     place-items: start;
     flex-direction: column;
-    // height: 100%;
+    height: 100%;
     gap: 8px;
 }
 
 .xpIcon {
+    display: grid;
+    place-items: center;
     height: $iconSize;
     width: $iconSize;
 }

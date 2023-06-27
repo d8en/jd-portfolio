@@ -10,5 +10,9 @@
     @include scroll-bar;
     // background-color: blue;
     margin: 0 20px;
-    padding: 20px 0 240px 0;
+    padding: 0 0 240px 0;
+}
+
+.viewHeader {
+    padding: 20px 0;
 }
