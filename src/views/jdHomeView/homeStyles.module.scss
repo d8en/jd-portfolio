@@ -3,4 +3,5 @@
 .homeContainer {
     @include bodyPadding;
     display: grid;
+    place-self: end center;
 }

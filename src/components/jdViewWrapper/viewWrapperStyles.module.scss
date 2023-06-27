@@ -1,21 +1,35 @@
 @use "../../styles/" as *;
 
 .viewContent {
-    // width: 100%;
     display: grid;
-    place-items: start center;
+    // place-items: start center;
+    // text-align: center;
     @include boxSizingBorder;
+    // width: 100%;
     // margin: 0 20px;
 
     // @include media-phone {
     //     padding: 0 0 240px 0;
     // }
 
+    // padding-bottom: 400px;
+
     @include fullVh;
     // width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
+    margin: 0 auto;
     @include scroll-bar;
-    background-color: orange;
+    width: 100vw;
+    place-items: center;
+    // &:after {
+    //     content: "";
+    //     height: 400px;
+    // }
+    &::after {
+        content: "Firefox appears to treat bottom padding in scrollable divs differently, or it's bugged.";
+        height: 100px;
+        color: transparent;
+    }
 }
 
 .viewHeader {
