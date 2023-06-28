@@ -1,7 +1,6 @@
 import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
 import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
 import { ReactComponent as ReanimatedIcon } from '../../assets/svg/brands/swm.svg';
-import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
 import { ReactComponent as ReduxIcon } from '../../assets/svg/brands/redux.svg';
 import { ReactComponent as NodeIcon } from '../../assets/svg/brands/node.svg';
 import { ReactComponent as FirebaseIcon } from '../../assets/svg/brands/firebase.svg';
@@ -40,8 +39,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* MOBX */}
             <JdXpItem
-                title="MobX"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media"
+                title={jdSkills.mobX.name}
+                imgSrcSet={jdSkills.mobX.imgSrc}
                 xp="4 years"
                 fillAmt={1}
             >
