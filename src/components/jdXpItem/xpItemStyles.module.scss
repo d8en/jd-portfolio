@@ -60,9 +60,10 @@ $skillGap: 16px;
 }
 
 .xpHeader {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    // overflow: hidden;
+    @include jdLineClamp(1);
     width: 100%;
 }
 

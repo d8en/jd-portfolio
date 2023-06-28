@@ -4,10 +4,11 @@ $previewImgHeight: 324px;
 
 .projectsContainer {
     border-radius: 24px;
-    @include flexCentered;
-    flex-direction: column;
+    display: grid;
     border: 1.5px solid var(--primFg);
     overflow: hidden;
+    max-width: $desktopMaxWidth;
+    gap: 12px;
 }
 
 .projectPreviewImg {
@@ -18,5 +19,15 @@ $previewImgHeight: 324px;
 }
 
 .projectContent {
+    display: grid;
     padding: 12px;
+    gap: 12px;
+}
+
+.projectHeader {
+    @include jdLineClamp(2);
+}
+
+.projectDesc {
+    @include jdLineClamp(3);
 }

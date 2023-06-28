@@ -16,7 +16,10 @@ export function JdProject(props: IJdProject): React.JSX.Element {
             <div className={styles.projectContent}>
 
                 {/* TITLE */}
-                <h2>{props.title}</h2>
+                <h2 className={styles.projectHeader}>{props.title}</h2>
+
+                {/* DESCRIPTION */}
+                <p className={styles.projectDesc}>{props.desc}</p>
 
             </div>
         </div>
