@@ -1,6 +1,22 @@
 @use "../../styles/" as *;
 
+$previewImgHeight: 324px;
+
 .projectsContainer {
+    border-radius: 24px;
     @include flexCentered;
+    flex-direction: column;
     border: 1.5px solid var(--primFg);
+    overflow: hidden;
+}
+
+.projectPreviewImg {
+    background-color: var(--greyBg);
+    object-fit: contain;
+    height: $previewImgHeight;
+    width: 100%;
+}
+
+.projectContent {
+    padding: 12px;
 }

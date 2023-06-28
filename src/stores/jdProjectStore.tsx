@@ -14,7 +14,7 @@ export class JdProjectStore {
     public projects: IJdProject[] = [{
         company: jdCompaniesStore.boomerang,
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.productDesign],
-        image: '',
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
         component: <JdAirshopApp />,
         title: 'Operation “Build a returns app with home pickup in one month”',
         desc: 'Our first prospect signed with us a month away from their new store launch in Chicago. They needed a return solution that was customized and offered a new cutting edge feature - home pickup. We were still in the early stages.',
