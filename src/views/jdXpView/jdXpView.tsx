@@ -38,7 +38,7 @@ export function JdXpView(): React.JSX.Element {
             {/* PRIMACY */}
             <JdXpItem
                 title="Product Designer"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media&token=b546bf34-6398-40db-ac44-87e710579c0c"
+                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media"
                 xp="2 years"
                 fillAmt={.75}
             >
@@ -50,7 +50,7 @@ export function JdXpView(): React.JSX.Element {
             {/* COCC */}
             <JdXpItem
                 title="Product Manager & Product Designer"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media&token=5c6866ea-4a5c-4c8b-b070-f2723b569009"
+                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media"
                 xp="7 years"
                 fillAmt={1}
             >
@@ -68,7 +68,7 @@ export function JdXpView(): React.JSX.Element {
                 icon={<GravixIcon />}
                 fillAmt={.8}
             >
-                <p>Created a digital agency with branding, UX, and marketing services for 10 clients across several industries.</p>
+                <p>At gravix, I created a digital agency with branding, UX, and marketing services for 10 clients across several industries.</p>
             </JdXpItem>
 
         </JdViewWrapper>

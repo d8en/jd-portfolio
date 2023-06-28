@@ -42,7 +42,7 @@ export function JdSkillsView(): React.JSX.Element {
             {/* MOBX */}
             <JdXpItem
                 title="MobX"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media&token=b5bb32ef-76f4-48d6-b9a6-6ddd4a6a105b"
+                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media"
                 xp="4 years"
                 fillAmt={1}
             >
@@ -102,7 +102,7 @@ export function JdSkillsView(): React.JSX.Element {
             {/* C# */}
             <JdXpItem
                 title="C#"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media&token=55fa7bf3-979a-42c3-a7d4-7185365577e4"
+                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media"
                 xp="1 year"
                 fillAmt={.1}
             >
@@ -122,7 +122,7 @@ export function JdSkillsView(): React.JSX.Element {
             {/* SQL */}
             <JdXpItem
                 title="SQL"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media&token=dbf2c16c-d771-404b-8a4e-71d2fa7f06a7"
+                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media"
                 xp="2 years"
                 fillAmt={.25}
             >

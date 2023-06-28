@@ -35,7 +35,7 @@ $skillGap: 16px;
     grid-template-rows: min-content auto;
     place-items: start;
     height: 100%;
-    gap: 8px;
+    gap: $skillGap;
 }
 
 .xpIcon {

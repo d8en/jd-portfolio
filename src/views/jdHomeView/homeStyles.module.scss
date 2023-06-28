@@ -1,7 +1,11 @@
 @use "../../styles/" as *;
 
 .homeContainer {
+    grid-template-rows: 1fr;
+}
+
+.homeHeader {
     @include bodyPadding;
     display: grid;
-    place-self: end center;
+    place-self: center;
 }
