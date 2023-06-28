@@ -52,7 +52,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                         <div className={styles.xpTotal}>
 
                             {/* XP TEXT */}
-                            <p className={styles.xpText}>{props.xp} years</p>
+                            <p className={styles.xpText}>{props.xp} year{props.xp !== 1 ? 's' : ''}</p>
 
                             {/* BAR */}
                             <div className={styles.xpBar} style={{ width: `${(props.xpPercentage / 1) * 100}%` }} />

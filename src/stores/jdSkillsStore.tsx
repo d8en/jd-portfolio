@@ -72,7 +72,7 @@ export class JdSkillsStore {
         icon: <FigmaIcon />,
         xp: 7,
         xpPercentage: 1,
-        component: <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>,
+        component: <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. I can't imagine using anything else, from advanced prototyping to large scale design libraries, I am the definition of a power user.</p>,
     }
 
     public productDesign: IJdSkillCo = {
@@ -80,7 +80,7 @@ export class JdSkillsStore {
         icon: <ProductIcon />,
         xp: 7,
         xpPercentage: 1,
-        component: <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>,
+        component: <p>Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>,
     }
 
     public reanimated: IJdSkillCo = {
