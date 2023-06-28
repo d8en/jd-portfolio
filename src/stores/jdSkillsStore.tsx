@@ -11,6 +11,7 @@ import { ReactComponent as NodeIcon } from '../assets/svg/brands/node.svg';
 import { ReactComponent as AdobeAeIcon } from '../assets/svg/brands/ae.svg';
 import { ReactComponent as FirebaseIcon } from '../assets/svg/brands/firebase.svg';
 import { ReactComponent as BrandIcon } from '../assets/svg/brands/brand.svg';
+import { ReactComponent as ProductIcon } from '../assets/svg/brands/product.svg';
 import { makeAutoObservable } from "mobx";
 import jdObjUtils from "../utils/jdObjUtils";
 
@@ -85,7 +86,7 @@ export class JdSkillsStore {
     public productDesign: IJdSkill = {
         name: 'Product Design',
         type: JdSkillType.ProductDesign,
-        icon: <FigmaIcon />,
+        icon: <ProductIcon />,
         xp: 7,
         xpPercentage: 1,
         component: <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>,
