@@ -4,6 +4,7 @@ import jdCompaniesStore from "./jdCompaniesStore";
 import jdSkillsStore from "./jdSkillsStore";
 import { JdAirshopApp } from "../components/jdProjects/jdAirshopApp";
 import { IJdSkillCo } from "../models/iJdSkillCo";
+import jdObjUtils from "../utils/jdObjUtils";
 
 export class JdProjectStore {
     constructor() {
@@ -24,6 +25,8 @@ export class JdProjectStore {
     }
 
     public get filteredProjects(): IJdProject[] {
+        console.log('filtered proejcts', jdObjUtils.getAllProperties(this).length);
+        if (this.filter.length === 0) return jdObjUtils.getAllProperties(this);
         return [];
     }
 }

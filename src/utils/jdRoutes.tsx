@@ -8,6 +8,7 @@ import { ReactComponent as SkillsIcon } from '../assets/svg/icons/tools.svg';
 import { ReactComponent as BriefcaseIcon } from '../assets/svg/icons/briefcase.svg';
 import { JdSkillsView } from "../views/jdSkillsView/jdSkillsView";
 import { JdXpView } from "../views/jdXpView/jdXpView";
+import { JdProjectsView } from "../views/jdProjectsView/jdProjectsView";
 
 export type IJdRouteObj = RouteObject & {
     name: string;
@@ -27,7 +28,7 @@ class JdRoutes {
     public projects: IJdRouteObj = {
         name: 'projects',
         path: '/projects',
-        element: <></>,
+        element: <JdProjectsView />,
         errorElement: <JdErrorView />,
         icon: <ProjectsIcon />,
     }
