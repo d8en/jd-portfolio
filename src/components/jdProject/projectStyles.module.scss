@@ -1,0 +1,6 @@
+@use "../../styles/" as *;
+
+.projectsContainer {
+    @include flexCentered;
+    border: 1.5px solid var(--primFg);
+}
