@@ -4,9 +4,9 @@ import styles from './xpItemStyles.module.scss';
 export interface IJdXpItemProps {
     title: string;
     icon?: React.JSX.Element;
-    imgSrcSet?: string;
-    xp: string;
-    fillAmt: number;
+    imgSrc?: string;
+    xp: number;
+    xpPercentage: number;
 }
 
 export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element {
@@ -21,9 +21,9 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                     {props.icon ?
                         props.icon
                         :
-                        props.imgSrcSet ?
+                        props.imgSrc ?
                             <JdImg
-                                srcSet={props.imgSrcSet}
+                                srcSet={props.imgSrc}
                                 className={styles.xpImage}
                             />
                             :
@@ -48,10 +48,10 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                     <div className={styles.xpTotal}>
 
                         {/* XP TEXT */}
-                        <p className={styles.xpText}>{props.xp}</p>
+                        <p className={styles.xpText}>{props.xp} years</p>
 
                         {/* BAR */}
-                        <div className={styles.xpBar} style={{ width: `${(props.fillAmt / 1) * 100}%` }} />
+                        <div className={styles.xpBar} style={{ width: `${(props.xpPercentage / 1) * 100}%` }} />
                     </div>
 
 

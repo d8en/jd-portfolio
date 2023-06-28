@@ -15,7 +15,7 @@ export function JdXpView(): React.JSX.Element {
                 title="VP, Development & Design"
                 icon={<BoomIcon />}
                 xp="2 years"
-                fillAmt={.75}
+                xpPercentage={.75}
             >
                 <p>At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 promotional site to help secure $1.3 million funding.</p>
                 <p>I also designed all web and mobile apps as well as marketing content.</p>
@@ -28,7 +28,7 @@ export function JdXpView(): React.JSX.Element {
                 title="Founder & Full Stack Dev"
                 icon={<RekIcon />}
                 xp="4 years"
-                fillAmt={.75}
+                xpPercentage={.75}
             >
                 <p>At <JdATag href="https://rekit.app/">Rek</JdATag>, I built 5 web apps, 1 native mobile app, and 1 promotional site to help secure $1.3 million funding.</p>
                 <p>I grew the product to 200 users in the first month.</p>
@@ -38,9 +38,9 @@ export function JdXpView(): React.JSX.Element {
             {/* PRIMACY */}
             <JdXpItem
                 title="Product Designer"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media"
+                imgSrc="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media"
                 xp="2 years"
-                fillAmt={.75}
+                xpPercentage={.75}
             >
                 <p>At <JdATag href="https://www.theprimacy.com/">Primacy</JdATag>, I was the sole designer on a $1.5 million end-to-end project management application.</p>
                 <p>I also designed a $3.2 million risk management application for a $22 billion insurance company.</p>
@@ -50,9 +50,9 @@ export function JdXpView(): React.JSX.Element {
             {/* COCC */}
             <JdXpItem
                 title="Product Manager & Product Designer"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media"
+                imgSrc="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media"
                 xp="7 years"
-                fillAmt={1}
+                xpPercentage={1}
             >
                 <p>At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I managed, and retained a team of 5 analysts.</p>
                 <p>I designed and managed the implementation of 200+ features across 3 products for 120+ clients and 1.2 million users.</p>
@@ -66,7 +66,7 @@ export function JdXpView(): React.JSX.Element {
                 title="Co-Founder & Product Designer"
                 xp="4 years"
                 icon={<GravixIcon />}
-                fillAmt={.8}
+                xpPercentage={.8}
             >
                 <p>At gravix, I created a digital agency with branding, UX, and marketing services for 10 clients across several industries.</p>
             </JdXpItem>
