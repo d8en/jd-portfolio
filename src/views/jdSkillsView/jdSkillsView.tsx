@@ -49,8 +49,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* SASS */}
             <JdXpItem
-                title="Sass (CSS)"
-                icon={<SassIcon />}
+                title={`${jdSkills.sass.name} / ${jdSkills.css.name}`}
+                icon={jdSkills.css.icon}
                 xp="4 years"
                 fillAmt={1}
             >

@@ -41,6 +41,13 @@ class JdSkills {
         type: JdSkillType.Css,
         icon: <CssIcon />,
     }
+
+    public sass: IJdSkill = {
+        name: 'Sass',
+        tag: 'sass',
+        type: JdSkillType.Sass,
+        icon: <SassIcon />,
+    }
 }
 
 const jdSkills = new JdSkills();
