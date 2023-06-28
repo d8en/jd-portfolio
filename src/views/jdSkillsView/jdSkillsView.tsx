@@ -1,7 +1,5 @@
 import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
 import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
-import { ReactComponent as TypescriptIcon } from '../../assets/svg/brands/typescript.svg';
-import { ReactComponent as ReactIcon } from '../../assets/svg/brands/react.svg';
 import { ReactComponent as ReanimatedIcon } from '../../assets/svg/brands/swm.svg';
 import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
 import { ReactComponent as ReduxIcon } from '../../assets/svg/brands/redux.svg';
@@ -11,6 +9,7 @@ import { ReactComponent as AdobeAeIcon } from '../../assets/svg/brands/ae.svg';
 import { ReactComponent as FigmaIcon } from '../../assets/svg/brands/figma.svg';
 import { ReactComponent as BrandIcon } from '../../assets/svg/brands/brand.svg';
 import styles from './skillsViewStyles.module.scss';
+import jdSkills from "../../data/jdSkills";
 
 export function JdSkillsView(): React.JSX.Element {
     return (
@@ -21,8 +20,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* TYPESCRIPT */}
             <JdXpItem
-                title="Typescript"
-                icon={<TypescriptIcon />}
+                title={jdSkills.typescript.name}
+                icon={jdSkills.typescript.icon}
                 xp="4 years"
                 fillAmt={1}
             >
@@ -31,8 +30,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* REACT */}
             <JdXpItem
-                title="React / React Native"
-                icon={<ReactIcon />}
+                title={`${jdSkills.react.name} / ${jdSkills.reactNative.name}`}
+                icon={jdSkills.react.icon}
                 xp="4 years"
                 fillAmt={1}
             >
