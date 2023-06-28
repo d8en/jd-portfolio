@@ -15,6 +15,10 @@ export class JdProjectStore {
     public get filter(): (IJdCompany | IJdSkill)[] {
         return [];
     }
+
+    public get filteredProejcts(): IJdProject[] {
+        return [];
+    }
 }
 const jdProjectStore: JdProjectStore = new JdProjectStore();
 export default jdProjectStore;

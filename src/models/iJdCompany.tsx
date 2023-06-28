@@ -1,9 +1,6 @@
+import { IJdSkillCoBase } from "./base/iJdSkillCoBase";
 import { JdCompanyType } from "./enums/jdCompanyType";
 
-export interface IJdCompany {
+export interface IJdCompany extends IJdSkillCoBase {
     type: JdCompanyType;
-    name: string;
-    imgSrc?: string;
-    icon?: React.JSX.Element;
-    isSelected: boolean;
 }
