@@ -38,7 +38,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 </div>
 
                 {/* COMPANY */}
-                <div>
+                <div className={styles.projectCompany}>
                     <JdXpItem
                         name={props.company.name}
                         companyName={props.company.companyName}

@@ -45,7 +45,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                 <div className={styles.xpRow}>
 
                     {/* TITLE */}
-                    <h2 className={styles.xpHeader}>{props.companyName ?? props.name}</h2>
+                    <h2 className={`${styles.xpHeader} ${!props.children ? styles.xpCoName : ''}`}>{props.companyName ?? props.name}</h2>
 
                     {/* XP BAR */}
                     {props.children &&

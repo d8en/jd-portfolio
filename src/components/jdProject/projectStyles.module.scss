@@ -39,6 +39,6 @@ $previewImgHeight: 324px;
 }
 
 .projectCompany {
-    @include flexCentered;
-    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: -8px;
 }
