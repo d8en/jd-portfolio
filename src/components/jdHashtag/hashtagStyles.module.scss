@@ -21,6 +21,7 @@
 }
 
 .hashtagText {
+    text-transform: lowercase;
     margin: 0;
     @include font-size-small;
     color: var(--greyText);

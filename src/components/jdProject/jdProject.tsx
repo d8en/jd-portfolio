@@ -36,6 +36,9 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                     })}
                 </div>
 
+                {/* COMPANY */}
+                
+
             </div>
         </div>
     )
