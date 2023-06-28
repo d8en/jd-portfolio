@@ -37,3 +37,8 @@ $previewImgHeight: 324px;
     flex-wrap: wrap;
     gap: 8px;
 }
+
+.projectCompany {
+    @include flexCentered;
+    gap: 8px;
+}

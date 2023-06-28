@@ -2,6 +2,7 @@ import { IJdProject } from '../../models/iJdProject';
 import { IJdSkillCo } from '../../models/iJdSkillCo';
 import { JdHashtag } from '../jdHashtag/jdHashtag';
 import { JdImg } from '../jdImg/jdImg';
+import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
 
 export function JdProject(props: IJdProject): React.JSX.Element {
@@ -37,7 +38,16 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 </div>
 
                 {/* COMPANY */}
-                
+                <div>
+                    <JdXpItem
+                        name={props.company.name}
+                        companyName={props.company.companyName}
+                        imgSrc={props.company.imgSrc}
+                        icon={props.company.icon}
+                        xp={props.company.xp}
+                        xpPercentage={props.company.xpPercentage}
+                    />
+                </div>
 
             </div>
         </div>

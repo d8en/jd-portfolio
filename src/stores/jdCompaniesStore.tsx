@@ -13,6 +13,7 @@ export class JdCompaniesStore {
 
     public boomerang: IJdSkillCo = {
         name: 'VP, Development & Design',
+        companyName: 'boomerang',
         xp: 2,
         xpPercentage: .75,
         icon: <BoomIcon />,
@@ -27,6 +28,7 @@ export class JdCompaniesStore {
 
     public rek: IJdSkillCo = {
         name: 'Founder & Full Stack Dev',
+        companyName: 'Rek it.',
         xp: 4,
         xpPercentage: .75,
         icon: <RekIcon />,
@@ -40,6 +42,7 @@ export class JdCompaniesStore {
 
     public primacy: IJdSkillCo = {
         name: 'Product Designer',
+        companyName: 'Primacy',
         xp: 2,
         xpPercentage: .75,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media',
@@ -53,6 +56,7 @@ export class JdCompaniesStore {
 
     public cocc: IJdSkillCo = {
         name: 'Product Manager',
+        companyName: 'COCC',
         xp: 7,
         xpPercentage: 1,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media',
@@ -68,6 +72,7 @@ export class JdCompaniesStore {
 
     public gravix: IJdSkillCo = {
         name: 'Co-Founder & Designer',
+        companyName: 'gravix',
         xp: 4,
         xpPercentage: .8,
         icon: <GravixIcon />,
