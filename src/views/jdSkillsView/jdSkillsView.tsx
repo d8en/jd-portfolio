@@ -1,12 +1,5 @@
 import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
 import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
-import { ReactComponent as ReanimatedIcon } from '../../assets/svg/brands/swm.svg';
-import { ReactComponent as ReduxIcon } from '../../assets/svg/brands/redux.svg';
-import { ReactComponent as NodeIcon } from '../../assets/svg/brands/node.svg';
-import { ReactComponent as FirebaseIcon } from '../../assets/svg/brands/firebase.svg';
-import { ReactComponent as AdobeAeIcon } from '../../assets/svg/brands/ae.svg';
-import { ReactComponent as FigmaIcon } from '../../assets/svg/brands/figma.svg';
-import { ReactComponent as BrandIcon } from '../../assets/svg/brands/brand.svg';
 import styles from './skillsViewStyles.module.scss';
 import jdSkills from "../../data/jdSkills";
 
@@ -59,8 +52,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* FIGMA */}
             <JdXpItem
-                title="Figma / Product Design"
-                icon={<FigmaIcon />}
+                title={`${jdSkills.figma.name} / ${jdSkills.productDesign.name}`}
+                icon={jdSkills.figma.icon}
                 xp="7 years"
                 fillAmt={1}
             >
@@ -69,8 +62,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* REANIMATED */}
             <JdXpItem
-                title="React Native Reanimated"
-                icon={<ReanimatedIcon />}
+                title={jdSkills.reanimated.name}
+                icon={jdSkills.reanimated.icon}
                 xp="3 years"
                 fillAmt={.75}
             >
@@ -79,8 +72,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* REDUX */}
             <JdXpItem
-                title="Redux Toolkit"
-                icon={<ReduxIcon />}
+                title={jdSkills.redux.name}
+                icon={jdSkills.redux.icon}
                 xp="1 year"
                 fillAmt={.25}
             >
@@ -89,8 +82,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* NODE */}
             <JdXpItem
-                title="Node.js"
-                icon={<NodeIcon />}
+                title={jdSkills.nodeJs.name}
+                icon={jdSkills.nodeJs.icon}
                 xp="2 years"
                 fillAmt={.25}
             >
@@ -99,8 +92,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* C# */}
             <JdXpItem
-                title="C#"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media"
+                title={jdSkills.cSharp.name}
+                imgSrcSet={jdSkills.cSharp.imgSrc}
                 xp="1 year"
                 fillAmt={.1}
             >
@@ -109,8 +102,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* NOSQL */}
             <JdXpItem
-                title="NoSQL"
-                icon={<FirebaseIcon />}
+                title={jdSkills.noSql.name}
+                icon={jdSkills.noSql.icon}
                 xp="1 year"
                 fillAmt={.25}
             >
@@ -119,8 +112,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* SQL */}
             <JdXpItem
-                title="SQL"
-                imgSrcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media"
+                title={jdSkills.sql.name}
+                imgSrcSet={jdSkills.sql.imgSrc}
                 xp="2 years"
                 fillAmt={.25}
             >
@@ -129,8 +122,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* AFTER EFFECTS */}
             <JdXpItem
-                title="After Effects / Motion Design"
-                icon={<AdobeAeIcon />}
+                title={jdSkills.afterEffects.name}
+                icon={jdSkills.afterEffects.icon}
                 xp="4 years"
                 fillAmt={.5}
             >
@@ -139,8 +132,8 @@ export function JdSkillsView(): React.JSX.Element {
 
             {/* BRANDING */}
             <JdXpItem
-                title="Brand Design"
-                icon={<BrandIcon />}
+                title={jdSkills.brandDesign.name}
+                icon={jdSkills.brandDesign.icon}
                 xp="8 years"
                 fillAmt={1}
             >

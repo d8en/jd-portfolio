@@ -2,6 +2,8 @@ import { makeAutoObservable } from "mobx";
 import { IJdCompany } from "../models/iJdCompany";
 import { IJdSkill } from "../models/iJdSkill";
 import { IJdProject } from "../models/iJdProject";
+import jdObjUtils from "../utils/jdObjUtils";
+import jdSkills from "../data/jdSkills";
 
 export class JdProjectStore {
     constructor() {
@@ -9,7 +11,7 @@ export class JdProjectStore {
     }
 
     public companies: IJdCompany[] = [];
-    public skills: IJdSkill[] = [];
+    public skills: IJdSkill[] = jdObjUtils.getAllProperties(jdSkills);
     public projects: IJdProject[] = [];
 
     public get filter(): (IJdCompany | IJdSkill)[] {
