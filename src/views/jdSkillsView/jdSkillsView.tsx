@@ -17,6 +17,7 @@ export function JdSkillsView(): React.JSX.Element {
                         key={skill.type}
                         title={skill.name}
                         icon={skill.icon}
+                        imgSrc={skill.imgSrc}
                         xp={skill.xp}
                         xpPercentage={skill.xpPercentage}
                     >
