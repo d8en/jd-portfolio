@@ -1,4 +1,4 @@
-export interface IJdSkillCoBase {
+export interface IJdSkillCo {
     name: string;
     imgSrc?: string;
     icon?: React.JSX.Element;

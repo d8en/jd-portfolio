@@ -2,7 +2,7 @@ import { JdImg } from '../jdImg/jdImg';
 import styles from './xpItemStyles.module.scss';
 
 export interface IJdXpItemProps {
-    title: string;
+    name: string;
     icon?: React.JSX.Element;
     imgSrc?: string;
     xp: number;
@@ -42,7 +42,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                 <div className={styles.xpRow}>
 
                     {/* TITLE */}
-                    <h2 className={styles.xpHeader}>{props.title}</h2>
+                    <h2 className={styles.xpHeader}>{props.name}</h2>
 
                     {/* XP BAR */}
                     <div className={styles.xpTotal}>

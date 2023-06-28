@@ -1,20 +1,18 @@
 import { makeAutoObservable } from "mobx";
-import { IJdCompany } from "../models/iJdCompany";
 import { ReactComponent as BoomIcon } from '../assets/svg/brands/boomerang.svg';
 import { ReactComponent as RekIcon } from '../assets/svg/brands/rek.svg';
 import { ReactComponent as GravixIcon } from '../assets/svg/brands/gravix.svg';
-import { JdCompanyType } from "../models/enums/jdCompanyType";
 import { JdATag } from "../components/jdATag/jdATag";
 import jdObjUtils from "../utils/jdObjUtils";
+import { IJdSkillCo } from "../models/iJdSkillCo";
 
 export class JdCompaniesStore {
     constructor() {
         makeAutoObservable(this);
     }
 
-    public boomerang: IJdCompany = {
+    public boomerang: IJdSkillCo = {
         name: 'VP, Development & Design',
-        type: JdCompanyType.Boomerang,
         xp: 2,
         xpPercentage: .75,
         icon: <BoomIcon />,
@@ -27,9 +25,8 @@ export class JdCompaniesStore {
             </>
     }
 
-    public rek: IJdCompany = {
+    public rek: IJdSkillCo = {
         name: 'Founder & Full Stack Dev',
-        type: JdCompanyType.Rek,
         xp: 4,
         xpPercentage: .75,
         icon: <RekIcon />,
@@ -41,9 +38,8 @@ export class JdCompaniesStore {
             </>
     }
 
-    public primacy: IJdCompany = {
+    public primacy: IJdSkillCo = {
         name: 'Product Designer',
-        type: JdCompanyType.Primacy,
         xp: 2,
         xpPercentage: .75,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media',
@@ -55,9 +51,8 @@ export class JdCompaniesStore {
             </>
     }
 
-    public cocc: IJdCompany = {
+    public cocc: IJdSkillCo = {
         name: 'Product Manager',
-        type: JdCompanyType.Cocc,
         xp: 7,
         xpPercentage: 1,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media',
@@ -71,9 +66,8 @@ export class JdCompaniesStore {
             </>
     }
 
-    public gravix: IJdCompany = {
+    public gravix: IJdSkillCo = {
         name: 'Co-Founder & Designer',
-        type: JdCompanyType.Gravix,
         xp: 4,
         xpPercentage: .8,
         icon: <GravixIcon />,
@@ -83,7 +77,7 @@ export class JdCompaniesStore {
             </>
     }
 
-    public get companies(): IJdCompany[] {
+    public get companies(): IJdSkillCo[] {
         return jdObjUtils.getAllProperties(this);
     }
 }
