@@ -31,8 +31,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src/*",
-    "src/custom.d.ts"
+    "src",
   ],
   "references": [
     {
