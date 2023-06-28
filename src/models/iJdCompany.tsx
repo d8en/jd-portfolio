@@ -5,4 +5,5 @@ export interface IJdCompany {
     name: string;
     imgSrc?: string;
     icon?: React.JSX.Element;
+    isSelected: boolean;
 }
