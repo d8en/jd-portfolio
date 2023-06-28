@@ -1,5 +1,5 @@
-import { JdSkillType } from "./enums/jdSkillType";
 import { JdCompanyType } from "./enums/jdCompanyType";
+import { JdSkillType } from "./enums/jdSkillType";
 
 export interface IJdProject {
     title: string;

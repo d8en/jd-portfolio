@@ -1,6 +1,6 @@
 import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
 import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
-import { ReactComponent as TypescriptIcon } from '../../assets/svg/brands/typescirpt.svg';
+import { ReactComponent as TypescriptIcon } from '../../assets/svg/brands/typescript.svg';
 import { ReactComponent as ReactIcon } from '../../assets/svg/brands/react.svg';
 import { ReactComponent as ReanimatedIcon } from '../../assets/svg/brands/swm.svg';
 import { ReactComponent as SassIcon } from '../../assets/svg/brands/sass.svg';
