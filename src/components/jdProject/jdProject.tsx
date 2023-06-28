@@ -1,4 +1,6 @@
 import { IJdProject } from '../../models/iJdProject';
+import { IJdSkillCo } from '../../models/iJdSkillCo';
+import { JdHashtag } from '../jdHashtag/jdHashtag';
 import { JdImg } from '../jdImg/jdImg';
 import styles from './projectStyles.module.scss';
 
@@ -20,6 +22,19 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
                 {/* DESCRIPTION */}
                 <p className={styles.projectDesc}>{props.desc}</p>
+
+                {/* SKILLS */}
+                <div className={styles.projectSkills}>
+                    {props.skills.map((skill: IJdSkillCo) => {
+                        return (
+                            <JdHashtag
+                                key={skill.name}
+                                name={skill.name}
+                                onClick={() => { }}
+                            />
+                        )
+                    })}
+                </div>
 
             </div>
         </div>

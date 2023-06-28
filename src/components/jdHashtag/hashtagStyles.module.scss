@@ -1,0 +1,28 @@
+@use "../../styles/" as *;
+
+.hashtagContainer {
+    @include flexCentered;
+    @include aniClick;
+    align-self: flex-start;
+    background-color: var(--greyBg);
+    border-radius: 4px;
+    padding: 4px 8px;
+    @include aniClick;
+
+    &:hover {
+        @include aniHoverBg;
+        cursor: pointer;
+        background-color: var(--link);
+
+        .hashtagText {
+            color: var(--primBg);
+        }
+    }
+}
+
+.hashtagText {
+    margin: 0;
+    @include font-size-small;
+    color: var(--greyText);
+    line-height: 1.25em;
+}

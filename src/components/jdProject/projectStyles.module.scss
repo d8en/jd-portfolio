@@ -31,3 +31,9 @@ $previewImgHeight: 324px;
 .projectDesc {
     @include jdLineClamp(3);
 }
+
+.projectSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
