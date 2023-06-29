@@ -1,6 +1,12 @@
 @use "../../styles/" as *;
 
+$aniProjectDuration: 0.3s;
 $previewImgHeight: 324px;
+
+@mixin aniProject {
+    transition: max-width $aniProjectDuration, width $aniProjectDuration, padding $aniProjectDuration;
+    transform-origin: center;
+}
 
 .projectsContainer {
     border-radius: 24px;
@@ -9,6 +15,31 @@ $previewImgHeight: 324px;
     overflow: hidden;
     max-width: $desktopMaxWidth;
     gap: 12px;
+    @include aniProject;
+}
+
+.projectsContainerOpen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    border: unset;
+    @include aniProject;
+    background-color: var(--primBg);
+    max-width: unset;
+
+    .projectPreviewImg {
+        @include aniProject;
+        padding-top: 56px;
+    }
+
+    .projectContent {
+        @include aniProject;
+        height: 100%;
+        overflow-y: scroll;
+        @include scroll-bar;
+    }
 }
 
 .projectPreviewImg {
@@ -36,6 +67,11 @@ $previewImgHeight: 324px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+.projectSkillsOpen {
+    flex-direction: column;
+    gap: 0;
 }
 
 .projectCompany {
