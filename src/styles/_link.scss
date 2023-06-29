@@ -1,0 +1,16 @@
+@use "./animations" as *;
+
+@mixin baseLink {
+    @include aniClick;
+    @include aniHoverBg;
+    &:hover {
+        background-color: var(--link);
+        @include aniHoverBg;
+        color: var(--primBg);
+        cursor: pointer;
+        path,
+        rect {
+            stroke: var(--primBg);
+        }
+    }
+}

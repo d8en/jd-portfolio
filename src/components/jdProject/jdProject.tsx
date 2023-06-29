@@ -6,6 +6,7 @@ import { JdImg } from '../jdImg/jdImg';
 import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
 import jdStringUtils from '../../utils/jdStringUtils';
+import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
 
 export function JdProject(props: IJdProject): React.JSX.Element {
 
@@ -28,6 +29,14 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
             {/* CONTENT */}
             <div className={styles.projectContent}>
+
+
+                {/* CLOSE */}
+                {isOpen &&
+                    <div onClick={() => setIsOpen(false)} className={styles.projectClose}>
+                        <Close />
+                    </div>
+                }
 
                 {/* TITLE */}
                 <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
@@ -88,6 +97,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
                 {/* ARTICLE CONTENT */}
                 {isOpen && props.component}
+
 
             </div>
         </div>

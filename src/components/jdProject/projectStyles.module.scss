@@ -46,7 +46,7 @@ $previewImgHeight: 324px;
         max-width: $desktopMaxWidth;
         place-self: start center;
         place-items: start;
-        gap: 20px;
+        gap: 28px;
         @include globalBottomAfter;
     }
 
@@ -86,4 +86,23 @@ $previewImgHeight: 324px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+.projectClose {
+    z-index: 2;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    height: 44px;
+    width: 44px;
+    top: 12px;
+    right: 12px;
+    border-radius: 200px;
+    @include font-size-small;
+    background-color: var(--primFg);
+    path {
+        stroke: var(--primBg);
+    }
+    @include baseLink;
+    @include darkBlur;
 }
