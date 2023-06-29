@@ -23,11 +23,15 @@ $previewImgHeight: 324px;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     border-radius: 0;
     border: unset;
     @include aniProject;
     background-color: var(--primBg);
     max-width: unset;
+    @include scroll-bar;
+    overflow-y: scroll;
+    box-sizing: border-box;
 
     .projectPreviewImg {
         @include aniProject;
@@ -37,11 +41,11 @@ $previewImgHeight: 324px;
 
     .projectContent {
         @include aniProject;
-        height: 100%;
-        overflow-y: scroll;
-        @include scroll-bar;
         max-width: $desktopMaxWidth;
-        place-self: center;
+        place-self: start center;
+        place-items: start;
+        // height: 100%;
+        @include globalBottomAfter;
     }
 }
 

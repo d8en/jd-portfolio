@@ -17,7 +17,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
     }
 
     return (
-        <div onClick={() => toggleOpen(!isOpen)} className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}>
+        <div onClick={() => { if (!isOpen) toggleOpen(!isOpen) }} className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}>
 
             {/* PREVIEW IMAGE */}
             <JdImg
@@ -29,10 +29,10 @@ export function JdProject(props: IJdProject): React.JSX.Element {
             <div className={styles.projectContent}>
 
                 {/* TITLE */}
-                <h2 className={styles.projectHeader}>{props.title}</h2>
+                <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
 
                 {/* DESCRIPTION */}
-                <p className={styles.projectDesc}>{props.desc}</p>
+                <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>
 
                 {/* SKILLS */}
                 <div className={`${styles.projectSkills} ${isOpen ? styles.projectSkillsOpen : ''}`}>
@@ -76,8 +76,9 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 </div>
 
                 {/* ARTICLE CONTENT */}
-
+                {/* <div> */}
                 {isOpen && props.component}
+                {/* </div> */}
 
             </div>
         </div>
