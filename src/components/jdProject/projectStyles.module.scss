@@ -4,8 +4,9 @@ $aniProjectDuration: 0.3s;
 $previewImgHeight: 324px;
 
 @mixin aniProject {
-    transition: max-width $aniProjectDuration, width $aniProjectDuration, padding $aniProjectDuration;
-    transform-origin: center;
+    // transition: max-width $aniProjectDuration, width $aniProjectDuration, padding $aniProjectDuration;
+    transition: all 0.3s;
+    // transform-origin: center;
 }
 
 .projectsContainer {
@@ -19,7 +20,7 @@ $previewImgHeight: 324px;
 }
 
 .projectsContainerOpen {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -32,6 +33,7 @@ $previewImgHeight: 324px;
     @include scroll-bar;
     overflow-y: scroll;
     box-sizing: border-box;
+    grid-auto-rows: min-content;
 
     .projectPreviewImg {
         @include aniProject;
@@ -44,28 +46,19 @@ $previewImgHeight: 324px;
         max-width: $desktopMaxWidth;
         place-self: start center;
         place-items: start;
-        // height: 100%;
-        gap: 24px;
+        gap: 20px;
         @include globalBottomAfter;
     }
 
     .projectSkills {
+        gap: 8px;
         flex-direction: column;
-        gap: 0;
     }
 }
 
 .projectPreviewImgContainer {
     position: relative;
-}
-
-.projectCompany {
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 8px;
-    @include baseBlur;
+    display: flex;
 }
 
 .projectPreviewImg {
@@ -78,7 +71,7 @@ $previewImgHeight: 324px;
 .projectContent {
     display: grid;
     padding: 12px;
-    gap: 12px;
+    gap: 16px;
 }
 
 .projectHeader {

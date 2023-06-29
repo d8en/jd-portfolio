@@ -21,26 +21,10 @@ export function JdProject(props: IJdProject): React.JSX.Element {
         <div onClick={() => { if (!isOpen) toggleOpen(!isOpen) }} className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}>
 
             {/* PREVIEW IMAGE */}
-            <div className={styles.projectPreviewImgContainer}>
-                <JdImg
-                    srcSet={props.image}
-                    className={styles.projectPreviewImg}
-                />
-
-
-                {/* COMPANY */}
-                <div className={styles.projectCompany}>
-                    <JdXpItem
-                        name={props.company.name}
-                        companyName={props.company.companyName}
-                        imgSrc={props.company.imgSrc}
-                        icon={props.company.icon}
-                        xp={props.company.xp}
-                        xpPercentage={props.company.xpPercentage}
-                    />
-                </div>
-
-            </div>
+            <JdImg
+                srcSet={props.image}
+                className={styles.projectPreviewImg}
+            />
 
             {/* CONTENT */}
             <div className={styles.projectContent}>
@@ -51,8 +35,24 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 {/* DESCRIPTION */}
                 <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>
 
+                {/* COMPANY HEADEAR */}
                 {isOpen &&
-                    <h2>{jdStringUtils.emojiSKillsUsed}Skills Used</h2>
+                    <h2>{jdStringUtils.emojiCompany}Company</h2>
+                }
+
+                {/* COMPANY */}
+                <JdXpItem
+                    name={props.company.name}
+                    companyName={props.company.companyName}
+                    imgSrc={props.company.imgSrc}
+                    icon={props.company.icon}
+                    xp={props.company.xp}
+                    xpPercentage={props.company.xpPercentage}
+                />
+
+                {/* SKILLS HEADEAR */}
+                {isOpen &&
+                    <h2>{jdStringUtils.emojiSkillsUsed}Skills Used</h2>
                 }
 
                 {/* SKILLS */}
