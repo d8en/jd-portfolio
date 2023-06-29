@@ -45,8 +45,27 @@ $previewImgHeight: 324px;
         place-self: start center;
         place-items: start;
         // height: 100%;
+        gap: 24px;
         @include globalBottomAfter;
     }
+
+    .projectSkills {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.projectPreviewImgContainer {
+    position: relative;
+}
+
+.projectCompany {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+    @include baseBlur;
 }
 
 .projectPreviewImg {
@@ -74,14 +93,4 @@ $previewImgHeight: 324px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-}
-
-.projectSkillsOpen {
-    flex-direction: column;
-    gap: 0;
-}
-
-.projectCompany {
-    margin-top: 8px;
-    margin-bottom: -8px;
 }

@@ -5,6 +5,7 @@ import { JdHashtag } from '../jdHashtag/jdHashtag';
 import { JdImg } from '../jdImg/jdImg';
 import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
+import jdStringUtils from '../../utils/jdStringUtils';
 
 export function JdProject(props: IJdProject): React.JSX.Element {
 
@@ -20,48 +21,12 @@ export function JdProject(props: IJdProject): React.JSX.Element {
         <div onClick={() => { if (!isOpen) toggleOpen(!isOpen) }} className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}>
 
             {/* PREVIEW IMAGE */}
-            <JdImg
-                srcSet={props.image}
-                className={styles.projectPreviewImg}
-            />
+            <div className={styles.projectPreviewImgContainer}>
+                <JdImg
+                    srcSet={props.image}
+                    className={styles.projectPreviewImg}
+                />
 
-            {/* CONTENT */}
-            <div className={styles.projectContent}>
-
-                {/* TITLE */}
-                <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
-
-                {/* DESCRIPTION */}
-                <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>
-
-                {/* SKILLS */}
-                <div className={`${styles.projectSkills} ${isOpen ? styles.projectSkillsOpen : ''}`}>
-                    {
-                        isOpen ?
-                            props.skills.map((skill: IJdSkillCo) => {
-                                return (
-                                    <JdXpItem
-                                        key={skill.name}
-                                        xp={skill.xp}
-                                        xpPercentage={skill.xpPercentage}
-                                        icon={skill.icon}
-                                        imgSrc={skill.imgSrc}
-                                        name={skill.name}
-                                    />
-                                )
-                            })
-                            :
-                            props.skills.map((skill: IJdSkillCo) => {
-                                return (
-                                    <JdHashtag
-                                        key={skill.name}
-                                        name={skill.name}
-                                        onClick={() => { }}
-                                    />
-                                )
-                            })
-                    }
-                </div>
 
                 {/* COMPANY */}
                 <div className={styles.projectCompany}>
@@ -75,10 +40,54 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                     />
                 </div>
 
+            </div>
+
+            {/* CONTENT */}
+            <div className={styles.projectContent}>
+
+                {/* TITLE */}
+                <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
+
+                {/* DESCRIPTION */}
+                <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>
+
+                {isOpen &&
+                    <h2>{jdStringUtils.emojiSKillsUsed}Skills Used</h2>
+                }
+
+                {/* SKILLS */}
+                <div className={styles.projectSkills}>
+                    {
+                        isOpen ?
+                            <>
+                                {props.skills.map((skill: IJdSkillCo) => {
+                                    return (
+                                        <JdXpItem
+                                            key={skill.name}
+                                            xp={skill.xp}
+                                            xpPercentage={skill.xpPercentage}
+                                            icon={skill.icon}
+                                            imgSrc={skill.imgSrc}
+                                            name={skill.name}
+                                        />
+                                    )
+                                })}
+                            </>
+                            :
+                            props.skills.map((skill: IJdSkillCo) => {
+                                return (
+                                    <JdHashtag
+                                        key={skill.name}
+                                        name={skill.name}
+                                        onClick={() => { }}
+                                    />
+                                )
+                            })
+                    }
+                </div>
+
                 {/* ARTICLE CONTENT */}
-                {/* <div> */}
                 {isOpen && props.component}
-                {/* </div> */}
 
             </div>
         </div>

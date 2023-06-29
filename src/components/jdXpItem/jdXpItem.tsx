@@ -15,7 +15,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
         <div className={styles.xpContainer} style={!props.children ? { display: 'flex', gap: 8 } : undefined}>
 
             {/* FIRST COLUMN  */}
-            <div className={styles.xpColumn}>
+            <div className={styles.xpColumn} style={!props.children ? { gap: 0 } : undefined}>
 
                 {/* ICON */}
                 <div className={styles.xpIcon}>
@@ -39,7 +39,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
             </div>
 
             {/* SECOND COLUMN */}
-            <div className={styles.xpColumn}>
+            <div className={styles.xpColumn} style={!props.children ? { gap: 0 } : undefined}>
 
                 {/* FIRST ROW */}
                 <div className={styles.xpRow}>

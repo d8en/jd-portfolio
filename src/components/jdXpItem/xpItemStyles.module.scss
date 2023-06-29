@@ -38,6 +38,10 @@ $skillGap: 16px;
     gap: $skillGap;
 }
 
+.xpColumnNoCompany {
+    gap: 0;
+}
+
 .xpIcon {
     display: grid;
     place-items: center;
