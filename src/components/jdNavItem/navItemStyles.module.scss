@@ -13,6 +13,7 @@ $activeBorder: 2px;
 
     &:hover {
         .navItemIcon {
+            @include aniClick;
             @include aniHoverBg;
             path,
             rect {
