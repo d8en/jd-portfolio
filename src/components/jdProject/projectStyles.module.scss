@@ -4,11 +4,11 @@ $previewImgHeight: 324px;
 $containerBorder: 24px;
 
 .projectsHolder {
-    background-color: var(--greyBg);
     border-radius: $containerBorder;
 }
 
 .projectsContainer {
+    @include aniHoverBase;
     border-radius: $containerBorder;
     display: grid;
     border: 1.5px solid var(--primFg);
@@ -25,6 +25,11 @@ $containerBorder: 24px;
     border-radius: 0;
     border: unset;
     background-color: var(--primBg);
+
+    &:hover {
+        background-color: var(--primBg);
+    }
+
     max-width: unset;
     @include scroll-bar;
     overflow-y: scroll;
@@ -95,7 +100,6 @@ $containerBorder: 24px;
     right: 12px;
     border-radius: 200px;
     @include font-size-small;
-    background-color: var(--primFg);
     path {
         stroke: var(--primBg);
     }

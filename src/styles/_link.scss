@@ -1,11 +1,11 @@
-$hoverDuration: 0.2s;
+$hoverDuration: 0.1s;
 
 $allLinkTransforms: transform $hoverDuration, background-color $hoverDuration, color $hoverDuration,
     stroke $hoverDuration;
 
 @mixin aniLinkScale {
     transition: transform $hoverDuration;
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 @mixin aniLinkClick {
@@ -28,6 +28,5 @@ $allLinkTransforms: transform $hoverDuration, background-color $hoverDuration, c
         cursor: pointer;
         @content;
     }
-
     @include aniLinkClick;
 }

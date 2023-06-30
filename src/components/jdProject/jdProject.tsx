@@ -7,7 +7,7 @@ import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
 import jdStringUtils from '../../utils/jdStringUtils';
 import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
-import { cubicBezier, motion } from 'framer-motion';
+import { cubicBezier, motion, spring } from 'framer-motion';
 
 export function JdProject(props: IJdProject): React.JSX.Element {
 
@@ -47,7 +47,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 layout
                 transition={{
                     ease: cubicBezier(0, 1, 0, 1),
-                    duration: .375,
+                    duration: .2,
                 }}
                 onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
                 className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}
@@ -66,10 +66,26 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
                     {/* CLOSE */}
                     {isOpen &&
-                        <div onClick={() => setIsOpen(false)} className={styles.projectClose}>
+                        <motion.div
+                            onClick={() => setIsOpen(false)}
+                            className={styles.projectClose}
+                            initial={{ top: -100 }}
+                            animate={{ top: 12 }}
+                            transition={{
+                                type: "spring",
+                                // How bouncy
+                                stiffness: 120,
+                                // Lower = faster
+                                mass: .5,
+                                // Deceleration
+                                damping: 10,
+                                delay: .2,
+                            }}
+                        >
                             <Close />
-                        </div>
+                        </motion.div>
                     }
+
 
                     {/* TITLE */}
                     <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
@@ -130,7 +146,6 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
                     {/* ARTICLE CONTENT */}
                     {isOpen && props.component}
-
 
                 </div>
             </motion.div>
