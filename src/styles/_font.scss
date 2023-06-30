@@ -28,6 +28,7 @@
 
 @mixin font-size-larger {
     font-size: 28px;
+    line-height: 1.5em;
 }
 
 @mixin font-size-largest {

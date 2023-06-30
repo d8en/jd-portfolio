@@ -25,8 +25,26 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* IDEATION */}
             <h2>{jdStringUtils.ideation}</h2>
             <p>Our first client was getting ready to launch a “dark store” in Chicago. They absolutely loved the idea of return pickup and wanted to offer a ‘same day’ pickup option.</p>
-            <p>I love starting with an unstructured brainstorming discussion. This allows everyone to express their ideas, challenge others, and refine the good ones until we have general consensus. We typically progress from "in a perfect world" to "what can we do first?".</p>
             <p>It is essential that every person working on this product attends these meetings. No one likes work being "tossed over the fence," and good ideas can come from anyone, regardless of their discipline.</p>
+
+            {/* DESIGN */}
+            <h2>{jdStringUtils.design}</h2>
+            <p>I created a high-fidelity prototype of the end user experience for returning items. This was well received by the team, with a few minor suggestions that helped improve its usability.</p>
+            <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
+
+            {/* BUILD */}
+            <h2>{jdStringUtils.build}</h2>
+
+            <p>On the technical side, we had to keep things super simple since we only had a month to ship. I met with our backend engineer who had a draft of the db model. With just a few minor tweaks, the model was ready.</p>
+            <p>Stack:</p>
+
+            <ul>
+                <li>React</li>
+                <li>C# .NET</li>
+                <li>MySQL</li>
+            </ul>
+
+            <p>We decided to keep two separate repos: one for front end, one for backend.</p>
 
         </>
     )

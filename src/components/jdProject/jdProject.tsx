@@ -81,7 +81,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
 
                     {/* TITLE */}
-                    <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
+                    <h2 className={isOpen ? styles.projectHeaderOpen : styles.projectHeader}>{props.title}</h2>
 
                     {/* DESCRIPTION */}
                     <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>

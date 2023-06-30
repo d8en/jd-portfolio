@@ -82,6 +82,10 @@ $containerBorder: 24px;
     @include jdLineClamp(2);
 }
 
+.projectHeaderOpen {
+    @include font-size-larger;
+}
+
 .projectDesc {
     @include jdLineClamp(3);
 }
