@@ -1,14 +1,19 @@
 @use "../../styles/" as *;
 
 $previewImgHeight: 324px;
+$containerBorder: 24px;
+
+.projectsHolder {
+    background-color: var(--greyBg);
+    border-radius: $containerBorder;
+}
 
 .projectsContainer {
-    border-radius: 24px;
+    border-radius: $containerBorder;
     display: grid;
     border: 1.5px solid var(--primFg);
     overflow: hidden;
     max-width: $desktopMaxWidth;
-    gap: 12px;
 }
 
 .projectsContainerOpen {
@@ -58,6 +63,7 @@ $previewImgHeight: 324px;
 }
 
 .projectContent {
+    background-color: var(--primBg);
     display: grid;
     padding: 12px;
     gap: 16px;

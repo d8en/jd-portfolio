@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Ref, useEffect, useRef, useState } from 'react';
 import { IJdProject } from '../../models/iJdProject';
 import { IJdSkillCo } from '../../models/iJdSkillCo';
 import { JdHashtag } from '../jdHashtag/jdHashtag';
@@ -13,19 +13,41 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
     // State
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [innerDivRect, setInnerDivRect] = useState<DOMRect>();
 
     // Open article
     const toggleOpen = (newIsOpen: boolean): void => {
         setIsOpen(newIsOpen);
     }
 
+    // Inner div ref
+    const innerDiv = useRef<HTMLDivElement | null>(null);
+
+    // Mount
+    useEffect(() => {
+        setInnerDivRect(innerDiv.current?.getBoundingClientRect());
+    }, []);
+
     return (
-        <div>
+
+        // OUTER PLACEHOLDER
+        <div
+            className={styles.projectsHolder}
+            style={innerDivRect ?
+                {
+                    height: innerDivRect.height,
+                    width: innerDivRect.width,
+                }
+                : undefined}
+        >
+
+            {/* INNER MOVING DIV */}
             <motion.div
+                ref={innerDiv}
                 layout
                 transition={{
                     ease: cubicBezier(0, 1, 0, 1),
-                    duration: .2,
+                    duration: .375,
                 }}
                 onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
                 className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}
@@ -39,14 +61,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 />
 
                 {/* CONTENT */}
-                <motion.div
-                    layout="preserve-aspect"
-                    transition={{
-                        ease: cubicBezier(0, 1, 0, 1),
-                        duration: .2,
-                    }}
-                    className={styles.projectContent}
-                >
+                <div className={styles.projectContent}>
 
 
                     {/* CLOSE */}
@@ -117,7 +132,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                     {isOpen && props.component}
 
 
-                </motion.div>
+                </div>
             </motion.div>
         </div>
     )
