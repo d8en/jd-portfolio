@@ -83,6 +83,10 @@ class JdRoutes {
         const activeRoute: IJdRouteObj | undefined = this.allRoutes.find((route: IJdRouteObj) => route.path === window.location.pathname);
         return activeRoute ?? this.home;
     }
+
+    public get routesToHideNav(): IJdRouteObj[] {
+        return [this.home];
+    }
 }
 
 const jdRoutes: JdRoutes = new JdRoutes();

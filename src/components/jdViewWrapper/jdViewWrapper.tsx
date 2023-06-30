@@ -2,7 +2,6 @@ import styles from './viewWrapperStyles.module.scss';
 
 export interface IJdViewWrapperProps {
     divProps?: React.PropsWithChildren & React.HTMLAttributes<HTMLDivElement>;
-    removeHeader?: boolean;
 }
 
 export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps>): JSX.Element {
