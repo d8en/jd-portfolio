@@ -8,6 +8,7 @@ import styles from './projectStyles.module.scss';
 import jdStringUtils from '../../utils/jdStringUtils';
 import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
 import { cubicBezier, motion, spring } from 'framer-motion';
+import jdAniUtils from '../../utils/jdAniUtils';
 
 export function JdProject(props: IJdProject): React.JSX.Element {
 
@@ -45,10 +46,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
             <motion.div
                 ref={innerDiv}
                 layout
-                transition={{
-                    ease: cubicBezier(0, 1, 0, 1),
-                    duration: .2,
-                }}
+                transition={jdAniUtils.baseEase}
                 onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
                 className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}
             >
@@ -71,16 +69,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                             className={styles.projectClose}
                             initial={{ top: -100 }}
                             animate={{ top: 12 }}
-                            transition={{
-                                type: "spring",
-                                // How bouncy
-                                stiffness: 120,
-                                // Lower = faster
-                                mass: .5,
-                                // Deceleration
-                                damping: 10,
-                                delay: .2,
-                            }}
+                            transition={jdAniUtils.springTransition}
                         >
                             <Close />
                         </motion.div>
