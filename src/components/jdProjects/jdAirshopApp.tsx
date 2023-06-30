@@ -1,5 +1,6 @@
 import jdStringUtils from "../../utils/jdStringUtils";
 import { JdImg } from "../jdImg/jdImg";
+import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 import styles from './proejctsStyles.module.scss';
 
 export function JdAirshopApp(): React.JSX.Element {
@@ -27,7 +28,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
 
             {/* WHITEBOARD */}
-            <div className={styles.imgFlex}>
+            <div className={styles.multiMedia}>
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes3.webp?alt=media"
@@ -56,7 +57,7 @@ export function JdAirshopApp(): React.JSX.Element {
             <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
 
             {/* PROTOTYPE IMAGES */}
-            <div className={styles.imgFlex}>
+            <div className={styles.multiMedia}>
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS3.webp?alt=media"
@@ -77,11 +78,11 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* BUILD */}
             <h2>{jdStringUtils.build}</h2>
 
-            {/* DRIVER IMAGES */}
-            <JdImg
-                className={styles.projectsImage}
-                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
-                style={{ boxShadow: 'unset' }}
+            {/* VIDEO */}
+
+            <JdVimeoPlayer
+                src="https://player.vimeo.com/video/841311563?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                style={{height: 600}}
             />
 
             <p>On the technical side, we had to keep things super simple since we only had a month to ship. I met with our backend engineer who had a draft of the db model. With just a few minor tweaks, the model was ready.</p>
@@ -94,6 +95,14 @@ export function JdAirshopApp(): React.JSX.Element {
             </ul>
 
             <p>We decided to keep two separate repos: one for front end, one for backend.</p>
+
+
+            {/* DRIVER IMAGES */}
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
+                style={{ boxShadow: 'unset' }}
+            />
 
         </>
     )
