@@ -4,12 +4,13 @@
     @include flexCentered;
     @include aniClick;
     align-self: flex-start;
-    background-color: var(--greyBg);
+    // background-color: var(--greyBg);
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 4px;
     @include aniClick;
 
-    &:hover {
+    @include aniHoverBase {
+        @include aniHoverScale;
         @include aniHoverBg;
         cursor: pointer;
         background-color: var(--link);

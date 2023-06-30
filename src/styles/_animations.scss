@@ -1,11 +1,22 @@
 $hoverDuration: 0.5s;
 
-@mixin aniHoverBg {
-    transition: background-color $hoverDuration ease-out, color $hoverDuration ease-out;
-}
+@mixin aniHoverBase {
+    transition: transform $hoverDuration, background-color $hoverDuration, color $hoverDuration;
+    &:hover {
+        transition: background-color $hoverDuration, color $hoverDuration, stroke $hoverDuration;
+        background-color: var(--link);
+        transform: scale(1.1);
+        color: var(--primFg);
+        path,
+        rect {
+            stroke: var(--primFg);
+        }
+        cursor: pointer;
+        @content;
+    }
 
-@mixin aniClick {
     &:active {
+        transition: transform $hoverDuration;
         transform: scale(0.9);
     }
 }
