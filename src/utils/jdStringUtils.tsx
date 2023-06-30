@@ -1,13 +1,12 @@
 class JdStringUtils {
-    private emojiSpacing: string = '   ';
-    public emojiFunFeatures: string = '🥳' + this.emojiSpacing;
-    public emojiIdeation: string = '🧠' + this.emojiSpacing;
-    public emojiDesign: string = '🎨' + this.emojiSpacing;
-    public emojiBuild: string = '🚧' + this.emojiSpacing;
-    public emojiResults: string = '📊' + this.emojiSpacing;
-    public emojiGoal: string = '🎯' + this.emojiSpacing;
-    public emojiSkillsUsed: string = '🛠️' + this.emojiSpacing;
-    public emojiCompany: string = '🏢' + this.emojiSpacing;
+    public funFeatures: string = '🥳  Fun Features';
+    public ideation: string = '🧠  Ideation';
+    public design: string = '🎨  Design';
+    public build: string = '🚧  Build'
+    public results: string = '📊  Results';
+    public goal: string = '🎯  Goals';
+    public skillsUsed: string = '🛠️  Skills Used';
+    public company: string = '🏢  Company';
 }
 
 const jdStringUtils = new JdStringUtils();

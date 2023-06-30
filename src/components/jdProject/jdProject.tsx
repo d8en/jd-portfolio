@@ -88,7 +88,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
                     {/* COMPANY HEADEAR */}
                     {isOpen &&
-                        <h2>{jdStringUtils.emojiCompany}Company</h2>
+                        <h2>{jdStringUtils.company}</h2>
                     }
 
                     {/* COMPANY */}
@@ -103,7 +103,7 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
                     {/* SKILLS HEADEAR */}
                     {isOpen &&
-                        <h2>{jdStringUtils.emojiSkillsUsed}Skills Used</h2>
+                        <h2>{jdStringUtils.skillsUsed}</h2>
                     }
 
                     {/* SKILLS */}

@@ -5,7 +5,6 @@
 }
 
 .homeHeader {
-    @include bodyPadding;
     display: grid;
     place-self: center;
 }

@@ -1,12 +1,19 @@
 @use "./font" as *;
+@use "./body" as *;
 
 p,
 li,
-ul,
 ol {
     @include font-weight-light;
     color: var(--greyText);
     margin: 0;
+}
+
+ul {
+    @include font-weight-light;
+    color: var(--greyText);
+    margin: 0;
+    padding: 0 0 0 $globalPadding;
 }
 
 h1 {
