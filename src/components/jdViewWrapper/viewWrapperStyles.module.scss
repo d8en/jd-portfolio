@@ -20,15 +20,5 @@
     //     color: transparent;
     // }
     @include globalBottomAfter;
-}
-
-.viewHeader {
-    z-index: 2;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: grid;
-    place-items: center;
-    padding: 20px 0;
-    @include baseBlur;
+    @include globalTopAfter;
 }
