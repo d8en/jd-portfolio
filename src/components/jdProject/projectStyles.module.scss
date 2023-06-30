@@ -1,13 +1,6 @@
 @use "../../styles/" as *;
 
-$aniProjectDuration: 0.3s;
 $previewImgHeight: 324px;
-
-@mixin aniProject {
-    // transition: max-width $aniProjectDuration, width $aniProjectDuration, padding $aniProjectDuration;
-    transition: all 0.3s;
-    // transform-origin: center;
-}
 
 .projectsContainer {
     border-radius: 24px;
@@ -16,7 +9,6 @@ $previewImgHeight: 324px;
     overflow: hidden;
     max-width: $desktopMaxWidth;
     gap: 12px;
-    @include aniProject;
 }
 
 .projectsContainerOpen {
@@ -27,7 +19,6 @@ $previewImgHeight: 324px;
     bottom: 0;
     border-radius: 0;
     border: unset;
-    @include aniProject;
     background-color: var(--primBg);
     max-width: unset;
     @include scroll-bar;
@@ -36,13 +27,11 @@ $previewImgHeight: 324px;
     grid-auto-rows: min-content;
 
     .projectPreviewImg {
-        @include aniProject;
         padding-top: 56px;
         width: 100%;
     }
 
     .projectContent {
-        @include aniProject;
         max-width: $desktopMaxWidth;
         place-self: start center;
         place-items: start;

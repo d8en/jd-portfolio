@@ -7,6 +7,7 @@ import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
 import jdStringUtils from '../../utils/jdStringUtils';
 import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
+import { cubicBezier, motion } from 'framer-motion';
 
 export function JdProject(props: IJdProject): React.JSX.Element {
 
@@ -19,12 +20,21 @@ export function JdProject(props: IJdProject): React.JSX.Element {
     }
 
     return (
-        <div onClick={() => { if (!isOpen) toggleOpen(!isOpen) }} className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}>
+        <motion.div
+            layout
+            transition={{
+                ease: cubicBezier(.5, 1, 0, 1),
+                duration: .5,
+            }}
+            onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
+            className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}
+        >
 
             {/* PREVIEW IMAGE */}
             <JdImg
                 srcSet={props.image}
                 className={styles.projectPreviewImg}
+                // style={{ transform: 'translateZ(0)' }}
             />
 
             {/* CONTENT */}
@@ -100,6 +110,6 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
 
             </div>
-        </div>
+        </motion.div>
     )
 }
