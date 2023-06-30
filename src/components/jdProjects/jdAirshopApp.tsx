@@ -43,6 +43,9 @@ export function JdAirshopApp(): React.JSX.Element {
                 />
             </div>
 
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
+
             {/* IDEATION */}
             <p>We didn't want to force users into creating user names and passwords so we used the order as a way to <strong>authenticate</strong>:</p>
             <ol>
@@ -54,7 +57,6 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* DESIGN */}
             <h2>{jdStringUtils.design}</h2>
             <p>I jumped right into high-fidelity prototypes of the end user experience for returning items first. This was well received by the team, with a few minor suggestions that helped improve its usability.</p>
-            <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
 
             {/* PROTOTYPE IMAGES */}
             <div className={styles.multiMedia}>
@@ -75,6 +77,12 @@ export function JdAirshopApp(): React.JSX.Element {
                 />
             </div>
 
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototypes of the end user experience.</figcaption>
+
+            {/* DESIGN */}
+            <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
+
             {/* BUILD */}
             <h2>{jdStringUtils.build}</h2>
 
@@ -82,27 +90,48 @@ export function JdAirshopApp(): React.JSX.Element {
 
             <JdVimeoPlayer
                 src="https://player.vimeo.com/video/841311563?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                style={{height: 600}}
+                style={{ height: 600 }}
             />
 
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screen recording of our app right before we shipped to production.</figcaption>
+
             <p>On the technical side, we had to keep things super simple since we only had a month to ship. I met with our backend engineer who had a draft of the db model. With just a few minor tweaks, the model was ready.</p>
-            <p>Stack:</p>
-
-            <ul>
-                <li>React</li>
-                <li>C# .NET</li>
-                <li>MySQL</li>
-            </ul>
-
             <p>We decided to keep two separate repos: one for front end, one for backend.</p>
 
 
-            {/* DRIVER IMAGES */}
-            <JdImg
-                className={styles.projectsImage}
-                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
-                style={{ boxShadow: 'unset' }}
-            />
+            <div className={styles.multiMedia}>
+                {/* DRIVER IMAGE */}
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
+                />
+
+                {/* HELP SCREEN */}
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopHelp.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
+                />
+
+                {/* CALENDAR */}
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopCalendar.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
+                />
+
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshots of the production web app.</figcaption>
+
+            {/* RESULTS */}
+            <h2>{jdStringUtils.results}</h2>
+            <p>A month after conception (28 days to be specific), we pushed our app to production.</p>
+            <p>Within the first month, we had 20+ returns with positive feedback pouring in. It was clear that return pickup was valuable for our end users, which drove brand loyalty and referral marketing.</p>
+            <p>The success of this product led us to our largest round of funding ($1 million) and would fuel our next big project - scaling this to any Shopify store.</p>
 
         </>
     )

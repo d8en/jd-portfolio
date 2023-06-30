@@ -10,6 +10,7 @@ $imgMaxHeight: 440px;
 }
 
 .projectsImage {
+    border-radius: 12px;
     place-self: start center;
     max-width: 100%;
     max-height: $imgMaxHeight;
@@ -19,4 +20,12 @@ $imgMaxHeight: 440px;
     &:hover {
         @include aniLinkScale;
     }
+}
+
+.projectImageCaption {
+    @include font-size-smallest;
+    font-style: italic;
+    color: var(--greyText);
+    width: 100%;
+    text-align: center;
 }
