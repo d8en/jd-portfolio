@@ -9,15 +9,15 @@ $activeBorder: 2px;
     flex-direction: column;
     flex: 1 1 0;
     padding: 8px;
+    @include aniLinkClick;
 
-    @mixin aniHoverBase {
+    &:hover {
         .navItemIcon {
+            @include aniLinkScale;
             path,
             rect {
-                stroke: var(--primBg);
+                stroke: var(--link);
             }
-
-            color: var(--link);
         }
 
         .navItemText {
@@ -27,7 +27,17 @@ $activeBorder: 2px;
 }
 
 .navItemActive {
-    border-top: $activeBorder solid var(--primFg);
+    border-top: $activeBorder solid var(--link);
+    .navItemText {
+        color: var(--link);
+    }
+    .navItemIcon {
+        @include aniLinkScale;
+        path,
+        rect {
+            stroke: var(--link);
+        }
+    }
 }
 
 .navItemIcon {

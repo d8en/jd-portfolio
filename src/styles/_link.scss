@@ -1,13 +1,24 @@
-$hoverDuration: 0.3s;
+$hoverDuration: 0.2s;
 
 $allLinkTransforms: transform $hoverDuration, background-color $hoverDuration, color $hoverDuration,
     stroke $hoverDuration;
 
+@mixin aniLinkScale {
+    transition: transform $hoverDuration;
+    transform: scale(1.05);
+}
+
+@mixin aniLinkClick {
+    &:active {
+        transition: transform $hoverDuration;
+        transform: scale(0.9);
+    }
+}
+
 @mixin aniHoverBase {
     transition: $allLinkTransforms;
     &:hover {
-        transition: $allLinkTransforms;
-        transform: scale(1.05);
+        @include aniLinkScale;
         background-color: var(--link);
         color: var(--primFg);
         path,
@@ -18,8 +29,5 @@ $allLinkTransforms: transform $hoverDuration, background-color $hoverDuration, c
         @content;
     }
 
-    &:active {
-        transition: transform $hoverDuration;
-        transform: scale(0.9);
-    }
+    @include aniLinkClick;
 }
