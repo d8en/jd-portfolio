@@ -1,16 +1,25 @@
-@use "./animations" as *;
+$hoverDuration: 0.3s;
 
-@mixin baseLink {
-    @include aniClick;
-    @include aniHoverBg;
+$allLinkTransforms: transform $hoverDuration, background-color $hoverDuration, color $hoverDuration,
+    stroke $hoverDuration;
+
+@mixin aniHoverBase {
+    transition: $allLinkTransforms;
     &:hover {
+        transition: $allLinkTransforms;
+        transform: scale(1.05);
         background-color: var(--link);
-        @include aniHoverBg;
-        color: var(--primBg);
-        cursor: pointer;
+        color: var(--primFg);
         path,
         rect {
             stroke: var(--primBg);
         }
+        cursor: pointer;
+        @content;
+    }
+
+    &:active {
+        transition: transform $hoverDuration;
+        transform: scale(0.9);
     }
 }

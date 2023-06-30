@@ -2,19 +2,12 @@
 
 .hashtagContainer {
     @include flexCentered;
-    @include aniClick;
     align-self: flex-start;
     // background-color: var(--greyBg);
     border-radius: 4px;
     padding: 4px;
-    @include aniClick;
 
     @include aniHoverBase {
-        @include aniHoverScale;
-        @include aniHoverBg;
-        cursor: pointer;
-        background-color: var(--link);
-
         .hashtagText {
             color: var(--primBg);
         }

@@ -8,20 +8,16 @@ $activeBorder: 2px;
     @include flexCentered;
     flex-direction: column;
     flex: 1 1 0;
-    @include aniHoverBg;
     padding: 8px;
 
-    &:hover {
+    @mixin aniHoverBase {
         .navItemIcon {
-            @include aniClick;
-            @include aniHoverBg;
             path,
             rect {
-                stroke: var(--link);
+                stroke: var(--primBg);
             }
 
             color: var(--link);
-            @include aniHoverBg;
         }
 
         .navItemText {

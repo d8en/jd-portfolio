@@ -99,6 +99,6 @@ $containerBorder: 24px;
     path {
         stroke: var(--primBg);
     }
-    @include baseLink;
+    @include aniHoverBase;
     @include darkBlur;
 }
