@@ -20,96 +20,105 @@ export function JdProject(props: IJdProject): React.JSX.Element {
     }
 
     return (
-        <motion.div
-            layout
-            transition={{
-                ease: cubicBezier(.5, 1, 0, 1),
-                duration: .5,
-            }}
-            onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
-            className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}
-        >
+        <div>
+            <motion.div
+                layout
+                transition={{
+                    ease: cubicBezier(0, 1, 0, 1),
+                    duration: .2,
+                }}
+                onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
+                className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}
+            >
 
-            {/* PREVIEW IMAGE */}
-            <JdImg
-                srcSet={props.image}
-                className={styles.projectPreviewImg}
-                // style={{ transform: 'translateZ(0)' }}
-            />
-
-            {/* CONTENT */}
-            <div className={styles.projectContent}>
-
-
-                {/* CLOSE */}
-                {isOpen &&
-                    <div onClick={() => setIsOpen(false)} className={styles.projectClose}>
-                        <Close />
-                    </div>
-                }
-
-                {/* TITLE */}
-                <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
-
-                {/* DESCRIPTION */}
-                <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>
-
-                {/* COMPANY HEADEAR */}
-                {isOpen &&
-                    <h2>{jdStringUtils.emojiCompany}Company</h2>
-                }
-
-                {/* COMPANY */}
-                <JdXpItem
-                    name={props.company.name}
-                    companyName={props.company.companyName}
-                    imgSrc={props.company.imgSrc}
-                    icon={props.company.icon}
-                    xp={props.company.xp}
-                    xpPercentage={props.company.xpPercentage}
+                {/* PREVIEW IMAGE */}
+                <JdImg
+                    srcSet={props.image}
+                    className={styles.projectPreviewImg}
+                    style={{ width: '100%', height: 324 }}
                 />
 
-                {/* SKILLS HEADEAR */}
-                {isOpen &&
-                    <h2>{jdStringUtils.emojiSkillsUsed}Skills Used</h2>
-                }
+                {/* CONTENT */}
+                <motion.div
+                    layout="preserve-aspect"
+                    transition={{
+                        ease: cubicBezier(0, 1, 0, 1),
+                        duration: .2,
+                    }}
+                    className={styles.projectContent}
+                >
 
-                {/* SKILLS */}
-                <div className={styles.projectSkills}>
-                    {
-                        isOpen ?
-                            <>
-                                {props.skills.map((skill: IJdSkillCo) => {
+
+                    {/* CLOSE */}
+                    {isOpen &&
+                        <div onClick={() => setIsOpen(false)} className={styles.projectClose}>
+                            <Close />
+                        </div>
+                    }
+
+                    {/* TITLE */}
+                    <h2 className={isOpen ? '' : styles.projectHeader}>{props.title}</h2>
+
+                    {/* DESCRIPTION */}
+                    <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>
+
+                    {/* COMPANY HEADEAR */}
+                    {isOpen &&
+                        <h2>{jdStringUtils.emojiCompany}Company</h2>
+                    }
+
+                    {/* COMPANY */}
+                    <JdXpItem
+                        name={props.company.name}
+                        companyName={props.company.companyName}
+                        imgSrc={props.company.imgSrc}
+                        icon={props.company.icon}
+                        xp={props.company.xp}
+                        xpPercentage={props.company.xpPercentage}
+                    />
+
+                    {/* SKILLS HEADEAR */}
+                    {isOpen &&
+                        <h2>{jdStringUtils.emojiSkillsUsed}Skills Used</h2>
+                    }
+
+                    {/* SKILLS */}
+                    <div className={styles.projectSkills}>
+                        {
+                            isOpen ?
+                                <>
+                                    {props.skills.map((skill: IJdSkillCo) => {
+                                        return (
+                                            <JdXpItem
+                                                key={skill.name}
+                                                xp={skill.xp}
+                                                xpPercentage={skill.xpPercentage}
+                                                icon={skill.icon}
+                                                imgSrc={skill.imgSrc}
+                                                name={skill.name}
+                                            />
+                                        )
+                                    })}
+                                </>
+                                :
+                                props.skills.map((skill: IJdSkillCo) => {
                                     return (
-                                        <JdXpItem
+                                        <JdHashtag
                                             key={skill.name}
-                                            xp={skill.xp}
-                                            xpPercentage={skill.xpPercentage}
-                                            icon={skill.icon}
-                                            imgSrc={skill.imgSrc}
                                             name={skill.name}
+                                            onClick={() => { }}
                                         />
                                     )
-                                })}
-                            </>
-                            :
-                            props.skills.map((skill: IJdSkillCo) => {
-                                return (
-                                    <JdHashtag
-                                        key={skill.name}
-                                        name={skill.name}
-                                        onClick={() => { }}
-                                    />
-                                )
-                            })
-                    }
-                </div>
+                                })
+                        }
+                    </div>
 
-                {/* ARTICLE CONTENT */}
-                {isOpen && props.component}
+                    {/* ARTICLE CONTENT */}
+                    {isOpen && props.component}
 
 
-            </div>
-        </motion.div>
+                </motion.div>
+            </motion.div>
+        </div>
     )
 }
