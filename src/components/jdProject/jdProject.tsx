@@ -7,7 +7,7 @@ import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
 import jdStringUtils from '../../utils/jdStringUtils';
 import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
-import { cubicBezier, motion, spring } from 'framer-motion';
+import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 
 export function JdProject(props: IJdProject): React.JSX.Element {

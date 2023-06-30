@@ -56,11 +56,6 @@ $containerBorder: 24px;
     }
 }
 
-.projectPreviewImgContainer {
-    position: relative;
-    display: flex;
-}
-
 .projectPreviewImg {
     background-color: var(--greyBg);
     object-fit: contain;
