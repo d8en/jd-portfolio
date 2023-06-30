@@ -23,12 +23,8 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* IDEATION */}
             <h2>{jdStringUtils.ideation}</h2>
             <p>The biggest question was "What's the most cost effective path to same-day pickups?"</p>
-            <p>The answer was a grass-roots approach - we would do it ourself!</p>
+            <p>The answer was a grass-roots approach - a few members of our staff would be our drivers for the pilot.</p>
 
-            {/* DESIGN */}
-            <h2>{jdStringUtils.design}</h2>
-            <p>I created a high-fidelity prototype of the end user experience for returning items. This was well received by the team, with a few minor suggestions that helped improve its usability.</p>
-            <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
 
             {/* WHITEBOARD */}
             <div className={styles.imgFlex}>
@@ -38,11 +34,43 @@ export function JdAirshopApp(): React.JSX.Element {
                 />
                 <JdImg
                     className={styles.projectsImage}
-                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes2.webp?alt=media"
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes1.webp?alt=media"
                 />
                 <JdImg
                     className={styles.projectsImage}
-                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes1.webp?alt=media"
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes2.webp?alt=media"
+                />
+            </div>
+
+            {/* IDEATION */}
+            <p>We didn't want to force users into creating user names and passwords so we used the order as a way to <strong>authenticate</strong>:</p>
+            <ol>
+                <li>User enters their order number.</li>
+                <li>We lookup the order using the Shopify API and send an OTP email to the order's email address.</li>
+                <li>User enters the OTP and they're in!</li>
+            </ol>
+
+            {/* DESIGN */}
+            <h2>{jdStringUtils.design}</h2>
+            <p>I jumped right into high-fidelity prototypes of the end user experience for returning items first. This was well received by the team, with a few minor suggestions that helped improve its usability.</p>
+            <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
+
+            {/* PROTOTYPE IMAGES */}
+            <div className={styles.imgFlex}>
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS3.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
+                />
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS2.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
+                />
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS1.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
             </div>
 

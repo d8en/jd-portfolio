@@ -1,7 +1,8 @@
 $hoverDuration: 0.1s;
 
-$allLinkTransforms: transform $hoverDuration, background-color $hoverDuration, color $hoverDuration,
-    stroke $hoverDuration;
+@mixin linkTransitions {
+    transition: transform $hoverDuration, background-color $hoverDuration, color $hoverDuration, stroke $hoverDuration;
+}
 
 @mixin aniLinkScale {
     transition: transform $hoverDuration;
@@ -16,7 +17,7 @@ $allLinkTransforms: transform $hoverDuration, background-color $hoverDuration, c
 }
 
 @mixin aniHoverBase {
-    transition: $allLinkTransforms;
+    @include linkTransitions;
     &:hover {
         @include aniLinkScale;
         background-color: var(--link);

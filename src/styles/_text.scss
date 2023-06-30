@@ -2,14 +2,14 @@
 @use "./body" as *;
 
 p,
-li,
-ol {
+li {
     @include font-weight-light;
     color: var(--greyText);
     margin: 0;
 }
 
-ul {
+ul,
+ol {
     @include font-weight-light;
     color: var(--greyText);
     margin: 0;
@@ -43,6 +43,10 @@ a {
         cursor: pointer;
         color: var(--link);
     }
+}
+
+strong {
+    @include font-weight-bold;
 }
 
 @mixin jdLineClamp($lines) {
