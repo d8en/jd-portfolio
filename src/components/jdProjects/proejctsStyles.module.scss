@@ -1,0 +1,14 @@
+@use "../../styles/" as *;
+
+$imgMaxHeight: 440px;
+
+.imgFlex {
+    @include flexCentered;
+    flex-direction: row;
+}
+
+.projectsImage {
+    width: 100%;
+    max-height: $imgMaxHeight;
+    object-fit: contain;
+}

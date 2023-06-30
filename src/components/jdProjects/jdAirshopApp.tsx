@@ -1,4 +1,6 @@
 import jdStringUtils from "../../utils/jdStringUtils";
+import { JdImg } from "../jdImg/jdImg";
+import styles from './proejctsStyles.module.scss';
 
 export function JdAirshopApp(): React.JSX.Element {
     return (
@@ -6,11 +8,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* GOAL */}
             <h2>{jdStringUtils.goal}</h2>
-            <ul>
-                <li>Develop an application that allows end users to schedule at-home return pickups. </li>
-                <li>The app should ideally provide same-day pickup with specified time windows such as morning, noon, or evening. </li>
-                <li>Additionally, the app should maintain clear communication with the end user throughout the logistics process to ensure a smooth experience.</li>
-            </ul>
+            <p>Build a web app for retail users to book at-home return pickups and a driver-side app to pickup returns. Users should be able book a pickup same-day and receive notifications along the way.</p>
 
             {/* FUN FEATURES */}
             <h2>{jdStringUtils.funFeatures}</h2>
@@ -34,6 +32,12 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* BUILD */}
             <h2>{jdStringUtils.build}</h2>
+
+            {/* DRIVER IMAGES */}
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
+            />
 
             <p>On the technical side, we had to keep things super simple since we only had a month to ship. I met with our backend engineer who had a draft of the db model. With just a few minor tweaks, the model was ready.</p>
             <p>Stack:</p>

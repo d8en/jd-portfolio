@@ -4,7 +4,7 @@ class JdStringUtils {
     public design: string = '🎨  Design';
     public build: string = '🚧  Build'
     public results: string = '📊  Results';
-    public goal: string = '🎯  Goals';
+    public goal: string = '🎯  The Goal';
     public skillsUsed: string = '🛠️  Skills Used';
     public company: string = '🏢  Company';
 }

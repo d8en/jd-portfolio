@@ -34,7 +34,7 @@ $containerBorder: 24px;
     max-width: unset;
     @include scroll-bar;
     overflow-y: scroll;
-    box-sizing: border-box;
+    @include boxSizingBorder;
     grid-auto-rows: min-content;
 
     .projectPreviewImgContainer {
@@ -58,7 +58,9 @@ $containerBorder: 24px;
 }
 
 .projectPreviewImgContainer {
+    @include boxSizingBorder;
     background-color: var(--greyBg);
+    padding: 24px;
     display: flex;
     position: relative;
     overflow: hidden;
