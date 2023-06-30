@@ -3,12 +3,16 @@
 $imgMaxHeight: 440px;
 
 .imgFlex {
-    @include flexCentered;
-    flex-direction: row;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 16px;
 }
 
 .projectsImage {
-    width: 100%;
+    place-self: start center;
+    max-width: 100%;
     max-height: $imgMaxHeight;
     object-fit: contain;
+    @include baseShadow;
 }

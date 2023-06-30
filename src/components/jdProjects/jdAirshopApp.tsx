@@ -22,13 +22,29 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <h2>{jdStringUtils.ideation}</h2>
-            <p>Our first client was getting ready to launch a “dark store” in Chicago. They absolutely loved the idea of return pickup and wanted to offer a ‘same day’ pickup option.</p>
-            <p>It is essential that every person working on this product attends these meetings. No one likes work being "tossed over the fence," and good ideas can come from anyone, regardless of their discipline.</p>
+            <p>The biggest question was "What's the most cost effective path to same-day pickups?"</p>
+            <p>The answer was a grass-roots approach - we would do it ourself!</p>
 
             {/* DESIGN */}
             <h2>{jdStringUtils.design}</h2>
             <p>I created a high-fidelity prototype of the end user experience for returning items. This was well received by the team, with a few minor suggestions that helped improve its usability.</p>
             <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
+
+            {/* WHITEBOARD */}
+            <div className={styles.imgFlex}>
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes3.webp?alt=media"
+                />
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes2.webp?alt=media"
+                />
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes1.webp?alt=media"
+                />
+            </div>
 
             {/* BUILD */}
             <h2>{jdStringUtils.build}</h2>
@@ -37,6 +53,7 @@ export function JdAirshopApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
+                style={{ boxShadow: 'unset' }}
             />
 
             <p>On the technical side, we had to keep things super simple since we only had a month to ship. I met with our backend engineer who had a draft of the db model. With just a few minor tweaks, the model was ready.</p>
