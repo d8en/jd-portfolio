@@ -48,15 +48,19 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 layout
                 transition={jdAniUtils.baseEase}
                 onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
-                className={`${styles.projectsContainer} ${isOpen ? styles.projectsContainerOpen : ''}`}
+                className={`${isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
+                style={{
+                    cursor: isOpen ? 'unset' : 'pointer',
+                }}
             >
 
                 {/* PREVIEW IMAGE */}
-                <JdImg
-                    srcSet={props.image}
-                    className={styles.projectPreviewImg}
-                    style={{ width: '100%', height: 324 }}
-                />
+                <div className={styles.projectPreviewImgContainer}>
+                    <JdImg
+                        srcSet={props.image}
+                        className={styles.projectPreviewImg}
+                    />
+                </div>
 
                 {/* CONTENT */}
                 <div className={styles.projectContent}>

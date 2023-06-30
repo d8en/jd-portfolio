@@ -6,8 +6,14 @@ export interface IJdHashtagProps {
 }
 
 export function JdHashtag(props: IJdHashtagProps): React.JSX.Element {
+
+    const onClick = async (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        e.stopPropagation();
+        e.preventDefault();
+        await props.onClick()
+    }
     return (
-        <div onClick={async () => await props.onClick()} className={styles.hashtagContainer}>
+        <div onClick={onClick} className={styles.hashtagContainer}>
             <p className={styles.hashtagText}>#{props.name}</p>
         </div>
     )

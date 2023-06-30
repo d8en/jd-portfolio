@@ -8,35 +8,36 @@ $containerBorder: 24px;
 }
 
 .projectsContainer {
-    @include aniHoverBase;
     border-radius: $containerBorder;
     display: grid;
     border: 1.5px solid var(--primFg);
     overflow: hidden;
     max-width: $desktopMaxWidth;
+
+    &:hover {
+        .projectPreviewImg {
+            @include aniLinkScale;
+            transform: scale(1.08);
+        }
+    }
 }
 
 .projectsContainerOpen {
+    z-index: 2;
     position: absolute;
+    display: grid;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 0;
-    border: unset;
     background-color: var(--primBg);
-
-    &:hover {
-        background-color: var(--primBg);
-    }
-
     max-width: unset;
     @include scroll-bar;
     overflow-y: scroll;
     box-sizing: border-box;
     grid-auto-rows: min-content;
 
-    .projectPreviewImg {
+    .projectPreviewImgContainer {
         padding-top: 56px;
         width: 100%;
     }
@@ -56,8 +57,15 @@ $containerBorder: 24px;
     }
 }
 
-.projectPreviewImg {
+.projectPreviewImgContainer {
     background-color: var(--greyBg);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectPreviewImg {
+    @include aniLinkScale;
     object-fit: contain;
     height: $previewImgHeight;
     width: 100%;
@@ -85,14 +93,13 @@ $containerBorder: 24px;
 }
 
 .projectClose {
-    z-index: 2;
+    // z-index: ;
     position: fixed;
     display: grid;
     place-items: center;
     height: 44px;
     width: 44px;
-    top: 12px;
-    right: 12px;
+    right: 24px;
     border-radius: 200px;
     @include font-size-small;
     path {
