@@ -11,7 +11,6 @@ class JdAniUtils {
             mass: .5,
             // Deceleration
             damping: 10,
-            delay: .2,
         }
     }
 

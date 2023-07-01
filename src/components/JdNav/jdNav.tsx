@@ -1,3 +1,4 @@
+import React from 'react';
 import jdRoutes, { IJdRouteObj } from '../../utils/jdRoutes';
 import { JdNavItem } from '../jdNavItem/jdNavItem';
 import styles from './navStyles.module.scss';
@@ -8,11 +9,9 @@ export function JdNav(): React.JSX.Element {
 
             {/* ROUTES */}
             <div className={styles.navRoutes}>
-                {jdRoutes.visibleRoutes.map((route: IJdRouteObj) => {
-                    return (
-                        <JdNavItem {...route} key={route.path} />
-                    )
-                })}
+                {jdRoutes.visibleRoutes.map((route: IJdRouteObj) =>
+                    <JdNavItem {...route} key={route.path} />
+                )}
             </div>
         </div>
     );

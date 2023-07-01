@@ -1,19 +1,14 @@
 @use "../../styles/" as *;
 
 .navContainer {
+    // border-top: 2px solid var(--greyText);
     @include baseBlur;
     z-index: 2;
     position: absolute;
     bottom: 0;
     @include boxSizingBorder;
     @include flexCentered;
-    // width: 400px;
     width: 100%;
-
-    @include media-phone {
-        border-radius: 0;
-        // width: 90%;
-    }
 }
 
 .navRoutes {
@@ -21,6 +16,6 @@
     flex: 1;
     max-width: $desktopMaxWidth;
     flex-wrap: wrap;
-    gap: 20px;
+    // gap: 20px;
     align-self: center;
 }

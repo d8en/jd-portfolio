@@ -1,10 +1,9 @@
 @use "../../styles/" as *;
 
 $iconHeight: 32px;
-$activeBorder: 2px;
 
 .navItemContainer {
-    border-top: $activeBorder solid transparent;
+    position: relative;
     @include flexCentered;
     flex-direction: column;
     flex: 1 1 0;
@@ -12,7 +11,7 @@ $activeBorder: 2px;
 
     &:active {
         .navItemIcon {
-            transform: scale(.9) !important;
+            transform: scale(0.9) !important;
         }
     }
 
@@ -32,8 +31,6 @@ $activeBorder: 2px;
 }
 
 .navItemActive {
-    border-top: $activeBorder solid var(--link);
-
     .navItemText {
         color: var(--link);
     }
@@ -54,4 +51,13 @@ $activeBorder: 2px;
 .navItemText {
     @include font-size-small;
     color: var(--primFg);
+}
+
+.navActiveBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--link);
 }
