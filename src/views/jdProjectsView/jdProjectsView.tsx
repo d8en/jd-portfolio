@@ -26,11 +26,10 @@ export const JdProjectsView = observer((): React.JSX.Element => {
     const onLocationChange = (): void => {
         const project: IJdProject | undefined = jdProjectUtils.getProjectFromParam(params.get(jdProjectUtils.projectParam));
         if (project) {
-            console.log('project found');
             jdProjectManager.toggleOpenProject(project);
         }
         else {
-            console.log('closing all');
+
             jdProjectManager.closeAllProjects();
             setParams(undefined);
         }
@@ -38,7 +37,6 @@ export const JdProjectsView = observer((): React.JSX.Element => {
 
     // Effect for location change
     useEffect(() => {
-        console.log('location change');
         onLocationChange();
     }, [location.search]);
 
@@ -53,15 +51,14 @@ export const JdProjectsView = observer((): React.JSX.Element => {
     return (
         <JdViewWrapper>
             <div className={styles.projectViewContainer}>
-                {jdProjectStore.projects.map((project: IJdProject) => {
-                    return (
-                        <JdProject
-                            key={project.id}
-                            {...project}
-                            onToggleProject={async () => onToggleProject(project)}
-                        />
-                    )
-                })}
+                {jdProjectStore.projects.map((project: IJdProject) =>
+                    <JdProject
+                        key={project.id}
+                        {...project}
+                        onToggleProject={async () => onToggleProject(project)}
+                    />
+
+                )}
             </div>
         </JdViewWrapper>
     )
