@@ -9,15 +9,6 @@ $imgMaxHeight: 440px;
     gap: 16px;
 }
 
-.sectionHeader {
-    @include flexCentered;
-    gap: 8px;
-}
-
-.sectionIcon {
-    @include flexCentered;
-}
-
 .projectsImage {
     border-radius: 12px;
     place-self: start center;

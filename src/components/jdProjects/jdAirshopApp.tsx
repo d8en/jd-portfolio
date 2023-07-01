@@ -1,5 +1,6 @@
 import jdStringUtils from "../../utils/jdStringUtils";
 import { JdImg } from "../jdImg/jdImg";
+import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 import styles from './proejctsStyles.module.scss';
 
@@ -8,11 +9,11 @@ export function JdAirshopApp(): React.JSX.Element {
         <>
 
             {/* GOAL */}
-            <h2>{jdStringUtils.goal}</h2>
+            <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Build a web app for retail users to book at-home return pickups and a driver-side app to pickup returns. Users should be able book a pickup same-day and receive notifications along the way.</p>
 
             {/* FUN FEATURES */}
-            <h2>{jdStringUtils.funFeatures}</h2>
+            <JdProjectSubHeader {...jdStringUtils.funFeatures} />
             <ul>
                 <li>Google Maps API</li>
                 <li>Shopify API</li>
@@ -22,7 +23,7 @@ export function JdAirshopApp(): React.JSX.Element {
             </ul>
 
             {/* IDEATION */}
-            <h2>{jdStringUtils.ideation}</h2>
+            <JdProjectSubHeader {...jdStringUtils.ideation} />
             <p>The biggest question was "What's the most cost effective path to same-day pickups?"</p>
             <p>The answer was a grass-roots approach - a few members of our staff would be our drivers for the pilot.</p>
 
@@ -55,7 +56,7 @@ export function JdAirshopApp(): React.JSX.Element {
             </ol>
 
             {/* DESIGN */}
-            <h2>{jdStringUtils.design}</h2>
+            <JdProjectSubHeader {...jdStringUtils.design} />
             <p>I jumped right into high-fidelity prototypes of the end user experience for returning items first. This was well received by the team, with a few minor suggestions that helped improve its usability.</p>
 
             {/* PROTOTYPE IMAGES */}
@@ -84,7 +85,7 @@ export function JdAirshopApp(): React.JSX.Element {
             <p>We then reviewed with our client, who also only had minor suggestions. We were quickly ready to build.</p>
 
             {/* BUILD */}
-            <h2>{jdStringUtils.build}</h2>
+            <JdProjectSubHeader {...jdStringUtils.build} />
 
             {/* VIDEO */}
 
@@ -128,7 +129,7 @@ export function JdAirshopApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots of the production web app.</figcaption>
 
             {/* RESULTS */}
-            <h2>{jdStringUtils.results}</h2>
+            <JdProjectSubHeader {...jdStringUtils.results} />
             <p>A month after conception, we pushed our app to production.</p>
             <p>Within the first month, we had 20+ returns with positive feedback pouring in. It was clear that return pickup was valuable for our end users, which drove brand loyalty and referral marketing.</p>
             <p>The success of this product led us to our largest round of funding ($1 million) and would fuel our next big project - scaling this to any Shopify store.</p>

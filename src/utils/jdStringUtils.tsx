@@ -1,12 +1,45 @@
+import { IJdProjectSubHeaderProps } from "../components/jdProjectSubHeader/jdProjectSubHeader";
+
 class JdStringUtils {
-    public funFeatures: string = '🥳  Fun Features';
-    public ideation: string = '🧠  Ideation';
-    public design: string = '🎨  Design';
-    public build: string = '🚧  Build'
-    public results: string = '📊  Results';
-    public goal: string = '🎯  The Goal';
-    public skillsUsed: string = '🛠️  Skills Used';
-    public company: string = '🏢  Company';
+    public funFeatures: IJdProjectSubHeaderProps = {
+        icon: '🥳',
+        name: 'Fun Features',
+    }
+
+    public ideation: IJdProjectSubHeaderProps = {
+        icon: '🧠',
+        name: 'Ideation',
+    }
+
+    public design: IJdProjectSubHeaderProps = {
+        icon: '🎨',
+        name: 'Design',
+    }
+
+    public build: IJdProjectSubHeaderProps = {
+        icon: '🚧',
+        name: 'Build',
+    }
+
+    public results: IJdProjectSubHeaderProps = {
+        icon: '📊',
+        name: 'Results',
+    }
+
+    public goal: IJdProjectSubHeaderProps = {
+        icon: '🎯',
+        name: 'The Goal',
+    }
+
+    public skillsUsed: IJdProjectSubHeaderProps = {
+        icon: '🛠️',
+        name: 'Skills Used',
+    }
+
+    public company: IJdProjectSubHeaderProps = {
+        icon: '🏢',
+        name: 'Company',
+    }
 }
 
 const jdStringUtils = new JdStringUtils();

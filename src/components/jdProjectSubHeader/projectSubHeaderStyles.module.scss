@@ -1,0 +1,15 @@
+@use "../../styles/" as *;
+
+.sectionHeader {
+    @include flexCentered;
+    gap: 12px;
+    margin-bottom: -36px;
+}
+
+.sectionIcon {
+    background-color: var(--greyBg);
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    @include flexCentered;
+}

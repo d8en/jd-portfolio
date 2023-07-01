@@ -10,6 +10,7 @@ import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { observer } from 'mobx-react-lite';
+import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 
 export interface IJdProjecProps {
     onToggleProject: () => void | Promise<void>;
@@ -87,7 +88,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
 
                     {/* COMPANY HEADEAR */}
                     {props.isOpen &&
-                        <h2>{jdStringUtils.company}</h2>
+                        <JdProjectSubHeader {...jdStringUtils.company} />
                     }
 
                     {/* COMPANY */}
@@ -102,7 +103,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
 
                     {/* SKILLS HEADEAR */}
                     {props.isOpen &&
-                        <h2>{jdStringUtils.skillsUsed}</h2>
+                        <JdProjectSubHeader {...jdStringUtils.skillsUsed} />
                     }
 
                     {/* SKILLS */}
