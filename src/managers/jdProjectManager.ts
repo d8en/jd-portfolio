@@ -6,12 +6,9 @@ class JdProjectManager extends JdManagerBase<JdProjectStore> {
     public store: JdProjectStore = jdProjectStore;
 
     public async toggleOpenProject(project: IJdProject): Promise<void> {
-        const isOpen: boolean = !project.isOpen;
-        console.log('is open', isOpen);
         await this.jdRunInAction(() => {
-            project.isOpen = isOpen;
+            project.isOpen = !project.isOpen;;
         });
-        console.log('projects', this.store.projects.map((proj) => proj.isOpen));
     }
 
     public async closeAllProjects(): Promise<void> {
