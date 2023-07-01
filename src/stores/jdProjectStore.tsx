@@ -13,6 +13,7 @@ export class JdProjectStore {
 
     public projects: IJdProject[] = [
         {
+            id: '1',
             company: jdCompaniesStore.boomerang,
             skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign],
             image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
@@ -21,6 +22,7 @@ export class JdProjectStore {
             desc: `We had one month to build an end-to-end returns solution for a dark store operating in Chicago. It felt like an episode of 24, or maybe Master Chef.`,
         },
         {
+            id: '2',
             company: jdCompaniesStore.boomerang,
             skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.productDesign],
             image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
