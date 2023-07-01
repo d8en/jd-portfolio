@@ -9,7 +9,12 @@ $activeBorder: 2px;
     flex-direction: column;
     flex: 1 1 0;
     padding: 8px;
-    @include aniLinkClick;
+
+    &:active {
+        .navItemIcon {
+            transform: scale(.9) !important;
+        }
+    }
 
     &:hover {
         .navItemIcon {
@@ -28,11 +33,11 @@ $activeBorder: 2px;
 
 .navItemActive {
     border-top: $activeBorder solid var(--link);
+
     .navItemText {
         color: var(--link);
     }
     .navItemIcon {
-        @include aniLinkScale;
         path,
         rect {
             stroke: var(--link);
