@@ -30,7 +30,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
                 <motion.div
                     className={styles.navActiveBar}
                     layoutId="activeNav"
-                    transition={jdAniUtils.springTransition}
+                    transition={jdAniUtils.baseEase}
                 />
             }
         </Link>
