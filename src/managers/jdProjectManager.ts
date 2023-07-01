@@ -9,7 +9,7 @@ class JdProjectManager extends JdManagerBase<JdProjectStore> {
         await this.jdRunInAction(() => {
             project.isOpen = !project.isOpen;
         });
-        console.log('is open?', project.isOpen);
+        console.log('projects', this.store.projects.map((proj) => proj.isOpen));
     }
 
     public async closeAllProjects(): Promise<void> {
