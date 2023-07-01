@@ -17,7 +17,7 @@ export interface IJdProjecProps {
 
 export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JSX.Element => {
 
-    // Inner div ref for sizing
+    // Sizing used for wrapper container to maintain scroll position when an article is position:absolute (opened)
     const [innerDivRect, setInnerDivRect] = useState<DOMRect>();
 
     // Inner div ref
