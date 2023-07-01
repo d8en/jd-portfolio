@@ -10,7 +10,7 @@ export function JdVimeoPlayer(props: IJdVimeoPlayerProps): React.JSX.Element {
     return (
         <iframe
             src={props.src}
-            width="100%"
+            // width="100%"
             // height="1408"
             allow="fullscreen;"
             allowFullScreen
