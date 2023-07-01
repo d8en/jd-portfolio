@@ -17,16 +17,33 @@ export const JdProjectsView = observer((): React.JSX.Element => {
     // Search params
     const [params, setParams] = useSearchParams();
 
-    // Project is opened or closed
+    // Project is clicked on / closed
     const onToggleProject = async (project: IJdProject): Promise<void> => {
-        console.log('is project open', project.isOpen);
-        setParams(project.isOpen ? undefined : [[jdProjectUtils.projectParam, jdProjectUtils.getProjectSlug(project)]]);
+        setParams(project.isOpen ? undefined : [[jdProjectUtils.projectParam, jdProjectUtils.getParamForProject(project)]]);
     }
 
-    // Location changed on this page (opening/closing projects)
+    // Location changed, need to open / close projects
+    const onLocationChange = (): void => {
+        const project: IJdProject | undefined = jdProjectUtils.getProjectFromParam(params.get(jdProjectUtils.projectParam));
+        if (project) {
+            console.log('project found');
+            jdProjectManager.toggleOpenProject(project);
+        }
+        else jdProjectManager.closeAllProjects();
+    }
+
+    // Effect for location change
     useEffect(() => {
-        jdProjectManager.findProjectFromSlug(params.get(jdProjectUtils.projectParam));
+        console.log('location change');
+        onLocationChange();
     }, [location]);
+    
+    // Mount
+    useEffect(() => {
+        // console.log('mount');
+        // onLocationChange();
+    }, []);
+
 
     return (
         <JdViewWrapper>

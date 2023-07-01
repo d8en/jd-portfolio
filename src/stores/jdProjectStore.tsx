@@ -20,6 +20,7 @@ export class JdProjectStore {
             component: <JdAirshopApp />,
             title: `Operation “Build a returns app with home pickup in one month”`,
             desc: `We had one month to build an end-to-end returns solution for a dark store operating in Chicago. It felt like an episode of 24, or maybe Master Chef.`,
+            isOpen: false,
         },
         {
             id: '2',
@@ -29,6 +30,7 @@ export class JdProjectStore {
             component: <JdAirshopApp />,
             title: 'Shopify App - Home pickup for any Shopify store owner',
             desc: 'After we launched our Chicago based pickup solution, it was time to scale up. The Shopify ecosystem seemed like a great place to experiment with offering home pickup to a large set of reatilers.',
+            isOpen: false,
         }
     ];
 
