@@ -29,21 +29,26 @@ export const JdProjectsView = observer((): React.JSX.Element => {
             console.log('project found');
             jdProjectManager.toggleOpenProject(project);
         }
-        else jdProjectManager.closeAllProjects();
+        else {
+            console.log('closing all');
+            jdProjectManager.closeAllProjects();
+            setParams(undefined);
+        }
     }
 
     // Effect for location change
     useEffect(() => {
         console.log('location change');
         onLocationChange();
-    }, [location]);
-    
-    // Mount
-    useEffect(() => {
-        // console.log('mount');
-        // onLocationChange();
-    }, []);
+    }, [location.search]);
 
+
+    // Mount / unmount
+    useEffect(() => {
+        return () => {
+            jdProjectManager.closeAllProjects();
+        }
+    }, []);
 
     return (
         <JdViewWrapper>
