@@ -1,7 +1,6 @@
 @use "../../styles/" as *;
 
 .navContainer {
-    // border-top: 2px solid var(--greyText);
     @include baseBlur;
     z-index: 2;
     position: absolute;
@@ -14,8 +13,11 @@
 .navRoutes {
     @include flexCentered;
     flex: 1;
-    max-width: $desktopMaxWidth;
+    // max-width: $desktopMaxWidth;
+    max-width: 400px;
+    @include media-phone {
+        max-width: unset;
+    }
     flex-wrap: wrap;
-    // gap: 20px;
     align-self: center;
 }
