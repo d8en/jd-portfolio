@@ -9,17 +9,16 @@ import jdStringUtils from '../../utils/jdStringUtils';
 import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
+import { observer } from 'mobx-react-lite';
 
-export function JdProject(props: IJdProject): React.JSX.Element {
+export interface IJdProjecProps {
+    onToggleProject: () => void | Promise<void>;
+}
 
-    // State
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JSX.Element => {
+
+    // Inner div ref for sizing
     const [innerDivRect, setInnerDivRect] = useState<DOMRect>();
-
-    // Open article
-    const toggleOpen = (newIsOpen: boolean): void => {
-        setIsOpen(newIsOpen);
-    }
 
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
@@ -47,10 +46,10 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                 ref={innerDiv}
                 layout
                 transition={jdAniUtils.baseEase}
-                onClick={() => { if (!isOpen) toggleOpen(!isOpen) }}
-                className={`${isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
+                onClick={() => { if (!props.isOpen) props.onToggleProject() }}
+                className={`${props.isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
                 style={{
-                    cursor: isOpen ? 'unset' : 'pointer',
+                    cursor: props.isOpen ? 'unset' : 'pointer',
                 }}
             >
 
@@ -67,9 +66,9 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
 
                     {/* CLOSE */}
-                    {isOpen &&
+                    {props.isOpen &&
                         <motion.div
-                            onClick={() => setIsOpen(false)}
+                            onClick={() => props.onToggleProject()}
                             className={styles.projectClose}
                             initial={{ top: -100 }}
                             animate={{ top: 12 }}
@@ -81,13 +80,13 @@ export function JdProject(props: IJdProject): React.JSX.Element {
 
 
                     {/* TITLE */}
-                    <h2 className={isOpen ? styles.projectHeaderOpen : styles.projectHeader}>{props.title}</h2>
+                    <h2 className={props.isOpen ? styles.projectHeaderOpen : styles.projectHeader}>{props.title}</h2>
 
                     {/* DESCRIPTION */}
-                    <p className={isOpen ? '' : styles.projectDesc}>{props.desc}</p>
+                    <p className={props.isOpen ? '' : styles.projectDesc}>{props.desc}</p>
 
                     {/* COMPANY HEADEAR */}
-                    {isOpen &&
+                    {props.isOpen &&
                         <h2>{jdStringUtils.company}</h2>
                     }
 
@@ -102,14 +101,14 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                     />
 
                     {/* SKILLS HEADEAR */}
-                    {isOpen &&
+                    {props.isOpen &&
                         <h2>{jdStringUtils.skillsUsed}</h2>
                     }
 
                     {/* SKILLS */}
                     <div className={styles.projectSkills}>
                         {
-                            isOpen ?
+                            props.isOpen ?
                                 <>
                                     {props.skills.map((skill: IJdSkillCo) => {
                                         return (
@@ -138,10 +137,10 @@ export function JdProject(props: IJdProject): React.JSX.Element {
                     </div>
 
                     {/* ARTICLE CONTENT */}
-                    {isOpen && props.component}
+                    {props.isOpen && props.component}
 
                 </div>
             </motion.div>
         </div>
     )
-}
+});

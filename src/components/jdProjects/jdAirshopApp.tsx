@@ -129,7 +129,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* RESULTS */}
             <h2>{jdStringUtils.results}</h2>
-            <p>A month after conception (28 days to be specific), we pushed our app to production.</p>
+            <p>A month after conception, we pushed our app to production.</p>
             <p>Within the first month, we had 20+ returns with positive feedback pouring in. It was clear that return pickup was valuable for our end users, which drove brand loyalty and referral marketing.</p>
             <p>The success of this product led us to our largest round of funding ($1 million) and would fuel our next big project - scaling this to any Shopify store.</p>
 

@@ -7,4 +7,5 @@ export interface IJdProject {
     skills: IJdSkillCo[];
     image: string;
     component: React.JSX.Element;
+    isOpen?: boolean;
 }

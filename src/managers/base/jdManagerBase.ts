@@ -20,7 +20,7 @@ export abstract class JdManagerBase<T extends object> {
         });
     }
 
-    public async srRunInAction(callBack: () => void | Promise<void>): Promise<void> {
+    public async jdRunInAction(callBack: () => void | Promise<void>): Promise<void> {
         return new Promise(async (resolve: (value: void | PromiseLike<void>) => void, reject: (reason?: any) => void) => {
             try {
                 await runInAction(async (): Promise<void> => {

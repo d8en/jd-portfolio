@@ -35,7 +35,6 @@ export class JdProjectStore {
     }
 
     public get filteredProjects(): IJdProject[] {
-        console.log('filtered proejcts', jdObjUtils.getAllProperties(this).length);
         if (this.filter.length === 0) return jdObjUtils.getAllProperties(this);
         return [];
     }
