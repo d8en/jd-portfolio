@@ -15,7 +15,6 @@ export class JdProjectStore {
     }
 
     public projectParam: string = 'id';
-
     public airshopApp: IJdProject = {
         id: '1',
         company: jdCompaniesStore.boomerang,
@@ -36,6 +35,12 @@ export class JdProjectStore {
         title: 'Shopify App - Home pickup for any Shopify store owner',
         desc: 'After we launched our Chicago based pickup solution, it was time to scale up. The Shopify ecosystem seemed like a great place to start.',
         isOpen: false,
+    }
+
+    public get isAnyProjectOpen(): boolean {
+        if (this.projects.find((proj) => proj.isOpen)) return true;
+
+        return false;
     }
 
     public get projects(): IJdProject[] {

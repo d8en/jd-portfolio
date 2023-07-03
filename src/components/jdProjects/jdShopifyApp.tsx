@@ -24,7 +24,7 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-
+            <p>We needed to figure out how we could <strong>scale ‘home pickup’</strong> efficiently.  Having drivers in every state, city, etc. seemed too asset heavy and would take a long time to implement.</p>
         </>
     )
 }

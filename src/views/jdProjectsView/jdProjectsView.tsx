@@ -23,7 +23,7 @@ export const JdProjectsView = observer((): React.JSX.Element => {
 
     // Location changed, need to open / close projects
     const onLocationChange = async (): Promise<void> => {
-        await jdProjectManager.closeAllProjects();
+        if (jdProjectManager.store.isAnyProjectOpen) await jdProjectManager.closeAllProjects();
         const project: IJdProject | undefined = jdProjectManager.store.getProjectFromParam(params.get(jdProjectManager.store.projectParam));
         if (project) {
             await jdProjectManager.toggleOpenProject(project);
@@ -33,7 +33,6 @@ export const JdProjectsView = observer((): React.JSX.Element => {
 
     // Effect for location change
     useEffect(() => {
-        console.log('search change');
         onLocationChange();
     }, [location.search]);
 
