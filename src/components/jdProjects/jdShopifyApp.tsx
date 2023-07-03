@@ -110,6 +110,14 @@ export function JdShoifyApp(): React.JSX.Element {
                 src='https://player.vimeo.com/video/841934938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
                 className={styles.projectVideo}
             />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Walkthrough of our production Shopify app, with an embarassing narration done by yours truly.</figcaption>
+
+            {/* RESULTS */}
+            <JdProjectSubHeader {...jdStringUtils.results} />
+            <p>About a month and a half later, we built a production ready Shopify app for end users and another administrative app for the retailers. Our marketing team had done an excellent job lining up beta clients so I demo’d the app and we onboarded them the next week.</p>
+            <p>Two months later, we had 4 clients signed with around 30 returns per month and growing!</p>
         </>
     )
 }
