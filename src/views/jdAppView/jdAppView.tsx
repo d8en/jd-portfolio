@@ -9,7 +9,7 @@ export function JdAppView(): React.JSX.Element {
         <div className={styles.appContainer}>
 
             {/* HEADER */}
-            <JdHeader />
+            {/* <JdHeader /> */}
 
             {/* ALL ROUTES */}
             <Outlet />
