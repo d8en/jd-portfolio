@@ -5,6 +5,7 @@ import jdSkillsStore from "./jdSkillsStore";
 import { JdAirshopApp } from "../components/jdProjects/jdAirshopApp";
 import { IJdSkillCo } from "../models/iJdSkillCo";
 import jdObjUtils from "../utils/jdObjUtils";
+import { JdShoifyApp } from "../components/jdProjects/jdShopifyApp";
 
 export class JdProjectStore {
     constructor() {
@@ -27,9 +28,9 @@ export class JdProjectStore {
             company: jdCompaniesStore.boomerang,
             skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.productDesign],
             image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
-            component: <JdAirshopApp />,
+            component: <JdShoifyApp />,
             title: 'Shopify App - Home pickup for any Shopify store owner',
-            desc: 'After we launched our Chicago based pickup solution, it was time to scale up. The Shopify ecosystem seemed like a great place to experiment with offering home pickup to a large set of reatilers.',
+            desc: 'After we launched our Chicago based pickup solution, it was time to scale up. The Shopify ecosystem seemed like a great place to start.',
             isOpen: false,
         }
     ];
