@@ -9,6 +9,8 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Use the lessons we learned from our <Link to={jdProjectStore.getLinkToProject('1')}>Chicago app</Link> and create a scaleable offering for any Shopify store owner across the country.</p>
+
+            
         </>
     )
 }
