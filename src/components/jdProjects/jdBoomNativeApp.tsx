@@ -55,7 +55,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>The experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify app</Link>S, so I started with a clean slate. We choose a dark mode for various reasons, but planned to add theming later on.</p>
+            <p>The experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify apps</Link>, so I started with a clean slate. We choose a dark mode for various reasons, but planned to add theming later on.</p>
 
             {/* PROTOTYPE SCREENSHOTS */}
             <div className={styles.multiMedia}>
