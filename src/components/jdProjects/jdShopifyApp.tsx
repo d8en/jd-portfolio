@@ -5,25 +5,26 @@ import jdProjectStore from '../../stores/jdProjectStore';
 import { JdImg } from '../jdImg/jdImg';
 import styles from './proejctsStyles.module.scss';
 import { JdVimeoPlayer } from '../jdVimeoPlayer/jdVimeoPlayer';
+import { JdATag } from '../jdATag/jdATag';
 
 export function JdShoifyApp(): React.JSX.Element {
     return (
         <>
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Use the lessons we learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>Chicago app</Link> and create a multi-tenant scaleable offering for any Shopify store.</p>
+            <p>Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>Chicago app</Link> and create a multi-tenant scaleable offering for any Shopify store.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
-                <li>Multi-tenant Shopify API</li>
-                <li>Address input w/Google Maps API and USPS API</li>
+                <li>Multi-tenancy</li>
+                <li>Address input (Google Maps API and USPS API)</li>
                 <li>Currency input (USD)</li>
                 <li>CSS Grid for tabular data</li>
-                <li>Icon design</li>
                 <li>Dot loader using CSS animations</li>
                 <li>Theming (client-specified primary and secondary colors)</li>
                 <li>Email template design</li>
+                <li>Icon design</li>
             </ul>
 
             {/* IDEATION */}
@@ -87,6 +88,13 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for desktop.</figcaption>
 
+            <p>I've always enjoyed icon design and I took some extra time on this project to build our own set.</p>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/iconDesign.webp?alt=media'
+            />
+
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
             <p className={styles.projectGapReducer}>We built a <strong>mono-repo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.</p>
@@ -112,12 +120,21 @@ export function JdShoifyApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Walkthrough of our production Shopify app, with an embarassing narration done by yours truly.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Walkthrough of our Shopify app, with an embarassing narration done by yours truly.</figcaption>
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>About a month and a half later, we built a production ready Shopify app for end users and another administrative app for the retailers. Our marketing team had done an excellent job lining up beta clients so I demo’d the app and we onboarded them the next week.</p>
-            <p>Two months later, we had 4 clients signed with around 30 returns per month and growing!</p>
+
+            {/* SHOPIFY APP WALKTHROUGH */}
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/841937403?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+            />
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Video walkthrough of the Shopify app from our first client.</figcaption>
+
+            <p>Two months later, we had 4 clients signed with around 30 returns per month and growing! We were generating revenue, while getting <JdATag href="https://boomreturns.io/news">great press</JdATag>.</p>
         </>
     )
 }
