@@ -20,7 +20,7 @@
     }
 }
 
-@mixin aniBeforePulse {
+.aniBeforePulse {
     &:before {
         border-radius: 2000px;
         position: absolute;
