@@ -6,11 +6,11 @@ import { JdImg } from '../jdImg/jdImg';
 import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
 import jdStringUtils from '../../utils/jdStringUtils';
-import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { observer } from 'mobx-react-lite';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
+import { JdClose } from '../jdClose/jdClose';
 
 export interface IJdProjecProps {
     onToggleProject: () => void | Promise<void>;
@@ -73,15 +73,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
 
                     {/* CLOSE */}
                     {props.isOpen &&
-                        <motion.div
-                            onClick={() => props.onToggleProject()}
-                            className={styles.projectClose}
-                            initial={{ top: -100 }}
-                            animate={{ top: 12 }}
-                            transition={jdAniUtils.springTransition}
-                        >
-                            <Close />
-                        </motion.div>
+                        <JdClose onClick={() => props.onToggleProject()} />
                     }
 
 

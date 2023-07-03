@@ -99,19 +99,4 @@ $containerBorder: 24px;
     gap: 8px;
 }
 
-.projectClose {
-    // z-index: ;
-    position: fixed;
-    display: grid;
-    place-items: center;
-    height: 44px;
-    width: 44px;
-    right: 24px;
-    border-radius: 200px;
-    @include font-size-small;
-    path {
-        stroke: var(--primBg);
-    }
-    @include aniHoverBase;
-    @include darkBlur;
-}
+
