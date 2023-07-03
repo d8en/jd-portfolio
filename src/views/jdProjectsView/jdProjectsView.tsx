@@ -22,20 +22,18 @@ export const JdProjectsView = observer((): React.JSX.Element => {
     }
 
     // Location changed, need to open / close projects
-    const onLocationChange = (): void => {
-        jdProjectManager.closeAllProjects();
+    const onLocationChange = async (): Promise<void> => {
+        await jdProjectManager.closeAllProjects();
         const project: IJdProject | undefined = jdProjectManager.store.getProjectFromParam(params.get(jdProjectManager.store.projectParam));
         if (project) {
-            jdProjectManager.toggleOpenProject(project);
+            await jdProjectManager.toggleOpenProject(project);
         }
-        else {
-            // jdProjectManager.closeAllProjects();
-            setParams(undefined);
-        }
+        else setParams(undefined);
     }
 
     // Effect for location change
     useEffect(() => {
+        console.log('search change');
         onLocationChange();
     }, [location.search]);
 
