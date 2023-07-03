@@ -1,0 +1,11 @@
+@use "../../styles/" as *;
+
+.imageFullScreen {
+    z-index: 3;
+    position: absolute;
+    padding: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
