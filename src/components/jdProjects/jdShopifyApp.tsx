@@ -88,7 +88,7 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p className={styles.projectGapReducer}>We built a mono-repo using Typescript project references, separating but sharing these projects:</p>
+            <p className={styles.projectGapReducer}>We built a mono-repo using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.</p>
 
             <ul>
                 <li>Base Project (Node and React state management classes and shared models / DTOs)</li>
@@ -98,9 +98,10 @@ export function JdShoifyApp(): React.JSX.Element {
                     <li>Models (DB and DTO)</li>
                 </ul>
                 <li>Authentication</li>
-                <li>Shoper React App</li>
+                <li>End User React App</li>
                 <li>Admin React App</li>
                 <li>Node API</li>
+                <li>Carrier Integration</li>
             </ul>
         </>
     )
