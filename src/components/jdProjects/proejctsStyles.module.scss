@@ -34,3 +34,8 @@ $imgMaxHeight: 440px;
 .projectGapReducer {
     @include projectGapReducer;
 }
+
+.projectVideo {
+    height: 600px;
+    place-self: center;
+}

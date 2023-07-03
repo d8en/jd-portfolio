@@ -68,7 +68,7 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* PROTOTYPE VIDEO */}
             <JdVimeoPlayer
                 src="https://player.vimeo.com/video/841905587?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                style={{ height: 600, placeSelf: 'center' }}
+                className={styles.projectVideo}
             />
 
             {/* CAPTION */}
@@ -106,7 +106,7 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* VIDEO */}
             <JdVimeoPlayer
                 src="https://player.vimeo.com/video/841311563?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                style={{ height: 600, placeSelf: 'center' }}
+                className={styles.projectVideo}
             />
 
             {/* CAPTION */}

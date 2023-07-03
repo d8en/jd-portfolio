@@ -4,6 +4,7 @@ import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import jdProjectStore from '../../stores/jdProjectStore';
 import { JdImg } from '../jdImg/jdImg';
 import styles from './proejctsStyles.module.scss';
+import { JdVimeoPlayer } from '../jdVimeoPlayer/jdVimeoPlayer';
 
 export function JdShoifyApp(): React.JSX.Element {
     return (
@@ -88,7 +89,7 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p className={styles.projectGapReducer}>We built a mono-repo using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.</p>
+            <p className={styles.projectGapReducer}>We built a <strong>mono-repo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.</p>
 
             <ul>
                 <li>Base Project (Node and React state management classes and shared models / DTOs)</li>
@@ -103,6 +104,12 @@ export function JdShoifyApp(): React.JSX.Element {
                 <li>Node API</li>
                 <li>Carrier Integration</li>
             </ul>
+
+            {/* SHOPIFY APP WALKTHROUGH */}
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/841934938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+            />
         </>
     )
 }
