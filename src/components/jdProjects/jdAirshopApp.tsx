@@ -13,7 +13,7 @@ export function JdAirshopApp(): React.JSX.Element {
             <p>Build two apps: one for shoppers to schedule at-home return pickups and one for drivers to handle pickups. Shoppers should be able book a same-day pickups and receive timely notifications along the way.</p>
 
             {/* FUN FEATURES */}
-            <JdProjectSubHeader {...jdStringUtils.funStuff} />
+            <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
                 <li>Google Maps API</li>
                 <li>Shopify API</li>

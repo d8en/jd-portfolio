@@ -1,9 +1,9 @@
 import { IJdProjectSubHeaderProps } from "../components/jdProjectSubHeader/jdProjectSubHeader";
 
 class JdStringUtils {
-    public funStuff: IJdProjectSubHeaderProps = {
+    public favoriteStuff: IJdProjectSubHeaderProps = {
         icon: '🥳',
-        name: 'Fun Stuff',
+        name: 'My Favorite Parts',
     }
 
     public ideation: IJdProjectSubHeaderProps = {
