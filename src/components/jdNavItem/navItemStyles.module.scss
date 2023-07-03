@@ -28,18 +28,7 @@ $iconHeight: 32px;
             color: var(--link);
         }
     }
-
-    :before {
-        // LEFT OFF HERE todo - make this pulse and turn into shared style
-        position: absolute;
-        content: "";
-        background-color: var(--greyBg);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-    }
+    @include aniBeforePulse;
 }
 
 .navItemActive {

@@ -1,1 +1,36 @@
+@use "./colors";
 
+@mixin aniPulse {
+    animation-name: aniPulse;
+    animation-duration: 1.5s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.25, 0.5, 0.25, 0.5);
+}
+
+@keyframes aniPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+@mixin aniBeforePulse {
+    &:before {
+        border-radius: 2000px;
+        position: absolute;
+        content: "";
+        background-color: var(--greyBg);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include aniPulse;
+    }
+}
