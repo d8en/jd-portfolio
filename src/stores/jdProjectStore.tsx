@@ -64,6 +64,14 @@ export class JdProjectStore {
         }
     }
 
+    public getProjectFromParam(param: string | null): IJdProject | undefined {
+        if (!param) return;
+        for (const project of this.projects) {
+            if (this.getParamForProject(project) !== param) continue;
+            return project;
+        }
+    }
+
 }
 const jdProjectStore: JdProjectStore = new JdProjectStore();
 export default jdProjectStore;

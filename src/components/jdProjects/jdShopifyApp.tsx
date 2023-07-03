@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import jdStringUtils from '../../utils/jdStringUtils';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
-import jdProjectManager from '../../managers/jdProjectManager';
 import jdProjectStore from '../../stores/jdProjectStore';
 
 export function JdShoifyApp(): React.JSX.Element {

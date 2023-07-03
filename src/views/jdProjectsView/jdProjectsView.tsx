@@ -6,7 +6,6 @@ import jdProjectStore from "../../stores/jdProjectStore";
 import styles from './projectViewStyles.module.scss';
 import { useLocation, Location, useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import jdProjectUtils from "../../utils/jdProjectUtils";
 import jdProjectManager from "../../managers/jdProjectManager";
 
 export const JdProjectsView = observer((): React.JSX.Element => {
@@ -19,13 +18,13 @@ export const JdProjectsView = observer((): React.JSX.Element => {
 
     // Project is clicked on / closed
     const onToggleProject = async (project: IJdProject): Promise<void> => {
-        setParams(project.isOpen ? undefined : [[jdProjectUtils.projectParam, jdProjectUtils.getParamForProject(project)]]);
+        setParams(project.isOpen ? undefined : [[jdProjectManager.store.projectParam, jdProjectManager.store.getParamForProject(project)]]);
     }
 
     // Location changed, need to open / close projects
     const onLocationChange = (): void => {
         jdProjectManager.closeAllProjects();
-        const project: IJdProject | undefined = jdProjectUtils.getProjectFromParam(params.get(jdProjectUtils.projectParam));
+        const project: IJdProject | undefined = jdProjectManager.store.getProjectFromParam(params.get(jdProjectManager.store.projectParam));
         if (project) {
             jdProjectManager.toggleOpenProject(project);
         }
