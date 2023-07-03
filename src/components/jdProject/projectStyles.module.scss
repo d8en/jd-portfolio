@@ -17,7 +17,7 @@ $containerBorder: 24px;
     &:hover {
         .projectPreviewImg {
             @include aniLinkScale;
-            transform: scale(1.14);
+            transform: scale(1.09);
         }
     }
 }
