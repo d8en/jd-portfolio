@@ -24,6 +24,10 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
 
+    const onClickProject = (e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+        if (!props.isOpen) props.onToggleProject()
+    }
+
     // Mount
     useEffect(() => {
         setInnerDivRect(innerDiv.current?.getBoundingClientRect());
@@ -47,7 +51,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
                 ref={innerDiv}
                 layout
                 transition={jdAniUtils.baseEase}
-                onClick={() => { if (!props.isOpen) props.onToggleProject() }}
+                onClick={(e) => { onClickProject(e) }}
                 className={`${props.isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
                 style={{
                     cursor: props.isOpen ? 'unset' : 'pointer',
@@ -59,6 +63,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
                     <JdImg
                         srcSet={props.image}
                         className={styles.projectPreviewImg}
+                        onClick={(e) => { e.preventDefault() }}
                     />
                 </div>
 

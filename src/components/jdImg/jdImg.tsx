@@ -6,21 +6,22 @@ export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTM
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
     const onClick = (): void => {
-        console.log('fullscreen clicked');
         setIsFullscreen(!isFullscreen);
     }
 
     return (
         <>
-            <img onClick={onClick} {...props} />
+            <img onClick={onClick} {...props} style={{ cursor: 'pointer' }} />
 
             {/* OPENED */}
             {isFullscreen &&
                 <div
-                    className={styles.imageFullScreen}
+                    className={styles.fullscreenContainer}
                     onClick={onClick}
                 >
-                    <img {...props} />
+                    <img
+                        {...props}
+                        className={`${props.className} ${styles.imageFullscreen}`} />
                 </div>
             }
         </>
