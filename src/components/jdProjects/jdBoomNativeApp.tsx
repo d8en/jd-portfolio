@@ -132,6 +132,23 @@ export function JdBoomNativeApp(): React.JSX.Element {
                 />
             </div>
 
+            {/* RESULTS */}
+            <JdProjectSubHeader {...jdStringUtils.results} />
+            <p>We grew our beta group to 200+ users, who submitted returns with pickups across 20+ stores.</p>
+            <p>For serial returners, the most valuable feature was having a centralized place to submit and manage returns. After that, home pickup was a close second.</p>
+
+            {/* HOME PAGE */}
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeLiveSs4.webp?alt=media"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshot of our home page, showing all pending and past returns.</figcaption>
+
+            <p>We were a few steps away from publishing the app when an exiting opportunity for one of our other products came up.</p>
+
+
         </>
     )
 }
