@@ -19,8 +19,8 @@ export function JdAirshopApp(): React.JSX.Element {
                 <li>Shopify API</li>
                 <li>On screen calendar picker</li>
                 <li>Driver features like tap-to-call and route directions</li>
-                <li>Custom virtual router</li>
-                <li>Custom icon design</li>
+                <li>Homemade virtual router</li>
+                <li>Icon design</li>
             </ul>
 
             {/* IDEATION */}
