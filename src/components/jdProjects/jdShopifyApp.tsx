@@ -134,7 +134,7 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Walkthrough of our Shopify app, with an embarassing narration done by yours truly.</figcaption>
 
-            <p>Our mono-repo allowed us to use shared code across the admin and end user experiences, while setting us up nicely for our native mobile app.</p>
+            <p>Our mono-repo allowed us to use shared code across the admin and end user experiences, while setting us up nicely for our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.</p>
 
             {/* SHOPIFY ADMIN WALKTHROUGH */}
             <JdVimeoPlayer
