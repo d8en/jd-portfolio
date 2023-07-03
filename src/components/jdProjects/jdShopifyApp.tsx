@@ -63,12 +63,12 @@ export function JdShoifyApp(): React.JSX.Element {
                 />
                 <JdImg
                     className={styles.projectsImage}
-                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot2.webp?alt=media"
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot4.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
-                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot4.webp?alt=media"
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot2.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
                 />
             </div>
@@ -82,7 +82,26 @@ export function JdShoifyApp(): React.JSX.Element {
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot1.webp?alt=media"
             />
+
+            {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for desktop.</figcaption>
+
+            {/* BUILD */}
+            <JdProjectSubHeader {...jdStringUtils.build} />
+            <p className={styles.projectGapReducer}>We built a mono-repo using Typescript project references, separating but sharing these projects:</p>
+
+            <ul>
+                <li>Base Project (Node and React state management classes and shared models / DTOs)</li>
+                <ul>
+                    <li>Node (state management classes)</li>
+                    <li>React (state management classes)</li>
+                    <li>Models (DB and DTO)</li>
+                </ul>
+                <li>Authentication</li>
+                <li>Shoper React App</li>
+                <li>Admin React App</li>
+                <li>Node API</li>
+            </ul>
         </>
     )
 }
