@@ -24,13 +24,13 @@ export const JdProjectsView = observer((): React.JSX.Element => {
 
     // Location changed, need to open / close projects
     const onLocationChange = (): void => {
+        jdProjectManager.closeAllProjects();
         const project: IJdProject | undefined = jdProjectUtils.getProjectFromParam(params.get(jdProjectUtils.projectParam));
         if (project) {
             jdProjectManager.toggleOpenProject(project);
         }
         else {
-
-            jdProjectManager.closeAllProjects();
+            // jdProjectManager.closeAllProjects();
             setParams(undefined);
         }
     }
