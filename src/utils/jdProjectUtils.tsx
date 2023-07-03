@@ -1,5 +1,7 @@
+import { To } from "react-router-dom";
 import jdProjectManager from "../managers/jdProjectManager";
 import { IJdProject } from "../models/iJdProject";
+import jdRoutes from "./jdRoutes";
 
 class JdProjectUtils {
 
@@ -14,6 +16,13 @@ class JdProjectUtils {
         for (const project of jdProjectManager.store.projects) {
             if (this.getParamForProject(project) !== param) continue;
             return project;
+        }
+    }
+
+    public getLinkToProject(project: IJdProject): To {
+        return {
+            pathname: jdRoutes.projects.path,
+            search: this.getParamForProject(project),
         }
     }
 }

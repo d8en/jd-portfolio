@@ -12,28 +12,31 @@ export class JdProjectStore {
         makeAutoObservable(this);
     }
 
-    public projects: IJdProject[] = [
-        {
-            id: '1',
-            company: jdCompaniesStore.boomerang,
-            skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign],
-            image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
-            component: <JdAirshopApp />,
-            title: `Operation “Build a returns app with home pickup in one month”`,
-            desc: `We had one month to build an end-to-end returns solution for a dark store in Chicago. It felt like an episode of 24, or maybe Master Chef.`,
-            isOpen: false,
-        },
-        {
-            id: '2',
-            company: jdCompaniesStore.boomerang,
-            skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.productDesign],
-            image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
-            component: <JdShoifyApp />,
-            title: 'Shopify App - Home pickup for any Shopify store owner',
-            desc: 'After we launched our Chicago based pickup solution, it was time to scale up. The Shopify ecosystem seemed like a great place to start.',
-            isOpen: false,
-        }
-    ];
+    public airshopChicgao: IJdProject = {
+        id: '1',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
+        component: <JdAirshopApp />,
+        title: `Operation “Build a returns app with home pickup in one month”`,
+        desc: `We had one month to build an end-to-end returns solution for a dark store in Chicago. It felt like an episode of 24, or maybe Master Chef.`,
+        isOpen: false,
+    }
+
+    public shopifyApp: IJdProject = {
+        id: '2',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
+        component: <JdShoifyApp />,
+        title: 'Shopify App - Home pickup for any Shopify store owner',
+        desc: 'After we launched our Chicago based pickup solution, it was time to scale up. The Shopify ecosystem seemed like a great place to start.',
+        isOpen: false,
+    }
+
+    public get projects(): IJdProject[] {
+        return jdObjUtils.getAllProperties(this);
+    }
 
     public get filter(): IJdSkillCo[] {
         return [];
