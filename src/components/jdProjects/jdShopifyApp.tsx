@@ -124,7 +124,8 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>About a month and a half later, we built a production ready Shopify app for end users and another administrative app for the retailers. Our marketing team had done an excellent job lining up beta clients so I demo’d the app and we onboarded them the next week.</p>
+            <p>About a month and a half later, we built a production ready Shopify app for end users and another administrative app for the retailers.</p>
+            <p>Our marketing team had done an excellent job lining up beta clients so I demo’d the app and we onboarded them the next week.</p>
 
             {/* SHOPIFY APP WALKTHROUGH */}
             <JdVimeoPlayer
