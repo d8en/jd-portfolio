@@ -8,6 +8,7 @@ import jdObjUtils from "../utils/jdObjUtils";
 import { JdShoifyApp } from "../components/jdProjects/jdShopifyApp";
 import jdRoutes from "../utils/jdRoutes";
 import { To } from "react-router-dom";
+import { JdBoomNativeApp } from "../components/jdProjects/jdBoomNativeApp";
 
 export class JdProjectStore {
     constructor() {
@@ -29,11 +30,22 @@ export class JdProjectStore {
     public shopifyApp: IJdProject = {
         id: '2',
         company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.productDesign],
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
         component: <JdShoifyApp />,
         title: 'Shopify App - Home pickup for any Shopify store owner',
         desc: 'After we launched our Chicago based pickup solution, it was time to scale up. The Shopify ecosystem seemed like a great place to start.',
+        isOpen: false,
+    }
+
+    public boomNativeApp: IJdProject = {
+        id: '3',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
+        component: <JdBoomNativeApp />,
+        title: 'Native App - One app, all returns, any store',
+        desc: 'The idea was relatively simple - build an app for shoppers to manage returns for any store they shopped at.',
         isOpen: false,
     }
 

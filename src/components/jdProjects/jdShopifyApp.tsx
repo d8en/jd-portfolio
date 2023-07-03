@@ -80,6 +80,7 @@ export function JdShoifyApp(): React.JSX.Element {
 
             <p>I created new high-fidelity designs from scratch but carried over elements and lessons-learned from the initial app.</p>
 
+            {/* END USER PROTOTYPES */}
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot1.webp?alt=media"
@@ -87,6 +88,17 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for desktop.</figcaption>
+
+            {/* ADMIN PROTOTYPE */}
+            <p>In addition to the shopper experience, I also designed an app for Shopify admins. This would be used to manage returns processing.</p>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot5.webp?alt=media"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshots of the admin prototype for desktop.</figcaption>
 
             <p>I've always enjoyed icon design and I took some extra time on this project to build our own set.</p>
 
@@ -121,6 +133,14 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Walkthrough of our Shopify app, with an embarassing narration done by yours truly.</figcaption>
+
+            <p>Our mono-repo allowed us to use shared code across the admin and end user experiences, while setting us up nicely for our native mobile app.</p>
+
+            {/* SHOPIFY ADMIN WALKTHROUGH */}
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/841945316?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                style={{ width: '100%' }}
+            />
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />

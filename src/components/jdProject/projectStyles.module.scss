@@ -82,6 +82,7 @@ $containerBorder: 24px;
 
 .projectHeader {
     @include jdLineClamp(2);
+    @include font-size-large;
 }
 
 .projectHeaderOpen {

@@ -114,7 +114,6 @@ export function JdAirshopApp(): React.JSX.Element {
 
             <p>We decided to keep two separate repos: one for front end, one for backend.</p>
 
-
             <div className={styles.multiMedia}>
                 {/* DRIVER IMAGE */}
                 <JdImg
