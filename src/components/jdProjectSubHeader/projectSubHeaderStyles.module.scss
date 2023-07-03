@@ -3,7 +3,7 @@
 .sectionHeader {
     @include flexCentered;
     gap: 12px;
-    margin-bottom: -28px;
+    @include projectGapReducer;
 }
 
 .sectionIcon {

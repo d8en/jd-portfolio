@@ -29,3 +29,7 @@ $imgMaxHeight: 440px;
     width: 100%;
     text-align: center;
 }
+
+.projectGapReducer {
+    @include projectGapReducer;
+}
