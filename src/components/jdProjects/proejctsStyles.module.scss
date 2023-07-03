@@ -7,6 +7,7 @@ $imgMaxHeight: 440px;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     gap: 16px;
+    place-self: center;
 }
 
 .projectsImage {

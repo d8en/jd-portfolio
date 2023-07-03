@@ -60,12 +60,10 @@ export class JdProjectStore {
         return project.title.split(' ').join('-');
     }
 
-    public getLinkToProject(projectId: string): To {
-        const findProjectById = this.projects.find((proj: IJdProject) => proj.id === projectId);
-        if (!findProjectById) return {};
+    public getLinkToProject(project: IJdProject): To {
         return {
             pathname: jdRoutes.projects.path,
-            search: `?${this.projectParam}=${this.getParamForProject(findProjectById)}`,
+            search: `?${this.projectParam}=${this.getParamForProject(project)}`,
         }
     }
 

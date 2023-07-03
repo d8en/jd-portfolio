@@ -21,6 +21,7 @@ export function JdAirshopApp(): React.JSX.Element {
                 <li>Driver features like tap-to-call and route directions</li>
                 <li>Homemade virtual router</li>
                 <li>Icon design</li>
+                <li>Email template design</li>
             </ul>
 
             {/* IDEATION */}
@@ -64,6 +65,17 @@ export function JdAirshopApp(): React.JSX.Element {
             <JdProjectSubHeader {...jdStringUtils.design} />
             <p>I created high-fidelity prototypes of the shopper experience for returning items and reviewed internally and with our client. </p>
 
+            {/* PROTOTYPE VIDEO */}
+            <JdVimeoPlayer
+                src="https://player.vimeo.com/video/841905587?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                style={{ height: 600, placeSelf: 'center' }}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Video walkthrough of the prototype.</figcaption>
+
+            <p>With a few minor suggestions from our internal staff and client, we were ready to build.</p>
+
             {/* PROTOTYPE IMAGES */}
             <div className={styles.multiMedia}>
                 <JdImg
@@ -85,9 +97,6 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes of the end user experience.</figcaption>
-
-            {/* DESIGN */}
-            <p>With a few minor suggestions from our internal staff and client, we were ready to build.</p>
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
