@@ -2,6 +2,7 @@ import jdStringUtils from "../../utils/jdStringUtils";
 import { JdATag } from "../jdATag/jdATag";
 import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
+import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 import styles from './proejctsStyles.module.scss';
 
 export function JdRekApp(): React.JSX.Element {
@@ -126,12 +127,12 @@ export function JdRekApp(): React.JSX.Element {
 
             <div className={styles.multiMedia}>
                 <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot4.webp?alt=media'
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot6.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ borderRadius: 20 }}
                 />
                 <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot6.webp?alt=media'
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot4.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ borderRadius: 20 }}
                 />
@@ -146,6 +147,15 @@ export function JdRekApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app.</figcaption>
 
             <p>Launch day and the following weeks were fun, exciting, and stressful with the app attracting 200+ users and over 1,000 recommendations within the first month!</p>
+
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/842604161?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+                style={{ width: '100%', minHeight: 'unset', padding: 12 }}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Video created with live screen recordings and After Effects (music by me as well).</figcaption>
 
             <p>You can download the app <JdATag href="https://rekit.app/">here</JdATag> (Android and iOS).</p>
 
