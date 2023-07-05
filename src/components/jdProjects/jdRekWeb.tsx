@@ -73,6 +73,20 @@ export function JdRekWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots from the website.</figcaption>
 
             <p>Using the <JdATag href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</JdATag> was quite interesting. It was something I had always wanted to explore and I'm glad I didn't reach for a library for the scroll interactions.</p>
+
+            {/* RESULTS */}
+            <JdProjectSubHeader {...jdStringUtils.results} />
+            <p>In the first month, I had around 400 unique hits on the site with 200+ user downloads across Android and iOS.</p>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot3.webp?alt=media"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshots from the app store listing.</figcaption>
+
+            <p><JdATag href="https://rekit.app/">This site</JdATag> drove app downloads and was a great way to spark interest in those curious about the app.</p>
         </>
     )
 }
