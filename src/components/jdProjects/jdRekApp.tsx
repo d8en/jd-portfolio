@@ -127,17 +127,17 @@ export function JdRekApp(): React.JSX.Element {
 
             <div className={styles.multiMedia}>
                 <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot6.webp?alt=media'
-                    className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
-                />
-                <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot4.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ borderRadius: 20 }}
                 />
                 <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot10.webp?alt=media'
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot6.webp?alt=media'
+                    className={styles.projectsImage}
+                    style={{ borderRadius: 20 }}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot12.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ borderRadius: 20 }}
                 />
