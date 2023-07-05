@@ -1,6 +1,6 @@
 import jdStringUtils from '../../utils/jdStringUtils';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
-import styles from './proejctsStyles.module.scss';
+// import styles from './proejctsStyles.module.scss';
 
 export function JdSmartRouteApp(): React.JSX.Element {
     return (
@@ -14,6 +14,9 @@ export function JdSmartRouteApp(): React.JSX.Element {
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
                 <li>Browser drag and drop APIs</li>
+                <li>Typeahead drop down input (single select)</li>
+                <li>Google maps API</li>
+                <li>Latest React router hooks</li>
             </ul>
 
         </>

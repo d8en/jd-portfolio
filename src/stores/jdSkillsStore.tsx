@@ -10,6 +10,7 @@ import { ReactComponent as AdobeAeIcon } from '../assets/svg/brands/ae.svg';
 import { ReactComponent as FirebaseIcon } from '../assets/svg/brands/firebase.svg';
 import { ReactComponent as BrandIcon } from '../assets/svg/brands/brand.svg';
 import { ReactComponent as ProductIcon } from '../assets/svg/brands/product.svg';
+import { ReactComponent as FramerIcon } from '../assets/svg/brands/framer.svg';
 import { makeAutoObservable } from "mobx";
 import jdObjUtils from "../utils/jdObjUtils";
 import { IJdSkillCo } from '../models/iJdSkillCo';
@@ -49,6 +50,14 @@ export class JdSkillsStore {
         xp: 4,
         xpPercentage: 1,
         component: <p>By far my favorite state management library, I have 4 years of experience using it with the React lite bindings. The simplicity and familiar architecture makes this my go to for all projects.</p>
+    }
+
+    public framerMotion: IJdSkillCo = {
+        name: 'Framer Motion',
+        icon: <FramerIcon />,
+        xp: 4,
+        xpPercentage: 1,
+        component: <p>I use css animations and transitions first but reach for Framer next. This library is incredibly performant and can make lifecycle animations and interpolation super simple.</p>
     }
 
     public css: IJdSkillCo = {
