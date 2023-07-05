@@ -1,6 +1,9 @@
 import { IJdProjectSubHeaderProps } from "../components/jdProjectSubHeader/jdProjectSubHeader";
 
 class JdStringUtils {
+
+    public pageTitlePrefix: string = 'Jeff Dayton - '
+
     public favoriteStuff: IJdProjectSubHeaderProps = {
         icon: '🥳',
         name: 'My Favorite Parts',

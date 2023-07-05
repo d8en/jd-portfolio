@@ -18,7 +18,7 @@ export type IJdRouteObj = RouteObject & {
 class JdRoutes {
 
     public home: IJdRouteObj = {
-        name: 'home',
+        name: 'Home',
         path: '/',
         element: <JdHomeView />,
         errorElement: <JdErrorView />,
@@ -26,7 +26,7 @@ class JdRoutes {
     }
 
     public projects: IJdRouteObj = {
-        name: 'projects',
+        name: 'Projects',
         path: '/projects',
         element: <JdProjectsView />,
         errorElement: <JdErrorView />,
@@ -34,7 +34,7 @@ class JdRoutes {
     }
 
     public skills: IJdRouteObj = {
-        name: 'skills',
+        name: 'Skills',
         path: '/skills',
         element: <JdSkillsView />,
         errorElement: <JdErrorView />,
@@ -42,7 +42,7 @@ class JdRoutes {
     }
 
     public experience: IJdRouteObj = {
-        name: 'experience',
+        name: 'Experience',
         path: '/experience',
         element: <JdXpView />,
         errorElement: <JdErrorView />,
