@@ -110,7 +110,6 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             <p>We were gaining traction with three large national retailers who immediately saw the benefit of our app and the ease of use.</p>
 
-
         </>
     )
 }

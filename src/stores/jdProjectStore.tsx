@@ -10,6 +10,7 @@ import jdRoutes from "../utils/jdRoutes";
 import { To } from "react-router-dom";
 import { JdBoomNativeApp } from "../components/jdProjects/jdBoomNativeApp";
 import { JdSmartRouteApp } from "../components/jdProjects/jdSmartRouteApp";
+import { JdSmartRouteWeb } from "../components/jdProjects/jdSmartRouteWeb";
 
 export class JdProjectStore {
     constructor() {
@@ -58,6 +59,17 @@ export class JdProjectStore {
         component: <JdSmartRouteApp />,
         title: 'Smart Routing - Optimizing return inventory management and resale velocity',
         desc: 'National retailers often send all returns to once place, sometimes across the country. Why not route them to a local store, warehouse, or consolidation center?',
+        isOpen: false,
+    }
+
+    public boomSmartWeb: IJdProject = {
+        id: '5',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebPreview.webp?alt=media',
+        component: <JdSmartRouteWeb />,
+        title: 'Marketing a complex reverse logistics app in a one page scrollable site',
+        desc: `Everyone's tired of hearing "simplify" I suppose it was a relevant verb for this project.`,
         isOpen: false,
     }
 
