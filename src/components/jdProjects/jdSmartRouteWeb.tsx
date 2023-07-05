@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import jdStringUtils from "../../utils/jdStringUtils";
 import { JdATag } from "../jdATag/jdATag";
 import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import styles from './proejctsStyles.module.scss';
+import jdProjectStore from "../../stores/jdProjectStore";
 
 export function JdSmartRouteWeb(): React.JSX.Element {
     return (
@@ -10,7 +12,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Build a website that concicely communicates how a our app can save a national retailer milliions by optimizing return processing.</p>
+            <p>Build a website that concicely communicates how a <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>our app</Link> can save a national retailer milliions by optimizing return processing.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -88,6 +90,51 @@ export function JdSmartRouteWeb(): React.JSX.Element {
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteOldWay1.webp?alt=media'
                 className={styles.projectsImage}
             />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshot of the first section beneath the fold.</figcaption>
+
+            <p>For some odd reason, I've always wanted to design and build a blog. The "<JdATag href="https://boomreturns.io/news">news</JdATag>" page was exactly that, just like the page you're currently on!</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNews.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNewsPost.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshot of the news page and a post.</figcaption>
+
+
+            <p>I also enjoy designing and optimizing the interactions around form inputs. Building the <JdATag href="https://boomreturns.io/#letsTalk">contact form</JdATag> and integrating it to send all messages to Hubspot was a surprisingly fun time.</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteForm.webp?alt=media'
+                className={styles.projectsImage}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshot of the contact form.</figcaption>
+
+            {/* RESULTS */}
+            <JdProjectSubHeader {...jdStringUtils.results} />
+            <p>Within about two weeks, we had designed, iterated, built, and shipped an entire website.</p>
+
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/zoneGraphic.webp?alt=media'
+                className={styles.projectsImage}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshot of the graphic we created to promote the cost savings around logistics.</figcaption>
+
+            <p>We were very quickly ready to market our latest <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>smart routing product</Link> and had a ton of positive feedback coming in from our retail partners and prospects.</p>
         </>
     )
 }
