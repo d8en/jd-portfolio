@@ -1,4 +1,5 @@
 import jdStringUtils from "../../utils/jdStringUtils";
+import { JdATag } from "../jdATag/jdATag";
 import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import styles from './proejctsStyles.module.scss';
@@ -41,6 +42,8 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
 
+            {/* DESIGN */}
+            <JdProjectSubHeader {...jdStringUtils.design} />
             <p>I came up with a traditonal concept, inspired by many Saas products out there.</p>
 
             <div className={styles.multiMedia}>
@@ -57,7 +60,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes of the first "traditional Saas" layout.</figcaption>
 
-            <p>Our CMO had an excellent idea: lets take the user on a "route" through the old ways of doing things, then the new. I loved this idea so I created a new concept and we moved forward with it.</p>
+            <p>Our CMO had an excellent idea: lets take the user on a "route" through the old ways of doing things, then the new. I loved this idea and created a new concept that we ended up moving forward with.</p>
 
             <div className={styles.multiMedia}>
                 <JdImg
@@ -76,6 +79,15 @@ export function JdSmartRouteWeb(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes of the second layout (old way vs. new way).</figcaption>
+
+            {/* BUILD */}
+            <JdProjectSubHeader {...jdStringUtils.build} />
+            <p>I had the most fun animating elements when they scrolled into view, includeding the svg lines. Check it out <JdATag href="https://boomreturns.io/">here</JdATag>!</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteOldWay1.webp?alt=media'
+                className={styles.projectsImage}
+            />
         </>
     )
 }
