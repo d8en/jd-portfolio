@@ -7,6 +7,8 @@ import styles from './projectViewStyles.module.scss';
 import { useLocation, Location, useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import jdProjectManager from "../../managers/jdProjectManager";
+import jdStringUtils from "../../utils/jdStringUtils";
+import jdRoutes from "../../utils/jdRoutes";
 
 export const JdProjectsView = observer((): React.JSX.Element => {
 
@@ -27,8 +29,12 @@ export const JdProjectsView = observer((): React.JSX.Element => {
         const project: IJdProject | undefined = jdProjectManager.store.getProjectFromParam(params.get(jdProjectManager.store.projectParam));
         if (project) {
             await jdProjectManager.toggleOpenProject(project);
+            document.title = jdStringUtils.pageTitlePrefix + project.title;
         }
-        else setParams(undefined);
+        else {
+            setParams(undefined);
+            document.title = jdStringUtils.pageTitlePrefix + jdRoutes.activeRoute.name;
+        }
     }
 
     // Effect for location change
