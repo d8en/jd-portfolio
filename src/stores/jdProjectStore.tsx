@@ -69,7 +69,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebPreview.webp?alt=media',
         component: <JdSmartRouteWeb />,
         title: 'Marketing a complex reverse logistics app in a one page scrollable site',
-        desc: `Everyone's tired of hearing "simplify" I suppose it was a relevant verb for this project.`,
+        desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
         isOpen: false,
     }
 

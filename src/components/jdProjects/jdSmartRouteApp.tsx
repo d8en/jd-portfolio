@@ -17,6 +17,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             <ul>
                 <li>Browser drag and drop APIs</li>
                 <li>Typeahead drop down input (single select)</li>
+                <li>CSS Grid (vs Flexbox)</li>
                 <li>Google maps API</li>
                 <li>React router hooks</li>
                 <li>Framer motion (lifecycle animations)</li>
