@@ -12,20 +12,20 @@ export interface IJdXpItemProps {
 
 export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element {
     return (
-        <div className={styles.xpContainer} style={!props.children ? { display: 'flex', gap: 8 } : undefined}>
+        <div className={styles.xpContainer} style={!props.children ? { display: 'flex', gap: 12 } : undefined}>
 
             {/* FIRST COLUMN  */}
-            <div className={styles.xpColumn} style={!props.children ? { gap: 0 } : undefined}>
+            <div className={styles.xpColumn} style={!props.children ? { gap: 8 } : undefined}>
 
                 {/* ICON */}
-                <div className={styles.xpIcon}>
+                <div className={`${styles.xpIcon} ${props.children ? '' : styles.xpIconSmaller}`}>
                     {props.icon ?
                         props.icon
                         :
                         props.imgSrc ?
                             <JdImg
                                 srcSet={props.imgSrc}
-                                className={styles.xpImage}
+                                className={`${styles.xpImage} ${props.children ? '' : styles.xpIconSmaller}`}
                             />
                             :
                             undefined
