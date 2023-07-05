@@ -5,7 +5,7 @@ $imgMaxHeight: 440px;
 .multiMedia {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    // grid-auto-columns: 1fr;
     gap: 16px;
     place-self: center;
 }

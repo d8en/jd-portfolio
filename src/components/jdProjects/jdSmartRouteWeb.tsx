@@ -58,6 +58,24 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Prototypes of the first "traditional Saas" layout.</figcaption>
 
             <p>Our CMO had an excellent idea: lets take the user on a "route" through the old ways of doing things, then the new. I loved this idea so I created a new concept and we moved forward with it.</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/desktopProto2.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobileProto2OldWay.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobileProto2NewWay.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototypes of the second layout (old way vs. new way).</figcaption>
         </>
     )
 }
