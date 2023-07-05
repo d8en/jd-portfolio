@@ -9,6 +9,7 @@ import { JdShoifyApp } from "../components/jdProjects/jdShopifyApp";
 import jdRoutes from "../utils/jdRoutes";
 import { To } from "react-router-dom";
 import { JdBoomNativeApp } from "../components/jdProjects/jdBoomNativeApp";
+import { JdSmartRouteApp } from "../components/jdProjects/jdSmartRouteApp";
 
 export class JdProjectStore {
     constructor() {
@@ -46,6 +47,17 @@ export class JdProjectStore {
         component: <JdBoomNativeApp />,
         title: 'Native App - One app, all returns, any store',
         desc: 'Returns can be a pain, but how nice would it be to manage all of them in one app across all of the stores you shopped at?',
+        isOpen: false,
+    }
+
+    public boomSmartApp: IJdProject = {
+        id: '4',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRoutePreview.webp?alt=media',
+        component: <JdSmartRouteApp />,
+        title: 'Smart Routing - Optimizing return inventory management and resale velocity',
+        desc: 'National retailers often send all returns to once place, sometimes across the country. Why not route them to a local store, warehouse, or consolidation center?',
         isOpen: false,
     }
 

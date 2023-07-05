@@ -24,7 +24,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
 
-    const onClickProject = (e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+    const onClickProject = (): void => {
         if (!props.isOpen) props.onToggleProject()
     }
 
@@ -51,7 +51,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
                 ref={innerDiv}
                 layout
                 transition={jdAniUtils.baseEase}
-                onClick={(e) => { onClickProject(e) }}
+                onClick={onClickProject}
                 className={`${props.isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
                 style={{
                     cursor: props.isOpen ? 'unset' : 'pointer',
