@@ -12,6 +12,7 @@ import { JdBoomNativeApp } from "../components/jdProjects/jdBoomNativeApp";
 import { JdSmartRouteApp } from "../components/jdProjects/jdSmartRouteApp";
 import { JdSmartRouteWeb } from "../components/jdProjects/jdSmartRouteWeb";
 import { JdRekApp } from "../components/jdProjects/jdRekApp";
+import { JdRekWeb } from "../components/jdProjects/jdRekWeb";
 
 export class JdProjectStore {
     constructor() {
@@ -82,6 +83,17 @@ export class JdProjectStore {
         component: <JdRekApp />,
         title: 'Rek it. - Tracking recommendations amongst friends',
         desc: `Walking away from a dinner with friends, I couldn't remember a single TV show we talked about. How nice would it be to track it?`,
+        isOpen: false,
+    }
+
+    public rekWeb: IJdProject = {
+        id: '7',
+        company: jdCompaniesStore.rek,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
+        component: <JdRekWeb />,
+        title: 'Promoting "Rek it" - a social recommendations app',
+        desc: `After spending months in the React Native realm, it was time to revist the wonderful world wide web.`,
         isOpen: false,
     }
 
