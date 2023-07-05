@@ -1,6 +1,7 @@
 import jdStringUtils from '../../utils/jdStringUtils';
 import { JdImg } from '../jdImg/jdImg';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
+import { JdVimeoPlayer } from '../jdVimeoPlayer/jdVimeoPlayer';
 import styles from './proejctsStyles.module.scss';
 
 export function JdSmartRouteApp(): React.JSX.Element {
@@ -82,6 +83,34 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
+            <p>We started with the simple pieces like return items, destinations, custom properties, and basic rule setup.</p>
+
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/842533893?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+                style={{ width: '100%', height: 'auto', padding: 0 }}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of the Smart Route admin screens.</figcaption>
+
+            <p>Eventually, we started to tie all of the objects together and started to work on the biggest challenge: custom rule overrides.</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouting3.webp?alt=media'
+                className={styles.projectsImage}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshot of the custom conditions page.</figcaption>
+
+            {/* RESULTS */}
+            <JdProjectSubHeader {...jdStringUtils.results} />
+            <p>Within about two months, we had gone from conceptions to a production ready app with robust client customization.</p>
+
+            <p>We were gaining traction with three large national retailers who immediately saw the benefit of our app and the ease of use.</p>
+
+
         </>
     )
 }
