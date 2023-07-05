@@ -53,18 +53,35 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteConditions1.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ placeSelf: 'center' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteConditions2.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ placeSelf: 'center' }}
                 />
             </div>
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes of the custom conditions screen (two versions).</figcaption>
 
+            <p>The only other complexity around the design was creating intuitive relationships between things like returned items, allowed return destinations, and their custom properties.</p>
+            <p>I always enjoy designing dashboards and this one turned out to be quite a useful one for national retailers.</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto1.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto2.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototypes of the dashboard and rule override screens.</figcaption>
+
+            {/* BUILD */}
+            <JdProjectSubHeader {...jdStringUtils.build} />
         </>
     )
 }
