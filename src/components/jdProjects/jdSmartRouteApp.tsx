@@ -106,7 +106,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>Within about two months, we had gone from conceptions to a production ready app with robust client customization.</p>
+            <p>Within about two months, we had gone from conceptions to a production ready app with a robust client customization UI and an endpoint for clients to use.</p>
 
             <p>We were gaining traction with three large national retailers who immediately saw the benefit of our app and the ease of use.</p>
 
