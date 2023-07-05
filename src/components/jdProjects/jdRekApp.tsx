@@ -13,6 +13,18 @@ export function JdRekApp(): React.JSX.Element {
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Create <JdATag href="https://rekit.app/">an app</JdATag> where friends could track recommendations amongst friends.</p>
 
+            {/* FUN FEATURES */}
+            <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
+            <ul>
+                <li>Custom link preview scraper</li>
+                <li>Native share activity ("share with")</li>
+                <li>Social data models (friends, commenting, etc.)</li>
+                <li>Push notifications</li>
+                <li>Image upload</li>
+                <li>App update enforcement</li>
+                <li>Promotinal vidoes</li>
+            </ul>
+
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
             <p>I came up with this idea around 10 years ago and evolved it quite a bit since then.</p>

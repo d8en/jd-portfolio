@@ -64,7 +64,6 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             <p>Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. It's easy to overcomplicate and cause more work.</p>
 
-
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
             <p>The shopper experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify apps</Link>, so I started with a clean slate.</p>
@@ -94,7 +93,6 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-
             <p>We integrated around 40 stores and also spent a good amount of time optimizing our experience for stores we weren't integrated with.</p>
 
             {/* STORE INTEGRATION */}

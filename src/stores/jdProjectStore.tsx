@@ -92,7 +92,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
         component: <JdRekWeb />,
-        title: 'Promoting "Rek it" - a social recommendations app',
+        title: 'Building a website to promote "Rek it" - a social recommendations app',
         desc: `After spending months in the React Native realm, it was time to revist the wonderful world wide web.`,
         isOpen: false,
     }
