@@ -11,6 +11,7 @@ import { To } from "react-router-dom";
 import { JdBoomNativeApp } from "../components/jdProjects/jdBoomNativeApp";
 import { JdSmartRouteApp } from "../components/jdProjects/jdSmartRouteApp";
 import { JdSmartRouteWeb } from "../components/jdProjects/jdSmartRouteWeb";
+import { JdRekApp } from "../components/jdProjects/jdRekApp";
 
 export class JdProjectStore {
     constructor() {
@@ -70,6 +71,17 @@ export class JdProjectStore {
         component: <JdSmartRouteWeb />,
         title: 'Marketing a complex reverse logistics app in a one page scrollable site',
         desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
+        isOpen: false,
+    }
+
+    public rekApp: IJdProject = {
+        id: '6',
+        company: jdCompaniesStore.rek,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.mobX, jdSkillsStore.sql, jdSkillsStore.noSql, jdSkillsStore.nodeJs, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekPreview.webp?alt=media',
+        component: <JdRekApp />,
+        title: 'Native app - Tracking recommendations amongst friends',
+        desc: `Walking away from a dinner with friends, I couldn't remember a single TV show we talked about. How nice would it be to track it in an app?`,
         isOpen: false,
     }
 
