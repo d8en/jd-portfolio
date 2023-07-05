@@ -12,25 +12,25 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Make it easier for consumers to manage all of their returns, while offering home-pickup for all stores and providing retailer benefits like smart return routing.</p>
+            <p>Build a native mobile app for shoppers to manage ALL of their returns, while offering home pickup and providing retailer benefits.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
-                <li>Native camera interactions for label scanning</li>
-                <li>OCR Scanning for shipping labels</li>
+                <li>Native camera label scanning</li>
+                <li>Real-time OCR on shipping labels (image text recognition)</li>
                 <li>Custom integrated webview</li>
-                <li>Tap to upload label from webview</li>
-                <li>Hovering keyboard input</li>
-                <li>Intro tutorial walkthrough</li>
+                <li>Webview injection for shipping label upload</li>
+                <li>Animated hovering keyboard input</li>
+                <li>Swipable tutorial walkthrough</li>
                 <li>Contextual help menus</li>
-                <li>Pan responder gestures for slideups</li>
+                <li>Pan responder gestures for slideups / dismissal</li>
                 <li>Swipable scroll paging</li>
             </ul>
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>There were a handful of some interesting challenges and questions. How could build store integration across so many stores? What type of integration would we need? What were the major problems around the returns experience for shoppers? How could retailers benefit?</p>
+            <p>How could we integrate with so many stores? What type of integration would we need? What were the major problems around the returns experience for shoppers? How could retailers benefit?</p>
 
             {/* NOTES SCREENSHOT */}
             <JdImg
@@ -49,13 +49,27 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
 
-            <p>We built a list of the top stores to integrate with and found ways to optimize those integration efforts (ex: integrate with a provider that covered many stores).</p>
+            <p>We researched the top retail stores who were likely to have high volume returns and found ways to optimize those integration efforts (ex: integrate with a provider that covered many stores).</p>
 
-            <p>The architecture we built for our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify app</Link> allowed us share code, which helped us get this product built faster but also avoided common problems around "fixing bugs in two places".</p>
+            <p>There were a few interactions that we knew would make it easier to submit the return with the retailer without leaving our app (storing user info, pulling order history, etc.). </p>
+
+            <p className={styles.projectGapReducer}>Our multi-project monorepo architecture from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify app</Link> was beneficial in a few ways:</p>
+
+            <ul>
+                <li>Most of the global state was already defined (view models)</li>
+                <li>State update methods</li>
+                <li>API definitions and methods</li>
+                <li>Fixing bugs in one place</li>
+            </ul>
+
+            <p>Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. It's easy to overcomplicate and cause more work.</p>
+
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>The experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify apps</Link>, so I started with a clean slate. We choose a dark mode for various reasons, but planned to add theming later on.</p>
+            <p>The shopper experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify apps</Link>, so I started with a clean slate.</p>
+
+            <p>We studied top retailer returns experiences and came up with a general flow that we could start building out.</p>
 
             {/* PROTOTYPE SCREENSHOTS */}
             <div className={styles.multiMedia}>
@@ -76,12 +90,12 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of our mobile prototype.</figcaption>
 
-            <p>We studied top retailer returns experiences and came up with a general flow that we could start building out.</p>
+            <p>We went with a dark mode as our primary theme, but planned to add custom theming later on.</p>
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
 
-            <p>We integrated with around 40 stores and also spent a good amount of time optimizing our experience for stores we weren't integrated with.</p>
+            <p>We integrated around 40 stores and also spent a good amount of time optimizing our experience for stores we weren't integrated with.</p>
 
             {/* STORE INTEGRATION */}
             <JdVimeoPlayer
@@ -114,7 +128,18 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live demo of the 'tap to upload' feature within an integrated webview.</figcaption>
 
-            <p>During our alpha testing, we found that breaking up the return process into more pages with fewer selections on each page felt 'faster' and easier to digest.</p>
+            <p>I also built a swipable tutorial and contextual help menu that showed help messages relevant to the page and the state of the app.</p>
+
+            {/* TUTORIAL */}
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/842506013?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipable" tutorial.</figcaption>
+
+            <p>During our alpha testing, we found that breaking up the return process into more "pages" with fewer selections on each page felt faster and easier for the shoppers to digest.</p>
 
             {/* LIVE SCREENSHOTS */}
             <div className={styles.multiMedia}>

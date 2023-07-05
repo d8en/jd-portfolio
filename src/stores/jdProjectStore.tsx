@@ -45,7 +45,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
         component: <JdBoomNativeApp />,
         title: 'Native App - One app, all returns, any store',
-        desc: 'The idea was relatively simple - build an app for shoppers to manage returns for any store they shopped at.',
+        desc: 'Returns can be a pain, but how nice would it be to manage all of them in one app across all of the stores you shopped at?',
         isOpen: false,
     }
 
