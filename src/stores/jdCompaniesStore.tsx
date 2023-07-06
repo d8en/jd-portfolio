@@ -84,7 +84,7 @@ export class JdCompaniesStore {
     }
 
     public typo: IJdSkillCo = {
-        name: 'Co-Founder & Dev',
+        name: 'Founder & Dev',
         companyName: 'Typo',
         xp: 1,
         xpPercentage: .2,
