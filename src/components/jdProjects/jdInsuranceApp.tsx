@@ -63,6 +63,9 @@ export function JdInsuranceApp(): React.JSX.Element {
                 className={`${styles.projectVideo} ${styles.projectVideoWide}`}
             />
 
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Animated prototype of the future vision of the product.</figcaption>
+
         </>
     )
 }
