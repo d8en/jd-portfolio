@@ -1,6 +1,6 @@
 @use "../../styles/" as *;
 
-$iconSize: 36px;
+$iconSize: 26px;
 $skillGap: 16px;
 
 .xpContainer {
@@ -41,13 +41,13 @@ $skillGap: 16px;
 .xpIcon {
     display: grid;
     place-items: center;
-    // height: $iconSize;
-    // width: $iconSize;
+    height: $iconSize;
+    width: $iconSize;
 }
 
 .xpIconSmaller {
-    // height: 24px !important;
-    // width: 24px !important;
+    height: 22px !important;
+    width: 22px !important;
 }
 
 .xpImage {
@@ -72,6 +72,7 @@ $skillGap: 16px;
 .xpCoName {
     @include jdLineClamp(1);
     width: 100%;
+    height: 22px;
     // color: var(--greyText);
     @include font-size-normal;
     @include font-weight-regular;
