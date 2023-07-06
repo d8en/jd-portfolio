@@ -78,25 +78,25 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
 
 
                     {/* TITLE */}
-                    <h1 className={styles.projectHeader}>{props.title}</h1>
+                    <h2 className={styles.projectHeader}>{props.title}</h2>
 
                     {/* DESCRIPTION */}
                     <p className={props.isOpen ? '' : styles.projectDesc}>{props.desc}</p>
 
                     {/* COMPANY HEADEAR */}
                     {props.isOpen &&
-                        <JdProjectSubHeader {...jdStringUtils.company} />
+                        <>
+                            <JdProjectSubHeader {...jdStringUtils.company} />
+                            <JdXpItem
+                                name={props.company.name}
+                                companyName={props.company.companyName}
+                                imgSrc={props.company.imgSrc}
+                                icon={props.company.icon}
+                                xp={props.company.xp}
+                                xpPercentage={props.company.xpPercentage}
+                            />
+                        </>
                     }
-
-                    {/* COMPANY */}
-                    <JdXpItem
-                        name={props.company.name}
-                        companyName={props.company.companyName}
-                        imgSrc={props.company.imgSrc}
-                        icon={props.company.icon}
-                        xp={props.company.xp}
-                        xpPercentage={props.company.xpPercentage}
-                    />
 
                     {/* SKILLS HEADEAR */}
                     {props.isOpen &&

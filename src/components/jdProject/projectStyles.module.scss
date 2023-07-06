@@ -10,7 +10,7 @@ $containerBorder: 24px;
 .projectsContainer {
     border-radius: $containerBorder;
     display: grid;
-    border: 1.5px solid var(--primFg);
+    // border: 1.5px solid var(--greyBg);
     overflow: hidden;
     max-width: $desktopMaxWidth;
 
@@ -59,8 +59,8 @@ $containerBorder: 24px;
 
 .projectPreviewImgContainer {
     @include boxSizingBorder;
-    background-color: var(--greyBg);
-    padding: 24px;
+    // background-color: var(--greyBg);
+    padding: 36px;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -81,7 +81,7 @@ $containerBorder: 24px;
 }
 
 .projectHeader {
-    @include jdLineClamp(2);
+    @include jdLineClamp(3);
     @include font-size-larger;
     margin: 0 0 -8px 0;
 }

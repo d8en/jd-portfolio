@@ -49,7 +49,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
         component: <JdBoomNativeApp />,
-        title: 'Native App - One app, all returns, any store',
+        title: 'One app for all of your returns',
         desc: 'Returns can be a pain, but how nice would it be to manage all of them in one app across all of the stores you shopped at?',
         isOpen: false,
     }
@@ -60,7 +60,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRoutePreview.webp?alt=media',
         component: <JdSmartRouteApp />,
-        title: 'Smart Routing - Optimizing return inventory management and resale velocity',
+        title: 'Optimizing return inventory management and resale velocity',
         desc: 'National retailers often send all returns to once place, sometimes across the country. Why not route them to a local store, warehouse, or consolidation center?',
         isOpen: false,
     }

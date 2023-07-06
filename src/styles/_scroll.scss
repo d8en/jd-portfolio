@@ -1,5 +1,6 @@
 @mixin scroll-bar {
     scrollbar-color: var(--greyText) transparent;
+    scrollbar-base-color: transparent;
     scrollbar-width: 24px;
     &::-webkit-scrollbar,
     -moz-scrollbar {
