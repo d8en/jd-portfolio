@@ -41,13 +41,13 @@ $skillGap: 16px;
 .xpIcon {
     display: grid;
     place-items: center;
-    height: $iconSize;
-    width: $iconSize;
+    // height: $iconSize;
+    // width: $iconSize;
 }
 
 .xpIconSmaller {
-    height: 24px !important;
-    width: 24px !important;
+    // height: 24px !important;
+    // width: 24px !important;
 }
 
 .xpImage {

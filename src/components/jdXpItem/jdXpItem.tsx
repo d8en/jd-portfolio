@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { JdImg } from '../jdImg/jdImg';
 import styles from './xpItemStyles.module.scss';
 
@@ -11,6 +12,18 @@ export interface IJdXpItemProps {
 }
 
 export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element {
+
+    // State
+    const [iconHeight, setIconHeight] = useState<number | undefined>();
+
+    // Header height
+    const h2Ref = useRef<HTMLHeadingElement | null>(null);
+
+    useEffect(() => {
+        if (!h2Ref) return;
+        setIconHeight(h2Ref.current?.getBoundingClientRect().height);
+    }, []);
+
     return (
         <div className={styles.xpContainer} style={!props.children ? { display: 'flex', gap: 12 } : undefined}>
 
@@ -18,14 +31,18 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
             <div className={styles.xpColumn} style={!props.children ? { gap: 8 } : undefined}>
 
                 {/* ICON */}
-                <div className={`${styles.xpIcon} ${props.children ? '' : styles.xpIconSmaller}`}>
+                <div
+                    className={styles.xpIcon}
+                    style={{ height: iconHeight, width: iconHeight }}
+                >
                     {props.icon ?
                         props.icon
                         :
                         props.imgSrc ?
                             <JdImg
                                 srcSet={props.imgSrc}
-                                className={`${styles.xpImage} ${props.children ? '' : styles.xpIconSmaller}`}
+                                className={styles.xpImage}
+                                style={{ height: iconHeight, width: iconHeight }}
                             />
                             :
                             undefined
@@ -45,7 +62,12 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                 <div className={styles.xpRow}>
 
                     {/* TITLE */}
-                    <h2 className={`${styles.xpHeader} ${!props.children ? styles.xpCoName : ''}`}>{props.companyName ?? props.name}</h2>
+                    <h2
+                        ref={h2Ref}
+                        className={`${styles.xpHeader} ${!props.children ? styles.xpCoName : ''}`}
+                    >
+                        {props.companyName ?? props.name}
+                    </h2>
 
                     {/* XP BAR */}
                     {props.children &&
