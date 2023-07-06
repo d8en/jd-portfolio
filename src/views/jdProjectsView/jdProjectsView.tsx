@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import jdProjectManager from "../../managers/jdProjectManager";
 import jdStringUtils from "../../utils/jdStringUtils";
 import jdRoutes from "../../utils/jdRoutes";
+import React from "react";
 
 export const JdProjectsView = observer((): React.JSX.Element => {
 
@@ -55,11 +56,9 @@ export const JdProjectsView = observer((): React.JSX.Element => {
             <div className={styles.projectViewContainer}>
                 {jdProjectStore.projects.map((project: IJdProject) =>
                     <JdProject
-                        key={project.id}
                         {...project}
                         onToggleProject={async () => onToggleProject(project)}
                     />
-
                 )}
             </div>
         </JdViewWrapper>

@@ -1,6 +1,6 @@
 @use "../../styles/" as *;
 
-$previewImgHeight: 200px;
+$previewImgHeight: 340px;
 $containerBorder: 24px;
 
 .projectsHolder {
@@ -11,7 +11,7 @@ $containerBorder: 24px;
     border-radius: $containerBorder;
     display: grid;
     // border: 1.5px solid var(--greyBg);
-    overflow: hidden;
+    // overflow: hidden;
     max-width: $desktopMaxWidth;
 
     &:hover {
@@ -59,8 +59,10 @@ $containerBorder: 24px;
 
 .projectPreviewImgContainer {
     @include boxSizingBorder;
-    // background-color: var(--greyBg);
-    padding: 36px;
+    padding: 72px 0;
+    @include media-phone {
+        padding: 20px 0;
+    }
     display: flex;
     position: relative;
     overflow: hidden;
@@ -70,6 +72,9 @@ $containerBorder: 24px;
     @include aniLinkScale;
     object-fit: contain;
     height: $previewImgHeight;
+    @include media-phone {
+        height: 200px;
+    }
     width: 100%;
 }
 
