@@ -14,6 +14,7 @@ import { JdSmartRouteWeb } from "../components/jdProjects/jdSmartRouteWeb";
 import { JdRekApp } from "../components/jdProjects/jdRekApp";
 import { JdRekWeb } from "../components/jdProjects/jdRekWeb";
 import { JdTypoApp } from "../components/jdProjects/jdTypoApp";
+import { JdInsuranceApp } from "../components/jdProjects/jdInuranceApp";
 
 export class JdProjectStore {
     constructor() {
@@ -114,7 +115,7 @@ export class JdProjectStore {
         company: jdCompaniesStore.primacy,
         skills: [jdSkillsStore.productDesign, jdSkillsStore.figma, jdSkillsStore.afterEffects],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/insuranceProto.webp?alt=media',
-        component: <JdTypoApp />,
+        component: <JdInsuranceApp />,
         title: `Designing an app for insurance underwriters`,
         desc: `How do you take some of the most complex data structures and present them in a digestable and actionable UI? Lots of research and iteration.`,
         isOpen: false,
