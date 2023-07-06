@@ -87,7 +87,7 @@ export function JdRekApp(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekIcons.webp?alt=media'
                 className={styles.projectsImage}
-                style={{ borderRadius: 20 }}
+                style={{ borderRadius: 16 }}
             />
 
             {/* CAPTION */}
@@ -103,17 +103,17 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot8.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot7.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot11.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
             </div>
 
@@ -126,17 +126,17 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot3.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot1.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot5.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
             </div>
 
@@ -151,17 +151,17 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot4.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot6.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot12.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
+                    style={{ borderRadius: 16 }}
                 />
             </div>
 
