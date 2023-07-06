@@ -1,6 +1,7 @@
 import jdStringUtils from "../../utils/jdStringUtils";
 import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
+import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 import styles from './proejctsStyles.module.scss';
 
 
@@ -30,7 +31,52 @@ export function JdTypoApp(): React.JSX.Element {
                 style={{ borderRadius: 24 }}
             />
 
-            <p>Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x).</p>
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live screenshot of the "create post" screen.</figcaption>
+
+            <p>Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x). This ended up being pretty simple - use a timeout delay multiplier that is controled by the user.</p>
+
+
+            {/* DESIGN */}
+            <JdProjectSubHeader {...jdStringUtils.design} />
+            <p>I wanted a super minimalist approach with almost nothing on the screen except reading and writing.</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign3.webp?alt=media'
+                    className={styles.projectsImage}
+                    style={{ boxShadow: 'unset' }}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign2.webp?alt=media'
+                    className={styles.projectsImage}
+                    style={{ boxShadow: 'unset' }}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign1.webp?alt=media'
+                    className={styles.projectsImage}
+                    style={{ boxShadow: 'unset' }}
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Initial designs for the writing and reading screens.</figcaption>
+
+            <p>This was the first time I would create an animated donut (for the countdown) in React Native, and I did not want to reach for a library. React Native Reanimated was a perfect utility for this.</p>
+
+            {/* BUILD */}
+            <JdProjectSubHeader {...jdStringUtils.build} />
+            <p>For some odd reason, I did a prototype on the web but quickly jumped into React Native.</p>
+
+            <JdVimeoPlayer
+                src="https://player.vimeo.com/video/842887806?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of the typo app on an iPhone.</figcaption>
+
+            <p></p>
 
         </>
     )
