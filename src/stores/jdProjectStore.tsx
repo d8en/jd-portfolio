@@ -14,7 +14,7 @@ import { JdSmartRouteWeb } from "../components/jdProjects/jdSmartRouteWeb";
 import { JdRekApp } from "../components/jdProjects/jdRekApp";
 import { JdRekWeb } from "../components/jdProjects/jdRekWeb";
 import { JdTypoApp } from "../components/jdProjects/jdTypoApp";
-import { JdInsuranceApp } from "../components/jdProjects/jdInuranceApp";
+import { JdInsuranceApp } from "../components/jdProjects/jdInsuranceApp";
 
 export class JdProjectStore {
     constructor() {
