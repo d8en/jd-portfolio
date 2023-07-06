@@ -40,3 +40,11 @@ $imgMaxHeight: 440px;
     height: 600px;
     place-self: center;
 }
+
+.projectVideoWide {
+    width: 100%;
+
+    @include media-phone {
+        margin-top: -124px;
+    }
+}
