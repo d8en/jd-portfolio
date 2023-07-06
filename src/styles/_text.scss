@@ -19,8 +19,8 @@ ol {
 h1 {
     margin: 12px 0;
     @include font-size-largest;
-    @include font-weight-black;
-    line-height: 1.5em;
+    @include font-weight-bold;
+    line-height: 1.2em;
 }
 
 h2 {

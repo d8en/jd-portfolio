@@ -93,7 +93,7 @@ export class JdSkillsStore {
     }
 
     public reanimated: IJdSkillCo = {
-        name: 'React Native Reanimated',
+        name: 'RN Reanimated',
         icon: <ReanimatedIcon />,
         xp: 3,
         xpPercentage: .75,

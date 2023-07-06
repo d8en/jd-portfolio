@@ -1,6 +1,6 @@
 @use "../../styles/" as *;
 
-$previewImgHeight: 140px;
+$previewImgHeight: 200px;
 $containerBorder: 24px;
 
 .projectsHolder {
@@ -82,15 +82,13 @@ $containerBorder: 24px;
 
 .projectHeader {
     @include jdLineClamp(2);
-    @include font-size-large;
-}
-
-.projectHeaderOpen {
     @include font-size-larger;
+    margin: 0 0 -8px 0;
 }
 
 .projectDesc {
     @include jdLineClamp(2);
+    color: var(--greyText);
 }
 
 .projectSkills {
@@ -98,5 +96,3 @@ $containerBorder: 24px;
     flex-wrap: wrap;
     gap: 8px;
 }
-
-

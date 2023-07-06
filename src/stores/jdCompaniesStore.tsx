@@ -2,6 +2,7 @@ import { makeAutoObservable } from "mobx";
 import { ReactComponent as BoomIcon } from '../assets/svg/brands/boomerang.svg';
 import { ReactComponent as RekIcon } from '../assets/svg/brands/rek.svg';
 import { ReactComponent as GravixIcon } from '../assets/svg/brands/gravix.svg';
+import { ReactComponent as TypoIcon } from '../assets/svg/brands/typo.svg';
 import { JdATag } from "../components/jdATag/jdATag";
 import jdObjUtils from "../utils/jdObjUtils";
 import { IJdSkillCo } from "../models/iJdSkillCo";
@@ -12,7 +13,7 @@ export class JdCompaniesStore {
     }
 
     public boomerang: IJdSkillCo = {
-        name: 'VP, Development & Design',
+        name: 'VP, Dev & Design',
         companyName: 'boomerang',
         xp: 2,
         xpPercentage: .75,
@@ -79,6 +80,18 @@ export class JdCompaniesStore {
         component:
             <>
                 <p>At gravix, I created a digital agency with branding, UX, and marketing services for 10 clients across several industries.</p>
+            </>
+    }
+
+    public typo: IJdSkillCo = {
+        name: 'Co-Founder & Dev',
+        companyName: 'Typo',
+        xp: 1,
+        xpPercentage: .2,
+        icon: <TypoIcon />,
+        component:
+            <>
+                <p>Typo is a text-only social media app that probably isn't worth building. This may just continue to be a fun development challenge.</p>
             </>
     }
 

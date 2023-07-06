@@ -78,7 +78,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
 
 
                     {/* TITLE */}
-                    <h2 className={props.isOpen ? styles.projectHeaderOpen : styles.projectHeader}>{props.title}</h2>
+                    <h1 className={styles.projectHeader}>{props.title}</h1>
 
                     {/* DESCRIPTION */}
                     <p className={props.isOpen ? '' : styles.projectDesc}>{props.desc}</p>

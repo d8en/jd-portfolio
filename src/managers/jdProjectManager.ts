@@ -9,7 +9,6 @@ class JdProjectManager extends JdManagerBase<JdProjectStore> {
         await this.jdRunInAction(() => {
             project.isOpen = !project.isOpen;;
         });
-        console.log('opening project');
     }
 
     public async closeAllProjects(): Promise<void> {
@@ -20,7 +19,6 @@ class JdProjectManager extends JdManagerBase<JdProjectStore> {
                 });
             }
         }
-        console.log('closing all projects');
     }
 }
 
