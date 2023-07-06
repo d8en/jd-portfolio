@@ -1,4 +1,4 @@
-$hoverDuration: 0.1s;
+$hoverDuration: 0.4s;
 
 @mixin linkTransitions {
     transition: transform $hoverDuration, background-color $hoverDuration, color $hoverDuration, stroke $hoverDuration;

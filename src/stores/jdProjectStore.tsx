@@ -60,7 +60,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRoutePreview.webp?alt=media',
         component: <JdSmartRouteApp />,
-        title: 'Optimizing return inventory management and resale velocity',
+        title: 'Optimizing return inventory by routing with purpose',
         desc: 'National retailers often send all returns to once place, sometimes across the country. Why not route them to a local store, warehouse, or consolidation center?',
         isOpen: false,
     }
@@ -112,11 +112,11 @@ export class JdProjectStore {
     public higApp: IJdProject = {
         id: '9',
         company: jdCompaniesStore.primacy,
-        skills: [jdSkillsStore.productDesign, jdSkillsStore.figma, jdSkillsStore.brandDesign],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
+        skills: [jdSkillsStore.productDesign, jdSkillsStore.figma, jdSkillsStore.afterEffects],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/insuranceProto.webp?alt=media',
         component: <JdTypoApp />,
-        title: `Typo - yet another social media app I probably shouldn't build.`,
-        desc: `I love the idea of returning to a text-only social media, but is it really something we need? Probably not.`,
+        title: `Designing an app for insurance underwriters`,
+        desc: `How do you take some of the most complex data structures and present them in a digestable and actionable UI? Lots of research and iteration.`,
         isOpen: false,
     }
 
