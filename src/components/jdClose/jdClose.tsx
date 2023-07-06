@@ -12,9 +12,9 @@ export function JdClose(props: IJdCloseProps): React.JSX.Element {
         <motion.div
             onClick={() => props.onClick()}
             className={styles.closeContainer}
-            initial={{ top: -100 }}
+            initial={{ top: -80, }}
             animate={{ top: 12 }}
-            transition={jdAniUtils.springTransition}
+            transition={{ ...jdAniUtils.springTransition, delay: .3 }}
         >
             <Close />
         </motion.div>
