@@ -101,7 +101,7 @@ export class JdProjectStore {
     public typoApp: IJdProject = {
         id: '8',
         company: jdCompaniesStore.typo,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.figma, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
         component: <JdTypoApp />,
         title: `Typo - yet another social media app I probably shouldn't build.`,
