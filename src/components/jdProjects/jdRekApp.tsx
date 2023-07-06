@@ -82,6 +82,17 @@ export function JdRekApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototype screenshots of the various versions of Rek I had designed.</figcaption>
 
+            <p>I love when I get the chance to design my own icons. There are so many great icon sets out there, so it's not the most efficient thing to do but I enjoy it.</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekIcons.webp?alt=media'
+                className={styles.projectsImage}
+                style={{ borderRadius: 20 }}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Icon sets used I designed for Rek.</figcaption>
+
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
             <p>I finally carved out time to start building the app, starting with a super quick prototype using Firebase functions and their NoSQL implementation (Cloud Firestore).</p>
@@ -131,7 +142,6 @@ export function JdRekApp(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app.</figcaption>
-
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />

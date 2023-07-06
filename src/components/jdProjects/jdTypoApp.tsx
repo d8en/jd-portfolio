@@ -66,7 +66,7 @@ export function JdTypoApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>For some odd reason, I did a prototype on the web but quickly jumped into React Native.</p>
+            <p>I started with figuring out how to animate the donut timer, using the Reanimated library. After that, I spent the majority of the time building the mechanism to track selection changes and the timing of each keystroke so that I could play it back accurately.</p>
 
             <JdVimeoPlayer
                 src="https://player.vimeo.com/video/842887806?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -76,7 +76,7 @@ export function JdTypoApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live demo of the typo app on an iPhone.</figcaption>
 
-            <p></p>
+            <p>I built a simple "feed" page that displays each post in a scroll-locking (TikTok) style, with playback options like restart, pause, and playback speed.</p>
 
         </>
     )
