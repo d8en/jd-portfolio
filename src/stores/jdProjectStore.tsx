@@ -109,9 +109,19 @@ export class JdProjectStore {
         isOpen: false,
     }
 
-    public get isAnyProjectOpen(): boolean {
-        if (this.projects.find((proj) => proj.isOpen)) return true;
+    public higApp: IJdProject = {
+        id: '9',
+        company: jdCompaniesStore.primacy,
+        skills: [jdSkillsStore.productDesign, jdSkillsStore.figma, jdSkillsStore.brandDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
+        component: <JdTypoApp />,
+        title: `Typo - yet another social media app I probably shouldn't build.`,
+        desc: `I love the idea of returning to a text-only social media, but is it really something we need? Probably not.`,
+        isOpen: false,
+    }
 
+    public get isAnyProjectOpen(): boolean {
+        if (this.projects.find((proj: IJdProject) => proj.isOpen)) return true;
         return false;
     }
 
