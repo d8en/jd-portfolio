@@ -82,6 +82,26 @@ export function JdSmartRouteApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes of the dashboard and rule override screens.</figcaption>
 
+            <p>We also put together a prototype for retail staff to process returns that were brought direclty to a retail location.</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto1.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto2.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto3.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototypes of the in-store experience</figcaption>
+
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
             <p>We started with the simple pieces like return items, destinations, custom properties, and basic rule setup.</p>
