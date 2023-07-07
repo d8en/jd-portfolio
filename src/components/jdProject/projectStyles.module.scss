@@ -37,7 +37,6 @@ $containerBorder: 24px;
 
         .projectPreviewImgContainer {
             @include aniHoverOnly;
-            background-color: var(--greyBg);
             border-radius: 20px;
         }
     }
@@ -101,7 +100,6 @@ $containerBorder: 24px;
 }
 
 .projectContent {
-    background-color: var(--primBg);
     display: grid;
     gap: 20px;
 }

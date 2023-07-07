@@ -59,8 +59,7 @@ html {
 @mixin globalTopAfter {
     &::before {
         content: "Firefox appears to treat bottom padding in scrollable divs differently, or it's bugged.";
-        // height: 88px;
-        height: 24px;
+        height: 20px;
         color: transparent;
     }
 }
