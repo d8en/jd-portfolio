@@ -20,14 +20,14 @@ h1 {
     margin: 12px 0;
     @include font-size-largest;
     @include font-weight-bold;
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
 
 h2 {
     margin: 0;
     @include font-size-large;
     @include font-weight-bold;
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
 
 h3 {
@@ -60,5 +60,5 @@ strong {
 }
 
 @mixin projectGapReducer {
-    margin-bottom: -28px;
+    margin-bottom: -24px;
 }

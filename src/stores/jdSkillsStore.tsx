@@ -89,7 +89,7 @@ export class JdSkillsStore {
         icon: <ProductIcon />,
         xp: 7,
         xpPercentage: 1,
-        component: <p>Product design was something I discovered a passion for early on in my career as a product analyst and it's still something I love to this day.</p>,
+        component: <p>I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industires.</p>
     }
 
     public reanimated: IJdSkillCo = {
