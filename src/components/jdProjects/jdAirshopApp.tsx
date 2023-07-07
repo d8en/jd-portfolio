@@ -26,7 +26,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>How could we offer same-day pickups in our pilot area (Chicago)? A grass-roots approach - our staff would be our drivers for the pilot.</p>
+            <p>How could we offer <strong>same-day</strong> pickups in our pilot area (Chicago)? A grass-roots approach - our staff would be our drivers for the pilot.</p>
 
 
             {/* WHITEBOARD */}
@@ -146,8 +146,8 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>28 days later, we shipped our app.</p>
-            <p>In the first month, we had 20+ returns with positive feedback pouring in. It was clear that return pickup was valuable for our end users, which drove brand loyalty and referral marketing for our client.</p>
-            <p>The success of this product led us to our largest round of funding ($1 million) and would fuel our next big project - scaling this to any Shopify store.</p>
+            <p>In the first month, we had <strong>20+ returns</strong> with positive feedback pouring in. Home pickup was a huge hit for end users and it drove brand loyalty and referral marketing for our client.</p>
+            <p>The success of this product led us to our <strong>largest round of funding ($1 million)</strong> and would fuel our next big project - scaling this to any Shopify store.</p>
 
         </>
     )

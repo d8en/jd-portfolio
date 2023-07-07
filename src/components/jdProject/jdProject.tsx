@@ -30,8 +30,17 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
 
     // Mount
     useEffect(() => {
+        if (!innerDiv.current) return;
         setInnerDivRect(innerDiv.current?.getBoundingClientRect());
+        innerDiv.current.scrollTop = 0;
     }, []);
+
+    // When opened
+    useEffect(() => {
+        if (!innerDiv.current) return;
+
+        innerDiv.current.scrollTop = 0;
+    }, [props.isOpen]);
 
     return (
 
