@@ -11,12 +11,15 @@ import jdAniUtils from '../../utils/jdAniUtils';
 import { observer } from 'mobx-react-lite';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import { JdClose } from '../jdClose/jdClose';
+import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
+import { Link } from 'react-router-dom';
+import jdProjectStore from '../../stores/jdProjectStore';
 
-export interface IJdProjecProps {
+export interface IJdProjectProps {
     onToggleProject: () => void | Promise<void>;
 }
 
-export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JSX.Element => {
+export const JdProject = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
 
     // Sizing used for wrapper container to maintain scroll position when an article is position:absolute (opened)
     const [innerDivRect, setInnerDivRect] = useState<DOMRect>();
@@ -32,14 +35,14 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
     useEffect(() => {
         if (!innerDiv.current) return;
         setInnerDivRect(innerDiv.current?.getBoundingClientRect());
-        innerDiv.current.scrollTop = 0;
+        // innerDiv.current.scrollTop = 0;
     }, []);
 
     // When opened
     useEffect(() => {
         if (!innerDiv.current) return;
 
-        innerDiv.current.scrollTop = 0;
+        // innerDiv.current.scrollTop = 0;
     }, [props.isOpen]);
 
     return (
@@ -107,7 +110,7 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
                         </>
                     }
 
-                    {/* SKILLS HEADEAR */}
+                    {/* SKILLS HEADER */}
                     {props.isOpen &&
                         <JdProjectSubHeader {...jdStringUtils.skillsUsed} />
                     }
@@ -145,6 +148,22 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
 
                     {/* ARTICLE CONTENT */}
                     {props.isOpen && props.component}
+
+                    {/* UP NEXT */}
+                    {props.isOpen &&
+                        <div className={styles.projectNav}>
+                            {jdProjectStore.prevProject &&
+                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.prevProject)}>
+                                    <ArrowIcon />
+                                </Link>
+                            }
+                            {jdProjectStore.nextProject &&
+                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.nextProject)}>
+                                    <ArrowIcon />
+                                </Link>
+                            }
+                        </div>
+                    }
 
                 </div>
             </motion.div>

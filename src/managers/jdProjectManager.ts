@@ -20,6 +20,12 @@ class JdProjectManager extends JdManagerBase<JdProjectStore> {
             }
         }
     }
+
+    public async cycleProjects(direction: 'next' | 'prev', idx: number): Promise<void> {
+        const newIdx: number = direction === 'next' ? idx + 1 : idx - 1;
+        await this.closeAllProjects();
+        await this.toggleOpenProject(this.store.projects[newIdx]);
+    }
 }
 
 const jdProjectManager: JdProjectManager = new JdProjectManager();

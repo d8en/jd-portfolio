@@ -151,6 +151,20 @@ export class JdProjectStore {
         return [];
     }
 
+    public get idxOfOpenProj(): number {
+        return this.projects.findIndex((proj: IJdProject) => proj.isOpen);
+    }
+
+    public get nextProject(): IJdProject | undefined {
+        if (this.idxOfOpenProj === -1 || (this.idxOfOpenProj + 1) > (this.projects.length - 1)) return;
+        return this.projects[this.idxOfOpenProj + 1];
+    }
+
+    public get prevProject(): IJdProject | undefined {
+        if (this.idxOfOpenProj === -1 || this.idxOfOpenProj - 1 < 0) return;
+        return this.projects[this.idxOfOpenProj - 1];
+    }
+
     public getParamForProject(project: IJdProject): string {
         return project.title.split(' ').join('-');
     }

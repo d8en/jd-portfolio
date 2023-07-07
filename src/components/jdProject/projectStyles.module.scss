@@ -139,3 +139,15 @@ $containerBorder: 24px;
         stroke: var(--primBg);
     }
 }
+
+.projectNav {
+    display: gap;
+    grid-template-columns: min-content auto min-content;
+}
+
+.navArrowIcon {
+    display: grid;
+    place-items: center;
+    height: 40px;
+    width: 40px;
+}
