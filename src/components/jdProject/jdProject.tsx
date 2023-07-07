@@ -11,7 +11,6 @@ import jdAniUtils from '../../utils/jdAniUtils';
 import { observer } from 'mobx-react-lite';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import { JdClose } from '../jdClose/jdClose';
-import { ReactComponent as LaunchIcon } from '../../assets/svg/icons/launch.svg';
 
 export interface IJdProjecProps {
     onToggleProject: () => void | Promise<void>;

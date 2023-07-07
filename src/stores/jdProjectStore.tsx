@@ -30,7 +30,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
         component: <JdAirshopApp />,
         title: `Returns app with home pickup`,
-        desc: `We had one month to build a returns solution for a dark store in Chicago. It felt like an episode of 24, or maybe Master Chef.`,
+        desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef?`,
         isOpen: false,
     }
 
