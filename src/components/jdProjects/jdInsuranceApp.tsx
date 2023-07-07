@@ -53,7 +53,7 @@ export function JdInsuranceApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototypes for the future vision and the immediate work efforts.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Prototypes for the future vision and the immediate work efforts</figcaption>
 
             <p>As a project wrap up, I created an animated prototype for the "future" version. This was my favorite part of the project.</p>
 
@@ -64,7 +64,7 @@ export function JdInsuranceApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Animated prototype of the future vision of the product.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Animated prototype of the future vision of the product</figcaption>
 
         </>
     )

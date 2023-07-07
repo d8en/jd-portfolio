@@ -35,7 +35,7 @@ export function JdRekApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Data model diagram for rek.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Data model diagram for rek </figcaption>
 
             <p>What started as a "movie and tv show recommendation app", evolved into a "recommend anything with a link".</p>
 
@@ -47,17 +47,14 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto3.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto4.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto5.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
             </div>
 
@@ -65,22 +62,19 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto7.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto1.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto2.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototype screenshots of the various versions of Rek I had designed.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Prototype screenshots of the various versions of Rek I had designed</figcaption>
 
             <p>I love when I get the chance to design my own icons. There are so many great icon sets out there, so it's not the most efficient thing to do but I enjoy it.</p>
 
@@ -90,7 +84,7 @@ export function JdRekApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Icon sets used I designed for Rek.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Icon sets used I designed for Rek</figcaption>
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
@@ -114,7 +108,7 @@ export function JdRekApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app</figcaption>
 
             <p>The relationships between friends, the conversations, and the notification features were all fun challenges.</p>
 
@@ -134,7 +128,7 @@ export function JdRekApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app</figcaption>
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
@@ -156,7 +150,7 @@ export function JdRekApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app</figcaption>
 
             <p>Launch day and the following weeks were fun, exciting, and stressful with the app attracting 200+ users and over 1,000 recommendations within the first month!</p>
 
@@ -167,7 +161,7 @@ export function JdRekApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Video created with live screen recordings and After Effects (music by me as well).</figcaption>
+            <figcaption className={styles.projectImageCaption}>Video created with live screen recordings and After Effects (music by me as well)</figcaption>
 
             <p>You can download the app <JdATag href="https://rekit.app/">here</JdATag> (Android and iOS).</p>
 

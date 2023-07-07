@@ -10,7 +10,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Build an app for online-only shoppers to schedule at-home return pickups. Build an app for drivers to handle pickups.</p>
+            <p>Build an app for online-only shoppers to schedule at-home return pickups and an app for drivers to handle pickups.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -26,8 +26,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>How could we offer same-day pickups in our pilot area (Chicago)?</p>
-            <p>A grass-roots approach - our staff would be our drivers for the pilot</p>
+            <p>How could we offer same-day pickups in our pilot area (Chicago)? A grass-roots approach - our staff would be our drivers for the pilot.</p>
 
 
             {/* WHITEBOARD */}
@@ -47,23 +46,14 @@ export function JdAirshopApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             {/* IDEATION */}
-            <p>We had a brainstorming session where we talked through user journies and app features, focusing on coummunication with the user and timely picups.</p>
-
-            <p className={styles.projectGapReducer}>We needed simple <strong>authentication</strong>, avoiding the need for another username and password so we created a passwordless flow:</p>
-            <ol>
-                <li>Shoppers enters their order number</li>
-                <li>We lookup the order using the Shopify API</li>
-                <li>We send an OTP (one-time passcode) to the email associated with the order</li>
-                <li>User enters the OTP in our app</li>
-                <li>Keep them authenticated using a JWT</li>
-            </ol>
+            <p>We laid out user journeys and expected features, focusing on communication with the user and timely pickups.</p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>I created high-fidelity prototypes of the shopper experience for returning items and reviewed internally and with our client. </p>
+            <p>I created high-fidelity prototypes of the shopper experience for returning items and reviewed internally and with our client.</p>
 
             {/* PROTOTYPE VIDEO */}
             <JdVimeoPlayer
@@ -72,7 +62,7 @@ export function JdAirshopApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Video walkthrough of the prototype.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Video walkthrough of the prototype</figcaption>
 
             <p>With a few minor suggestions from our internal staff and client, we were ready to build.</p>
 
@@ -81,27 +71,38 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS3.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS2.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS1.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototypes of the end user experience.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Prototypes of the end user experience</figcaption>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopEmail1.webp?alt=media"
+                />
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopEmail2.webp?alt=media"
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Email template designs</figcaption>
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
 
-            <p>On the technical side, we had to keep things super simple since we only had a month to ship. I met with our backend engineer who had a draft of the db model. With just a few minor tweaks, the model was ready.</p>
+            <p>I met with our backend engineer to plan for our db/ui models, api structure, authentication, and notifications.</p>
 
             {/* VIDEO */}
             <JdVimeoPlayer
@@ -110,7 +111,7 @@ export function JdAirshopApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screen recording of our app right before we shipped to production.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screen recording of our app right before we shipped to production</figcaption>
 
             <p>We decided to keep two separate repos: one for front end, one for backend.</p>
 
@@ -119,27 +120,24 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
 
                 {/* HELP SCREEN */}
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopHelp.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
 
                 {/* CALENDAR */}
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopCalendar.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
 
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of the production web app.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of the production web app</figcaption>
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />

@@ -42,7 +42,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
@@ -60,7 +60,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototypes of the first "traditional Saas" layout.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Prototypes of the first "traditional Saas" layout</figcaption>
 
             <p>Our CMO had an excellent idea: lets take the user on a "route" through the old ways of doing things, then the new. I loved this idea and created a new concept that we ended up moving forward with.</p>
 
@@ -80,7 +80,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototypes of the second layout (old way vs. new way).</figcaption>
+            <figcaption className={styles.projectImageCaption}>Prototypes of the second layout (old way vs. new way)</figcaption>
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
@@ -92,7 +92,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshot of the first section beneath the fold.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshot of the first section beneath the fold</figcaption>
 
             <p>For some odd reason, I've always wanted to design and build a blog. The "<JdATag href="https://boomreturns.io/news">news</JdATag>" page was exactly that, just like the page you're currently on!</p>
 
@@ -108,7 +108,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshot of the news page and a post.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshot of the news page and a post</figcaption>
 
 
             <p>I also enjoy designing and optimizing the interactions around form inputs. Building the <JdATag href="https://boomreturns.io/#letsTalk">contact form</JdATag> and integrating it to send all messages to Hubspot was a surprisingly fun time.</p>
@@ -119,7 +119,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshot of the contact form.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshot of the contact form</figcaption>
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
@@ -132,7 +132,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshot of the graphic we created to promote the cost savings around logistics.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshot of the graphic we created to promote the cost savings around logistics</figcaption>
 
             <p>We were very quickly ready to market our latest <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>smart routing product</Link> and had a ton of positive feedback coming in from our retail partners and prospects.</p>
         </>

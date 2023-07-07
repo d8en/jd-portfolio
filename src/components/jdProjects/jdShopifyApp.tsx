@@ -38,7 +38,7 @@ export function JdShoifyApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             <p>Hiring drivers or gig workers in every city/state felt very asset heavy and would liklely take a long time to implement.</p>
             <p>We figured the best economic and even eco-friendly option was to use existing logistics providers (UPS, FedEx, USPS). Each of these providers had APIs that offered package pickup, most of which was affordable for our retail clients.</p>
@@ -61,22 +61,19 @@ export function JdShoifyApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot3.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot4.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot2.webp?alt=media"
-                    style={{ boxShadow: 'unset' }}
                 />
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for mobile.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for mobile</figcaption>
 
             <p>I created new high-fidelity designs from scratch but carried over elements and lessons-learned from the initial app.</p>
 
@@ -87,7 +84,7 @@ export function JdShoifyApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for desktop.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for desktop</figcaption>
 
             {/* ADMIN PROTOTYPE */}
             <p>In addition to the shopper experience, I also designed an app for Shopify admins. This would be used to manage returns processing.</p>
@@ -98,7 +95,7 @@ export function JdShoifyApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of the admin prototype for desktop.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of the admin prototype for desktop</figcaption>
 
             <p>I've always enjoyed icon design and I took some extra time on this project to build our own set.</p>
 
@@ -132,7 +129,7 @@ export function JdShoifyApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Walkthrough of our Shopify app, with an embarassing narration done by yours truly.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Walkthrough of our Shopify app, with an embarrassing narration done by yours truly</figcaption>
 
             <p>Our mono-repo allowed us to use shared code across the admin and end user experiences, while setting us up nicely for our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.</p>
 
@@ -153,7 +150,7 @@ export function JdShoifyApp(): React.JSX.Element {
                 className={styles.projectVideo}
             />
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Video walkthrough of the Shopify app from our first client.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Video walkthrough of the Shopify app from our first client</figcaption>
 
             <p>Two months later, we had 4 clients signed with around 30 returns per month and growing! We were generating revenue, while getting <JdATag href="https://boomreturns.io/news">great press</JdATag>.</p>
         </>

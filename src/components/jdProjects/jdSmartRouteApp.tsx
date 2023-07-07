@@ -43,7 +43,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             <p>We sketched out all of the 'return flows' for all of the scenarios we had heard from clients and prospects. We came up with a flexible model that made it simple to onboard but allowed for the advanced flexibility these retailers needed.</p>
 
@@ -63,7 +63,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototypes of the custom conditions screen (two versions).</figcaption>
+            <figcaption className={styles.projectImageCaption}>Prototypes of the custom conditions screen (two versions)</figcaption>
 
             <p>The only other complexity around the design was creating intuitive relationships between things like returned items, allowed return destinations, and their custom properties.</p>
             <p>I always enjoy designing dashboards and this one turned out to be quite a useful one for national retailers.</p>
@@ -80,7 +80,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototypes of the dashboard and rule override screens.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Prototypes of the dashboard and rule override screens</figcaption>
 
             <p>We also put together a prototype for retail staff to process returns that were brought direclty to a retail location.</p>
 
@@ -113,7 +113,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live demo of the Smart Route admin screens.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live demo of the Smart Route admin screens</figcaption>
 
             <p>Eventually, we started to tie all of the objects together and started to work on the biggest challenge: custom rule overrides.</p>
 
@@ -123,7 +123,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshot of the custom conditions page.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshot of the custom conditions page</figcaption>
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />

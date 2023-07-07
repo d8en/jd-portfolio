@@ -24,7 +24,6 @@ export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTM
                     <img
                         {...props}
                         className={`${props.className} ${styles.imageFullscreen}`}
-                        style={{ boxShadow: 'unset' }}
                     />
 
                     {/* CLOSE BTN */}

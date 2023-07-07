@@ -31,7 +31,7 @@ export function JdTypoApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live screenshot of the "create post" screen.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live screenshot of the "create post" screen</figcaption>
 
             <p>Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x). This ended up being pretty simple - use a timeout delay multiplier that is controled by the user.</p>
 
@@ -44,22 +44,19 @@ export function JdTypoApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign3.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign2.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign1.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
                 />
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Initial designs for the writing and reading screens.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Initial designs for the writing and reading screens</figcaption>
 
             <p>This was the first time I would create an animated donut (for the countdown) in React Native, and I did not want to reach for a library. React Native Reanimated was a perfect utility for this.</p>
 
@@ -73,7 +70,7 @@ export function JdTypoApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live demo of the typo app on an iPhone.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live demo of the typo app on an iPhone</figcaption>
 
             <p>I built a simple "feed" page that displays each post in a scroll-locking (TikTok) style, with playback options like restart, pause, and playback speed.</p>
 

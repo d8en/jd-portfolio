@@ -32,7 +32,7 @@ export function JdRekWeb(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots an initial prototype with a tagline.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots an initial prototype with a tagline</figcaption>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
@@ -51,7 +51,7 @@ export function JdRekWeb(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of the website prototype.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of the website prototype</figcaption>
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
@@ -70,7 +70,7 @@ export function JdRekWeb(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots from the website.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots from the website</figcaption>
 
             <p>Using the <JdATag href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</JdATag> was quite interesting. It was something I had always wanted to explore and I'm glad I didn't reach for a library for the scroll interactions.</p>
 
@@ -84,7 +84,7 @@ export function JdRekWeb(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots from the app store listing.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots from the app store listing</figcaption>
 
             <p><JdATag href="https://rekit.app/">This site</JdATag> drove app downloads and was a great way to spark interest in those curious about the app.</p>
         </>

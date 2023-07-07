@@ -47,7 +47,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             <p>We researched the top retail stores who were likely to have high volume returns and found ways to optimize those integration efforts (ex: integrate with a provider that covered many stores).</p>
 
@@ -87,7 +87,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             </div>
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshots of our mobile prototype.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshots of our mobile prototype</figcaption>
 
             <p>We went with a dark mode as our primary theme, but planned to add custom theming later on.</p>
 
@@ -102,7 +102,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live demo of an integrated returns experience.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live demo of an integrated returns experience</figcaption>
 
             <p>I had a lot of fun implementing a live-scanning feature where users could scan return shipping labels to prefil informations such as carrier, tracking, and return address.</p>
 
@@ -113,7 +113,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live demo of real-time OCR scanning with native camera view.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live demo of real-time OCR scanning with native camera view</figcaption>
 
             <p>It was also quite interesting to implement our own webview, with features to help a user submit a return on a third party site and upload information direclty to us.</p>
 
@@ -124,7 +124,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live demo of the 'tap to upload' feature within an integrated webview.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live demo of the 'tap to upload' feature within an integrated webview</figcaption>
 
             <p>I also built a swipable tutorial and contextual help menu that showed help messages relevant to the page and the state of the app.</p>
 
@@ -135,7 +135,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipable" tutorial.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipable" tutorial</figcaption>
 
             <p>During our alpha testing, we found that breaking up the return process into more "pages" with fewer selections on each page felt faster and easier for the shoppers to digest.</p>
 
@@ -167,7 +167,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshot of our home page, showing all pending and past returns.</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshot of our home page, showing all pending and past returns</figcaption>
 
             <p>We were a few steps away from publishing the app when an exiting opportunity for one of our other products came up.</p>
 
