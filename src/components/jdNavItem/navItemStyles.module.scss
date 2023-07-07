@@ -55,9 +55,10 @@ $iconHeight: 32px;
 
 .navActiveBar {
     position: absolute;
+    display: grid;
+    align-self: center;
     top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
+    height: 2.5px;
+    width: $iconHeight;
     background-color: var(--link);
 }
