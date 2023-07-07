@@ -48,7 +48,7 @@ $containerBorder: 24px;
         max-width: $desktopMaxWidth;
         place-self: start center;
         place-items: start;
-        gap: 44px;
+        gap: 36px;
         padding: 24px 20px;
         @include globalBottomAfter;
     }
@@ -67,7 +67,6 @@ $containerBorder: 24px;
     }
     display: flex;
     position: relative;
-    overflow: hidden;
 }
 
 .projectPreviewImg {
@@ -83,7 +82,7 @@ $containerBorder: 24px;
 .projectContent {
     background-color: var(--primBg);
     display: grid;
-    gap: 24px;
+    gap: 36px;
 }
 
 .projectHeader {
