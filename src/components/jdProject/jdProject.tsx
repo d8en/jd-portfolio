@@ -66,11 +66,6 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
                         className={styles.projectPreviewImg}
                         onClick={(e) => { e.preventDefault() }}
                     />
-
-                    {/* LAUNCH ICON */}
-                    <div className={styles.projectLaunchIcon}>
-                        <LaunchIcon />
-                    </div>
                 </div>
 
                 {/* CONTENT */}
