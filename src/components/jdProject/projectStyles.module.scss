@@ -1,6 +1,6 @@
 @use "../../styles/" as *;
 
-$previewImgHeight: 400px;
+$previewImgHeight: 348px;
 $containerBorder: 24px;
 
 .projectsHolder {
@@ -10,9 +10,11 @@ $containerBorder: 24px;
 .projectsContainer {
     border-radius: $containerBorder;
     display: grid;
+    gap: 12px;
     max-width: $desktopMaxWidth;
     position: relative;
     @include aniScaleIn;
+    @include aniHoverOnly;
 
     &:hover {
         .projectPreviewImg {
@@ -27,8 +29,16 @@ $containerBorder: 24px;
 
         .projectLaunchIcon {
             @include aniScaleIn;
+            opacity: 1;
             transform: scale(1);
+            bottom: 12px;
             visibility: visible;
+        }
+
+        .projectPreviewImgContainer {
+            @include aniHoverOnly;
+            background-color: var(--greyBg);
+            border-radius: 20px;
         }
     }
 }
@@ -71,7 +81,8 @@ $containerBorder: 24px;
 
 .projectPreviewImgContainer {
     @include boxSizingBorder;
-    padding: 56px 0;
+    padding: 56px 28px;
+
     @include media-phone {
         padding: 44px 0;
     }
@@ -120,10 +131,11 @@ $containerBorder: 24px;
     border-radius: 200px;
     background-color: var(--link);
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     transform: scale(0.7);
+    opacity: 0;
     visibility: hidden;
-    right: 0;
+    right: 12px;
 
     path {
         stroke: var(--primBg);

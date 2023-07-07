@@ -1,5 +1,7 @@
 @use "./colors";
 
+$bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
+
 @mixin aniPulse {
     animation-name: aniPulse;
     animation-duration: 1.5s;
@@ -36,5 +38,9 @@
 }
 
 @mixin aniScaleIn {
-    transition: transform 0.3s cubic-bezier(0, 1.6, 0.41, 1.56);
+    transition: transform $bezierScale, opacity $bezierScale, bottom $bezierScale;
+}
+
+@mixin aniHoverOnly {
+    transition: background-color 0.3s, border 0.3s;
 }
