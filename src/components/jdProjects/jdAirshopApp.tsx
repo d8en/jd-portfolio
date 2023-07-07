@@ -71,14 +71,17 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS3.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS2.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS1.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
             </div>
 
@@ -102,7 +105,7 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
 
-            <p>I met with our backend engineer to plan for our db/ui models, api structure, authentication, and notifications.</p>
+            <p>I met with our backend engineer to layout our db/ui models, api structure, authentication, and notifications. We decided to keep two separate repos: one for front end, one for backend.</p>
 
             {/* VIDEO */}
             <JdVimeoPlayer
@@ -113,25 +116,26 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screen recording of our app right before we shipped to production</figcaption>
 
-            <p>We decided to keep two separate repos: one for front end, one for backend.</p>
-
             <div className={styles.multiMedia}>
                 {/* DRIVER IMAGE */}
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
 
                 {/* HELP SCREEN */}
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopHelp.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
 
                 {/* CALENDAR */}
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopCalendar.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
 
             </div>
@@ -141,8 +145,8 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>A month after conception, we pushed our app to production.</p>
-            <p>Within the first month, we had 20+ returns with positive feedback pouring in. It was clear that return pickup was valuable for our end users, which drove brand loyalty and referral marketing for our client.</p>
+            <p>28 days later, we shipped our app.</p>
+            <p>In the first month, we had 20+ returns with positive feedback pouring in. It was clear that return pickup was valuable for our end users, which drove brand loyalty and referral marketing for our client.</p>
             <p>The success of this product led us to our largest round of funding ($1 million) and would fuel our next big project - scaling this to any Shopify store.</p>
 
         </>

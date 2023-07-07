@@ -29,7 +29,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
         component: <JdAirshopApp />,
-        title: `Returns app with home pickup`,
+        title: `Building a returns app in one month`,
         desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef?`,
         isOpen: false,
     }
