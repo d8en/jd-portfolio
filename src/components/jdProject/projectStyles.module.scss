@@ -34,6 +34,7 @@ $containerBorder: 24px;
 }
 
 .projectsContainerOpen {
+    overflow-x: hidden;
     z-index: 2;
     position: absolute;
     display: grid;
