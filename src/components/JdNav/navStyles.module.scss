@@ -8,6 +8,7 @@
     @include boxSizingBorder;
     @include flexCentered;
     width: 100%;
+    @include navShadow;
 }
 
 .navRoutes {
