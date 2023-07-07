@@ -16,7 +16,7 @@ $imgMaxHeight: 440px;
     max-width: 100%;
     max-height: $imgMaxHeight;
     object-fit: contain;
-    @include baseShadow;
+    // @include baseShadow;
     @include linkTransitions;
     &:hover {
         @include aniLinkScale;

@@ -1,4 +1,5 @@
 import jdStringUtils from "../../utils/jdStringUtils";
+import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import styles from './proejctsStyles.module.scss';
 
@@ -39,6 +40,52 @@ export function JdObApp(): React.JSX.Element {
                 <li>Time tracking was mentally exhausting and time-consuming for staff members</li>
                 <li>Middle management and lower level staff needed more visibility into upcoming work</li>
             </ul>
+
+            {/* DESIGN */}
+            <JdProjectSubHeader {...jdStringUtils.design} />
+            <p>The most challenging aspect wasn't generating designs, but establishing an execution plan. Specifically, determining the starting point and defining the intermediate and long-term objectives.</p>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto1.webp?alt=media"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototype for an executive dashboard</figcaption>
+
+            <p>We focused on giving project managers actionable overviews while giving lower level staff a view of their day, week, and month.</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto4.webp?alt=media"
+                />
+                <JdImg
+                    className={styles.projectsImage}
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto5.webp?alt=media"
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototypes for a project overview screen and a timeline view for lower level staff</figcaption>
+
+            <p>We found that a robust search feature was super important to almost all of our persona groups, so we spent quite some time making sure we had great filtering options and digestable results.</p>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto3.webp?alt=media"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototype of the advanced "global" search ui</figcaption>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto2.webp?alt=media"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototype of the login page on mobile</figcaption>
 
         </>
     )
