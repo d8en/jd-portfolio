@@ -56,6 +56,7 @@ export const JdProjectsView = observer((): React.JSX.Element => {
             <div className={styles.projectViewContainer}>
                 {jdProjectStore.projects.map((project: IJdProject) =>
                     <JdProject
+                        key={project.id}
                         {...project}
                         onToggleProject={async () => onToggleProject(project)}
                     />
