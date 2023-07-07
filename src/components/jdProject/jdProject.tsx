@@ -35,14 +35,13 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
     useEffect(() => {
         if (!innerDiv.current) return;
         setInnerDivRect(innerDiv.current?.getBoundingClientRect());
-        // innerDiv.current.scrollTop = 0;
+        innerDiv.current.scrollTop = 0;
     }, []);
 
     // When opened
     useEffect(() => {
         if (!innerDiv.current) return;
-
-        // innerDiv.current.scrollTop = 0;
+        innerDiv.current.scrollTop = 0;
     }, [props.isOpen]);
 
     return (
@@ -161,10 +160,10 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                             }
 
                             {jdProjectStore.nextProject ?
-                                <p><strong>Up Next:</strong> {jdProjectStore.nextProject.title}</p>
+                                <p className={styles.projectNavText}><strong>Up Next:</strong> {jdProjectStore.nextProject.title}</p>
                                 :
                                 jdProjectStore.prevProject &&
-                                <p><strong>Go Back:</strong> {jdProjectStore.prevProject.title}</p>
+                                <p className={styles.projectNavText}><strong>Go Back:</strong> {jdProjectStore.prevProject.title}</p>
                             }
 
                             {/* NEXT PROJECT */}

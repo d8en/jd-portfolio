@@ -143,7 +143,9 @@ $containerBorder: 24px;
 .projectNav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    gap: 12px;
 }
 
 .projectNavArrowIcon {
@@ -161,6 +163,7 @@ $containerBorder: 24px;
 }
 
 .projectNavText {
+    text-align: center;
     flex: 1;
     @include jdLineClamp(1);
 }
