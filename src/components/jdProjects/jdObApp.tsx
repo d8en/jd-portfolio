@@ -79,6 +79,10 @@ export function JdObApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototype of the advanced "global" search ui</figcaption>
 
+            {/* RESULTS */}
+            <JdProjectSubHeader {...jdStringUtils.results} />
+            <p>We shipped the app to about 4 large beta clients, who all had excellent feedback. We met weekly with staff members to solicit honest feedback (formally and adhoc) and tried to make room for incremental changes while maintaining our planned roadmap.</p>
+
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto2.webp?alt=media"
