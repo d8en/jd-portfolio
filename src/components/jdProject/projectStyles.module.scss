@@ -67,9 +67,14 @@ $containerBorder: 24px;
         max-width: $desktopMaxWidth;
         place-self: start center;
         place-items: start;
-        gap: 32px;
+        gap: 56px;
         padding: 24px 20px;
         @include globalBottomAfter;
+        & > p,
+        ul,
+        img {
+            margin-top: -16px;
+        }
     }
 
     .projectSkills {
