@@ -11,6 +11,7 @@ import jdAniUtils from '../../utils/jdAniUtils';
 import { observer } from 'mobx-react-lite';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import { JdClose } from '../jdClose/jdClose';
+import { ReactComponent as LaunchIcon } from '../../assets/svg/icons/launch.svg';
 
 export interface IJdProjecProps {
     onToggleProject: () => void | Promise<void>;
@@ -57,6 +58,11 @@ export const JdProject = observer((props: IJdProject & IJdProjecProps): React.JS
                     cursor: props.isOpen ? 'unset' : 'pointer',
                 }}
             >
+
+                {/* LAUNCH ICON */}
+                <div className={styles.projectLaunchIcon}>
+                    <LaunchIcon />
+                </div>
 
                 {/* PREVIEW IMAGE */}
                 <div className={styles.projectPreviewImgContainer}>

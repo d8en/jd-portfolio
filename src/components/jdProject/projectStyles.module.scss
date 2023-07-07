@@ -11,15 +11,24 @@ $containerBorder: 24px;
     border-radius: $containerBorder;
     display: grid;
     max-width: $desktopMaxWidth;
+    position: relative;
+    @include aniScaleIn;
 
     &:hover {
         .projectPreviewImg {
             @include aniLinkScale;
             transform: scale(1.09);
         }
+
         .projectHeader {
             @include linkTransitions;
             color: var(--link);
+        }
+
+        .projectLaunchIcon {
+            @include aniScaleIn;
+            transform: scale(1);
+            visibility: visible;
         }
     }
 }
@@ -100,4 +109,22 @@ $containerBorder: 24px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+.projectLaunchIcon {
+    display: grid;
+    place-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 200px;
+    background-color: var(--link);
+    position: absolute;
+    bottom: 0;
+    transform: scale(.6);
+    visibility: hidden;
+    right: 0;
+
+    path {
+        stroke: var(--primBg);
+    }
 }
