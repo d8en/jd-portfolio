@@ -166,4 +166,8 @@ $containerBorder: 24px;
     text-align: center;
     flex: 1;
     @include jdLineClamp(1);
+    @include media-phone {
+        @include jdLineClamp(2);
+        text-align: left;
+    }
 }
