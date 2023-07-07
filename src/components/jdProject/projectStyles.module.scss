@@ -67,7 +67,7 @@ $containerBorder: 24px;
         max-width: $desktopMaxWidth;
         place-self: start center;
         place-items: start;
-        gap: 44px;
+        gap: 32px;
         padding: 24px 20px;
         @include globalBottomAfter;
     }
@@ -118,7 +118,7 @@ $containerBorder: 24px;
 .projectSkills {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
 }
 
 .projectLaunchIcon {
