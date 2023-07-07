@@ -141,13 +141,26 @@ $containerBorder: 24px;
 }
 
 .projectNav {
-    display: gap;
-    grid-template-columns: min-content auto min-content;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.navArrowIcon {
+.projectNavArrowIcon {
     display: grid;
     place-items: center;
+    border-radius: 200px;
+    background-color: var(--greyBg);
     height: 40px;
     width: 40px;
+    @include aniLinkClick;
+
+    &:hover {
+        @include aniHoverBase;
+    }
+}
+
+.projectNavText {
+    flex: 1;
+    @include jdLineClamp(1);
 }

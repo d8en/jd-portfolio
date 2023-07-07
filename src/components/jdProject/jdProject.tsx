@@ -152,13 +152,24 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                     {/* UP NEXT */}
                     {props.isOpen &&
                         <div className={styles.projectNav}>
+
+                            {/* PREVIOUS PROJECT */}
                             {jdProjectStore.prevProject &&
-                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.prevProject)}>
-                                    <ArrowIcon />
+                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.prevProject)} className={styles.projectNavArrowIcon}>
+                                    <ArrowIcon style={{ transform: 'rotate(180deg)' }} />
                                 </Link>
                             }
+
+                            {jdProjectStore.nextProject ?
+                                <p><strong>Up Next:</strong> {jdProjectStore.nextProject.title}</p>
+                                :
+                                jdProjectStore.prevProject &&
+                                <p><strong>Go Back:</strong> {jdProjectStore.prevProject.title}</p>
+                            }
+
+                            {/* NEXT PROJECT */}
                             {jdProjectStore.nextProject &&
-                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.nextProject)}>
+                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.nextProject)} className={styles.projectNavArrowIcon}>
                                     <ArrowIcon />
                                 </Link>
                             }
