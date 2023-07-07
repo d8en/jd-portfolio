@@ -67,7 +67,6 @@ $skillGap: 16px;
 .xpHeader {
     @include jdLineClamp(1);
     width: 100%;
-    color: var(--greyText);
 }
 
 .xpCoName {

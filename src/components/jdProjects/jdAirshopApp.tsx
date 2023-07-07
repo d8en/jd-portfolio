@@ -26,8 +26,8 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>The biggest question was "<strong>What's the most cost effective path to same-day pickups?</strong>"</p>
-            <p>The answer was a grass-roots approach - a few members of our staff would be our drivers for the pilot.</p>
+            <p>How could we offer same-day pickups in our pilot area (Chicago)?</p>
+            <p>A grass-roots approach - our staff would be our drivers for the pilot</p>
 
 
             {/* WHITEBOARD */}
