@@ -12,7 +12,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Build a website that concicely communicates how a <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>our app</Link> can save a national retailer milliions by optimizing return processing.</p>
+            <p>Build a website that concisely communicates how a <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>our app</Link> can save a national retailer millions by optimizing return processing.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />

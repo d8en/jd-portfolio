@@ -1,4 +1,5 @@
 import jdStringUtils from '../../utils/jdStringUtils';
+import { JdATag } from '../jdATag/jdATag';
 import { JdImg } from '../jdImg/jdImg';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import { JdVimeoPlayer } from '../jdVimeoPlayer/jdVimeoPlayer';
@@ -10,7 +11,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Build a web service and self-service admin app for retailers to help them optimize their return logistics.</p>
+            <p>Build an app that allows retailers to automatically route returns to the most cost-effective location.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -25,7 +26,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>How could we build an app that any national retailer could use to optimize return logistics? What cusotmizations would they need? How could we optimized the return path down to the cent?</p>
+            <p>How could we build an app for any national retailer? What customizations would each need? How could we optimize return logistics?</p>
 
             <div className={styles.multiMedia}>
                 <JdImg
@@ -45,11 +46,13 @@ export function JdSmartRouteApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
-            <p>We sketched out all of the 'return flows' for all of the scenarios we had heard from clients and prospects. We came up with a flexible model that made it simple to onboard but allowed for the advanced flexibility these retailers needed.</p>
+            <p>We drew up several return flows, including how our web services would work for clients. The main challenge was building the right amount of customization while keeping onboarding simple.</p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>The majority of my design time was spent on drag and drop interface for customizing return logic. It was a blast and after a few iterations we were ready to build.</p>
+            <p>The majority of my design time was spent on the <strong>drag and drop interface</strong> for customizing return logic.</p>
+
+            <p>While I was designing, I was also familiarizing myself with the browser's <JdATag href='https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API'>drag and drop API</JdATag>.</p>
 
             <div className={styles.multiMedia}>
                 <JdImg

@@ -13,7 +13,7 @@ class JdStringUtils {
 
     public ideation: IJdProjectSubHeaderProps = {
         icon: '🧠',
-        name: 'Brainstorming',
+        name: 'Brainstorm',
     }
 
     public design: IJdProjectSubHeaderProps = {

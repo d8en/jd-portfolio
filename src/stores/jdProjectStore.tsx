@@ -62,8 +62,8 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRoutePreview.webp?alt=media',
         component: <JdSmartRouteApp />,
-        title: 'Optimizing return inventory by routing with purpose',
-        desc: 'National retailers often send all returns to once place, sometimes across the country. Why not route them to a local store, warehouse, or consolidation center?',
+        title: 'Routing returns to the most profitable location',
+        desc: 'Most retailers send all of their returns to once place, sometimes across the country. Why not route them to a local store, warehouse, or consolidation center?',
         isOpen: false,
     }
 
