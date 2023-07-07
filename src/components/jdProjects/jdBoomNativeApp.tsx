@@ -12,7 +12,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Build a native mobile app for shoppers to manage ALL of their returns, while offering home pickup and providing retailer benefits.</p>
+            <p>Build a native mobile app for shoppers to manage all of their returns, while offering home pickup and providing retailer benefits.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -22,10 +22,10 @@ export function JdBoomNativeApp(): React.JSX.Element {
                 <li>Custom integrated webview</li>
                 <li>Webview injection for shipping label upload</li>
                 <li>Animated hovering keyboard input</li>
-                <li>Swipable tutorial walkthrough</li>
+                <li>Swipeable tutorial walkthrough</li>
                 <li>Contextual help menus</li>
                 <li>Pan responder gestures for slideups / dismissal</li>
-                <li>Swipable scroll paging</li>
+                <li>Swipeable scroll paging</li>
             </ul>
 
             {/* IDEATION */}
@@ -49,26 +49,13 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
-            <p>We researched the top retail stores who were likely to have high volume returns and found ways to optimize those integration efforts (ex: integrate with a provider that covered many stores).</p>
-
-            <p>There were a few interactions that we knew would make it easier to submit the return with the retailer without leaving our app (storing user info, pulling order history, etc.). </p>
-
-            <p className={styles.projectGapReducer}>Our multi-project monorepo architecture from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify app</Link> was beneficial in a few ways:</p>
-
-            <ul>
-                <li>Most of the global state was already defined (view models)</li>
-                <li>State update methods</li>
-                <li>API definitions and methods</li>
-                <li>Fixing bugs in one place</li>
-            </ul>
-
-            <p>Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. It's easy to overcomplicate and cause more work.</p>
+            <p>We identified the top retailers who were likely to have the most returns and found ways to optimize those integration efforts (ex: integrate with a provider that covered many stores).</p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
             <p>The shopper experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify apps</Link>, so I started with a clean slate.</p>
 
-            <p>We studied top retailer returns experiences and came up with a general flow that we could start building out.</p>
+            <p>We studied the top retailer returns experiences and came up with a flow that combined all of our favorite parts.</p>
 
             {/* PROTOTYPE SCREENSHOTS */}
             <div className={styles.multiMedia}>
@@ -93,7 +80,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>We integrated around 40 stores and also spent a good amount of time optimizing our experience for stores we weren't integrated with.</p>
+            <p>We integrated <strong>40+ stores</strong> and also spent a good amount of time optimizing our experience for stores we weren't integrated with.</p>
 
             {/* STORE INTEGRATION */}
             <JdVimeoPlayer
@@ -104,7 +91,18 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live demo of an integrated returns experience</figcaption>
 
-            <p>I had a lot of fun implementing a live-scanning feature where users could scan return shipping labels to prefil informations such as carrier, tracking, and return address.</p>
+            <p className={styles.projectGapReducer}>Our multi-project monorepo architecture from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify app</Link> was beneficial in a few ways:</p>
+
+            <ul>
+                <li>Most of the global state was already defined (view models)</li>
+                <li>State update methods</li>
+                <li>API definitions and methods</li>
+                <li>Fixing bugs in one place</li>
+            </ul>
+
+            <p>Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. We caught ourselves adding unnecessary complexity a few times just to share small pieces of code.</p>
+
+            <p>I had a lot of fun implementing a <strong>live-scanning</strong> feature where users could scan return shipping labels to prefill information such as carrier, tracking, and return address.</p>
 
             {/* LABEL SCANNING CAMERA */}
             <JdVimeoPlayer
@@ -115,9 +113,9 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live demo of real-time OCR scanning with native camera view</figcaption>
 
-            <p>It was also quite interesting to implement our own webview, with features to help a user submit a return on a third party site and upload information direclty to us.</p>
+            <p>It was also quite interesting to implement our own <strong>fully customized webview</strong>, with injections that let users submit a return on a third party site and upload information directly to us.</p>
 
-            {/* TAP TO UPLOAD LABLE */}
+            {/* TAP TO UPLOAD LABEL */}
             <JdVimeoPlayer
                 src='https://player.vimeo.com/video/841963743?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
                 className={styles.projectVideo}
@@ -126,7 +124,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live demo of the 'tap to upload' feature within an integrated webview</figcaption>
 
-            <p>I also built a swipable tutorial and contextual help menu that showed help messages relevant to the page and the state of the app.</p>
+            <p>I also built a swipple tutorial and contextual help menu that showed help messages relevant to the page and the state of the app.</p>
 
             {/* TUTORIAL */}
             <JdVimeoPlayer
@@ -135,7 +133,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipable" tutorial</figcaption>
+            <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipeable" tutorial</figcaption>
 
             <p>During our alpha testing, we found that breaking up the return process into more "pages" with fewer selections on each page felt faster and easier for the shoppers to digest.</p>
 
@@ -157,7 +155,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>We grew our beta group to 200+ users, who submitted returns with pickups across 20+ stores.</p>
+            <p>We grew our beta group to <strong>200+ users</strong>, who submitted returns with pickups across <strong>20+ stores</strong>.</p>
             <p>For serial returners, the most valuable feature was having a centralized place to submit and manage returns. After that, home pickup was a close second.</p>
 
             {/* HOME PAGE */}
@@ -169,7 +167,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshot of our home page, showing all pending and past returns</figcaption>
 
-            <p>We were a few steps away from publishing the app when an exiting opportunity for one of our other products came up.</p>
+            <p>We were a few steps away from publishing the app when an <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>exciting opportunity</Link> for one of our other products came up.</p>
 
 
         </>

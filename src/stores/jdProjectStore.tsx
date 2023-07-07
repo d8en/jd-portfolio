@@ -40,7 +40,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
         component: <JdShoifyApp />,
-        title: 'Shopify returns app with home pickup',
+        title: 'Shopify app with home pickup',
         desc: 'The success of our Chicago pilot led us to the next big project: build a Shopify app.',
         isOpen: false,
     }
@@ -51,8 +51,8 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
         component: <JdBoomNativeApp />,
-        title: 'One app for all of your returns',
-        desc: 'Returns can be a pain, but how nice would it be to manage all of them in one app across all of the stores you shopped at?',
+        title: 'Mobile app to manage all returns',
+        desc: 'Returns can be a pain, but how nice would it be to manage all of them in one app?',
         isOpen: false,
     }
 
