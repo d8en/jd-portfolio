@@ -14,6 +14,18 @@ class JdAniUtils {
         }
     }
 
+    public get springTransitionExtra(): Transition {
+        return {
+            type: "spring",
+            // How bouncy
+            stiffness: 200,
+            // Lower = faster
+            mass: .5,
+            // Deceleration
+            damping: 10,
+        }
+    }
+
     public get baseEase(): Transition {
         return {
             ease: cubicBezier(0, 1, 0, 1),
