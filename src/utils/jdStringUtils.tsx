@@ -8,12 +8,12 @@ class JdStringUtils {
 
     public favoriteStuff: IJdProjectSubHeaderProps = {
         icon: '🥳',
-        name: 'My Favorite Parts',
+        name: 'My Favorites',
     }
 
     public ideation: IJdProjectSubHeaderProps = {
         icon: '🧠',
-        name: 'Ideation',
+        name: 'Brainstorming',
     }
 
     public design: IJdProjectSubHeaderProps = {

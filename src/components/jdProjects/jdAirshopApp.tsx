@@ -10,7 +10,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Build two apps: one for shoppers to schedule at-home return pickups and one for drivers to handle pickups. Shoppers should be able book a same-day pickups and receive timely notifications along the way.</p>
+            <p>Build an app for online-only shoppers to schedule at-home return pickups. Build an app for drivers to handle pickups.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
