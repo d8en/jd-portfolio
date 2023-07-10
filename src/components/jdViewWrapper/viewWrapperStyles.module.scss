@@ -1,7 +1,6 @@
 @use "../../styles/" as *;
 
 .viewContent {
-    @include aniWipe;
     @include scroll-bar;
     @include boxSizingBorder;
     @include fullVh;

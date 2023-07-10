@@ -58,7 +58,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
         left: 0;
         right: 0;
         bottom: 0;
-        content: "wipe";
+        content: "";
         color: transparent;
         @include baseBlur;
     }
@@ -66,7 +66,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
 @keyframes aniWipe {
     100% {
-        top: 100%;
+        left: 100%;
         @include unsetBlur;
     }
 }

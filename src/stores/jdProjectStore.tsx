@@ -16,6 +16,7 @@ import { JdRekWeb } from "../components/jdProjects/jdRekWeb";
 import { JdTypoApp } from "../components/jdProjects/jdTypoApp";
 import { JdInsuranceApp } from "../components/jdProjects/jdInsuranceApp";
 import { JdObApp } from "../components/jdProjects/jdObApp";
+import { JdAether } from "../components/jdProjects/jdAether";
 
 export class JdProjectStore {
     constructor() {
@@ -23,6 +24,7 @@ export class JdProjectStore {
     }
 
     public projectParam: string = 'id';
+
     public airshopApp: IJdProject = {
         id: '1',
         company: jdCompaniesStore.boomerang,
@@ -130,6 +132,17 @@ export class JdProjectStore {
         component: <JdObApp />,
         title: `Designing a project management app for agencies`,
         desc: `Talk about a LOT of personas. This was not only an fun research project but also an exciting design challenge.`,
+        isOpen: false,
+    }
+
+    public aether: IJdProject = {
+        id: '11',
+        company: jdCompaniesStore.gravix,
+        skills: [jdSkillsStore.brandDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aetherPreview.webp?alt=media',
+        component: <JdAether />,
+        title: `Designing a brand for an insurance company`,
+        desc: `It tiring navigating through the complex world of health insurance. Trust and transparency are often lacking.`,
         isOpen: false,
     }
 
