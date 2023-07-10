@@ -12,19 +12,19 @@ export function JdShoifyApp(): React.JSX.Element {
         <>
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>pilot app</Link> and create a multi-tenant scalable offering for any Shopify store.</p>
+            <p>Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>pilot app</Link> and create a multi-tenant scalable offering for the Shopify ecosystem.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
-                <li>Multi-tenancy</li>
                 <li>Address input (Google Maps API and USPS API)</li>
                 <li>Currency input (USD)</li>
                 <li>CSS Grid for tabular data</li>
-                <li>Dot loader using CSS animations</li>
-                <li>Theming (client-specified primary and secondary colors)</li>
+                <li>Theming (client-specified colors and branding)</li>
                 <li>Email template design</li>
                 <li>Icon design</li>
+                <li>Multi-tenancy</li>
+                <li>Dot loader using CSS animations</li>
             </ul>
 
             {/* IDEATION */}
@@ -40,12 +40,12 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
-            <p>Hiring drivers and buying vehicles in every city/state would take too long and would be tough to scale.</p>
-            <p>We figured the best economic and even eco-friendly option was to use existing logistics providers (UPS, FedEx, USPS). Each of these providers had APIs that offered pickup, most of which were affordable.</p>
+            <p>Creating a widespread network of drivers and vehicles in every city/state would be time-consuming and difficult to scale.</p>
+            <p>The best economic and eco-friendly option was to use existing logistics providers (UPS, FedEx, USPS). Each of these providers had APIs that offered pickup, most of which were affordable.</p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>We had some excellent shopper feedback from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>first returns app</Link>, so we used that to improve interactions, verbiage, and overall design.</p>
+            <p>We had some excellent shopper feedback from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>first returns app</Link>, so we used that to improve interactions, verbiage, code architecture, and overall design.</p>
 
             <p className={styles.projectGapReducer}>The <strong>requirements</strong> were similar, with a few extra challenges:</p>
 
@@ -55,6 +55,8 @@ export function JdShoifyApp(): React.JSX.Element {
                 <li>Theming (brand colors, logo, etc.)</li>
                 <li>Pricing customization</li>
                 <li>Package tracking</li>
+                <li>Custom return reasons</li>
+                <li>Automated refunds</li>
             </ul>
 
             {/* SCREENSHOT */}
@@ -79,7 +81,7 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of the end user prototype for mobile</figcaption>
 
-            <p>I created new high-fidelity designs from scratch but carried over elements and lessons-learned from the initial app.</p>
+            <p>I created new high-fidelity designs from scratch but carried some elements over from the initial app.</p>
 
             {/* END USER PROTOTYPES */}
             <JdImg
@@ -101,7 +103,7 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of the admin prototype for desktop</figcaption>
 
-            <p>I've always enjoyed icon design so I took some extra time on this project to build our own set.</p>
+            <p>I've always enjoyed <strong>icon design</strong> so I took some extra time on this project to build our own set.</p>
 
             <JdImg
                 className={styles.projectsImage}
@@ -110,22 +112,7 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p className={styles.projectGapReducer}>We built a <strong>monorepo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.</p>
-
-            <p className={styles.projectGapReducer}>This was our general structure:</p>
-            <ul>
-                <li>Base Project (Node and React state management classes and shared models / DTOs)</li>
-                <ul>
-                    <li>Node (state management classes)</li>
-                    <li>React (state management classes)</li>
-                    <li>Models (DB and DTO)</li>
-                </ul>
-                <li>Authentication</li>
-                <li>End User React App</li>
-                <li>Admin React App</li>
-                <li>Node API</li>
-                <li>Carrier Integration</li>
-            </ul>
+            <p>We built a <strong>monorepo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.</p>
 
             {/* SHOPIFY APP WALKTHROUGH */}
             <JdVimeoPlayer
@@ -136,7 +123,23 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Walkthrough of our Shopify app, with an embarrassing narration done by yours truly</figcaption>
 
-            <p>Our monorepo allowed us to use shared code across the admin and end user experiences, while setting us up nicely for our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.</p>
+            <p className={styles.projectGapReducer}>This was our general repo structure, excluding some base utility projects / scaffolding:</p>
+
+            <ul>
+                <li>Base Project</li>
+                <ul style={{ margin: 0 }}>
+                    <li>Node (state management)</li>
+                    <li>React (state management)</li>
+                    <li>Models (DB and DTO)</li>
+                </ul>
+                <li>Authentication</li>
+                <li>End User React App</li>
+                <li>Admin React App</li>
+                <li>Node API</li>
+                <li>Carrier Integration</li>
+            </ul>
+
+            <p>We shared code across our Shopify admin and shopper experiences, and eventually our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.</p>
 
             {/* SHOPIFY ADMIN WALKTHROUGH */}
             <JdVimeoPlayer

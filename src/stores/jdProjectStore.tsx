@@ -41,7 +41,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
         component: <JdShoifyApp />,
         title: 'Shopify app with home pickup',
-        desc: 'The success of our Chicago pilot led us to the next big project: build a Shopify app.',
+        desc: 'The success of our Chicago pilot led us to the next big project - build a Shopify app.',
         isOpen: false,
     }
 
