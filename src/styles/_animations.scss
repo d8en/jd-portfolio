@@ -44,3 +44,16 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 @mixin aniHoverOnly {
     transition: background-color 0.3s, border 0.3s;
 }
+
+@mixin aniWipe {
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // background-color: var(--link);
+        content: "wipe";
+        color: transparent;
+    }
+}
