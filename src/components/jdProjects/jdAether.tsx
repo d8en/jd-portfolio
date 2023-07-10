@@ -78,6 +78,9 @@ export function JdAether(): React.JSX.Element {
                 />
             </div>
 
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screenshots from the branding guide</figcaption>
+
         </>
     )
 }
