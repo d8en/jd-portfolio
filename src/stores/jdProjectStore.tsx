@@ -106,8 +106,8 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.figma, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
         component: <JdTypoApp />,
-        title: `Typo - yet another social media app we don't need`,
-        desc: `I love the idea of returning to a text-only social media, but is it really something we need? Probably not.`,
+        title: `Building "Typo" - a text-based social media app that shows every keystroke`,
+        desc: `I love the idea of returning to text-only social media, but let's be honest, we don't need another social media app.`,
         isOpen: false,
     }
 
