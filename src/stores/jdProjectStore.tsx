@@ -81,7 +81,7 @@ export class JdProjectStore {
     public rekApp: IJdProject = {
         id: '6',
         company: jdCompaniesStore.rek,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.mobX, jdSkillsStore.sql, jdSkillsStore.noSql, jdSkillsStore.nodeJs, jdSkillsStore.figma, jdSkillsStore.afterEffects, jdSkillsStore.productDesign],
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.mobX, jdSkillsStore.sql, jdSkillsStore.noSql, jdSkillsStore.nodeJs, jdSkillsStore.figma, jdSkillsStore.afterEffects, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekPreview.webp?alt=media',
         component: <JdRekApp />,
         title: 'Building my dream - a native app to track recommendations',
@@ -92,11 +92,11 @@ export class JdProjectStore {
     public rekWeb: IJdProject = {
         id: '7',
         company: jdCompaniesStore.rek,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
         component: <JdRekWeb />,
         title: 'Building a website to promote "Rek it" - a social recommendations app',
-        desc: `After spending months in the React Native realm, it was time to revist the wonderful world wide web.`,
+        desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
         isOpen: false,
     }
 

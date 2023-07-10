@@ -5,6 +5,7 @@ import jdProjectStore from "../../stores/jdProjectStore";
 import styles from './proejctsStyles.module.scss';
 import { JdImg } from "../jdImg/jdImg";
 import { JdATag } from "../jdATag/jdATag";
+import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 
 export function JdRekWeb(): React.JSX.Element {
     return (
@@ -12,12 +13,12 @@ export function JdRekWeb(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Concicely communicate the core benefits of the <Link to={jdProjectStore.getLinkToProject(jdProjectStore.rekApp)}>Rek app</Link> in a single page scrolling website.</p>
+            <p>Communicate the value of the <Link to={jdProjectStore.getLinkToProject(jdProjectStore.rekApp)}>Rek app</Link> in a single page scrolling website.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
-                <li>Interseciton observer API (scroll interactions)</li>
+                <li>Intersection observer API (scroll interactions)</li>
                 <li>Page loader with css animations</li>
                 <li>Slideout with download links, contact, and privacy policy</li>
             </ul>
@@ -36,7 +37,7 @@ export function JdRekWeb(): React.JSX.Element {
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>After figuring out a tagline and general message I wanted to communicate, I put together a very simple single page scrolling site.</p>
+            <p>After figuring out a tagline and general messaging, I put together a very simple single page scrolling site.</p>
 
             <div className={styles.multiMedia}>
                 <JdImg
@@ -55,7 +56,7 @@ export function JdRekWeb(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>It only took a day or so to decide it was time to build the site. I'll admit, I was very anxious to ship Rek but tried to stay patient over the finish line.</p>
+            <p>I'll admit, it was hard to be patient with this website. I had been dreaming of Rek for so long but I forced myself to take my time with this last piece.</p>
 
             <div className={styles.multiMedia}>
                 <JdImg
@@ -76,7 +77,9 @@ export function JdRekWeb(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>In the first month, I had around 400 unique hits on the site with 200+ user downloads across Android and iOS.</p>
+            <p>In the first month, I had <strong>400+ unique hits</strong> on the site with <strong>200+ user downloads</strong> across Android and iOS.</p>
+
+            <p>You can <JdATag href="https://rekit.app/">checkout the site here</JdATag>.</p>
 
             <JdImg
                 className={styles.projectsImage}
@@ -86,7 +89,7 @@ export function JdRekWeb(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots from the app store listing</figcaption>
 
-            <p><JdATag href="https://rekit.app/">This site</JdATag> drove app downloads and was a great way to spark interest in those curious about the app.</p>
+            <p>Users seemed to really love the social aspect around recommendations. Most people didn't care so much about remembering the recommendation but genuinely enjoyed the conversation around it.</p>
         </>
     )
 }
