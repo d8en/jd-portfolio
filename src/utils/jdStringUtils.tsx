@@ -8,7 +8,7 @@ class JdStringUtils {
 
     public favoriteStuff: IJdProjectSubHeaderProps = {
         icon: '🥳',
-        name: 'My Favorites',
+        name: 'Highlights',
     }
 
     public ideation: IJdProjectSubHeaderProps = {
