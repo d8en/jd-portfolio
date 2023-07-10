@@ -118,7 +118,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/insuranceProto.webp?alt=media',
         component: <JdInsuranceApp />,
         title: `Designing an app for insurance underwriters`,
-        desc: `How do you take some of the most complex data structures and present them in a digestable and actionable UI? Lots of research and iteration.`,
+        desc: `How do you take some of the most complex data structures and present them in a digestible and actionable UI? Lots of research and iteration.`,
         isOpen: false,
     }
 

@@ -10,25 +10,27 @@ export function JdInsuranceApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Redesign and combine a set of truly massive applications that help underwriters make decisions quickly and accurately.</p>
+            <p>Design an experience that ultimately helps underwriters produce profitable quotes faster.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
                 <li>Animated prototype using Principle</li>
                 <li>Information architecture</li>
-                <li>Presenting to stakeholders and underwriters</li>
+                <li>Leading stakeholders presentations</li>
+                <li>User research with underwriters</li>
+                <li>Product roadmaps</li>
             </ul>
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p className={styles.projectGapReducer}>We took a cyclical appraoch to our research, making sure we were validating ideas weekly:</p >
+            <p className={styles.projectGapReducer}>We took a cyclical approach to our research, validating ideas weekly:</p >
 
             <ol>
                 <li>Interview stakeholders and underwriters</li>
                 <li>Identify problems, come up with proposed solutions</li>
                 <li>Design proposed solutions</li>
-                <li>Present solutions to underwriters</li>
+                <li>Present solutions to underwriters and stakeholders</li>
                 <li>Review results with stakeholders</li>
                 <li>Repeat</li>
             </ol>
@@ -55,7 +57,7 @@ export function JdInsuranceApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes for the future vision and the immediate work efforts</figcaption>
 
-            <p>As a project wrap up, I created an animated prototype for the "future" version. This was my favorite part of the project.</p>
+            <p>I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work.</p>
 
             {/* PROTOTYPE VIDEO */}
             <JdVimeoPlayer
