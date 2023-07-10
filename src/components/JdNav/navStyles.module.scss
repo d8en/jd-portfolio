@@ -1,10 +1,9 @@
 @use "../../styles/" as *;
 
 .navContainer {
+    position: absolute;
     @include baseBlur;
     z-index: 2;
-    position: absolute;
-    bottom: 0;
     @include boxSizingBorder;
     @include flexCentered;
     width: 100%;
