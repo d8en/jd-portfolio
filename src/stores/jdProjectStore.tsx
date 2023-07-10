@@ -26,7 +26,7 @@ export class JdProjectStore {
     public airshopApp: IJdProject = {
         id: '1',
         company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign],
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
         component: <JdAirshopApp />,
         title: `Building a returns app in one month`,
@@ -40,7 +40,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
         component: <JdShoifyApp />,
-        title: 'Shopify app with home pickup',
+        title: 'Building a Shopify app with home pickup and inventory management',
         desc: 'The success of our Chicago pilot led us to the next big project - build a Shopify app.',
         isOpen: false,
     }
@@ -51,7 +51,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
         component: <JdBoomNativeApp />,
-        title: 'Mobile app to manage all returns',
+        title: 'Building a mobile app to manage all returns',
         desc: 'Returns can be a pain, but how nice would it be to manage all of them in one app?',
         isOpen: false,
     }
