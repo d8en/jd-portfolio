@@ -147,6 +147,9 @@ export function JdShoifyApp(): React.JSX.Element {
                 style={{ width: '100%' }}
             />
 
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Walkthrough of our admin experience for Shopify store owners</figcaption>
+
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>About a month and a half later, we shipped our Shopify app.</p>
