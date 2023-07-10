@@ -11,3 +11,9 @@ $blurAmt: 16px;
     backdrop-filter: blur($blurAmt);
     -webkit-backdrop-filter: blur($blurAmt);
 }
+
+@mixin unsetBlur {
+    background-color: unset;
+    backdrop-filter: unset;
+    -webkit-backdrop-filter: unset;
+}

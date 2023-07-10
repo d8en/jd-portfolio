@@ -3,7 +3,7 @@
 $iconHeight: 32px;
 
 .navItemContainer {
-    @include aniWipe;
+    @include aniWipe();
     position: relative;
     @include flexCentered;
     flex-direction: column;
