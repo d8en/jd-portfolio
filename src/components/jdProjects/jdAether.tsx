@@ -44,17 +44,18 @@ export function JdAether(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aitherSs1.webp?alt=media"
+                    style={{ boxShadow: 'unset' }}
                 />
                 <JdImg
                     className={styles.projectsImage}
-                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aitherSs3.webp?alt=media"
+                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aitherSs4.webp?alt=media"
                 />
             </div>
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Finished brand mockups</figcaption>
 
-            <p>This project was super fast with no revisions needed so all that was left was to prepare the final assets (style guide, deck template, and logo exports).</p>
+            <p>This project was super fast with no revisions needed so all that was left was to prepare the <strong>final assets (style guide, deck template, and logo exports)</strong>.</p>
 
             <div className={styles.multiMedia}>
                 <JdImg
