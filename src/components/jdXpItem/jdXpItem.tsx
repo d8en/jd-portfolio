@@ -29,6 +29,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                             <JdImg
                                 srcSet={props.imgSrc}
                                 className={`${styles.xpImage} ${props.children ? '' : styles.xpIconSmaller}`}
+                                style={{ margin: 0 }}
                             />
                             :
                             undefined

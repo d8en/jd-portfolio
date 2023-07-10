@@ -70,10 +70,10 @@ export class JdProjectStore {
     public boomSmartWeb: IJdProject = {
         id: '5',
         company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebPreview.webp?alt=media',
         component: <JdSmartRouteWeb />,
-        title: 'Marketing a complex reverse logistics app in a one page scrollable site',
+        title: 'Building a website to promote a complex return routing app',
         desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
         isOpen: false,
     }
