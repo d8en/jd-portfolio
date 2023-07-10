@@ -12,20 +12,17 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Build a native mobile app for shoppers to manage all of their returns, while offering home pickup and providing retailer benefits.</p>
+            <p>Build a native app (iOS and Android) for shoppers to book and manage returns, while offering home pickup.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
-                <li>Native camera label scanning</li>
-                <li>Real-time OCR on shipping labels (image text recognition)</li>
-                <li>Custom integrated webview</li>
-                <li>Webview injection for shipping label upload</li>
-                <li>Animated hovering keyboard input</li>
-                <li>Swipeable tutorial walkthrough</li>
+                <li>OCR scanning of shipping labels (image-to-text recognition)</li>
+                <li>Custom webview with JS injections</li>
+                <li>Floating keyboard input</li>
+                <li>Swipeable tutorial</li>
                 <li>Contextual help menus</li>
-                <li>Pan responder gestures for slideups / dismissal</li>
-                <li>Swipeable scroll paging</li>
+                <li>Pan responder gestures</li>
             </ul>
 
             {/* IDEATION */}
@@ -76,11 +73,9 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of our mobile prototype</figcaption>
 
-            <p>We went with a dark mode as our primary theme, but planned to add custom theming later on.</p>
-
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>We integrated <strong>40+ stores</strong> and also spent a good amount of time optimizing our experience for stores we weren't integrated with.</p>
+            <p>We integrated <strong>40+ stores</strong> and built interactions for stores that we weren't integrated with.</p>
 
             {/* STORE INTEGRATION */}
             <JdVimeoPlayer
@@ -100,7 +95,11 @@ export function JdBoomNativeApp(): React.JSX.Element {
                 <li>Fixing bugs in one place</li>
             </ul>
 
-            <p>Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. We caught ourselves adding unnecessary complexity a few times just to share small pieces of code.</p>
+            <p>Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. We caught ourselves adding unnecessary complexity in a few places just to share small pieces of code.</p>
+
+            <p>For example, we initially wanted to share components across web and native. While this is entirely possible, it would have pushed our beta back by at least a month.</p>
+
+            <p>It was exponentially more valuable for us to get shopper feedback then to have 100% shared components.</p>
 
             <p>I had a lot of fun implementing a <strong>live-scanning</strong> feature where users could scan return shipping labels to prefill information such as carrier, tracking, and return address.</p>
 
@@ -135,7 +134,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipeable" tutorial</figcaption>
 
-            <p>During our alpha testing, we found that breaking up the return process into more "pages" with fewer selections on each page felt faster and easier for the shoppers to digest.</p>
+            <p>Shoppers said the return process was a bit overwhelming so we ended up creating more 'steps' with fewer selections on each step. This seemed to make the process more digestible and less overwhelming.</p>
 
             {/* LIVE SCREENSHOTS */}
             <div className={styles.multiMedia}>
@@ -156,7 +155,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>We grew our beta group to <strong>200+ users</strong>, who submitted returns with pickups across <strong>20+ stores</strong>.</p>
-            <p>For serial returners, the most valuable feature was having a centralized place to submit and manage returns. After that, home pickup was a close second.</p>
+            <p>For serial returners, the most valuable feature was having a centralized place to manage returns. After that, home pickup was a close second.</p>
 
             {/* HOME PAGE */}
             <JdImg
