@@ -10,6 +10,7 @@ $containerBorder: 24px;
 .projectsContainer {
     border-radius: $containerBorder;
     display: grid;
+    grid-auto-columns: 1fr;
 
     @include media-desktop {
         grid-auto-flow: column;
@@ -20,8 +21,8 @@ $containerBorder: 24px;
     @include media-desktop {
         gap: 56px;
     }
-    
-    max-width: 900px;
+
+    max-width: 1200px;
     position: relative;
     @include aniScaleIn;
     @include aniHoverOnly;
