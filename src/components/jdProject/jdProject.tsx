@@ -43,7 +43,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
     // When opened
     useEffect(() => {
         if (!innerDiv.current) return;
-        // innerDiv.current.scrollTop = 0;
+        innerDiv.current.scrollTop = 0;
     }, [props.isOpen]);
 
     return (

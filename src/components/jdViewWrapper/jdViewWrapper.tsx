@@ -15,7 +15,7 @@ export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps
     // Mount
     useEffect(() => {
         document.title = `${jdStringUtils.pageTitlePrefix}${jdRoutes.activeRoute.name}`;
-        // if (divRef.current) divRef.current.scrollTop = 0;
+        if (divRef.current) divRef.current.scrollTop = 0;
     }, []);
 
     return (
