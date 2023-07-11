@@ -63,7 +63,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
             {/* INNER MOVING DIV */}
             <motion.div
                 ref={innerDiv}
-                // layout
+                layout
                 transition={jdAniUtils.baseEase}
                 onClick={onClickProject}
                 className={`${props.isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}

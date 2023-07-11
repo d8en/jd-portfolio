@@ -28,7 +28,7 @@ class JdAniUtils {
 
     public get baseEase(): Transition {
         return {
-            ease: cubicBezier(0, 1, 0, 1),
+            ease: cubicBezier(.5, 1, 0, 1),
             duration: .375,
         }
     }
