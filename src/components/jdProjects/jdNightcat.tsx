@@ -34,20 +34,24 @@ export function JdNightCat(): React.JSX.Element {
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>The trickiest part was getting the cat silhouette just right.</p>
+            <p>The trickiest part was getting the cat silhouette just right. After that, I designed fairly simple sans serif letters in all caps.</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs2.webp?alt=media'
+                className={styles.projectsImage}
+                style={{ width: '100%' }}
+            />
 
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs1.webp?alt=media'
                 className={styles.projectsImage}
+                style={{ width: '100%', objectFit: 'fill' }}
             />
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Finished logo</figcaption>
 
-            <JdImg
-                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs2.webp?alt=media'
-                className={styles.projectsImage}
-            />
+            <p>It was clear that the founder's cat ruled his life, as it demanded to be the focal point of the entire company's brand.</p>
 
         </>
     )
