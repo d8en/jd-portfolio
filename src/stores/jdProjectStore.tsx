@@ -17,6 +17,7 @@ import { JdTypoApp } from "../components/jdProjects/jdTypoApp";
 import { JdInsuranceApp } from "../components/jdProjects/jdInsuranceApp";
 import { JdObApp } from "../components/jdProjects/jdObApp";
 import { JdAether } from "../components/jdProjects/jdAether";
+import { JdNightCat } from "../components/jdProjects/jdNightcat";
 
 export class JdProjectStore {
     constructor() {
@@ -150,7 +151,7 @@ export class JdProjectStore {
         company: jdCompaniesStore.gravix,
         skills: [jdSkillsStore.brandDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightCatPreview.webp?alt=media',
-        component: <JdAether />,
+        component: <JdNightCat />,
         title: `Designing a brand for a viral quirky weather app`,
         desc: `Haven't you always dreamed about a weather app that insults you? Me too.`,
         isOpen: false,
