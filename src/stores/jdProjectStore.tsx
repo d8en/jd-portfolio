@@ -18,6 +18,7 @@ import { JdInsuranceApp } from "../components/jdProjects/jdInsuranceApp";
 import { JdObApp } from "../components/jdProjects/jdObApp";
 import { JdAether } from "../components/jdProjects/jdAether";
 import { JdNightCat } from "../components/jdProjects/jdNightcat";
+import { JdWeekend } from "../components/jdProjects/jdWeekend";
 
 export class JdProjectStore {
     constructor() {
@@ -146,6 +147,7 @@ export class JdProjectStore {
         desc: `It's tiring navigating through the complex world of health insurance. Trust and transparency are often lacking.`,
         isOpen: false,
     }
+
     public nightcat: IJdProject = {
         id: '12',
         company: jdCompaniesStore.gravix,
@@ -154,6 +156,17 @@ export class JdProjectStore {
         component: <JdNightCat />,
         title: `Designing a brand for a viral quirky weather app`,
         desc: `Haven't you always dreamed about a weather app that insults you? Me too.`,
+        isOpen: false,
+    }
+
+    public funProjects: IJdProject = {
+        id: '13',
+        company: jdCompaniesStore.gravix,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.nodeJs, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.brandDesign, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/weekendPreview.webp?alt=media',
+        component: <JdWeekend />,
+        title: `A collection of weekend projects`,
+        desc: `Some of these side gigs refueled me when I needed it the most, some were relatively pointless, and others were valuable exercises that helped me learn new techniques.`,
         isOpen: false,
     }
 

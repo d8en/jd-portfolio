@@ -7,7 +7,6 @@ import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
 import jdStringUtils from '../../utils/jdStringUtils';
 import { motion } from 'framer-motion';
-import jdAniUtils from '../../utils/jdAniUtils';
 import { observer } from 'mobx-react-lite';
 import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import { JdClose } from '../jdClose/jdClose';
@@ -63,8 +62,6 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
             {/* INNER MOVING DIV */}
             <motion.div
                 ref={innerDiv}
-                layout
-                transition={jdAniUtils.baseEase}
                 onClick={onClickProject}
                 className={`${props.isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
                 style={{
