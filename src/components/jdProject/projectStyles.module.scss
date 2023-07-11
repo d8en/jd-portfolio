@@ -81,6 +81,10 @@ $containerBorder: 24px;
         gap: 16px;
         flex-direction: column;
     }
+
+    .projectHeader {
+        margin-bottom: -28px;
+    }
 }
 
 .projectPreviewImgContainer {
@@ -112,7 +116,6 @@ $containerBorder: 24px;
 .projectHeader {
     @include jdLineClamp(3);
     @include font-size-larger;
-    margin: 0 0 -8px 0;
 }
 
 .projectDesc {

@@ -5,7 +5,6 @@ import jdProjectStore from "../../stores/jdProjectStore";
 import styles from './proejctsStyles.module.scss';
 import { JdImg } from "../jdImg/jdImg";
 import { JdATag } from "../jdATag/jdATag";
-import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 
 export function JdRekWeb(): React.JSX.Element {
     return (

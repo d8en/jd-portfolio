@@ -142,7 +142,17 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aetherPreview.webp?alt=media',
         component: <JdAether />,
         title: `Designing a brand for an insurance company`,
-        desc: `It tiring navigating through the complex world of health insurance. Trust and transparency are often lacking.`,
+        desc: `It's tiring navigating through the complex world of health insurance. Trust and transparency are often lacking.`,
+        isOpen: false,
+    }
+    public nightcat: IJdProject = {
+        id: '12',
+        company: jdCompaniesStore.gravix,
+        skills: [jdSkillsStore.brandDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightCatPreview.webp?alt=media',
+        component: <JdAether />,
+        title: `Designing a brand for a viral quirky weather app`,
+        desc: `Haven't you always dreamed about a weather app that insults you? Me too.`,
         isOpen: false,
     }
 
