@@ -10,7 +10,7 @@ export function JdAether(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Design an insurance brand that feels transparent and refreshing.</p>
+            <p>Design an <JdATag href="https://www.aitherhealth.com/">insurance brand</JdATag> that feels transparent and refreshing.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />

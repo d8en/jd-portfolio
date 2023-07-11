@@ -1,4 +1,5 @@
 import jdStringUtils from "../../utils/jdStringUtils";
+import { JdATag } from "../jdATag/jdATag";
 import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import styles from './proejctsStyles.module.scss';
@@ -9,7 +10,7 @@ export function JdNightCat(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Design a brand around a cat who clearly ruled the founders household.</p>
+            <p>Design a brand for a <JdATag href="https://nightcatproductions.com/">snarky weather app</JdATag>.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -22,17 +23,11 @@ export function JdNightCat(): React.JSX.Element {
             <JdProjectSubHeader {...jdStringUtils.ideation} />
             <p>I met with the founder to review their vision for the brand and talked through a few concepts.</p>
 
-            <div className={styles.multiMedia}>
-                <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs4.webp?alt=media'
-                    className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
-                />
-                <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs3.webp?alt=media'
-                    className={styles.projectsImage}
-                />
-            </div>
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs4.webp?alt=media'
+                className={styles.projectsImage}
+                style={{ boxShadow: 'unset' }}
+            />
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Finished logo</figcaption>
