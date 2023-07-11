@@ -24,6 +24,9 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
     // Sizing used for wrapper container to maintain scroll position when an article is position:absolute (opened)
     const [innerDivRect, setInnerDivRect] = useState<DOMRect>();
 
+    // Hover over arrows to replace 'up next'
+    const [isHoverLeft, setIsHoverLeft] = useState<boolean>(false);
+
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
 
@@ -154,12 +157,17 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
 
                             {/* PREVIOUS PROJECT */}
                             {jdProjectStore.prevProject &&
-                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.prevProject)} className={styles.projectNavArrowIcon}>
+                                <Link
+                                    onMouseEnter={() => setIsHoverLeft(true)}
+                                    onMouseLeave={() => setIsHoverLeft(false)}
+                                    to={jdProjectStore.getLinkToProject(jdProjectStore.prevProject)}
+                                    className={styles.projectNavArrowIcon}
+                                >
                                     <ArrowIcon style={{ transform: 'rotate(180deg)' }} />
                                 </Link>
                             }
 
-                            {jdProjectStore.nextProject ?
+                            {jdProjectStore.nextProject && !isHoverLeft ?
                                 <p className={styles.projectNavText}><strong>Up Next:</strong> {jdProjectStore.nextProject.title}</p>
                                 :
                                 jdProjectStore.prevProject &&
@@ -168,7 +176,10 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
 
                             {/* NEXT PROJECT */}
                             {jdProjectStore.nextProject &&
-                                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.nextProject)} className={styles.projectNavArrowIcon}>
+                                <Link
+                                    to={jdProjectStore.getLinkToProject(jdProjectStore.nextProject)}
+                                    className={styles.projectNavArrowIcon}
+                                >
                                     <ArrowIcon />
                                 </Link>
                             }
