@@ -31,23 +31,11 @@ export function JdWeekend(): React.JSX.Element {
             <h2 className={styles.projectGapReducer}>Galaxy Wear Watch Faces</h2>
             <p>I designed and built a custom watch face, primarily because of the design / layout challenge but also because I enjoy making icons.</p>
 
-            <JdImg
-                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch1.webp?alt=media'
-                className={styles.projectsImage}
-            />
-
-            {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Watch face with the Primacy logo on it</figcaption>
-
-            <p>I started with a design using <JdATag href="https://www.theprimacy.com/">Primacy's logo</JdATag> (agency I was working at), but liked the second concept better.</p>
-
-            <p>I enjoyed making the coffee cup and shoe icons the most.</p>
-
             <div className={styles.multiMedia}>
                 <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch3.webp?alt=media'
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch1.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ boxShadow: 'unset' }}
+                    style={{ placeSelf: 'center' }}
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch2.webp?alt=media'
@@ -55,6 +43,12 @@ export function JdWeekend(): React.JSX.Element {
                 />
             </div>
 
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Watch face with the Primacy logo on it</figcaption>
+
+            <p>I started with a design using <JdATag href="https://www.theprimacy.com/">Primacy's logo</JdATag> (agency I was working at), but liked the second concept better.</p>
+
+            <p>I enjoyed making the coffee cup and shoe icons the most.</p>
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Watch face with custom icons</figcaption>
