@@ -21,7 +21,7 @@ $containerBorder: 24px;
         gap: 56px;
     }
     
-    max-width: $desktopMaxWidth;
+    max-width: 900px;
     position: relative;
     @include aniScaleIn;
     @include aniHoverOnly;
