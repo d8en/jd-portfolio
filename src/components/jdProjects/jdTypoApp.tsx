@@ -37,7 +37,6 @@ export function JdTypoApp(): React.JSX.Element {
 
             <p>Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x). This ended up being pretty simple - use a timeout delay multiplier that is controled by the user.</p>
 
-
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
             <p>I wanted a super minimalist approach with almost nothing on the screen except reading and writing.</p>
