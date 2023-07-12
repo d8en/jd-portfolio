@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styles from './imgStyles.module.scss';
 import { JdClose } from "../jdClose/jdClose";
+import { JdSkelly } from "../jdSkelly/jdSkelly";
 
 export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>): React.JSX.Element {
 
@@ -13,6 +14,8 @@ export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTM
     return (
         <>
             <img onClick={onClick} {...props} />
+
+            <JdSkelly {...props} />
 
             {/* OPENED */}
             {isFullscreen &&

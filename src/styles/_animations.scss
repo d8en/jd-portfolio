@@ -88,14 +88,15 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
 @mixin aniSkelly {
     animation-name: aniSkelly;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-play-state: running;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @keyframes aniSkelly {
     0% {
-        opacity: 0;
+        opacity: .5;
     }
     100% {
         opacity: 1;

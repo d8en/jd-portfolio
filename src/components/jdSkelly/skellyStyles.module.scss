@@ -2,4 +2,5 @@
 
 .skellyContainer {
     background-color: var(--greyBg);
+    @include aniSkelly;
 }
