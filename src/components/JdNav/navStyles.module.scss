@@ -13,7 +13,6 @@
 .navRoutes {
     @include flexCentered;
     flex: 1;
-    // max-width: $desktopMaxWidth;
     max-width: 400px;
     @include media-phone {
         max-width: unset;
