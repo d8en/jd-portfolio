@@ -89,6 +89,7 @@ export function JdWeekend(): React.JSX.Element {
                     className={styles.projectsImage}
                 />
             </div>
+
             <div className={styles.multiMedia}>
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto4.webp?alt=media'
@@ -107,6 +108,21 @@ export function JdWeekend(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Designs for the store website</figcaption>
+
+            {/* LKL PKL; */}
+            <h2 className={styles.projectGapReducer}>Collage of Branding Projects</h2>
+            <p>I needed some pictures in my office, so I decided to make a collage of all of my favorite branding projects in the past 6 years.</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollage1.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollage2.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
 
         </>
     )
