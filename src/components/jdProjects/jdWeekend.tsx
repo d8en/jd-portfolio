@@ -53,6 +53,61 @@ export function JdWeekend(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Watch face with custom icons</figcaption>
 
+            {/* LKL PKL; */}
+            <h2 className={styles.projectGapReducer}>LKL PKL - Pickleball Apparel</h2>
+            <p>Pickleball became an obsession almost immediately after I started playing in April 2023. I wanted to design a brand to represent all the awesome local pickleball cults..I mean communities.</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lkl3.webp?alt=media'
+                className={styles.projectsImage}
+            />
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lkl1.webp?alt=media'
+                    className={styles.projectsImage}
+                    style={{ placeSelf: 'center' }}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lkl2.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>First two t-shirt designs I produced</figcaption>
+
+            <p>I'm also in the process of building a store website that will link to a Shopify store with print-on-demand services hooked up.</p>
+
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto6.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto5.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
+            <div className={styles.multiMedia}>
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto4.webp?alt=media'
+                    className={styles.projectsImage}
+                    style={{ placeSelf: 'center' }}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto3.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+                <JdImg
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto2.webp?alt=media'
+                    className={styles.projectsImage}
+                />
+            </div>
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Designs for the store website</figcaption>
+
         </>
     )
 }
