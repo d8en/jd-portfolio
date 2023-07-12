@@ -16,11 +16,11 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
     useEffect(() => {
         setIsActive(props.path === location.pathname);
-        if (jdRoutes.activeRoute === jdRoutes.projects) setIsProjects(false);
+        if (jdRoutes.activeRoute.name === jdRoutes.projects.name) setIsProjects(false);
     }, [location]);
 
     useEffect(() => {
-        if (props.name === jdRoutes.projects.name) setIsProjects(true);
+        if (props.name === jdRoutes.projects.name && jdRoutes.activeRoute.name !== jdRoutes.projects.name) setIsProjects(true);
     }, []);
 
     return (
