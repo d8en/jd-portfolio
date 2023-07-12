@@ -11,6 +11,21 @@
     gap: 12px;
 }
 
+.homeTitle {
+    gap: 20px;
+    grid-template-columns: min-content max-content;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+.homeLogo {
+    height: 20px;
+    width: 20px;
+    padding: 40px;
+    background-color: var(--greyBg);
+}
+
 .homeSubHeader {
     @include font-weight-light;
     line-height: 1.6em;
