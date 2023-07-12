@@ -22,7 +22,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
         <Link to={props.path!} className={`${styles.navItemContainer} ${isActive ? styles.navItemActive : ''}`}>
 
             {props.name === jdRoutes.projects.name &&
-                <JdFloatingHelp style={{ top: -100, }} />
+                <JdFloatingHelp style={{ top: -80, }} />
             }
 
             {/* ICON */}

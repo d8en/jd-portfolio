@@ -4,15 +4,27 @@ $closeSize: 28px;
 
 .floatingHelpContainer {
     display: grid;
-    grid-template-columns: auto-fit min-content;
+    grid-template-columns: auto min-content;
     grid-auto-flow: column;
     position: absolute;
     background-color: var(--primBg);
     border-radius: 12px;
+    place-items: center;
     @include baseShadow;
-    padding: 12px;
     @include aniFloating;
+    padding: 12px;
+    width: 180px;
     gap: 12px;
+    // &::after {
+    //     position: absolute;
+    //     bottom: -10px;
+    //     height: 12px;
+    //     width: 12px;
+    //     left: 50%;
+    //     transform: rotate(45deg) translateX(-50%);
+    //     content: "";
+    //     background-color: inherit;
+    // }
 }
 
 .floatingHelpText {
