@@ -22,7 +22,7 @@ export function JdHomeView(): React.JSX.Element {
                 </div>
 
                 {/* HEADLINE */}
-                <h2 className={styles.homeSubHeader}>👋 Hey! I'm a <strong>software engineer</strong> and <strong>product designer</strong> with 8 years of experience designing and building products.</h2>
+                <h2 className={styles.homeSubHeader}>👋 I'm a <strong>software engineer</strong> and <strong>product designer</strong> with 8 years of experience designing and building products.</h2>
             </div>
 
         </JdViewWrapper>
