@@ -14,7 +14,7 @@ export function JdNav(): React.JSX.Element {
             animate={{
                 bottom: 0,
             }}
-            transition={{ ...jdAniUtils.springTransition, delay: jdAniUtils.mountDelay }}
+            transition={{ ...jdAniUtils.longEase, delay: jdAniUtils.mountDelay }}
             className={styles.navContainer}
         >
 

@@ -27,7 +27,7 @@ export function JdHomeView(): React.JSX.Element {
             <div className={styles.homeHeader}>
 
                 {/* TITLE / LOGO */}
-                <motion.div layout="preserve-aspect" className={styles.homeTitle}>
+                <motion.div layout className={styles.homeTitle}>
 
                     {/* LOGO */}
                     <motion.div
@@ -38,7 +38,7 @@ export function JdHomeView(): React.JSX.Element {
                         }}
                         animate={{ position: 'relative', bottom: 0, opacity: 1, scale: 1 }}
                         className={styles.homeLogo}
-                        layout="preserve-aspect"
+                        layout
                     >
                         <JdLogo style={{ width: 24, height: 24 }} />
                     </motion.div>
@@ -46,8 +46,10 @@ export function JdHomeView(): React.JSX.Element {
                     {/* TITLE */}
                     {isHeaderShowing &&
                         <motion.h1
-                            layout="preserve-aspect"
-                            transition={jdAniUtils.baseEase}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            layout
+                            transition={jdAniUtils.longEase}
                         >
                             Jeff Dayton
                         </motion.h1>
@@ -57,9 +59,9 @@ export function JdHomeView(): React.JSX.Element {
                 {/* HEADLINE */}
                 {isTaglineShowing &&
                     <motion.h2
-                        layout="preserve-aspect"
-                        initial={{ position: 'absolute', bottom: -40 }}
-                        animate={{ position: 'relative', bottom: 0 }}
+                        layout
+                        initial={{ bottom: -40, opacity: 0 }}
+                        animate={{ position: 'relative', bottom: 0, opacity: 1 }}
                         transition={jdAniUtils.longEase}
                         className={styles.homeSubHeader}
                     >
