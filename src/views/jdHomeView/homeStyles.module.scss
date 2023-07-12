@@ -1,5 +1,7 @@
 @use "../../styles/" as *;
 
+$logoContainer: 56px;
+
 .homeContainer {
     grid-auto-rows: unset;
 }
@@ -12,7 +14,7 @@
 }
 
 .homeTitle {
-    gap: 20px;
+    gap: 16px;
     grid-template-columns: min-content max-content;
     display: grid;
     grid-auto-flow: column;
@@ -20,10 +22,13 @@
 }
 
 .homeLogo {
-    height: 20px;
-    width: 20px;
-    padding: 40px;
-    background-color: var(--greyBg);
+    display: grid;
+    place-items: center;
+    border-radius: 200px;
+    height: $logoContainer;
+    width: $logoContainer;
+    background-color: var(--primBg);
+    @include baseShadow;
 }
 
 .homeSubHeader {

@@ -14,7 +14,7 @@ export function JdHomeView(): React.JSX.Element {
 
                     {/* LOGO */}
                     <div className={styles.homeLogo} >
-                        <JdLogo />
+                        <JdLogo style={{ width: 24, height: 24 }} />
                     </div>
 
                     {/* TITLE */}
@@ -23,9 +23,6 @@ export function JdHomeView(): React.JSX.Element {
 
                 {/* HEADLINE */}
                 <h2 className={styles.homeSubHeader}>👋 Hey! I'm a <strong>software engineer</strong> and <strong>product designer</strong> with 8 years of experience designing and building products.</h2>
-
-                {/* SUB HEADER */}
-                <p>Checkout my projects below!</p>
             </div>
 
         </JdViewWrapper>
