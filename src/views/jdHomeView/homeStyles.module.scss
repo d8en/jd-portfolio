@@ -7,4 +7,11 @@
 .homeHeader {
     display: grid;
     place-self: center;
+    max-width: $desktopMaxWidth;
+    gap: 12px;
+}
+
+.homeSubHeader {
+    @include font-weight-light;
+    line-height: 1.6em;
 }

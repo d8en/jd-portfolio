@@ -8,7 +8,8 @@ export function JdHomeView(): React.JSX.Element {
             {/* TITLE */}
             <div className={styles.homeHeader}>
                 <h1>Jeff Dayton</h1>
-                <p>👋 Hey there! I build apps with amazing people. Checkout my projects!</p>
+                <h2 className={styles.homeSubHeader}>👋 Hey! I'm a <strong>software engineer</strong> and <strong>product designer</strong> with 8 years of experience designing and building products.</h2>
+                <p>Checkout my projects below!</p>
             </div>
 
         </JdViewWrapper>
