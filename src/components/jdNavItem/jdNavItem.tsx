@@ -4,6 +4,7 @@ import styles from './navItemStyles.module.scss';
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import jdAniUtils from "../../utils/jdAniUtils";
+import { JdFloatingHelp } from "../jdFloatingHelp/jdFloatingHelp";
 
 export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
@@ -17,6 +18,12 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
     return (
         <Link to={props.path!} className={`${styles.navItemContainer} ${isActive ? styles.navItemActive : ''}`}>
+
+            <JdFloatingHelp
+                style={{
+                    top: -80,
+                }}
+            />
 
             {/* ICON */}
             <div className={styles.navItemIcon}>

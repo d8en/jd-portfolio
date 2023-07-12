@@ -1,5 +1,15 @@
+@use "../../styles/" as *;
+
 .floatingHelpContainer {
     position: absolute;
     background-color: var(--primBg);
     border-radius: 12px;
+    @include baseShadow;
+    padding: 8px;
+    @include aniFloating;
+}
+
+.floatingHelpText {
+    @include font-size-small;
+    line-height: 1.5em;
 }

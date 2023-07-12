@@ -96,9 +96,29 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
 @keyframes aniSkelly {
     0% {
-        filter: brightness(.8)
+        filter: brightness(0.8);
     }
     100% {
-        filter: brightness(1)
+        filter: brightness(1);
+    }
+}
+
+$aniFloatAmt: 12px;
+@mixin aniFloating {
+    animation-name: aniFloating;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.8, .2, .2, .8);
+}
+
+@keyframes aniFloating {
+    0% {
+        transform: translateY(-$aniFloatAmt);
+    }
+
+    100% {
+        transform: translateY($aniFloatAmt);
     }
 }
