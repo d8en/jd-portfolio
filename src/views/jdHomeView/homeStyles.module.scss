@@ -32,6 +32,7 @@ $logoContainer: 56px;
 }
 
 .homeSubHeader {
+    @include font-size-normal;
     @include font-weight-light;
     line-height: 1.6em;
 }
