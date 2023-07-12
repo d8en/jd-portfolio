@@ -1,15 +1,31 @@
 @use "../../styles/" as *;
 
+$closeSize: 28px;
+
 .floatingHelpContainer {
+    display: grid;
+    grid-template-columns: auto-fit min-content;
+    grid-auto-flow: column;
     position: absolute;
     background-color: var(--primBg);
     border-radius: 12px;
     @include baseShadow;
-    padding: 8px;
+    padding: 12px;
     @include aniFloating;
+    gap: 12px;
 }
 
 .floatingHelpText {
     @include font-size-small;
     line-height: 1.5em;
+}
+
+.floatingClose {
+    display: grid;
+    place-items: center;
+    border-radius: 200px;
+    background-color: var(--greyBg);
+    width: $closeSize;
+    height: $closeSize;
+    @include aniHoverBase;
 }
