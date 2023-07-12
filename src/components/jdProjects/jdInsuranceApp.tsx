@@ -1,7 +1,6 @@
 import jdStringUtils from "../../utils/jdStringUtils";
 import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
-import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 import styles from './proejctsStyles.module.scss';
 
 export function JdInsuranceApp(): React.JSX.Element {
@@ -57,16 +56,7 @@ export function JdInsuranceApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes for the future vision and the immediate work efforts</figcaption>
 
-            <p>I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work.</p>
-
-            {/* PROTOTYPE VIDEO */}
-            <JdVimeoPlayer
-                src="https://player.vimeo.com/video/842977038?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                className={`${styles.projectVideo} ${styles.projectVideoWide}`}
-            />
-
-            {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Animated prototype of the future vision of the product</figcaption>
+            <p>I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work. This video was an excellent communication tool for stakeholders, underwriters, and executives.</p>
 
         </>
     )
