@@ -1,5 +1,5 @@
 import { Link, useLocation, Location } from "react-router-dom";
-import { IJdRouteObj } from "../../utils/jdRoutes";
+import jdRoutes, { IJdRouteObj } from "../../utils/jdRoutes";
 import styles from './navItemStyles.module.scss';
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -12,6 +12,8 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
     const [isActive, setIsActive] = useState<boolean>(false);
     const location: Location = useLocation();
 
+    console.log('props', props.name);
+
     useEffect(() => {
         setIsActive(props.path === location.pathname);
     }, [location]);
@@ -19,12 +21,9 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
     return (
         <Link to={props.path!} className={`${styles.navItemContainer} ${isActive ? styles.navItemActive : ''}`}>
 
-            <JdFloatingHelp
-                style={{
-                    top: -80,
-                    // width: 80,
-                }}
-            />
+            {props.name === jdRoutes.projects.name &&
+                <JdFloatingHelp style={{ top: -100, }} />
+            }
 
             {/* ICON */}
             <div className={styles.navItemIcon}>
