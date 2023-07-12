@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import styles from './viewWrapperStyles.module.scss';
 import jdRoutes from '../../utils/jdRoutes';
 import jdStringUtils from '../../utils/jdStringUtils';
+import jdElementUtils from '../../utils/jdElementUtils';
 
 export interface IJdViewWrapperProps {
     divProps?: React.PropsWithChildren & React.HTMLAttributes<HTMLDivElement>;
@@ -15,7 +16,7 @@ export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps
     // Mount
     useEffect(() => {
         document.title = `${jdStringUtils.pageTitlePrefix}${jdRoutes.activeRoute.name}`;
-        if (divRef.current) divRef.current.scrollTop = 0;
+        if (divRef.current) jdElementUtils.resetScrollTop(divRef.current);
     }, []);
 
     return (

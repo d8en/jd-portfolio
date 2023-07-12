@@ -13,6 +13,7 @@ import { JdClose } from '../jdClose/jdClose';
 import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
 import { Link } from 'react-router-dom';
 import jdProjectStore from '../../stores/jdProjectStore';
+import jdElementUtils from '../../utils/jdElementUtils';
 
 export interface IJdProjectProps {
     onToggleProject: () => void | Promise<void>;
@@ -37,13 +38,13 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
     useEffect(() => {
         if (!innerDiv.current) return;
         setInnerDivRect(innerDiv.current?.getBoundingClientRect());
-        innerDiv.current.scrollTop = 0;
+        jdElementUtils.resetScrollTop(innerDiv.current);
     }, []);
 
     // When opened
     useEffect(() => {
         if (!innerDiv.current) return;
-        innerDiv.current.scrollTop = 0;
+        jdElementUtils.resetScrollTop(innerDiv.current);
     }, [props.isOpen]);
 
     return (

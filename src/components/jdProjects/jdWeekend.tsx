@@ -10,7 +10,7 @@ export function JdWeekend(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Some of these had no goal, some did and it wasn't reached. That's the beauty of side projects, there's no pressure and only chosen constraints.</p>
+            <p>Some of these had no goal. That's the beauty of side projects, there's no pressure and only chosen constraints.</p>
 
 
             {/* AQI */}
@@ -29,7 +29,7 @@ export function JdWeekend(): React.JSX.Element {
 
             {/* WATCHFACE */}
             <h2 className={styles.projectGapReducer}>Galaxy Wear Watch Faces</h2>
-            <p>I designed and built a custom watch face, primarily because of the design / layout challenge but also because I enjoy making icons.</p>
+            <p>I designed and built a <strong>custom watch face</strong>, primarily because of the design / layout challenge but also because I enjoy making icons.</p>
 
             <div className={styles.multiMedia}>
                 <JdImg
