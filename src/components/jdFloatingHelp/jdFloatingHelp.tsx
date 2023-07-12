@@ -23,7 +23,7 @@ export function JdFloatingHelp(props: React.PropsWithChildren<MotionProps & { on
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={jdAniUtils.springTransition}
+                    transition={{ ...jdAniUtils.springTransition, delay: jdAniUtils.mountDelay }}
                     className={styles.floatingHelpContainer}
                     {...props}
                 >

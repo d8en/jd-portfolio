@@ -2,6 +2,10 @@ import { Transition, cubicBezier } from "framer-motion";
 
 class JdAniUtils {
 
+    public logoDelay: number = 600;
+    public taglineDelay: number = 1200;
+    public mountDelay: number = (this.logoDelay + this.taglineDelay - 300) / 1000;
+
     public get springTransition(): Transition {
         return {
             type: "spring",
@@ -30,6 +34,13 @@ class JdAniUtils {
         return {
             ease: cubicBezier(.5, 1, 0, 1),
             duration: .375,
+        }
+    }
+
+    public get longEase(): Transition {
+        return {
+            ease: cubicBezier(.5, 1, 0, 1),
+            duration: 1,
         }
     }
 }
