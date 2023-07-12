@@ -48,7 +48,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 @mixin _aniWipe($delay) {
     &::before {
         animation-name: aniWipe;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
         animation-delay: $delay * 0.2s;
         animation-play-state: running;
         animation-fill-mode: forwards;
@@ -83,5 +83,21 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
     }
     &:nth-child(4) {
         @include _aniWipe(3);
+    }
+}
+
+@mixin aniSkelly {
+    animation-name: aniSkelly;
+    animation-duration: 3s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aniSkelly {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
