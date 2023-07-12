@@ -1,7 +1,7 @@
 import { Link, useLocation, Location } from "react-router-dom";
 import jdRoutes, { IJdRouteObj } from "../../utils/jdRoutes";
 import styles from './navItemStyles.module.scss';
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import jdAniUtils from "../../utils/jdAniUtils";
 import { JdFloatingHelp } from "../jdFloatingHelp/jdFloatingHelp";
@@ -16,6 +16,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
     useEffect(() => {
         setIsActive(props.path === location.pathname);
+        if (jdRoutes.activeRoute === jdRoutes.projects) setIsProjects(false);
     }, [location]);
 
     useEffect(() => {
