@@ -1,7 +1,7 @@
 import { Link, useLocation, Location } from "react-router-dom";
 import jdRoutes, { IJdRouteObj } from "../../utils/jdRoutes";
 import styles from './navItemStyles.module.scss';
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import jdAniUtils from "../../utils/jdAniUtils";
 import { JdFloatingHelp } from "../jdFloatingHelp/jdFloatingHelp";
@@ -12,17 +12,28 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
     const [isActive, setIsActive] = useState<boolean>(false);
     const location: Location = useLocation();
 
-    console.log('props', props.name);
+    const [isProjects, setIsProjects] = useState<boolean>(false);
 
     useEffect(() => {
         setIsActive(props.path === location.pathname);
     }, [location]);
 
-    return (
-        <Link to={props.path!} className={`${styles.navItemContainer} ${isActive ? styles.navItemActive : ''}`}>
+    useEffect(() => {
+        if (props.name === jdRoutes.projects.name) setIsProjects(true);
+    }, []);
 
-            {props.name === jdRoutes.projects.name &&
-                <JdFloatingHelp style={{ top: -80, }} />
+    return (
+        <Link
+            onClick={() => { if (isProjects) setIsProjects(false) }}
+            to={props.path!}
+            className={`${styles.navItemContainer} ${isActive ? styles.navItemActive : ''} ${isProjects ? styles.navItemPulse : ''}`}
+        >
+
+            {isProjects &&
+                <JdFloatingHelp
+                    style={{ top: -80, }}
+                    onClose={() => setIsProjects(false)}
+                />
             }
 
             {/* ICON */}

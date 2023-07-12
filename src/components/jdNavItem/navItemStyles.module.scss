@@ -30,6 +30,10 @@ $iconHeight: 32px;
     }
 }
 
+.navItemPulse {
+    @include aniBeforePulse;
+}
+
 .navItemActive {
     .navItemText {
         color: var(--link);

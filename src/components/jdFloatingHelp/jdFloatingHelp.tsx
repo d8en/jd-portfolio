@@ -4,7 +4,7 @@ import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
 import { AnimatePresence, MotionProps, motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 
-export function JdFloatingHelp(props: React.PropsWithChildren<MotionProps>): React.JSX.Element {
+export function JdFloatingHelp(props: React.PropsWithChildren<MotionProps & { onClose?: () => void }>): React.JSX.Element {
 
     // Hide / Show
     const [isShowing, setIsShowing] = useState<boolean>(true);
@@ -14,6 +14,7 @@ export function JdFloatingHelp(props: React.PropsWithChildren<MotionProps>): Rea
         e.stopPropagation();
         setIsShowing(false);
         console.log('is showing', isShowing);
+        if (props.onClose) props.onClose();
     }
     return (
         <AnimatePresence>
