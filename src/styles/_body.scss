@@ -3,6 +3,7 @@
 
 $globalPadding: 20px;
 $desktopMaxWidth: 720px;
+$desktopMaxWidth4k: 1400px;
 
 @mixin bodyPadding {
     padding: 0 $globalPadding;

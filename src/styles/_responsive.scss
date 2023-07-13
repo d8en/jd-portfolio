@@ -9,3 +9,9 @@
         @content;
     }
 }
+
+@mixin media-desktop4k {
+    @media (min-width: 1900px) {
+        @content;
+    }
+}

@@ -37,8 +37,13 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
     // Mount
     useEffect(() => {
         if (!innerDiv.current) return;
+
+        // Set wrapper dims - we use a wrapper to make sure we maintain scroll position when a project is open.
         setInnerDivRect(innerDiv.current?.getBoundingClientRect());
         jdElementUtils.resetScrollTop(innerDiv.current);
+
+        // Listen for window resize events
+
     }, []);
 
     // When opened
@@ -54,8 +59,8 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
             className={styles.projectsHolder}
             style={innerDivRect ?
                 {
-                    height: innerDivRect.height,
-                    width: innerDivRect.width,
+                    maxHeight: innerDivRect.height,
+                    maxWidth: innerDivRect.width,
                 }
                 : undefined}
         >
