@@ -83,6 +83,7 @@ $containerBorder: 24px;
         @include globalBottomAfter;
         & > p,
         ul,
+        ol,
         img {
             margin-top: -16px;
         }
