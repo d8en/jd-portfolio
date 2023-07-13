@@ -8,38 +8,53 @@ export const JdContactForm = observer(() => {
     return (
         <div className={styles.contactFormContainer}>
 
-            <form className={styles.contactForm}>
+            <div className={styles.contactContent}>
 
+                {/* HEADLINE */}
+                <h1>Let's talk!</h1>
+                <p>I'm looking for fulltime employment but also open to contract gigs. Tell me what you're up to!</p>
 
-                {/* ROW */}
-                <div className={styles.contactRow}>
+                <form className={styles.contactForm}>
 
-                    {/* FIRST NAME */}
+                    {/* ROW */}
+                    <div className={styles.contactRow}>
+
+                        {/* FIRST NAME */}
+                        <JdInput
+                            id="firstName"
+                            value={jdContactStore.contactInfo.firstName}
+                            placeholder="First name"
+                            handleUpdate={(value: string) => jdContactManager.setContactProps({ firstName: value })}
+                        />
+
+                        {/* LAST NAME */}
+                        <JdInput
+                            id="lastName"
+                            value={jdContactStore.contactInfo.lastName}
+                            placeholder="Last name"
+                            handleUpdate={(value: string) => jdContactManager.setContactProps({ lastName: value })}
+                        />
+                    </div>
+
+                    {/* EMAIL */}
                     <JdInput
-                        id="firstName"
-                        value={jdContactStore.contactInfo.firstName}
-                        placeholder="First name"
-                        handleUpdate={(value: string) => jdContactManager.setContactProps({ firstName: value })}
+                        id="email"
+                        value={jdContactStore.contactInfo.email}
+                        placeholder="Email"
+                        handleUpdate={(value: string) => jdContactManager.setContactProps({ email: value })}
                     />
 
-                    {/* LAST NAME */}
+                    {/* MESSAGE */}
                     <JdInput
-                        id="lastName"
-                        value={jdContactStore.contactInfo.lastName}
-                        placeholder="Last name"
-                        handleUpdate={(value: string) => jdContactManager.setContactProps({ lastName: value })}
+                        id="message"
+                        value={jdContactStore.contactInfo.message}
+                        placeholder="What would you like to talk about?"
+                        handleUpdate={(value: string) => jdContactManager.setContactProps({ message: value })}
                     />
-                </div>
 
-                {/* EMAIL */}
-                <JdInput
-                    id="email"
-                    value={jdContactStore.contactInfo.email}
-                    placeholder="Email"
-                    handleUpdate={(value: string) => jdContactManager.setContactProps({ email: value })}
-                />
+                </form>
 
-            </form>
+            </div>
         </div>
     );
 })

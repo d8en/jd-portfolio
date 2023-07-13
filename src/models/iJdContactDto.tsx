@@ -2,12 +2,12 @@ export interface IJdContactDto {
     firstName: string;
     lastName: string;
     email: string;
-    notes: string;
+    message: string;
 }
 
 export const sampleJdContactDto: IJdContactDto = {
     firstName: '',
     lastName: '',
     email: '',
-    notes: '',
+    message: '',
 }

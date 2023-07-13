@@ -8,19 +8,41 @@ $inputGap: 12px;
     @include zeroPostion;
     display: grid;
     place-items: center;
+
+    @include media-phone {
+        place-items: start center;
+    }
+
     z-index: 1;
+    grid-auto-rows: auto;
+}
+
+.contactContent {
+    display: grid;
+    gap: 44px;
+    place-items: center;
+
+    & > p {
+        color: var(--greyText);
+        margin-top: -44px;
+        width: 80%;
+        @include media-phone {
+            width: 100%;
+        }
+    }
+    max-width: $desktopMaxWidth;
+
+    @include media-phone {
+        margin-top: 56px;
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }
 
 .contactForm {
     display: grid;
     grid-auto-rows: auto;
     gap: $inputGap;
-    max-width: $desktopMaxWidth;
-
-    @include media-phone {
-        max-width: 100%;
-        padding: 0 20px;
-    }
 }
 
 .contactRow {
