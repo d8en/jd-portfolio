@@ -3,12 +3,14 @@
 $contactPosition: 24px;
 $contactSize: 56px;
 
-.contactContainer {
+.contactWrapper {
     position: fixed;
+    right: $contactPosition;
+}
+
+.contactContainer {
     @include flexCentered;
     gap: 12px;
-    position: absolute;
-    right: $contactPosition;
     min-width: $contactSize;
     min-height: $contactSize;
     background-color: var(--primBg);

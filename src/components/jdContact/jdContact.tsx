@@ -11,15 +11,19 @@ export const JdContact = observer(() => {
             initial={{ bottom: -40, opacity: 0 }}
             animate={{ bottom: 95, opacity: 1 }}
             transition={{ ...jdAniUtils.baseEase, delay: 2.2 }}
-            className={styles.contactContainer}
+            className={styles.contactWrapper}
             onClick={() => jdContactManager.setStateAsync({ isOpen: !jdContactManager.store.isOpen })}
         >
+            <div
+                className={styles.contactContainer}
+            >
 
-            {/* ICON */}
-            <ContactIcon style={{ marginBottom: 3 }} />
+                {/* ICON */}
+                <ContactIcon style={{ marginBottom: 3 }} />
 
-            {/* TEXT */}
-            <span>contact</span>
+                {/* TEXT */}
+                <span>contact</span>
+            </div>
         </motion.div>
     )
 });
