@@ -1,3 +1,4 @@
+import jdContactApi from "../api/jdContactApi";
 import { IJdContactDto } from "../models/iJdContactDto";
 import jdContactStore, { JdContactStore } from "../stores/jdContactStore";
 import { JdManagerBase } from "./base/jdManagerBase";
@@ -12,9 +13,7 @@ export class JdContactManager extends JdManagerBase<JdContactStore> {
     }
 
     public async sendForm(): Promise<boolean> {
-
-        
-        return true;
+        return await jdContactApi.sendForm(this.store.contactInfo);
     }
 
 }
