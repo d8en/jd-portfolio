@@ -58,5 +58,5 @@ $inputGap: 12px;
     color: var(--greyText);
     font-style: italic;
     text-align: center;
-    @include aniPushInOut(5);
+    @include aniPushInOut(2000);
 }

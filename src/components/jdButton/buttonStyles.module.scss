@@ -1,5 +1,11 @@
 @use "../../styles/" as *;
 
+@mixin btnTransition {
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
 button {
     all: unset;
 }
@@ -16,7 +22,9 @@ button {
         color: var(--primBg);
     }
 
+    @include btnTransition;
     &:disabled {
+        @include btnTransition;
         background-color: var(--greyBg);
         color: var(--greyText);
     }

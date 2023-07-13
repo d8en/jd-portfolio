@@ -10,6 +10,13 @@ export class JdContactManager extends JdManagerBase<JdContactStore> {
             Object.assign(this.store.contactInfo, newProperties);
         });
     }
+
+    public async sendForm(): Promise<boolean> {
+
+        
+        return true;
+    }
+
 }
 
 const jdContactManager: JdContactManager = new JdContactManager();
