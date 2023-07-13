@@ -32,7 +32,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
             {isProjects &&
                 <JdFloatingHelp
-                    style={{ top: -80, }}
+                    style={{ top: -72, }}
                     onClose={() => setIsProjects(false)}
                 />
             }
