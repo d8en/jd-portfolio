@@ -1,5 +1,4 @@
 import jdStringUtils from "../../utils/jdStringUtils";
-import { JdImg } from "../jdImg/jdImg";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import styles from './proejctsStyles.module.scss';
 
@@ -42,21 +41,9 @@ export function JdInsuranceApp(): React.JSX.Element {
                 <li>One set that we could start working on immediately</li>
             </ol>
 
-            <div className={styles.multiMedia}>
-                <JdImg
-                    className={styles.projectsImage}
-                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/insuranceSs1.webp?alt=media"
-                />
-                <JdImg
-                    className={styles.projectsImage}
-                    srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/insuranceSs2.webp?alt=media"
-                />
-            </div>
-
-            {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Prototypes for the future vision and the immediate work efforts</figcaption>
-
             <p>I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work. This video was an excellent communication tool for stakeholders, underwriters, and executives.</p>
+
+            <p>This project contains highly confidential information so unfortunately I can't share the video or UI design.</p>
 
         </>
     )
