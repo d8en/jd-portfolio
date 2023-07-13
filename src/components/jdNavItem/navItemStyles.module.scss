@@ -62,8 +62,8 @@ $iconHeight: 32px;
     display: grid;
     align-self: center;
     top: 0;
-    height: 2.5px;
-    width: $iconHeight;
-    border-radius: 10px;
+    height: 2px;
+    // width: $iconHeight;
+    width: 50%;
     background-color: var(--link);
 }
