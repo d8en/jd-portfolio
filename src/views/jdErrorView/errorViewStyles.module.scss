@@ -1,0 +1,12 @@
+@use "../../styles/" as *;
+
+.errorContainer {
+    grid-auto-rows: unset;
+}
+
+// .errorContent {
+//     display: grid;
+//     place-self: center;
+//     max-width: $desktopMaxWidth;
+//     gap: 12px;
+// }

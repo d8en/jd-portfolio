@@ -1,9 +1,9 @@
 import { JdViewWrapper } from '../../components/jdViewWrapper/jdViewWrapper';
 import styles from './homeStyles.module.scss';
-import { ReactComponent as JdLogo } from '../../assets/svg/brands/jd.svg';
-import { cubicBezier, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { useEffect, useState } from 'react';
+import { JdAniLogo } from '../../components/jdAniLogo/jdAniLogo';
 
 export function JdHomeView(): React.JSX.Element {
 
@@ -29,19 +29,7 @@ export function JdHomeView(): React.JSX.Element {
                 {/* TITLE / LOGO */}
                 <motion.div layout className={styles.homeTitle}>
 
-                    {/* LOGO */}
-                    <motion.div
-                        initial={{ bottom: '-100vh', opacity: 0, scale: 1.2 }}
-                        transition={{
-                            ease: cubicBezier(0, 1, 0, 1),
-                            duration: 1,
-                        }}
-                        animate={{ position: 'relative', bottom: 0, opacity: 1, scale: 1 }}
-                        className={styles.homeLogo}
-                        layout
-                    >
-                        <JdLogo style={{ width: 24, height: 24 }} />
-                    </motion.div>
+                    <JdAniLogo />
 
                     {/* TITLE */}
                     {isHeaderShowing &&

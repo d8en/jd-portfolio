@@ -1,7 +1,5 @@
 @use "../../styles/" as *;
 
-$logoContainer: 56px;
-
 .homeContainer {
     grid-auto-rows: unset;
 }
@@ -19,16 +17,6 @@ $logoContainer: 56px;
     display: grid;
     grid-auto-flow: column;
     place-items: center;
-}
-
-.homeLogo {
-    display: grid;
-    place-items: center;
-    border-radius: 200px;
-    height: $logoContainer;
-    width: $logoContainer;
-    background-color: var(--primBg);
-    @include baseShadow;
 }
 
 .homeSubHeader {
