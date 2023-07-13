@@ -18,6 +18,7 @@ $contactSize: 56px;
 
     @include baseShadow;
     transition: 375ms padding cubic-bezier(0, 1, 0, 1);
+
     @include aniHoverBase {
         @include media-desktop {
             padding: 0 16px;
