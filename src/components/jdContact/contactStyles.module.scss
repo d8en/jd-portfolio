@@ -13,5 +13,6 @@ $contactSize: 44px;
     width: $contactSize;
     background-color: var(--primBg);
     @include baseShadow;
+    @include aniHoverBase;
     border-radius: 200px;
 }
