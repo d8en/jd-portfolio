@@ -28,7 +28,8 @@ input {
     appearance: none !important;
     background-color: transparent;
 
-    ::placeholder {
+    &::placeholder {
+        all: unset;
         color: var(--greyText);
     }
 }
@@ -44,7 +45,6 @@ input {
     transition: $transition;
 
     &:hover {
-        // border: 1px solid var(--primFg);
         background-color: var(--greyBg);
         transition: $transition;
     }

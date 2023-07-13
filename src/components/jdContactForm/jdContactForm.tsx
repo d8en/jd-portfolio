@@ -41,8 +41,7 @@ export const JdContactForm = observer(() => {
 
                         {/* HEADLINE */}
                         <h1>Let's talk!</h1>
-                        <p>I'm looking for fulltime employment but also open to contract gigs.</p>
-                        <p>Let me know what you're thinkin' and I'll reach out to setup a meeting</p>
+                        <p>I'm open to fulltime and contract gigs, let me know what you're up to!</p>
 
                         <form
                             className={styles.contactForm}
