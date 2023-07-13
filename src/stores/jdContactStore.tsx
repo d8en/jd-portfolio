@@ -8,6 +8,20 @@ export class JdContactStore {
 
     public contactInfo: IJdContactDto = sampleJdContactDto;
     public isOpen: boolean = false;
+
+    public get isDisabled(): boolean {
+        if (
+            this.contactInfo.firstName
+            &&
+            this.contactInfo.lastName
+            &&
+            this.contactInfo.email
+            &&
+            this.contactInfo.message
+        ) return false;
+
+        return true;
+    }
 }
 
 const jdContactStore = new JdContactStore();

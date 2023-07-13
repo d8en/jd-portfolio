@@ -80,7 +80,7 @@ export const JdContactForm = observer(() => {
 
                             <JdButton
                                 id='sendIt'
-                                isDisabled={false}
+                                isDisabled={jdContactManager.store.isDisabled}
                                 text="Send it!"
                                 onClick={() => { }}
                                 style={{ marginTop: 24 }}
