@@ -4,9 +4,27 @@
     grid-auto-rows: unset;
 }
 
-// .errorContent {
-//     display: grid;
-//     place-self: center;
-//     max-width: $desktopMaxWidth;
-//     gap: 12px;
-// }
+.errorContent {
+    display: grid;
+    place-self: center;
+    place-items: center;
+    max-width: $desktopMaxWidth;
+    gap: 32px;
+}
+
+.errorText {
+    display: grid;
+    gap: 32px;
+    place-self: center;
+    place-items: center;
+    & > p {
+        color: var(--greyText);
+        margin-bottom: -24px;
+    }
+    & > h1 {
+        margin-bottom: -12px;
+    }
+    strong {
+        color: var(--primFg);
+    }
+}

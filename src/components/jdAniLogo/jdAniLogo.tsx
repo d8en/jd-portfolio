@@ -1,8 +1,8 @@
-import { motion, cubicBezier } from "framer-motion";
+import { motion, cubicBezier, MotionProps } from "framer-motion";
 import styles from './aniLogoStyles.module.scss';
 import { ReactComponent as JdLogo } from '../../assets/svg/brands/jd.svg';
 
-export function JdAniLogo(): React.JSX.Element {
+export function JdAniLogo(props: MotionProps): React.JSX.Element {
     return (
         <motion.div
             initial={{ bottom: '-100vh', opacity: 0, scale: 1.2 }}
@@ -13,6 +13,7 @@ export function JdAniLogo(): React.JSX.Element {
             animate={{ position: 'relative', bottom: 0, opacity: 1, scale: 1 }}
             className={styles.homeLogo}
             layout
+            {...props}
         >
             <JdLogo style={{ width: 24, height: 24 }} />
         </motion.div>
