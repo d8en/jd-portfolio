@@ -1,6 +1,5 @@
 import styles from './contactStyles.module.scss';
 import { ReactComponent as ContactIcon } from '../../assets/svg/icons/mailOpen.svg';
-import { ReactComponent as CloseIcon } from '../../assets/svg/icons/close.svg';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import jdContactManager from '../../managers/jdContactManager';
@@ -17,11 +16,7 @@ export const JdContact = observer(() => {
         >
 
             {/* ICON */}
-            {jdContactManager.store.isOpen ?
-                <CloseIcon />
-                :
-                <ContactIcon style={{ marginBottom: 3 }} />
-            }
+            <ContactIcon style={{ marginBottom: 3 }} />
 
             {/* TEXT */}
             <span>contact</span>

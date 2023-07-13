@@ -22,6 +22,7 @@ export const JdContactForm = observer(() => {
                     {/* CLOSE */}
                     <JdClose
                         onClick={() => jdContactManager.setStateAsync({ isOpen: false })}
+                        isBottom
                     />
 
                     <div className={styles.contactContent}>
