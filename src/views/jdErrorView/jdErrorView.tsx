@@ -17,29 +17,32 @@ export function JdErrorView(): React.JSX.Element {
     }, []);
 
     return (
-        <JdViewWrapper divProps={{ className: styles.errorContainer }}>
+        <>
+            <JdViewWrapper divProps={{ className: styles.errorContainer }}>
 
-            <div className={styles.errorContent}>
+                <div className={styles.errorContent}>
 
-                {/* LOGO */}
-                <JdAniLogo />
+                    {/* LOGO */}
+                    <JdAniLogo />
 
-                {/* TEXT */}
-                {isTextShowing &&
-                    <motion.div
-                        className={styles.errorText}
-                        {...jdAniUtils.getMoveUp()}
-                    >
-                        <h1>Whoopsie Daisy!</h1>
-                        <p>Looks like the page you're tryin' to get to doesn't exist...</p>
-                        <p><strong>Tap a link below</strong> to get back on the road!</p>
-                    </motion.div>
-                }
+                    {/* TEXT */}
+                    {isTextShowing &&
+                        <motion.div
+                            className={styles.errorText}
+                            {...jdAniUtils.getMoveUp()}
+                        >
+                            <h1>Whoopsie Daisy!</h1>
+                            <p>Looks like the page you're tryin' to get to doesn't exist...</p>
+                            <p><strong>Tap a link below</strong> to get back on the road!</p>
+                        </motion.div>
+                    }
 
-            </div>
+                </div>
+
+            </JdViewWrapper>
 
             {/* NAV BAR */}
             <JdNav />
-        </JdViewWrapper>
+        </>
     )
 }

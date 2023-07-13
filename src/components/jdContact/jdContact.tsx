@@ -7,8 +7,8 @@ export function JdContact(): React.JSX.Element {
     return (
         <motion.div
             initial={{ bottom: -40, opacity: 0 }}
-            animate={{ bottom: 'calc(100% + 24px)', opacity: 1 }}
-            transition={{ ...jdAniUtils.baseEase, delay: 3 }}
+            animate={{ bottom: 95, opacity: 1 }}
+            transition={{ ...jdAniUtils.baseEase, delay: 2.2 }}
             className={styles.contactContainer}
         >
 
