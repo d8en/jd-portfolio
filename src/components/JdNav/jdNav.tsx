@@ -4,6 +4,7 @@ import { JdNavItem } from '../jdNavItem/jdNavItem';
 import styles from './navStyles.module.scss';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
+import { JdContact } from '../jdContact/jdContact';
 
 export function JdNav(): React.JSX.Element {
     return (
@@ -18,6 +19,11 @@ export function JdNav(): React.JSX.Element {
                     <JdNavItem {...route} key={route.path} />
                 )}
             </div>
+
+            {/* CONTACT */}
+            <JdContact />
+
+
         </motion.div>
     );
 }

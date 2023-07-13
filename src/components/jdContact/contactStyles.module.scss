@@ -1,0 +1,17 @@
+@use "../../styles/" as *;
+
+$contactPosition: 24px;
+$contactSize: 44px;
+
+.contactContainer {
+    position: absolute;
+    @include flexCentered;
+    position: absolute;
+    bottom: calc(100% + $contactPosition);
+    right: $contactPosition;
+    height: $contactSize;
+    width: $contactSize;
+    background-color: var(--primBg);
+    @include baseShadow;
+    border-radius: 200px;
+}
