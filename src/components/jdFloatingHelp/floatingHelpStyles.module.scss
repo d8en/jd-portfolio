@@ -15,16 +15,7 @@ $closeSize: 28px;
     padding: 12px;
     width: 180px;
     gap: 12px;
-    // &::after {
-    //     position: absolute;
-    //     bottom: -10px;
-    //     height: 12px;
-    //     width: 12px;
-    //     left: 50%;
-    //     transform: rotate(45deg) translateX(-50%);
-    //     content: "";
-    //     background-color: inherit;
-    // }
+    border: 1.5px solid var(--greyBg);
 }
 
 .floatingHelpText {
