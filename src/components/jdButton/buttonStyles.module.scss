@@ -1,0 +1,16 @@
+@use "../../styles/" as *;
+
+button {
+    all: unset;
+}
+
+.buttonContainer {
+    @include flexCentered;
+    padding: 24px;
+    background-color: var(--primFg);
+    color: var(--primBg);
+    border-radius: 20px;
+    @include aniHoverBase {
+        color: var(--primBg);
+    }
+}

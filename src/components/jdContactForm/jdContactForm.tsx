@@ -6,8 +6,14 @@ import jdContactManager from "../../managers/jdContactManager";
 import { AnimatePresence, motion } from "framer-motion";
 import jdAniUtils from "../../utils/jdAniUtils";
 import { JdClose } from "../jdClose/jdClose";
+import { JdButton } from "../jdButton/jdButton";
 
 export const JdContactForm = observer(() => {
+
+    const onSubmit = async (e?: React.FormEvent<HTMLFormElement>): Promise<void> => {
+        if (e) e.preventDefault();
+    }
+
     return (
         <AnimatePresence>
             {jdContactManager.store.isOpen &&
@@ -31,7 +37,10 @@ export const JdContactForm = observer(() => {
                         <h1>Let's talk!</h1>
                         <p>I'm looking for fulltime employment but also open to contract gigs. Tell me what you're up to!</p>
 
-                        <form className={styles.contactForm}>
+                        <form
+                            className={styles.contactForm}
+                            onSubmit={onSubmit}
+                        >
 
                             {/* ROW */}
                             <div className={styles.contactRow}>
@@ -67,6 +76,13 @@ export const JdContactForm = observer(() => {
                                 value={jdContactStore.contactInfo.message}
                                 placeholder="What would you like to talk about?"
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ message: value })}
+                            />
+
+                            <JdButton
+                                id='sendIt'
+                                isDisabled={false}
+                                text="Send it!"
+                                onClick={() => { }}
                             />
 
                         </form>
