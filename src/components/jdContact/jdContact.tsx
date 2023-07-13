@@ -4,7 +4,7 @@ import { ReactComponent as ContactIcon } from '../../assets/svg/icons/mailOpen.s
 export function JdContact(): React.JSX.Element {
     return (
         <div className={styles.contactContainer}>
-            <ContactIcon />
+            <ContactIcon style={{ marginBottom: 3 }} />
         </div>
     )
 }
