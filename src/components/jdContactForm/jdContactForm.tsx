@@ -7,19 +7,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import jdAniUtils from "../../utils/jdAniUtils";
 import { JdClose } from "../jdClose/jdClose";
 import { JdButton } from "../jdButton/jdButton";
-import { useState } from "react";
 
 export const JdContactForm = observer(() => {
 
-    const [isSuccess, setIsSuccess] = useState<boolean>(false);
-
     const onSubmit = async (e?: React.FormEvent<HTMLFormElement>): Promise<void> => {
         if (e) e.preventDefault();
+        jdContactManager.setStateAsync({ isLoading: true });
         if (await jdContactManager.sendForm()) {
-            setIsSuccess(true);
+            jdContactManager.setStateAsync({ isLoading: false, isSuccess: true });
             return;
         }
-        setIsSuccess(false);
+        jdContactManager.setStateAsync({ isLoading: false, isSuccess: false });
     }
 
     return (
@@ -96,8 +94,8 @@ export const JdContactForm = observer(() => {
 
                             <JdButton
                                 id='sendIt'
-                                isDisabled={jdContactManager.store.isDisabled || isSuccess}
-                                text={isSuccess ? 'Message sent!' : 'Send it!'}
+                                isDisabled={jdContactManager.store.isDisabled}
+                                text={jdContactManager.store.isSuccess ? 'Message sent!' : 'Send it!'}
                                 onClick={() => { }}
                                 style={{ marginTop: 24 }}
                             />

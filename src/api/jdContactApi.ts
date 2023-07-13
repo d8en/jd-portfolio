@@ -2,7 +2,8 @@ import { IJdContactDto } from "../models/iJdContactDto";
 
 class JdContactApi {
 
-    private url: string = 'http://localhost:3000/api/v1/contact';
+    // private url: string = 'http://localhost:3000/api/v1/contact';
+    private url: string = 'https://jd-proxy.onrender.com/api/v1/contact';
 
     public async sendForm(body: IJdContactDto): Promise<boolean> {
         try {
