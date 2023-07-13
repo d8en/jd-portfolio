@@ -78,6 +78,8 @@ export const JdContactForm = observer(() => {
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ message: value })}
                             />
 
+                            <p className={styles.contactRequiredText}>All fields are required.</p>
+
                             <JdButton
                                 id='sendIt'
                                 isDisabled={jdContactManager.store.isDisabled}
@@ -86,7 +88,9 @@ export const JdContactForm = observer(() => {
                                 style={{ marginTop: 24 }}
                             />
 
+
                         </form>
+
 
                     </div>
                 </motion.div>

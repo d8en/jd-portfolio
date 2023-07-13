@@ -52,3 +52,11 @@ $inputGap: 12px;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
 }
+
+.contactRequiredText {
+    @include font-size-small;
+    color: var(--greyText);
+    font-style: italic;
+    text-align: center;
+    @include aniPushInOut(5);
+}
