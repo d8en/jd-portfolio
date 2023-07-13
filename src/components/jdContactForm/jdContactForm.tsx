@@ -83,6 +83,7 @@ export const JdContactForm = observer(() => {
                                 isDisabled={false}
                                 text="Send it!"
                                 onClick={() => { }}
+                                style={{ marginTop: 24 }}
                             />
 
                         </form>
