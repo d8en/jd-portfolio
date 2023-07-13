@@ -1,4 +1,3 @@
-import React from 'react';
 import jdRoutes, { IJdRouteObj } from '../../utils/jdRoutes';
 import { JdNavItem } from '../jdNavItem/jdNavItem';
 import styles from './navStyles.module.scss';
@@ -6,8 +5,9 @@ import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { JdContact } from '../jdContact/jdContact';
 import { JdContactForm } from '../jdContactForm/jdContactForm';
+import { observer } from 'mobx-react-lite';
 
-export function JdNav(): React.JSX.Element {
+export const JdNav = observer(() => {
     return (
         <>
             <motion.div
@@ -29,6 +29,7 @@ export function JdNav(): React.JSX.Element {
 
             {/* CONTACT FORM */}
             <JdContactForm />
+
         </>
     );
-}
+});
