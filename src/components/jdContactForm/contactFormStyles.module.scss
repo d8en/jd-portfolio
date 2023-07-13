@@ -19,18 +19,18 @@ $inputGap: 12px;
 
 .contactContent {
     display: grid;
-    gap: 44px;
+    gap: 56px;
     place-items: center;
 
     & > p {
         color: var(--greyText);
         margin-top: -44px;
-        width: 80%;
+        width: 90%;
         @include media-phone {
             width: 100%;
         }
     }
-    max-width: $desktopMaxWidth;
+    max-width: 600px;
 
     @include media-phone {
         margin-top: 56px;
@@ -43,6 +43,7 @@ $inputGap: 12px;
     display: grid;
     grid-auto-rows: auto;
     gap: $inputGap;
+    margin-top: -24px;
 }
 
 .contactRow {
