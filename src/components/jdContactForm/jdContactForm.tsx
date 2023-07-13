@@ -85,17 +85,21 @@ export const JdContactForm = observer(() => {
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ message: value })}
                             />
 
-                            {jdContactManager.store.isDisabled &&
-                                <motion.p
-                                    {...jdAniUtils.getMoveUp()}
-                                    className={styles.contactRequiredText}>All fields are required.
-                                </motion.p>
-                            }
-
                             <JdButton
                                 id='sendIt'
                                 isDisabled={jdContactManager.store.isDisabled}
-                                text={jdContactManager.store.isSuccess ? 'Message sent!' : 'Send it!'}
+                                text={
+                                    jdContactManager.store.isSuccess ?
+                                        'Message sent!'
+                                        :
+                                        jdContactManager.store.isLoading ?
+                                            'Sending...'
+                                            :
+                                            jdContactManager.store.isDisabled ?
+                                                'Fill out the required fields above'
+                                                :
+                                                'Send it!'
+                                }
                                 onClick={() => { }}
                                 style={{ marginTop: 24 }}
                             />

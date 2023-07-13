@@ -54,3 +54,15 @@ input {
         background-color: transparent;
     }
 }
+
+.closeBtn {
+    @include aniHoverBase;
+    all: unset;
+    height: 32px;
+    width: 32px;
+    @include flexCentered;
+    flex-shrink: 0;
+    background-color: var(--greyBg);
+    border-radius: 200px;
+    margin-right: 16px;
+}
