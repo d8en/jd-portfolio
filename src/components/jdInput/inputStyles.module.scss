@@ -1,12 +1,14 @@
 @use "../../styles/" as *;
 
 $inputPadding: 20px 16px;
-$transition: border 0.7s;
+$transition:
+    border 0.7s,
+    background-color 0.7s;
 
 input {
     all: unset;
     padding: $inputPadding;
-    color: var(--primBg);
+    color: var(--primFg);
     cursor: pointer;
     box-sizing: border-box;
     width: 100%;
@@ -18,7 +20,6 @@ input {
     caret-color: var(--primFg);
     line-height: 1.2em;
     display: -webkit-box;
-    // -webkit-line-clamp: 2;
     -webkit-box-orient: horizontal;
 
     // Remove ios inner shadow
@@ -38,17 +39,18 @@ input {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--greyBg);
+    border: 2px solid var(--greyBg);
     border-radius: 20px;
     transition: $transition;
 
     &:hover {
-        border: 1px solid var(--greyBg);
+        // border: 1px solid var(--primFg);
+        background-color: var(--greyBg);
         transition: $transition;
     }
 
     &:focus-within {
-        border: 1px solid var(--link) !important;
+        border: 2px solid var(--link);
         background-color: transparent;
     }
 }
