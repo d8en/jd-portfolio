@@ -1,4 +1,4 @@
-import { Transition, cubicBezier } from "framer-motion";
+import { AnimationProps, Transition, cubicBezier } from "framer-motion";
 
 class JdAniUtils {
 
@@ -6,41 +6,41 @@ class JdAniUtils {
     public taglineDelay: number = 1200;
     public mountDelay: number = (this.logoDelay + this.taglineDelay) / 1000;
 
-    public get springTransition(): Transition {
-        return {
-            type: "spring",
-            // How bouncy
-            stiffness: 120,
-            // Lower = faster
-            mass: .5,
-            // Deceleration
-            damping: 10,
-        }
+    public springTransition: Transition = {
+        type: "spring",
+        // How bouncy
+        stiffness: 120,
+        // Lower = faster
+        mass: .5,
+        // Deceleration
+        damping: 10,
     }
 
-    public get springTransitionExtra(): Transition {
-        return {
-            type: "spring",
-            // How bouncy
-            stiffness: 200,
-            // Lower = faster
-            mass: .5,
-            // Deceleration
-            damping: 10,
-        }
+    public springTransitionExtra: Transition = {
+        type: "spring",
+        // How bouncy
+        stiffness: 200,
+        // Lower = faster
+        mass: .5,
+        // Deceleration
+        damping: 10,
     }
 
-    public get baseEase(): Transition {
-        return {
-            ease: cubicBezier(.5, 1, 0, 1),
-            duration: .375,
-        }
+    public baseEase: Transition = {
+        ease: cubicBezier(.5, 1, 0, 1),
+        duration: .375,
     }
 
-    public get longEase(): Transition {
+    public longEase: Transition = {
+        ease: cubicBezier(.5, 1, 0, 1),
+        duration: 1,
+    }
+
+    public getMoveUp(delay?: number): AnimationProps {
         return {
-            ease: cubicBezier(.5, 1, 0, 1),
-            duration: 1,
+            initial: { bottom: -100, opacity: 0 },
+            animate: { bottom: 0, opacity: 1 },
+            transition: { ...this.longEase, delay }
         }
     }
 }

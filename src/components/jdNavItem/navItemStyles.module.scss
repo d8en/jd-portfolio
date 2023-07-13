@@ -31,7 +31,7 @@ $iconHeight: 32px;
 }
 
 .navItemPulse {
-    @include aniBeforePulse;
+    @include aniBeforePulse(2.5s);
 }
 
 .navItemActive {

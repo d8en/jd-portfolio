@@ -8,13 +8,7 @@ import jdAniUtils from '../../utils/jdAniUtils';
 export function JdNav(): React.JSX.Element {
     return (
         <motion.div
-            initial={{
-                bottom: -100,
-            }}
-            animate={{
-                bottom: 0,
-            }}
-            transition={{ ...jdAniUtils.longEase, delay: jdAniUtils.mountDelay }}
+            {...jdAniUtils.getMoveUp(jdAniUtils.mountDelay)}
             className={styles.navContainer}
         >
 

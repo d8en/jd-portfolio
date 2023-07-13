@@ -80,7 +80,6 @@ class JdRoutes {
     }
 
     public get activeRoute(): IJdRouteObj {
-        console.log('active route', window.location.pathname);
         const activeRoute: IJdRouteObj | undefined = this.allRoutes.find((route: IJdRouteObj) => route.path === window.location.pathname);
         return activeRoute ?? this.home;
     }

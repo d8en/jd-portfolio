@@ -2,17 +2,23 @@
 
 $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
-@mixin aniPulse {
+@mixin aniPulse($delay) {
     animation-name: aniPulse;
     animation-duration: 2s;
     animation-play-state: running;
+    animation-delay: $delay;
     animation-timing-function: cubic-bezier(0.25, 0.5, 0.25, 0.5);
     animation-iteration-count: infinite;
+    opacity: 0;
 }
 
 @keyframes aniPulse {
     0% {
         transform: scale(1);
+        opacity: 0;
+    }
+
+    1% {
         opacity: 1;
     }
 
@@ -22,7 +28,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
     }
 }
 
-@mixin aniBeforePulse {
+@mixin aniBeforePulse($delay) {
     &:before {
         border-radius: 8px;
         position: absolute;
@@ -33,7 +39,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
         bottom: 0;
         right: 0;
         z-index: -1;
-        @include aniPulse;
+        @include aniPulse($delay);
     }
 }
 
@@ -172,7 +178,4 @@ $aniFloatAmt: 12px;
     100% {
         transform: scale(1);
     }
-    // 100% {
-    //     transform: scale(1);
-    // }
 }
