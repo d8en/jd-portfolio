@@ -4,7 +4,7 @@ $contactPosition: 24px;
 $contactSize: 56px;
 
 .contactContainer {
-    position: absolute;
+    position: fixed;
     @include flexCentered;
     gap: 12px;
     position: absolute;
