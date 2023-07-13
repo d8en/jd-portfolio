@@ -3,6 +3,35 @@
 $inputPadding: 20px 16px;
 $transition: border 0.7s;
 
+input {
+    all: unset;
+    padding: $inputPadding;
+    color: var(--primBg);
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    outline-color: none;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    caret-color: var(--primFg);
+    line-height: 1.2em;
+    display: -webkit-box;
+    // -webkit-line-clamp: 2;
+    -webkit-box-orient: horizontal;
+
+    // Remove ios inner shadow
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+    background-color: transparent;
+
+    ::placeholder {
+        color: var(--greyText);
+    }
+}
+
 .mainContainer {
     overflow: hidden;
     display: flex;
