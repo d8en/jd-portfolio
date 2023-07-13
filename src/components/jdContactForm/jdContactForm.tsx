@@ -43,7 +43,8 @@ export const JdContactForm = observer(() => {
 
                         {/* HEADLINE */}
                         <h1>Let's talk!</h1>
-                        <p>I'm looking for fulltime employment but also open to contract gigs. Tell me what you're up to!</p>
+                        <p>I'm looking for fulltime employment but also open to contract gigs.</p>
+                        <p>Let me know what you're thinkin' and I'll reach out to setup a meeting</p>
 
                         <form
                             className={styles.contactForm}
@@ -86,7 +87,12 @@ export const JdContactForm = observer(() => {
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ message: value })}
                             />
 
-                            <p className={styles.contactRequiredText}>All fields are required.</p>
+                            {jdContactManager.store.isDisabled &&
+                                <motion.p
+                                    {...jdAniUtils.getMoveUp()}
+                                    className={styles.contactRequiredText}>All fields are required.
+                                </motion.p>
+                            }
 
                             <JdButton
                                 id='sendIt'

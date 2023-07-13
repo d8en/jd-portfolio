@@ -14,6 +14,7 @@ button {
     @include flexCentered;
     padding: 24px;
     background-color: var(--primFg);
+    border: 1.5px solid transparent;
     color: var(--primBg);
     border-radius: 20px;
     user-select: none;
@@ -23,9 +24,12 @@ button {
     }
 
     @include btnTransition;
+
     &:disabled {
         @include btnTransition;
-        background-color: var(--greyBg);
+        background-color: transparent;
+        border: 1.5px solid var(--greyLine);
         color: var(--greyText);
+        cursor: not-allowed;
     }
 }
