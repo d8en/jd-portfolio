@@ -28,7 +28,7 @@ export class JdCompaniesStore {
     }
 
     public rek: IJdSkillCo = {
-        name: 'Founder & Full Stack Dev',
+        name: 'Founder / Full Stack',
         companyName: 'Rek it.',
         xp: 4,
         xpPercentage: .75,
