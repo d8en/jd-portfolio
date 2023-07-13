@@ -5,25 +5,30 @@ import styles from './navStyles.module.scss';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { JdContact } from '../jdContact/jdContact';
+import { JdContactForm } from '../jdContactForm/jdContactForm';
 
 export function JdNav(): React.JSX.Element {
     return (
-        <motion.div
-            {...jdAniUtils.getMoveUp(jdAniUtils.mountDelay)}
-            className={styles.navContainer}
-        >
+        <>
+            <motion.div
+                {...jdAniUtils.getMoveUp(jdAniUtils.mountDelay)}
+                className={styles.navContainer}
+            >
 
-            {/* ROUTES */}
-            <div className={styles.navRoutes}>
-                {jdRoutes.visibleRoutes.map((route: IJdRouteObj) =>
-                    <JdNavItem {...route} key={route.path} />
-                )}
-            </div>
+                {/* ROUTES */}
+                <div className={styles.navRoutes}>
+                    {jdRoutes.visibleRoutes.map((route: IJdRouteObj) =>
+                        <JdNavItem {...route} key={route.path} />
+                    )}
+                </div>
 
-            {/* CONTACT */}
-            <JdContact />
+                {/* CONTACT ICON */}
+                <JdContact />
 
+            </motion.div>
 
-        </motion.div>
+            {/* CONTACT FORM */}
+            <JdContactForm />
+        </>
     );
 }

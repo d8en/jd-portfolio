@@ -5,7 +5,7 @@ import { JdManagerBase } from "./base/jdManagerBase";
 export class JdContactManager extends JdManagerBase<JdContactStore> {
     public store: JdContactStore = jdContactStore
 
-    public async setProperties(newProperties: Partial<IJdContactDto>): Promise<void> {
+    public async setContactProps(newProperties: Partial<IJdContactDto>): Promise<void> {
         await this.jdRunInAction(() => {
             Object.assign(this.store.contactInfo, newProperties);
         });
