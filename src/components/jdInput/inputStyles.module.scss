@@ -1,0 +1,25 @@
+@use "../../styles/" as *;
+
+$inputPadding: 20px 16px;
+$transition: border 0.7s;
+
+.mainContainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--greyBg);
+    border-radius: 20px;
+    transition: $transition;
+
+    &:hover {
+        border: 1px solid var(--greyBg);
+        transition: $transition;
+    }
+
+    &:focus-within {
+        border: 1px solid var(--link) !important;
+        background-color: transparent;
+    }
+}
