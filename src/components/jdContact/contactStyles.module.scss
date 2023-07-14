@@ -7,7 +7,7 @@ $contactSize: 56px;
     position: fixed;
     bottom: calc(100% + 24px);
     @include media-phone {
-        bottom: 90px;
+        bottom: 102px;
     }
     right: 24px;
 }

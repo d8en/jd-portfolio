@@ -4,12 +4,14 @@ $previewImgHeight: 348px;
 $containerBorder: 24px;
 
 .projectsHolder {
+    position: relative;
     border-radius: $containerBorder;
 }
 
 .projectsContainer {
     position: relative;
     border-radius: $containerBorder;
+    background-color: var(--primBg);
     display: grid;
     grid-auto-columns: 1fr;
     gap: 44px;
@@ -60,7 +62,7 @@ $containerBorder: 24px;
 .projectsContainerOpen {
     overflow-x: hidden;
     z-index: 2;
-    position: absolute;
+    position: fixed;
     display: grid;
     top: 0;
     left: 0;

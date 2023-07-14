@@ -79,13 +79,17 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
             >
 
                 {/* PREVIEW IMAGE */}
-                <div className={styles.projectPreviewImgContainer}>
+                <motion.div
+                    {...jdAniUtils.getMoveUp(0)}
+                    layoutDependency={[props.isOpen]}
+                    className={styles.projectPreviewImgContainer}
+                >
                     <JdImg
                         srcSet={props.image}
                         className={styles.projectPreviewImg}
                         onClick={(e) => { e.preventDefault() }}
                     />
-                </div>
+                </motion.div>
 
                 {/* CONTENT */}
                 <div className={styles.projectContent}>

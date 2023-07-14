@@ -32,6 +32,7 @@ export const JdContactForm = observer(() => {
                     exit={{ bottom: -1000, opacity: 0, transition: jdAniUtils.baseEaseOut }}
                     transition={jdAniUtils.baseEase}
                     className={styles.contactFormContainer}
+                    onClick={() => jdContactManager.setStateAsync({ isOpen: false })}
                 >
 
                     {/* CLOSE */}
@@ -49,6 +50,7 @@ export const JdContactForm = observer(() => {
                         <form
                             className={styles.contactForm}
                             onSubmit={async (e: React.FormEvent<HTMLFormElement>) => await onSubmit(e)}
+                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
                         >
 
                             {/* ROW */}

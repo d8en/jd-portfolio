@@ -47,6 +47,8 @@ class JdAniUtils {
             transition: { ...this.longEase, delay }
         }
     }
+
+    public layoutPreserve: boolean | "position" | "size" | "preserve-aspect" | undefined = 'preserve-aspect';
 }
 
 const jdAniUtils = new JdAniUtils();
