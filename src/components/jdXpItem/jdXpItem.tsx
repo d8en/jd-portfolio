@@ -50,7 +50,10 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
             </div>
 
             {/* SECOND COLUMN */}
-            <div className={styles.xpColumn} style={!props.children ? { gap: 0 } : undefined}>
+            <div
+                className={styles.xpColumn}
+                style={!props.children ? { gap: 0 } : undefined}
+            >
 
                 {/* FIRST ROW */}
                 <div className={styles.xpRow}>
