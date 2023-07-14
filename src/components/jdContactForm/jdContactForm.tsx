@@ -81,7 +81,7 @@ export const JdContactForm = observer(() => {
                             <JdInput
                                 id="message"
                                 value={jdContactStore.contactInfo.message}
-                                placeholder="What would you like to talk about?"
+                                placeholder="What can I help you build?"
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ message: value })}
                             />
 
@@ -101,7 +101,6 @@ export const JdContactForm = observer(() => {
                                                 'Send it!'
                                 }
                                 onClick={() => { }}
-                                style={{ marginTop: 24 }}
                             />
 
 
