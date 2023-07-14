@@ -14,7 +14,7 @@ export const JdContactForm = observer(() => {
         if (e) e.preventDefault();
         jdContactManager.setStateAsync({ isLoading: true });
         if (await jdContactManager.sendForm()) {
-            jdContactManager.setStateAsync({ isLoading: false, isSuccess: true });
+            jdContactManager.setStateAsync({ isLoading: false, isSuccess: true, isOpen: false });
             return;
         }
         jdContactManager.setStateAsync({ isLoading: false, isSuccess: false });
@@ -92,13 +92,10 @@ export const JdContactForm = observer(() => {
                                     jdContactManager.store.isSuccess ?
                                         'Message sent!'
                                         :
-                                        jdContactManager.store.isLoading ?
-                                            'Sending...'
+                                        jdContactManager.store.isDisabled ?
+                                            'Fill out the required fields above'
                                             :
-                                            jdContactManager.store.isDisabled ?
-                                                'Fill out the required fields above'
-                                                :
-                                                'Send it!'
+                                            'Send it!'
                                 }
                                 onClick={async () => await onSubmit()}
                             />
