@@ -32,7 +32,6 @@ export function JdErrorView(): React.JSX.Element {
                             {...jdAniUtils.getMoveUp()}
                         >
                             <h1>Whoopsie Daisy!</h1>
-                            <p>Looks like the page you're tryin' to get to doesn't exist...</p>
                             <p><strong>Tap a link below</strong> to get back on the road!</p>
                         </motion.div>
                     }
