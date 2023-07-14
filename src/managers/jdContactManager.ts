@@ -13,6 +13,7 @@ export class JdContactManager extends JdManagerBase<JdContactStore> {
     }
 
     public async sendForm(): Promise<boolean> {
+        console.log('sending form');
         return await jdContactApi.sendForm(this.store.contactInfo);
     }
 

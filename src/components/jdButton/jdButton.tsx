@@ -8,6 +8,7 @@ export interface IJdButtonProps {
     text: string;
     isDisabled: boolean;
     onClick: () => void | Promise<void>;
+    type: "submit" | "reset" | "button" | undefined;
 
     style?: React.CSSProperties;
     className?: string;
@@ -26,17 +27,18 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
     const onClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('test');
         toggleLoader(true);
-        // await props.onClick();
+        await props.onClick();
         toggleLoader(false);
     }
 
     return (
         <button
+            type={props.type}
             id={props.id}
             className={`${styles.buttonContainer} ${props.className}`}
             onClick={async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => await onClick(e)}
+            onSubmit={async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => await onClick(e)}
             disabled={props.isDisabled}
             style={props.style}
         >
