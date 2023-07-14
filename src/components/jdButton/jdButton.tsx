@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './buttonStyles.module.scss';
 import { JdDotLoader } from '../jdDotLoader/jdDotLoader';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export interface IJdButtonProps {
     id: string;
@@ -38,9 +39,17 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
         >
             {props.text}
 
-            <div className={styles.buttonLoader}>
-                <JdDotLoader />
-            </div>
+            {isLoading &&
+                <AnimatePresence>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className={styles.buttonLoader}
+                    >
+                        <JdDotLoader />
+                    </motion.div>
+                </AnimatePresence>
+            }
         </button>
     )
 }
