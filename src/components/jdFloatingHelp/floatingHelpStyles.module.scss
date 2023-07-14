@@ -26,7 +26,7 @@ $closeSize: 28px;
 .floatingClose {
     display: grid;
     place-items: center;
-    border-radius: 200px;
+    border-radius: 50%;
     background-color: var(--greyBg);
     width: $closeSize;
     height: $closeSize;
