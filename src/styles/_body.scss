@@ -18,6 +18,7 @@ $desktopMaxWidth4k: 1400px;
     @include media-phone {
         height: -webkit-fill-available;
         height: -moz-available;
+        // height: 100vh;
     }
     overflow-y: hidden;
     overflow-x: hidden;

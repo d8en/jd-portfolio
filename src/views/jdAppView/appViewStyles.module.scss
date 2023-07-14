@@ -1,6 +1,7 @@
 @use "../../styles/" as *;
 
 .appContainer {
+    position: fixed;
     display: grid;
     width: 100vw;
     @include fullVh;
