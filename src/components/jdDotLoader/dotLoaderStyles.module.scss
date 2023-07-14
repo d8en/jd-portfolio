@@ -2,6 +2,27 @@
 
 $dotSize: 12px;
 
+@mixin aniDotLoader($idx) {
+    animation-delay: calc($idx * 300ms);
+    animation-name: aniDotLoader;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aniDotLoader {
+    // 0% {
+    //     // transform: scale(0.5);
+    //     // opacity: 0.2;
+    // }
+
+    100% {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+}
+
 .dotLoaderContainer {
     @include flexCentered;
 }
@@ -16,9 +37,23 @@ $dotSize: 12px;
 }
 
 .dotLoading {
-    @include flexCentered;
+    flex-shrink: 0;
     height: $dotSize;
     width: $dotSize;
     background-color: var(--primFg);
     border-radius: 200px;
+    transform: scale(0.4);
+    opacity: 0.2;
+
+    &:nth-child(1) {
+        @include aniDotLoader(0);
+    }
+
+    &:nth-child(2) {
+        @include aniDotLoader(1);
+    }
+
+    &:nth-child(3) {
+        @include aniDotLoader(2);
+    }
 }

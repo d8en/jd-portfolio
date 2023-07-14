@@ -7,6 +7,7 @@ export function JdDotLoader(props: React.HTMLAttributes<HTMLDivElement>): React.
             {...props}
         >
 
+            {/* LOADING CONTENT */}
             <div className={styles.dotLoaderContent}>
                 <div className={styles.dotLoading} />
                 <div className={styles.dotLoading} />
