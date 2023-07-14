@@ -14,6 +14,7 @@ import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
 import { Link } from 'react-router-dom';
 import jdProjectStore from '../../stores/jdProjectStore';
 import jdElementUtils from '../../utils/jdElementUtils';
+import { JdSkelly } from '../jdSkelly/jdSkelly';
 
 export interface IJdProjectProps {
     onToggleProject: () => void | Promise<void>;
@@ -86,7 +87,6 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
 
                 {/* CONTENT */}
                 <div className={styles.projectContent}>
-
 
                     {/* CLOSE */}
                     {props.isOpen &&
