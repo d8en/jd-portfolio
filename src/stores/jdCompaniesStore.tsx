@@ -20,10 +20,9 @@ export class JdCompaniesStore {
         icon: <BoomIcon />,
         component:
             <>
-                <p>At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 promotional site to help secure $1.3 million funding.</p>
-                <p>I also designed all web and mobile apps as well as marketing content.</p>
-                <p>I Integrated all internal and third party APIs.</p>
-                <p>Constructed database architecture alongside backend engineers.</p>
+                <p>At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. This work helped us secure $1.3 million funding over the course of 2 years.</p>
+                <p>I integrated all internal and third party APIs and constructed database architecture with fellow backend engineers.</p>
+                <p>I was also the sole designer for all web and mobile apps and marketing content.</p>
             </>
     }
 
@@ -36,8 +35,7 @@ export class JdCompaniesStore {
         component:
             <>
                 <p>At <JdATag href="https://rekit.app/">Rek</JdATag>, I designed and built a native mobile app (iOS and Android) and a website to promote the product.</p>
-                <p>I grew the product to 200 users in the first month.</p>
-                <p>Used user feedback to manage feature development.</p>
+                <p>I grew the product to 200+ users in the first month and used user feedback to manage feature development and product roadmaps.</p>
             </>
     }
 
@@ -63,11 +61,9 @@ export class JdCompaniesStore {
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media',
         component:
             <>
-                <p>At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I managed, and retained a team of 5 analysts.</p>
-                <p>I designed and managed the implementation of 200+ features across 3 products for 120+ clients and 1.2 million users.</p>
-                <p>Designed 20+ third party integrations via API and SSO.</p>
-                <p>Grew annual revenue by 60% from managed products.</p>
-                <p>Presented product roadmaps to large crowds (200+ participants).</p>
+                <p>At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I designed and managed the implementation of 200+ features across 3 flagship products for 120+ clients and 1.2 million users, including 20+ third party integrations.</p>
+                <p>I also managed and retained a team of 5 analysts and worked directly with C-level executives on roadmaps, strategy, and growth.</p>
+                <p>The products I was responsible for contributed towards annual revenue growth of 60%.</p>
             </>
     }
 
@@ -79,7 +75,8 @@ export class JdCompaniesStore {
         icon: <GravixIcon />,
         component:
             <>
-                <p>At gravix, I created a digital agency with branding, UX, and marketing services for 10 clients across several industries.</p>
+                <p>At gravix, I created a digital agency with branding, UX, and marketing services for 10+ clients.</p>
+                <p>I worked directly with co-founders, executives, and middle management to develop branding, UX/CX, and growth plans for many products and services.</p>
             </>
     }
 
@@ -91,7 +88,7 @@ export class JdCompaniesStore {
         icon: <TypoIcon />,
         component:
             <>
-                <p>Typo is a text-only social media app that probably isn't worth building. This may just continue to be a fun development challenge.</p>
+                <p>Typo is a text-only social media app that I came up with at 3:00 AM on a Tuesday. Do we really need another hellscape of a social media platform? Probably not, but it's been a super fun design and development exercise.</p>
             </>
     }
 
