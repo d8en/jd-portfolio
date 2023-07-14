@@ -14,10 +14,11 @@ import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
 import { Link } from 'react-router-dom';
 import jdProjectStore from '../../stores/jdProjectStore';
 import jdElementUtils from '../../utils/jdElementUtils';
-import { JdSkelly } from '../jdSkelly/jdSkelly';
+import jdAniUtils from '../../utils/jdAniUtils';
 
 export interface IJdProjectProps {
     onToggleProject: () => void | Promise<void>;
+    idx: number;
 }
 
 export const JdProject = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
@@ -74,6 +75,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                 style={{
                     cursor: props.isOpen ? 'unset' : 'pointer',
                 }}
+                {...jdAniUtils.getMoveUp(props.idx / 2)}
             >
 
                 {/* PREVIEW IMAGE */}

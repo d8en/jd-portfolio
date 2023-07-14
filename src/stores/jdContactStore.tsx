@@ -11,6 +11,10 @@ export class JdContactStore {
     public isSuccess: boolean = false;
     public isLoading: boolean = false;
 
+    public get isValidEmail(): boolean {
+        return /^[^\s@]+@[^\s@]+\.[^\s@\W]+$/.test(this.contactInfo.email);
+    }
+
     public get isDisabled(): boolean {
         if (
             this.contactInfo.firstName
@@ -24,6 +28,8 @@ export class JdContactStore {
             !this.isLoading
             &&
             !this.isSuccess
+            &&
+            this.isValidEmail
         ) return false;
 
         return true;

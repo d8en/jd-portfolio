@@ -54,11 +54,12 @@ export const JdProjectsView = observer((): React.JSX.Element => {
     return (
         <JdViewWrapper>
             <div className={styles.projectViewContainer}>
-                {jdProjectStore.projects.map((project: IJdProject) =>
+                {jdProjectStore.projects.map((project: IJdProject, idx: number) =>
                     <JdProject
                         key={project.id}
                         {...project}
                         onToggleProject={async () => onToggleProject(project)}
+                        idx={idx}
                     />
                 )}
             </div>

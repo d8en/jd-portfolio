@@ -24,9 +24,9 @@ export const JdContactForm = observer(() => {
         <AnimatePresence>
             {jdContactManager.store.isOpen &&
                 <motion.div
-                    initial={{ bottom: '-100vh', opacity: 0 }}
+                    initial={{ bottom: -1000, opacity: 0 }}
                     animate={{ bottom: 0, opacity: 1 }}
-                    exit={{ bottom: '-100vh', opacity: 0 }}
+                    exit={{ bottom: -1000, opacity: 0, transition: jdAniUtils.baseEaseOut }}
                     transition={jdAniUtils.baseEase}
                     className={styles.contactFormContainer}
                 >
@@ -74,7 +74,7 @@ export const JdContactForm = observer(() => {
                                 value={jdContactStore.contactInfo.email}
                                 placeholder="Email"
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ email: value })}
-                                errorTxt={/^[^\s@]+@[^\s@]+\.[^\s@\W]+$/.test(jdContactStore.contactInfo.email) ? '' : 'Please type a valid email.'}
+                                errorTxt={jdContactManager.store.isValidEmail ? '' : 'Please type a valid email.'}
                             />
 
                             {/* MESSAGE */}

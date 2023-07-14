@@ -27,13 +27,17 @@ class JdAniUtils {
     }
 
     public baseEase: Transition = {
-        ease: cubicBezier(.5, 1, 0, 1),
-        duration: .375,
+        ease: cubicBezier(0, .5, 0, 1),
+        duration: .5,
+    }
+    public baseEaseOut: Transition = {
+        ease: cubicBezier(1, 0, 1, 0),
+        duration: .5,
     }
 
     public longEase: Transition = {
-        ease: cubicBezier(.5, 1, 0, 1),
-        duration: .3,
+        ease: cubicBezier(0, 1, 0, 1),
+        duration: 2,
     }
 
     public getMoveUp(delay?: number): AnimationProps {
