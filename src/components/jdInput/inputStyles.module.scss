@@ -87,4 +87,5 @@ input {
     bottom: -3px;
     @include font-size-smallest;
     color: var(--primFg);
+    transform: translateY();
 }

@@ -2,6 +2,7 @@
 
 .navContainer {
     position: absolute;
+    bottom: 0;
     @include baseBlur;
     z-index: 2;
     @include boxSizingBorder;

@@ -5,7 +5,7 @@ $contactSize: 56px;
 
 .contactWrapper {
     position: fixed;
-    right: $contactPosition;
+    bottom: calc(100% + 24px);
 }
 
 .contactContainer {

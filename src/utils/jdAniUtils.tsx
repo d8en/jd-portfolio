@@ -33,13 +33,13 @@ class JdAniUtils {
 
     public longEase: Transition = {
         ease: cubicBezier(.5, 1, 0, 1),
-        duration: 1,
+        duration: .3,
     }
 
     public getMoveUp(delay?: number): AnimationProps {
         return {
-            initial: { bottom: -100, opacity: 0 },
-            animate: { bottom: 0, opacity: 1 },
+            initial: { translateY: 100, opacity: 0 },
+            animate: { translateY: 0, opacity: 1 },
             transition: { ...this.longEase, delay }
         }
     }
