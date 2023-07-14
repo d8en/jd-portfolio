@@ -37,7 +37,7 @@ class JdAniUtils {
 
     public longEase: Transition = {
         ease: cubicBezier(0, 1, 0, 1),
-        duration: 2,
+        duration: 2.5,
     }
 
     public getMoveUp(delay?: number): AnimationProps {

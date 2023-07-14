@@ -75,7 +75,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                 style={{
                     cursor: props.isOpen ? 'unset' : 'pointer',
                 }}
-                {...jdAniUtils.getMoveUp(props.idx / 2)}
+                {...jdAniUtils.getMoveUp(props.idx / 4)}
             >
 
                 {/* PREVIEW IMAGE */}
@@ -107,6 +107,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                         <>
                             <JdProjectSubHeader {...jdStringUtils.company} />
                             <JdXpItem
+                                idx={0}
                                 name={props.company.name}
                                 companyName={props.company.companyName}
                                 imgSrc={props.company.imgSrc}
@@ -127,9 +128,10 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                         {
                             props.isOpen ?
                                 <>
-                                    {props.skills.map((skill: IJdSkillCo) => {
+                                    {props.skills.map((skill: IJdSkillCo, idx: number) => {
                                         return (
                                             <JdXpItem
+                                                idx={idx}
                                                 key={skill.name}
                                                 xp={skill.xp}
                                                 xpPercentage={skill.xpPercentage}

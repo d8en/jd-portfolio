@@ -7,9 +7,10 @@ import { IJdSkillCo } from "../../models/iJdSkillCo";
 export function JdXpView(): React.JSX.Element {
     return (
         <JdViewWrapper divProps={{ className: styles.xpViewContainer }}>
-            {jdCompaniesStore.companies.map((company: IJdSkillCo) => {
+            {jdCompaniesStore.companies.map((company: IJdSkillCo, idx: number) => {
                 return (
                     <JdXpItem
+                        idx={idx}
                         key={company.name}
                         name={company.name}
                         imgSrc={company.imgSrc}

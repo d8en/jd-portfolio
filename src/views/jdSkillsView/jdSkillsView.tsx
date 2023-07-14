@@ -11,9 +11,10 @@ export function JdSkillsView(): React.JSX.Element {
             {/* SKILLS */}
             {/* <div className={styles.skillsContainer}> */}
 
-            {jdSkillsStore.skills.map((skill: IJdSkillCo) => {
+            {jdSkillsStore.skills.map((skill: IJdSkillCo, idx: number) => {
                 return (
                     <JdXpItem
+                        idx={idx}
                         key={skill.name}
                         name={skill.name}
                         icon={skill.icon}

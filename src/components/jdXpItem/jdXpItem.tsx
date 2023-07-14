@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import { JdImg } from '../jdImg/jdImg';
 import styles from './xpItemStyles.module.scss';
+import jdAniUtils from '../../utils/jdAniUtils';
 
 export interface IJdXpItemProps {
     name: string;
@@ -8,12 +10,17 @@ export interface IJdXpItemProps {
     imgSrc?: string;
     xp: number;
     xpPercentage: number;
+    idx: number;
 }
 
 export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element {
 
     return (
-        <div className={styles.xpContainer} style={!props.children ? { display: 'flex', gap: 12 } : undefined}>
+        <motion.div
+            {...jdAniUtils.getMoveUp(props.idx / 4)}
+            className={styles.xpContainer}
+            style={!props.children ? { display: 'flex', gap: 12 } : undefined}
+        >
 
             {/* FIRST COLUMN  */}
             <div className={styles.xpColumn} style={!props.children ? { gap: 8 } : undefined}>
@@ -70,6 +77,6 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }
