@@ -45,3 +45,7 @@ $dotSize: 12px;
         @include aniDotLoader(2);
     }
 }
+
+.dotLoadingWhite {
+    background-color: var(--primBg) !important;
+}

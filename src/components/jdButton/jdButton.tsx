@@ -9,6 +9,7 @@ export interface IJdButtonProps {
     isDisabled: boolean;
     onClick: () => void | Promise<void>;
     type: "submit" | "reset" | "button" | undefined;
+    isWhiteLoader?: boolean;
 
     style?: React.CSSProperties;
     className?: string;
@@ -50,7 +51,7 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
                         animate={{ opacity: 1 }}
                         className={styles.buttonLoader}
                     >
-                        <JdDotLoader />
+                        <JdDotLoader isWhite={props.isWhiteLoader} />
                     </motion.div>
                 </AnimatePresence>
             }

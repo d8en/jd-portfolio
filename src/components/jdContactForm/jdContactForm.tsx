@@ -11,13 +11,13 @@ import { JdButton } from "../jdButton/jdButton";
 export const JdContactForm = observer(() => {
 
     const onSubmit = async (e?: React.FormEvent<HTMLFormElement>): Promise<void> => {
-        console.log('form submit triggered');
         if (e) {
             e.preventDefault();
             e.stopPropagation();
         }
         if (await jdContactManager.sendForm()) {
-            jdContactManager.setStateAsync({ isSuccess: true, isOpen: false });
+            await jdContactManager.setStateAsync({ isSuccess: true, isOpen: false }, true);
+            await jdContactManager.resetForm();
             return;
         }
         jdContactManager.setStateAsync({ isSuccess: false });
@@ -48,11 +48,7 @@ export const JdContactForm = observer(() => {
 
                         <form
                             className={styles.contactForm}
-                            onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
-                                console.log('submit triggered on form');
-                                e.preventDefault();
-                                await onSubmit(e);
-                            }}
+                            onSubmit={async (e: React.FormEvent<HTMLFormElement>) => await onSubmit(e)}
                         >
 
                             {/* ROW */}
@@ -97,6 +93,7 @@ export const JdContactForm = observer(() => {
                             />
 
                             <JdButton
+                                isWhiteLoader
                                 type="submit"
                                 id='sendIt'
                                 isDisabled={jdContactManager.store.isDisabled}
