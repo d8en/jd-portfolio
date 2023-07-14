@@ -100,7 +100,7 @@ export const JdContactForm = observer(() => {
                                                 :
                                                 'Send it!'
                                 }
-                                onClick={() => { }}
+                                onClick={async () => await onSubmit()}
                             />
 
 

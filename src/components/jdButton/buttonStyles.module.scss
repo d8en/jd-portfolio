@@ -11,10 +11,11 @@ button {
 }
 
 .buttonContainer {
+    overflow: hidden;
     @include flexCentered;
     padding: 24px;
     background-color: var(--link);
-    // @include baseShadow;
+    position: relative;
     color: var(--primBg);
     border-radius: 20px;
     user-select: none;
@@ -31,4 +32,15 @@ button {
         color: var(--greyText);
         cursor: not-allowed;
     }
+}
+
+.buttonLoader {
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
 }

@@ -22,9 +22,6 @@ $dotSize: 12px;
     @include flexCentered;
     gap: 8px;
     border-radius: 12px;
-    padding: 24px;
-    @include baseBlurLighter;
-    @include baseShadow;
 }
 
 .dotLoading {
