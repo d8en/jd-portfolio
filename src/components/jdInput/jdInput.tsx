@@ -1,6 +1,6 @@
 import styles from './inputStyles.module.scss';
 import { ReactComponent as ExIcon } from '../../assets/svg/icons/close.svg';
-import { useState } from 'react';
+import { HTMLInputTypeAttribute, useState } from 'react';
 
 export interface IJdInputProps {
     id: string;
@@ -8,6 +8,7 @@ export interface IJdInputProps {
     handleUpdate: (input: string) => void | Promise<void>;
     value: string;
     errorTxt?: string;
+    type: HTMLInputTypeAttribute;
 }
 
 export function JdInput(props: IJdInputProps): React.JSX.Element {
@@ -19,6 +20,7 @@ export function JdInput(props: IJdInputProps): React.JSX.Element {
 
             {/* INPUT */}
             <input
+                type={props.type}
                 id={props.id}
                 placeholder={props.placeholder}
                 value={props.value}
@@ -35,12 +37,12 @@ export function JdInput(props: IJdInputProps): React.JSX.Element {
 
             {/* CLEAR */}
             <div className={styles.closeBtnContainer}>
-                <button
+                <div
                     className={styles.closeBtn}
-                    onClick={(e) => { e.preventDefault(); props.handleUpdate('') }}
+                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); props.handleUpdate('') }}
                 >
                     <ExIcon style={{ height: 12, width: 12 }} />
-                </button>
+                </div>
             </div>
 
         </div>

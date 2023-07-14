@@ -48,7 +48,10 @@ export const JdContactForm = observer(() => {
 
                         <form
                             className={styles.contactForm}
-                            onSubmit={onSubmit}
+                            onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+                                console.log('submit triggered on form');
+                                e.preventDefault();
+                            }}
                         >
 
                             {/* ROW */}
@@ -56,6 +59,7 @@ export const JdContactForm = observer(() => {
 
                                 {/* FIRST NAME */}
                                 <JdInput
+                                    type="text"
                                     id="firstName"
                                     value={jdContactStore.contactInfo.firstName}
                                     placeholder="First name"
@@ -64,6 +68,7 @@ export const JdContactForm = observer(() => {
 
                                 {/* LAST NAME */}
                                 <JdInput
+                                    type="text"
                                     id="lastName"
                                     value={jdContactStore.contactInfo.lastName}
                                     placeholder="Last name"
@@ -73,6 +78,7 @@ export const JdContactForm = observer(() => {
 
                             {/* EMAIL */}
                             <JdInput
+                                type="text"
                                 id="email"
                                 value={jdContactStore.contactInfo.email}
                                 placeholder="Email"
@@ -82,6 +88,7 @@ export const JdContactForm = observer(() => {
 
                             {/* MESSAGE */}
                             <JdInput
+                                type="text"
                                 id="message"
                                 value={jdContactStore.contactInfo.message}
                                 placeholder="What can I help you build?"
@@ -89,7 +96,7 @@ export const JdContactForm = observer(() => {
                             />
 
                             <JdButton
-                                type="submit"
+                                type="button"
                                 id='sendIt'
                                 isDisabled={jdContactManager.store.isDisabled}
                                 text={
