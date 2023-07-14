@@ -1,3 +1,24 @@
+@use "../../styles/" as *;
+
+$dotSize: 12px;
+
 .dotLoaderContainer {
     @include flexCentered;
+}
+
+.dotLoaderContent {
+    @include flexCentered;
+    gap: 8px;
+    border-radius: 12px;
+    padding: 24px;
+    @include baseBlur;
+    @include baseShadow;
+}
+
+.dotLoading {
+    @include flexCentered;
+    height: $dotSize;
+    width: $dotSize;
+    background-color: var(--primFg);
+    border-radius: 200px;
 }
