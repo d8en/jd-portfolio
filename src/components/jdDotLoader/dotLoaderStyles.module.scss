@@ -18,10 +18,6 @@ $dotSize: 12px;
     }
 }
 
-.dotLoaderContainer {
-    @include flexCentered;
-}
-
 .dotLoaderContent {
     @include flexCentered;
     gap: 8px;
