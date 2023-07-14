@@ -14,6 +14,7 @@ export type IJdRouteObj = RouteObject & {
     name: string;
     icon: React.JSX.Element;
     isHidden?: boolean;
+    idx?: number;
 }
 class JdRoutes {
 

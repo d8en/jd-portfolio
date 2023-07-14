@@ -38,12 +38,20 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
             }
 
             {/* ICON */}
-            <div className={styles.navItemIcon}>
+            <motion.div
+                {...jdAniUtils.getMoveUp(1.5 + props.idx! / 3)}
+                className={styles.navItemIcon}
+            >
                 {props.icon}
-            </div>
+            </motion.div>
 
             {/* NAME */}
-            <p className={styles.navItemText}>{props.name}</p>
+            <motion.p
+                className={styles.navItemText}
+                {...jdAniUtils.getMoveUp(1.7 + props.idx! / 3)}
+            >
+                {props.name}
+            </motion.p>
 
             {isActive &&
                 <motion.div

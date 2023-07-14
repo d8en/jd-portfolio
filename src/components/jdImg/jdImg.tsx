@@ -5,13 +5,13 @@ import { JdClose } from "../jdClose/jdClose";
 export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>): React.JSX.Element {
 
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
+    // const [isLoading, setIsLoading] = useState<boolean>(true);
 
-    const toggleLoader = (newIsLoading: boolean): void => {
-        setTimeout(() => {
-            setIsLoading(newIsLoading);
-        }, newIsLoading === false ? 350 : 0);
-    }
+    // const toggleLoader = (newIsLoading: boolean): void => {
+    //     setTimeout(() => {
+    //         setIsLoading(newIsLoading);
+    //     }, newIsLoading === false ? 350 : 0);
+    // }
 
     // Open/close fullscreen
     const onClick = (): void => {
@@ -21,14 +21,14 @@ export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTM
     return (
         <>
             <img
-                onLoad={() => toggleLoader(false)}
+                // onLoad={() => toggleLoader(false)}
                 onClick={onClick}
                 {...props}
             />
 
-            {isLoading &&
+            {/* {isLoading &&
                 <p style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, }}>Loading...</p>
-            }
+            } */}
 
             {/* OPENED */}
             {isFullscreen &&

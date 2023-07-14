@@ -10,7 +10,7 @@ export const JdContact = observer(() => {
         <motion.div
             initial={{ right: -90, opacity: 0 }}
             animate={{ right: 24, opacity: 1 }}
-            transition={{ ...jdAniUtils.springTransitionExtra, delay: 2.2 }}
+            transition={{ ...jdAniUtils.springTransitionExtra, delay: 2 }}
             className={styles.contactWrapper}
             onClick={() => jdContactManager.setStateAsync({ isOpen: !jdContactManager.store.isOpen })}
         >
@@ -22,7 +22,7 @@ export const JdContact = observer(() => {
                 <ContactIcon style={{ marginBottom: 3 }} />
 
                 {/* TEXT */}
-                <span>contact</span>
+                <span>hit me up!</span>
             </div>
         </motion.div>
     )

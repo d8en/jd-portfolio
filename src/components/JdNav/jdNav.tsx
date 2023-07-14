@@ -17,8 +17,8 @@ export const JdNav = observer(() => {
 
                 {/* ROUTES */}
                 <div className={styles.navRoutes}>
-                    {jdRoutes.visibleRoutes.map((route: IJdRouteObj) =>
-                        <JdNavItem {...route} key={route.path} />
+                    {jdRoutes.visibleRoutes.map((route: IJdRouteObj, idx: number) =>
+                        <JdNavItem {...route} key={route.path} idx={idx} />
                     )}
                 </div>
 

@@ -4,7 +4,7 @@ class JdAniUtils {
 
     public logoDelay: number = 600;
     public taglineDelay: number = 1200;
-    public mountDelay: number = (this.logoDelay + this.taglineDelay) / 1000;
+    public mountDelay: number = (300 + this.taglineDelay) / 1000;
 
     public springTransition: Transition = {
         type: "spring",
