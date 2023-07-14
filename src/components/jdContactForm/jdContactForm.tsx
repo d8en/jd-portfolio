@@ -41,7 +41,7 @@ export const JdContactForm = observer(() => {
 
                         {/* HEADLINE */}
                         <h1>Reach out!</h1>
-                        <p>I'm open to fulltime and contract gigs, let me know what you're up to!</p>
+                        <p>I'm open to <strong>fulltime and contract gigs</strong>, let me know what you're up to!</p>
 
                         <form
                             className={styles.contactForm}
@@ -93,7 +93,7 @@ export const JdContactForm = observer(() => {
                                         'Message sent!'
                                         :
                                         jdContactManager.store.isDisabled ?
-                                            'Fill out the required fields above'
+                                            'Fill out all fields above'
                                             :
                                             'Send it!'
                                 }

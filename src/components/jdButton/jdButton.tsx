@@ -23,9 +23,12 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
         }, isLoading === true ? 0 : 500);
     }
 
-    const onClick = async (): Promise<void> => {
+    const onClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('test');
         toggleLoader(true);
-        await props.onClick();
+        // await props.onClick();
         toggleLoader(false);
     }
 
@@ -33,12 +36,11 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
         <button
             id={props.id}
             className={`${styles.buttonContainer} ${props.className}`}
-            onClick={async () => await onClick()}
+            onClick={async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => await onClick(e)}
             disabled={props.isDisabled}
             style={props.style}
         >
             {props.text}
-
             {isLoading &&
                 <AnimatePresence>
                     <motion.div
