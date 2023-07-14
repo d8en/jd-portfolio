@@ -48,9 +48,10 @@ export const JdContactForm = observer(() => {
 
                         <form
                             className={styles.contactForm}
-                            onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+                            onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
                                 console.log('submit triggered on form');
                                 e.preventDefault();
+                                await onSubmit(e);
                             }}
                         >
 
@@ -96,7 +97,7 @@ export const JdContactForm = observer(() => {
                             />
 
                             <JdButton
-                                type="button"
+                                type="submit"
                                 id='sendIt'
                                 isDisabled={jdContactManager.store.isDisabled}
                                 text={

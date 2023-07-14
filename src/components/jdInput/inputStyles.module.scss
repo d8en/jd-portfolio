@@ -55,12 +55,6 @@ input {
         transition: $transition;
         border: 1.5px solid var(--link);
         background-color: transparent;
-        .closeBtn {
-            background-color: var(--link);
-            path {
-                stroke: var(--primBg);
-            }
-        }
     }
 }
 
