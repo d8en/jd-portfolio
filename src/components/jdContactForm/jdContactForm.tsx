@@ -74,6 +74,7 @@ export const JdContactForm = observer(() => {
                                 value={jdContactStore.contactInfo.email}
                                 placeholder="Email"
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ email: value })}
+                                errorTxt={/^[^\s@]+@[^\s@]+\.[^\s@\W]+$/.test(jdContactStore.contactInfo.email) ? '' : 'Please type a valid email.'}
                             />
 
                             {/* MESSAGE */}

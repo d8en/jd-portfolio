@@ -1,13 +1,13 @@
 @use "../../styles/" as *;
 
-$inputPadding: 20px 16px;
+$inputPadding: 20px 0 20px 16px;
 $transition:
     border 0.7s,
     background-color 0.7s;
 
 input {
     all: unset;
-    padding: $inputPadding;
+    padding-left: 16px;
     color: var(--primFg);
     cursor: pointer;
     box-sizing: border-box;
@@ -26,7 +26,7 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none !important;
-    background-color: transparent;
+    height: 100%;
 
     &::placeholder {
         all: unset;
@@ -35,6 +35,7 @@ input {
 }
 
 .mainContainer {
+    position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -63,20 +64,27 @@ input {
 }
 
 .closeBtn {
-    transition: $transition;
-    @include aniHoverBase;
     all: unset;
-    height: 32px;
-    width: 32px;
+    @include aniHoverBase;
+    height: 56px;
+    width: 44px;
     @include flexCentered;
     flex-shrink: 0;
     background-color: var(--greyBg);
-    border-radius: 200px;
-    margin-right: 16px;
+}
+
+.closeBtnContainer {
+    background-color: var(--greyBg);
+    &:hover {
+        background-color: var(--link);
+    }
 }
 
 .errorText {
     position: absolute;
-    left: 0;
-    bottom: 16px;
+    left: 16px;
+    @include jdLineClamp(1);
+    bottom: -3px;
+    @include font-size-smallest;
+    color: var(--primFg);
 }
