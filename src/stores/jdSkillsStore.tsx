@@ -25,7 +25,7 @@ export class JdSkillsStore {
         icon: <TsIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>My roots in C# were super beneficial in learning and using Typescript. I'm a big fan an very happy with the progression of Typescript over the past few years.</p>
+        component: <p>My roots in C# were super helpful in picking up Typescript. This is my primary language and I would consider myself an advanced user.</p>
     }
 
     public react: IJdSkillCo = {
@@ -33,7 +33,7 @@ export class JdSkillsStore {
         icon: <ReactIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>Experience building full web applications using hooks and, previously, class components. Proficient in full app architecture, troubleshooting, refactoring, and feature development.</p>
+        component: <p>I've built many end-to-end web applications using hooks and, previously, class components. I excel at full app architecture, troubleshooting, refactoring, optimizing, bug fixing, and feature development.</p>
     }
 
     public reactNative: IJdSkillCo = {
@@ -41,7 +41,7 @@ export class JdSkillsStore {
         icon: <ReactIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>Experience building mobile apps with many native features like push notifications, camera interactions, share activities, etc.</p>
+        component: <p>I'm a huge fan of React Native and have four years of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera interactions, share activities, and more.</p>
     }
 
     public mobX: IJdSkillCo = {
@@ -49,7 +49,7 @@ export class JdSkillsStore {
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media',
         xp: 4,
         xpPercentage: 1,
-        component: <p>By far my favorite state management library, I have 4 years of experience using it with the React lite bindings. The simplicity and familiar architecture makes this my go to for all projects.</p>
+        component: <p>By far my favorite state management library, I have 4 years of experience using it with large scale projects. The simplicity and familiar architecture makes this my go-to for all projects.</p>
     }
 
     public framerMotion: IJdSkillCo = {
@@ -57,7 +57,7 @@ export class JdSkillsStore {
         icon: <FramerIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>I use css animations and transitions first but reach for Framer next. This library is incredibly performant and can make lifecycle animations and interpolation super simple.</p>
+        component: <p>I use css animations and transitions as much as possible but continue to be impressed by the Framer Motion team. This library is incredibly performant and can make lifecycle animations (specifically unmounting) and interpolation super simple.</p>
     }
 
     public css: IJdSkillCo = {
@@ -65,7 +65,7 @@ export class JdSkillsStore {
         icon: <CssIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>Sass is an incredibly useful pre-processing language that I use in all projects. Mixins, variables, and functions are a daily </p>
+        component: <p>Sass is an incredibly useful pre-processing language that I use in all of my projects. Mixins, variables, and functions bring sanity to CSS.</p>
     }
 
     public sass: IJdSkillCo = {
@@ -81,7 +81,7 @@ export class JdSkillsStore {
         icon: <FigmaIcon />,
         xp: 7,
         xpPercentage: 1,
-        component: <p>It's fascinating to hear which applications each product designer has used. My progression goes like this: Inkscape, Illustrator, XD, Sketch, then Figma. I can't imagine using anything else, from advanced prototyping to large scale design libraries, I am the definition of a power user.</p>,
+        component: <p>It's fascinating to see which applications each product designer has gone through. My progression goes something like this: Inkscape, Illustrator, XD, Sketch, then Figma. I can't imagine using anything else, from advanced prototyping and large scale design systems to branding and typeface design, I'm an fanboy and power user.</p>,
     }
 
     public productDesign: IJdSkillCo = {
@@ -89,7 +89,7 @@ export class JdSkillsStore {
         icon: <ProductIcon />,
         xp: 7,
         xpPercentage: 1,
-        component: <p>I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industires.</p>
+        component: <p>I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industries with many happy clients, profitable products, and growing user bases.</p>
     }
 
     public reanimated: IJdSkillCo = {
@@ -97,7 +97,7 @@ export class JdSkillsStore {
         icon: <ReanimatedIcon />,
         xp: 3,
         xpPercentage: .75,
-        component: <p>An exceptional and powerful library that allowed me to do complex and performant native animations in my React Native projects (responsive pan responders, donut loaders, etc.).</p>
+        component: <p>Software Mansion has built some incredible libraries and this is no exception. I use this library in almost every project and prefer it over the Animated API for almost all animations (responsive pan responders, donut loaders, etc.).</p>
     }
 
     public redux: IJdSkillCo = {
@@ -121,7 +121,7 @@ export class JdSkillsStore {
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media',
         xp: 1,
         xpPercentage: .1,
-        component: <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>,
+        component: <p>I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get to where I'm at today.</p>
 
     }
 
@@ -130,7 +130,7 @@ export class JdSkillsStore {
         icon: <FirebaseIcon />,
         xp: 1,
         xpPercentage: .25,
-        component: <p>Heavily debated amongst my DBA friends, I believe NoSQL is a super powerful architecture that has many use cases. I've used this to develop rapid prototypes but also plan on using it for a side project.</p>,
+        component: <p>Heavily debated amongst my DBA friends, I believe the NoSQL paradigm has many use cases. I've used this to develop rapid prototypes but also feel its the appropriate database for specific projects.</p>,
     }
 
     public sql: IJdSkillCo = {
@@ -138,7 +138,7 @@ export class JdSkillsStore {
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media',
         xp: 2,
         xpPercentage: .25,
-        component: <p>In addition to experimenting with NoSQL dbs, I've also used MySQL to support one of my published apps as well as during my time as a product analyst.</p>,
+        component: <p>My mental model for database design is still relational. I use MySQL to support one of my published apps and used MSSQL daily as a product analyst.</p>,
     }
 
     public afterEffects: IJdSkillCo = {
