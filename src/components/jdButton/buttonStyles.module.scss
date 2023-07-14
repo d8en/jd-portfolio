@@ -13,8 +13,8 @@ button {
 .buttonContainer {
     @include flexCentered;
     padding: 24px;
-    background-color: var(--primFg);
-    border: 1.5px solid transparent;
+    background-color: var(--link);
+    // @include baseShadow;
     color: var(--primBg);
     border-radius: 20px;
     user-select: none;
@@ -27,8 +27,7 @@ button {
 
     &:disabled {
         @include btnTransition;
-        background-color: transparent;
-        border: 1.5px solid var(--greyLine);
+        background-color: var(--greyBg);
         color: var(--greyText);
         cursor: not-allowed;
     }

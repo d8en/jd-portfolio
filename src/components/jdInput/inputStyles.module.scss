@@ -40,22 +40,30 @@ input {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--greyLine);
+    border: 1.5px solid var(--greyLine);
     border-radius: 20px;
     transition: $transition;
 
     &:hover {
-        background-color: var(--greyBg);
+        border: 1.5px solid var(--primFg);
         transition: $transition;
     }
 
     &:focus-within {
-        border: 2px solid var(--link);
+        transition: $transition;
+        border: 1.5px solid var(--link);
         background-color: transparent;
+        .closeBtn {
+            background-color: var(--link);
+            path {
+                stroke: var(--primBg);
+            }
+        }
     }
 }
 
 .closeBtn {
+    transition: $transition;
     @include aniHoverBase;
     all: unset;
     height: 32px;
@@ -65,4 +73,10 @@ input {
     background-color: var(--greyBg);
     border-radius: 200px;
     margin-right: 16px;
+}
+
+.errorText {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
 }

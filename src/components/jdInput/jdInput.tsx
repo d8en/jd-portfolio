@@ -19,6 +19,8 @@ export function JdInput(props: IJdInputProps): React.JSX.Element {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => props.handleUpdate(e.target.value)}
             />
 
+            <p className={styles.errorText}>Not a valid email (email@site.com).</p>
+
             <button
                 className={styles.closeBtn}
                 onClick={(e) => { e.preventDefault(); props.handleUpdate('') }}
