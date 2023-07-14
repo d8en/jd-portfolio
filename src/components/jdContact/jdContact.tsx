@@ -8,6 +8,7 @@ import { observer } from 'mobx-react-lite';
 export const JdContact = observer(() => {
     return (
         <motion.div
+            layout
             initial={{ right: -90, opacity: 0 }}
             animate={{ right: 24, opacity: 1 }}
             transition={{ ...jdAniUtils.springTransitionExtra, delay: 2 }}
@@ -18,11 +19,11 @@ export const JdContact = observer(() => {
                 className={styles.contactContainer}
             >
 
-                {/* ICON */}
-                <ContactIcon style={{ marginBottom: 3 }} />
-
                 {/* TEXT */}
                 <span>hit me up!</span>
+
+                {/* ICON */}
+                <ContactIcon style={{ marginBottom: 3 }} />
             </div>
         </motion.div>
     )

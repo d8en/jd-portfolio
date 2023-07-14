@@ -15,29 +15,29 @@ $contactSize: 56px;
 .contactContainer {
     @include flexCentered;
     gap: 12px;
-    min-width: $contactSize;
-    min-height: $contactSize;
+    width: $contactSize;
+    height: $contactSize;
     background-color: var(--primBg);
     border-radius: 200px;
 
     @include baseShadow;
-    transition: 375ms padding cubic-bezier(0, 1, 0, 1);
 
     @include aniHoverBase {
         @include media-desktop {
             padding: 0 16px;
-            transition: 375ms padding cubic-bezier(0, 1, 0, 1);
 
             & > span {
                 display: unset;
                 color: var(--primBg);
             }
+
+            width: auto;
         }
     }
 
     & > span {
         display: none;
         user-select: none;
-        @include font-size-normal;
+        @include font-size-small;
     }
 }

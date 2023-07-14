@@ -80,7 +80,7 @@ export const JdContactForm = observer(() => {
                                 value={jdContactStore.contactInfo.email}
                                 placeholder="Email"
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ email: value })}
-                                errorTxt={jdContactManager.store.isValidEmail ? '' : 'Please type a valid email.'}
+                                errorTxt={jdContactManager.store.isValidEmail ? '' : 'Make sure your email is valid (ex: email@site.com).'}
                             />
 
                             {/* MESSAGE */}
@@ -93,7 +93,6 @@ export const JdContactForm = observer(() => {
                             />
 
                             <JdButton
-                                isWhiteLoader
                                 type="submit"
                                 id='sendIt'
                                 isDisabled={jdContactManager.store.isDisabled}

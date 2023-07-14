@@ -18,11 +18,14 @@ export interface IJdButtonProps {
 export function JdButton(props: IJdButtonProps): React.JSX.Element {
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [isTempDisabled, setIsTempDisabled] = useState<boolean>(false);
 
     const toggleLoader = (newLoadingState: boolean): void => {
+        if (newLoadingState) setIsTempDisabled(true);
         setTimeout(() => {
             setIsLoading(newLoadingState);
-        }, isLoading === true ? 0 : 500);
+            if (isTempDisabled) setIsTempDisabled(false);
+        }, isLoading === true ? 0 : 800);
     }
 
     const onClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> => {
@@ -40,7 +43,7 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
             className={`${styles.buttonContainer} ${props.className}`}
             onClick={async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => await onClick(e)}
             onSubmit={async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => await onClick(e)}
-            disabled={props.isDisabled}
+            disabled={isTempDisabled || props.isDisabled}
             style={props.style}
         >
             {props.text}

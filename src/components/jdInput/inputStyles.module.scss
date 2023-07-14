@@ -84,6 +84,6 @@ input {
     @include jdLineClamp(1);
     bottom: -3px;
     @include font-size-smallest;
-    color: var(--primFg);
+    color: var(--greyText);
     transform: translateY();
 }

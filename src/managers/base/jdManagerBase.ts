@@ -13,7 +13,7 @@ export abstract class JdManagerBase<T extends object> {
                         Object.assign(this.store, { ...newState });
                     });
                     resolve();
-                }, isDelayed ? 500 : 0);
+                }, isDelayed ? 800 : 0);
             } catch (error) {
                 reject();
             }
