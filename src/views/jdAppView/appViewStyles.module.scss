@@ -1,0 +1,8 @@
+@use "../../styles/" as *;
+
+.appContainer {
+    display: grid;
+    width: 100vw;
+    @include fullVh;
+    margin: 0 auto;
+}

@@ -1,0 +1,23 @@
+@use "../../styles/" as *;
+
+.navContainer {
+    position: absolute;
+    bottom: 0;
+    @include baseBlur;
+    z-index: 2;
+    @include boxSizingBorder;
+    @include flexCentered;
+    width: 100%;
+    @include navShadow;
+}
+
+.navRoutes {
+    @include flexCentered;
+    flex: 1;
+    max-width: 400px;
+    @include media-phone {
+        max-width: unset;
+    }
+    flex-wrap: wrap;
+    align-self: center;
+}

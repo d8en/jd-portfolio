@@ -1,0 +1,17 @@
+@use "../../styles/" as *;
+
+.closeContainer {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    height: 44px;
+    width: 44px;
+    right: 20px;
+    border-radius: 200px;
+    @include font-size-small;
+    path {
+        stroke: var(--primBg);
+    }
+    @include aniHoverBase;
+    @include darkBlur;
+}

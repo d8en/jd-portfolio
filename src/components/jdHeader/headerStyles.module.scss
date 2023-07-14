@@ -1,0 +1,12 @@
+@use "../../styles/" as *;
+
+.viewHeader {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 20px 0;
+    @include baseBlur;
+}

@@ -1,0 +1,66 @@
+@use "./responsive" as *;
+@use "./font" as *;
+
+$globalPadding: 20px;
+$desktopMaxWidth: 720px;
+$desktopMaxWidth4k: 1400px;
+
+@mixin bodyPadding {
+    padding: 0 $globalPadding;
+}
+
+@mixin bodyMargin {
+    margin: 0 $globalPadding;
+}
+
+@mixin fullVh {
+    height: 100vh;
+    @include media-phone {
+        height: -webkit-fill-available;
+        height: -moz-available;
+    }
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+@mixin fullVw {
+    width: 100vw;
+    @include media-phone {
+        width: -webkit-fill-available;
+        width: -moz-available;
+    }
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+@mixin boxSizingBorder {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--primBg);
+    @include fullVh;
+}
+
+html {
+    @include fullVh;
+    @include base-font;
+}
+
+@mixin globalBottomAfter {
+    &::after {
+        content: "Firefox appears to treat bottom padding in scrollable divs differently, or it's bugged.";
+        height: 100px;
+        color: transparent;
+    }
+}
+
+@mixin globalTopAfter {
+    &::before {
+        content: "Firefox appears to treat bottom padding in scrollable divs differently, or it's bugged.";
+        height: 20px;
+        color: transparent;
+    }
+}

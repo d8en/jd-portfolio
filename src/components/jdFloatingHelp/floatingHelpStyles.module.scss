@@ -1,0 +1,34 @@
+@use "../../styles/" as *;
+
+$closeSize: 28px;
+
+.floatingHelpContainer {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-auto-flow: column;
+    position: absolute;
+    background-color: var(--primBg);
+    border-radius: 12px;
+    place-items: center;
+    @include baseShadow;
+    @include aniFloating;
+    padding: 12px;
+    width: 180px;
+    gap: 12px;
+    border: 1.5px solid var(--greyBg);
+}
+
+.floatingHelpText {
+    @include font-size-small;
+    line-height: 1.5em;
+}
+
+.floatingClose {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--greyBg);
+    width: $closeSize;
+    height: $closeSize;
+    @include aniHoverBase;
+}

@@ -1,0 +1,89 @@
+@use "../../styles/" as *;
+
+$inputPadding: 20px 0 20px 16px;
+$transition:
+    border 0.7s,
+    background-color 0.7s;
+
+input {
+    all: unset;
+    padding-left: 16px;
+    padding-right: 8px;
+    color: var(--primFg);
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    outline-color: none;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    caret-color: var(--primFg);
+    line-height: 1.2em;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+
+    // Remove ios inner shadow
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+    height: 100%;
+
+    &::placeholder {
+        all: unset;
+        color: var(--greyText);
+    }
+}
+
+.mainContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--greyLine);
+    border-radius: 20px;
+    transition: $transition;
+
+    &:hover {
+        border: 1.5px solid var(--primFg);
+        transition: $transition;
+    }
+
+    &:focus-within {
+        transition: $transition;
+        border: 1.5px solid var(--link);
+        background-color: transparent;
+    }
+}
+
+.closeBtn {
+    all: unset;
+    @include aniHoverBase;
+    height: 72px;
+    @include media-phone {
+        height: 68px;
+    }
+    width: 44px;
+    @include flexCentered;
+    flex-shrink: 0;
+    background-color: var(--greyBg);
+}
+
+.closeBtnContainer {
+    background-color: var(--greyBg);
+    &:hover {
+        background-color: var(--link);
+    }
+}
+
+.errorText {
+    position: absolute;
+    left: 16px;
+    @include jdLineClamp(1);
+    bottom: -3px;
+    @include font-size-smallest;
+    color: var(--greyText);
+    transform: translateY();
+}

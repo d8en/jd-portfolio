@@ -1,0 +1,64 @@
+@use "./font" as *;
+@use "./body" as *;
+
+p,
+li {
+    @include font-weight-light;
+    color: var(--primFg);
+    margin: 0;
+}
+
+ul,
+ol {
+    @include font-weight-light;
+    color: var(--greyText);
+    margin: 0;
+    padding: 0 0 0 $globalPadding;
+}
+
+h1 {
+    margin: 12px 0;
+    @include font-size-largest;
+    @include font-weight-bold;
+    line-height: 1.3em;
+}
+
+h2 {
+    margin: 0;
+    @include font-size-large;
+    @include font-weight-bold;
+    line-height: 1.3em;
+}
+
+h3 {
+    margin: 0;
+    @include font-size-normal;
+    @include font-weight-bold;
+}
+
+a {
+    position: relative;
+    all: unset;
+    color: var(--link);
+
+    &:hover {
+        cursor: pointer;
+        color: var(--link);
+    }
+}
+
+strong {
+    @include font-weight-bold;
+}
+
+@mixin jdLineClamp($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin projectGapReducer {
+    margin-bottom: -32px;
+}

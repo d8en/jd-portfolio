@@ -1,0 +1,51 @@
+@use "../../styles/" as *;
+
+$imgMaxHeight: 440px;
+
+.multiMedia {
+    display: grid;
+    grid-auto-flow: column;
+    // grid-auto-columns: 1fr;
+    gap: 20px;
+    place-self: center;
+}
+
+.projectsImage {
+    border-radius: 8px;
+    place-self: start center;
+    max-width: 100%;
+    max-height: $imgMaxHeight;
+    object-fit: contain;
+    @include linkTransitions;
+    @include baseShadow;
+
+    &:hover {
+        @include aniLinkScale;
+        cursor: pointer;
+    }
+}
+
+.projectImageCaption {
+    @include font-size-smallest;
+    font-style: italic;
+    color: var(--greyText);
+    width: 100%;
+    text-align: center;
+}
+
+.projectGapReducer {
+    @include projectGapReducer;
+}
+
+.projectVideo {
+    height: 600px;
+    place-self: center;
+}
+
+.projectVideoWide {
+    width: 100%;
+
+    @include media-phone {
+        margin-top: -124px;
+    }
+}

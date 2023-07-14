@@ -1,0 +1,45 @@
+$hoverDuration: 0.3s;
+
+@mixin linkTransitions {
+    transition:
+        transform 0.1s,
+        color 0.3s,
+        stroke 0.3s;
+}
+
+@mixin aniLinkScale {
+    transition:
+        transform $hoverDuration,
+        background-color $hoverDuration,
+        color $hoverDuration;
+    transform: scale(1.04);
+}
+
+@mixin aniLinkClick {
+    &:not(:disabled) {
+        transition: transform 0.1s;
+        &:active {
+            transition: transform 0.1s;
+            transform: scale(0.97);
+        }
+    }
+}
+
+@mixin aniHoverBase {
+    &:not(:disabled) {
+        @include linkTransitions;
+
+        &:hover {
+            @include aniLinkScale;
+            background-color: var(--link);
+            color: var(--primFg);
+            path,
+            rect {
+                stroke: var(--primBg);
+            }
+            cursor: pointer;
+            @content;
+        }
+        @include aniLinkClick;
+    }
+}

@@ -1,0 +1,202 @@
+@use "../../styles/" as *;
+
+$previewImgHeight: 348px;
+$containerBorder: 24px;
+
+.projectsHolder {
+    position: relative;
+    border-radius: $containerBorder;
+}
+
+.projectsContainer {
+    position: relative;
+    border-radius: $containerBorder;
+    background-color: var(--primBg);
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 44px;
+    max-width: 1200px;
+
+    @include media-phone {
+        gap: 0;
+    }
+
+    @include media-desktop4k {
+        max-width: $desktopMaxWidth4k;
+    }
+
+    @include aniScaleIn;
+    @include aniHoverOnly;
+    @include media-desktop {
+        padding: 0 20px;
+        grid-auto-flow: column;
+        gap: 56px;
+    }
+
+    &:hover {
+        .projectPreviewImg {
+            @include aniLinkScale;
+            transform: scale(1.09);
+        }
+
+        .projectHeader {
+            @include linkTransitions;
+            color: var(--link);
+        }
+
+        .projectLaunchIcon {
+            @include aniScaleIn;
+            opacity: 1;
+            transform: scale(1);
+            bottom: 12px;
+            visibility: visible;
+        }
+
+        .projectPreviewImgContainer {
+            @include aniHoverOnly;
+            border-radius: 20px;
+        }
+    }
+}
+
+.projectsContainerOpen {
+    overflow-x: hidden;
+    z-index: 2;
+    position: fixed;
+    display: grid;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primBg);
+    max-width: unset;
+    @include scroll-bar;
+    overflow-y: scroll;
+    @include boxSizingBorder;
+    grid-auto-rows: min-content;
+
+    .projectPreviewImgContainer {
+        padding-top: 56px;
+        width: 100%;
+    }
+
+    .projectContent {
+        max-width: $desktopMaxWidth;
+
+        place-self: start center;
+        place-items: start;
+        gap: 56px;
+        padding: 24px 20px;
+        @include globalBottomAfter;
+        & > p,
+        ul,
+        ol,
+        img {
+            margin-top: -16px;
+        }
+    }
+
+    .projectSkills {
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .projectHeader {
+        margin-bottom: -28px;
+        @include jdLineClamp(4);
+    }
+}
+
+.projectPreviewImgContainer {
+    @include boxSizingBorder;
+    padding: 56px 28px;
+
+    @include media-phone {
+        padding: 20px;
+    }
+    display: flex;
+    position: relative;
+}
+
+.projectPreviewImg {
+    @include aniLinkScale;
+    object-fit: contain;
+    place-self: center;
+    height: $previewImgHeight;
+    width: 100%;
+    height: 288px;
+}
+
+.projectContent {
+    display: grid;
+    grid-auto-rows: min-content;
+    place-self: center;
+    gap: 20px;
+}
+
+.projectHeader {
+    @include jdLineClamp(3);
+    @include font-size-larger;
+}
+
+.projectDesc {
+    @include jdLineClamp(2);
+    color: var(--greyText);
+}
+
+.projectSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.projectLaunchIcon {
+    display: grid;
+    place-items: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: var(--link);
+    position: absolute;
+    bottom: -20px;
+    transform: scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+    right: 12px;
+
+    path {
+        stroke: var(--primBg);
+    }
+}
+
+.projectNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.projectNavArrowIcon {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--greyBg);
+    height: 40px;
+    width: 40px;
+    @include aniLinkClick;
+
+    &:hover {
+        @include aniHoverBase;
+    }
+}
+
+.projectNavText {
+    text-align: center;
+    flex: 1;
+    @include jdLineClamp(1);
+    @include media-phone {
+        @include jdLineClamp(2);
+        text-align: left;
+    }
+}

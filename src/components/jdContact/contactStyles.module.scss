@@ -1,0 +1,42 @@
+@use "../../styles/" as *;
+
+$contactPosition: 24px;
+$contactSize: 56px;
+
+.contactWrapper {
+    position: fixed;
+    bottom: calc(100% + 24px);
+    @include media-phone {
+        bottom: 102px;
+    }
+    right: 24px;
+}
+
+.contactContainer {
+    @include flexCentered;
+    gap: 12px;
+    width: $contactSize;
+    height: $contactSize;
+    background-color: var(--primBg);
+    border-radius: 200px;
+    @include baseShadow;
+
+    @include aniHoverBase {
+        @include media-desktop {
+            padding: 0 16px;
+
+            & > span {
+                display: unset;
+                color: var(--primBg);
+            }
+
+            width: auto;
+        }
+    }
+
+    & > span {
+        display: none;
+        user-select: none;
+        @include font-size-small;
+    }
+}

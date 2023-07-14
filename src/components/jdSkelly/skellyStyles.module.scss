@@ -1,0 +1,6 @@
+@use "../../styles/" as *;
+
+.skellyContainer {
+    background-color: var(--greyBg);
+    @include aniSkelly;
+}

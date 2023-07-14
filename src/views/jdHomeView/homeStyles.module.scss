@@ -1,0 +1,26 @@
+@use "../../styles/" as *;
+
+.homeContainer {
+    grid-auto-rows: unset;
+}
+
+.homeHeader {
+    display: grid;
+    place-self: center;
+    max-width: $desktopMaxWidth;
+    gap: 12px;
+}
+
+.homeTitle {
+    gap: 16px;
+    grid-template-columns: min-content max-content;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+.homeSubHeader {
+    @include font-size-normal;
+    @include font-weight-light;
+    line-height: 1.6em;
+}

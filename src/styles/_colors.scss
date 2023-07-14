@@ -1,0 +1,17 @@
+:root {
+    --primBlack: #1a1a20;
+    --primWhite: #ffffff;
+    --blurBg: rgba(255, 255, 255, 0.85);
+    --blurBgLighter: rgba(255, 255, 255, 0.2);
+    --blurDark: rgba(28, 28, 32, 0.5);
+    --greyText: #6b737b;
+    --greyBg: #e5ebf0;
+    --greyLine: #d8e0e9;
+    --link: #0064d9;
+    --red: #e42323;
+    --primBg: var(--primWhite);
+    --primFg: var(--primBlack);
+    background-color: var(--primBg);
+}
+
+$navActiveBar: 4px;

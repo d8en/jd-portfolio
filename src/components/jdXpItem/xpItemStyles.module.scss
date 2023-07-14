@@ -1,0 +1,90 @@
+@use "../../styles/" as *;
+
+$iconSize: 28px;
+$skillGap: 16px;
+
+.xpContainer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: start;
+    gap: $skillGap;
+    border-radius: 12px;
+    max-width: $desktopMaxWidth;
+}
+
+.xpRow {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
+    gap: $skillGap;
+}
+
+.xpTotal {
+    position: relative;
+    padding: 4px 8px;
+    display: grid;
+    place-items: center;
+    @include font-size-small;
+    border: 1.5px solid var(--greyBg);
+    border-radius: 4px;
+    line-height: 1em;
+}
+
+.xpColumn {
+    display: grid;
+    grid-template-rows: min-content;
+    place-items: start;
+    height: 100%;
+    gap: $skillGap;
+}
+
+.xpIcon {
+    display: grid;
+    place-items: center;
+    height: $iconSize;
+    width: $iconSize;
+}
+
+.xpIconSmaller {
+    height: 22px !important;
+    width: 22px !important;
+}
+
+.xpImage {
+    height: $iconSize;
+    width: $iconSize;
+    object-fit: contain;
+}
+
+.xpBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--greyBg);
+}
+
+.xpHeader {
+    @include jdLineClamp(1);
+    width: 100%;
+}
+
+.xpCoName {
+    @include jdLineClamp(1);
+    width: 100%;
+    height: 22px;
+    @include font-size-normal;
+    @include font-weight-light;
+}
+
+.xpText {
+    z-index: 1;
+}
+
+.xpConnector {
+    display: grid;
+    place-self: center;
+    width: 1.5px;
+    height: 100%;
+    background-color: var(--greyBg);
+}

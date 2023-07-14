@@ -1,0 +1,68 @@
+@use "../../styles/" as *;
+
+$iconHeight: 32px;
+
+.navItemContainer {
+    position: relative;
+    @include flexCentered;
+    flex-direction: column;
+    flex: 1 1 0;
+    padding: 12px;
+
+    &:active {
+        .navItemIcon {
+            transform: scale(0.9) !important;
+        }
+    }
+
+    &:hover {
+        .navItemIcon {
+            @include aniLinkScale;
+            path,
+            rect {
+                stroke: var(--link);
+            }
+        }
+
+        .navItemText {
+            color: var(--link);
+        }
+    }
+}
+
+.navItemPulse {
+    @include aniBeforePulse(2.5s);
+}
+
+.navItemActive {
+    .navItemText {
+        color: var(--link);
+    }
+    .navItemIcon {
+        path,
+        rect {
+            stroke: var(--link);
+        }
+    }
+}
+
+.navItemIcon {
+    height: $iconHeight;
+    width: $iconHeight;
+    @include flexCentered;
+}
+
+.navItemText {
+    @include font-size-small;
+    color: var(--primFg);
+}
+
+.navActiveBar {
+    position: absolute;
+    display: grid;
+    align-self: center;
+    top: 0;
+    height: $navActiveBar;
+    width: $iconHeight;
+    background-color: var(--link);
+}

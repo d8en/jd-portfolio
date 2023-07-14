@@ -1,0 +1,46 @@
+@use "../../styles/" as *;
+
+@mixin btnTransition {
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+button {
+    all: unset;
+}
+
+.buttonContainer {
+    overflow: hidden;
+    @include flexCentered;
+    padding: 24px;
+    background-color: var(--link);
+    position: relative;
+    color: var(--primBg);
+    border-radius: 20px;
+    user-select: none;
+
+    @include aniHoverBase {
+        color: var(--primBg);
+    }
+
+    @include btnTransition;
+
+    &:disabled {
+        @include btnTransition;
+        background-color: var(--greyBg);
+        color: var(--greyText);
+        cursor: not-allowed;
+    }
+}
+
+.buttonLoader {
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+}

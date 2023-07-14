@@ -1,0 +1,38 @@
+@mixin scroll-bar {
+    scrollbar-color: var(--greyText) transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-width: 24px;
+    &::-webkit-scrollbar,
+    -moz-scrollbar {
+        width: 8px;
+
+        /* width of the entire scrollbar */
+        // &:hover {
+        // }
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 20px;
+
+        // &:hover {
+
+        // }
+
+        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--greyText);
+        /* color of the scroll thumb */
+        border-radius: 20px;
+        /* roundness of the scroll thumb */
+        border: 0px solid transparent;
+
+        /* creates padding around scroll thumb */
+        &:hover {
+            background-color: var(--primWhite);
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@use "../../styles/" as *;
+
+$inputGap: 12px;
+
+.contactFormContainer {
+    position: absolute;
+    @include baseBlur;
+    @include zeroPostion;
+    display: grid;
+    place-items: center;
+
+    @include media-phone {
+        place-items: start center;
+    }
+
+    z-index: 2;
+    grid-auto-rows: auto;
+}
+
+.contactContent {
+    display: grid;
+    gap: 56px;
+    place-items: center;
+
+    & > p {
+        margin-top: -44px;
+        @include media-phone {
+            width: 100%;
+        }
+    }
+    max-width: 600px;
+
+    @include media-phone {
+        margin-top: 56px;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.contactForm {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: $inputGap;
+    margin-top: -24px;
+}
+
+.contactRow {
+    gap: $inputGap;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+.contactRequiredText {
+    @include font-size-small;
+    color: var(--greyText);
+    font-style: italic;
+    text-align: center;
+}
+
+.contactPulse {
+    @include aniPushInOut(0);
+}
