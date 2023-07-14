@@ -7,7 +7,7 @@ $iconHeight: 32px;
     @include flexCentered;
     flex-direction: column;
     flex: 1 1 0;
-    padding: 8px;
+    padding: 12px;
 
     &:active {
         .navItemIcon {
@@ -62,8 +62,7 @@ $iconHeight: 32px;
     display: grid;
     align-self: center;
     top: 0;
-    height: 2px;
+    height: $navActiveBar;
     width: $iconHeight;
-    // width: 50%;
     background-color: var(--link);
 }
