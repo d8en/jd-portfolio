@@ -5,6 +5,11 @@ $blurAmt: 16px;
     backdrop-filter: blur($blurAmt);
     -webkit-backdrop-filter: blur($blurAmt);
 }
+@mixin baseBlurLighter {
+    background-color: var(--blurBgLighter);
+    backdrop-filter: blur($blurAmt);
+    -webkit-backdrop-filter: blur($blurAmt);
+}
 
 @mixin darkBlur {
     background-color: var(--blurDark);

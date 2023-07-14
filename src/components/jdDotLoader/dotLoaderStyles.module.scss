@@ -3,20 +3,15 @@
 $dotSize: 12px;
 
 @mixin aniDotLoader($idx) {
-    animation-delay: calc($idx * 300ms);
+    animation-delay: calc($idx * 200ms);
     animation-name: aniDotLoader;
-    animation-duration: 0.9s;
+    animation-duration: 0.6s;
     animation-fill-mode: forwards;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
 
 @keyframes aniDotLoader {
-    // 0% {
-    //     // transform: scale(0.5);
-    //     // opacity: 0.2;
-    // }
-
     100% {
         opacity: 1;
         transform: scale(0.9);
@@ -32,7 +27,7 @@ $dotSize: 12px;
     gap: 8px;
     border-radius: 12px;
     padding: 24px;
-    @include baseBlur;
+    @include baseBlurLighter;
     @include baseShadow;
 }
 
