@@ -14,8 +14,8 @@ export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTM
     return (
         <>
             <img
-                {...props}
                 onClick={onClick}
+                {...props}
             />
 
             {/* OPENED */}
