@@ -1,6 +1,7 @@
 import styles from './inputStyles.module.scss';
 import { ReactComponent as ExIcon } from '../../assets/svg/icons/close.svg';
 import { HTMLInputTypeAttribute, useState } from 'react';
+import { JdAutoCompleteType } from '../../models/JdAutoCompleteType';
 
 export interface IJdInputProps {
     id: string;
@@ -9,6 +10,7 @@ export interface IJdInputProps {
     value: string;
     errorTxt?: string;
     type: HTMLInputTypeAttribute;
+    autoComplete: JdAutoCompleteType;
 }
 
 export function JdInput(props: IJdInputProps): React.JSX.Element {
@@ -22,6 +24,7 @@ export function JdInput(props: IJdInputProps): React.JSX.Element {
             <input
                 type={props.type}
                 id={props.id}
+                autoComplete={props.autoComplete}
                 placeholder={props.placeholder}
                 value={props.value}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
