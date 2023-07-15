@@ -13,7 +13,7 @@ export const JdContact = observer(() => {
             animate={{ right: 24, opacity: 1 }}
             transition={{ ...jdAniUtils.springTransitionExtra, delay: 2 }}
             className={`${styles.contactWrapper} ${jdContactManager.store.isFloatingShowing ? styles.contactPulse : ''}`}
-            onClick={() => jdContactManager.setStateAsync({ isOpen: !jdContactManager.store.isOpen })}
+            onClick={() => jdContactManager.setStateAsync({ isOpen: !jdContactManager.store.isOpen, isFloatingShowing: false, hasFloatShown: true })}
         >
             <div
                 className={styles.contactContainer}
