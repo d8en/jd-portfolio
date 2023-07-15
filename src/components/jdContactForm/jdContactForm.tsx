@@ -78,7 +78,7 @@ export const JdContactForm = observer(() => {
 
                             {/* EMAIL */}
                             <JdInput
-                                type="text"
+                                type="email"
                                 id="email"
                                 value={jdContactStore.contactInfo.email}
                                 placeholder="Email"
