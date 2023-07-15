@@ -10,7 +10,7 @@ export interface IJdProjectSubHeaderProps {
 export function JdProjectSubHeader(props: IJdProjectSubHeaderProps): React.JSX.Element {
     return (
         <motion.div
-            {...jdAniUtils.getMoveUp()}
+            {...jdAniUtils.aniElementMount()}
             className={styles.sectionHeader}
         >
             {/* <h2 className={styles.sectionIcon}>{props.icon}</h2> */}

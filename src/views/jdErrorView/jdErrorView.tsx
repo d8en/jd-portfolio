@@ -29,7 +29,7 @@ export function JdErrorView(): React.JSX.Element {
                     {isTextShowing &&
                         <motion.div
                             className={styles.errorText}
-                            {...jdAniUtils.getMoveUp()}
+                            {...jdAniUtils.aniElementMount()}
                         >
                             <h1>Whoopsie Daisy!</h1>
                             <p><strong>Tap a link below</strong> to get back on the road!</p>

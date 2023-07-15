@@ -37,14 +37,18 @@ class JdAniUtils {
 
     public longEase: Transition = {
         ease: cubicBezier(0, 1, 0, 1),
+        duration: 2,
+    }
+    public longEaseOut: Transition = {
+        ease: cubicBezier(1, 0, 1, 0),
         duration: 2.5,
     }
 
-    public getMoveUp(delay?: number): AnimationProps {
+    public aniElementMount(delay?: number, isOut?: boolean): AnimationProps {
         return {
-            initial: { translateY: 100, opacity: 0 },
-            animate: { translateY: 0, opacity: 1 },
-            transition: { ...this.longEase, delay }
+            initial: { translateY: isOut ? 0 : 100, opacity: 0 },
+            animate: { translateY: isOut ? 100 : 0, opacity: 1 },
+            transition: { ...isOut ? this.baseEaseOut : this.longEase, delay }
         }
     }
 

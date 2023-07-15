@@ -17,7 +17,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
 
     return (
         <motion.div
-            {...jdAniUtils.getMoveUp(props.idx / 4)}
+            {...jdAniUtils.aniElementMount(props.idx / 4)}
             className={styles.xpContainer}
             style={!props.children ? { display: 'flex', gap: 12 } : undefined}
         >

@@ -94,6 +94,10 @@ $containerBorder: 24px;
         img {
             margin-top: -16px;
         }
+
+        & > h1 {
+            scroll-margin: 20px;
+        }
     }
 
     .projectSkills {

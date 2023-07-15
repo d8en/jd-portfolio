@@ -18,7 +18,7 @@ export class JdContactManager extends JdManagerBase<JdContactStore> {
     }
 
     public async resetForm(): Promise<void> {
-        await this.setStateAsync({ contactInfo: sampleJdContactDto });
+        await this.setStateAsync({ contactInfo: sampleJdContactDto, isSuccess: false });
     }
 
 }

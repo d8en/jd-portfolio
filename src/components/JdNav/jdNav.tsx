@@ -11,7 +11,7 @@ export const JdNav = observer(() => {
     return (
         <>
             <motion.div
-                {...jdAniUtils.getMoveUp(jdAniUtils.mountDelay)}
+                {...jdAniUtils.aniElementMount(jdAniUtils.mountDelay)}
                 className={styles.navContainer}
             >
 

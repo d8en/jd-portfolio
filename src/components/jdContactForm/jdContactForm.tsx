@@ -15,22 +15,20 @@ export const JdContactForm = observer(() => {
             e.preventDefault();
             e.stopPropagation();
         }
-        if (await jdContactManager.sendForm()) {
-            await jdContactManager.setStateAsync({ isSuccess: true, isOpen: false }, true);
+        jdContactManager.sendForm();
+        await jdContactManager.setStateAsync({ isSuccess: true });
+        setTimeout(async () => {
+            await jdContactManager.setStateAsync({ isOpen: false }, true);
             await jdContactManager.resetForm();
-            return;
-        }
-        jdContactManager.setStateAsync({ isSuccess: false });
+        }, 200);
     }
 
     return (
         <AnimatePresence>
             {jdContactManager.store.isOpen &&
                 <motion.div
-                    initial={{ bottom: -1000, opacity: 0 }}
-                    animate={{ bottom: 0, opacity: 1 }}
-                    exit={{ bottom: -1000, opacity: 0, transition: jdAniUtils.baseEaseOut }}
-                    transition={jdAniUtils.baseEase}
+                    exit={{ translateY: 40, opacity: 0, transition: jdAniUtils.baseEaseOut }}
+                    {...jdAniUtils.aniElementMount()}
                     className={styles.contactFormContainer}
                     onClick={() => jdContactManager.setStateAsync({ isOpen: false })}
                 >

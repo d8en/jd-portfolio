@@ -4,7 +4,7 @@ $inputGap: 12px;
 
 .contactFormContainer {
     position: absolute;
-    @include baseBlur;
+    background-color: var(--primBg);
     @include zeroPostion;
     display: grid;
     place-items: center;

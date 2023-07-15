@@ -22,7 +22,7 @@ export function JdObApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>The first and most important step was research. I interviewed agecny staff at all levels and identified common problems across teams.</p>
+            <p>The first and most important step was research. I interviewed agency staff at all levels and identified common problems across teams.</p>
 
             <p className={styles.projectGapReducer}>Persona groups:</p>
             <ul>
@@ -30,7 +30,7 @@ export function JdObApp(): React.JSX.Element {
                 <li>Middle management</li>
                 <li>Project and product managers</li>
                 <li>Account executives</li>
-                <li>Designers, writers, and devleopers</li>
+                <li>Designers, writers, and developers</li>
             </ul>
 
             <p className={styles.projectGapReducer}>Primary problems that we felt the app could help with:</p>
