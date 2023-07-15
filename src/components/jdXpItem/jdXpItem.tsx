@@ -48,7 +48,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                     <div className={styles.xpConnector}>
                         <motion.div
                             initial={{ top: '100%' }}
-                            animate={{ top: `${100 - ((props.xpPercentage / 1) * 100)}%` }}
+                            animate={{ top: `${108 - ((props.xpPercentage / 1) * 100)}%` }}
                             transition={jdAniUtils.longestEase}
                             className={styles.xpConnectorAmt}
                         />
@@ -76,7 +76,7 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                             <p className={styles.xpText}>{props.xp} year{props.xp !== 1 ? 's' : ''}</p>
 
                             {/* BAR */}
-                            <div className={styles.xpBar} style={{ width: `${(props.xpPercentage / 1) * 100}%` }} />
+                            {/* <div className={styles.xpBar} style={{ width: `${(props.xpPercentage / 1) * 100}%` }} /> */}
                         </div>
                     }
 

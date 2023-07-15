@@ -14,12 +14,34 @@
     background-color: var(--primBg);
 }
 
-$navActiveBar: 4px;
+$navActiveBar: 2.5px;
 
-@mixin bgGradient {
-    background-image: linear-gradient(to top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -moz-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -webkit-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -ms-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -o-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+@mixin bgGradient($direction: top) {
+    background-image: linear-gradient(to $direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -moz-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -webkit-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -ms-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -o-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-size: 150% auto;
+}
+
+@mixin textGradient($direction: top) {
+    @include bgGradient($direction);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    // animation: gradientAnimation 4s infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
