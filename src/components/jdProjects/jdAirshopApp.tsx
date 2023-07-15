@@ -49,7 +49,7 @@ export function JdAirshopApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             {/* IDEATION */}
-            <p>We laid out the primary user journeys for both the shoppers and the drivers and quickly put together the feature set we wanted to support.</p>
+            <p>I laid out the primary user journeys for both the shoppers and the drivers and quickly put together the feature set we wanted to support.</p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />

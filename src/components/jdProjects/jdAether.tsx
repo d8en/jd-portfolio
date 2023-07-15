@@ -26,7 +26,7 @@ export function JdAether(): React.JSX.Element {
             <JdProjectSubHeader {...jdStringUtils.ideation} />
             <p>Like most founders I've worked with, the <JdATag href="https://www.aitherhealth.com/">aither health</JdATag> folks had a clear vision - cut through the noise and build trust with clients.</p>
 
-            <p>We met to review their vision, expected deliverables, timelines, and compensation.</p>
+            <p>I met to review their vision, expected deliverables, timelines, and compensation.</p>
 
             <JdImg
                 className={styles.projectsImage}

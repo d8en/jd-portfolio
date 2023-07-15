@@ -116,9 +116,9 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>We started with the simple pieces like return items, destinations, custom properties, and basic rule setup.</p>
+            <p>I started with the simple pieces like return items, destinations, custom properties, and basic rule setup.</p>
 
-            <p>Eventually, we started to tie all of the objects together and started to work on the <strong>biggest challenge: custom rule overrides</strong>.</p>
+            <p>Eventually, I started to tie all of the objects together and started to work on the <strong>biggest challenge: custom rule overrides</strong>.</p>
 
             <JdVimeoPlayer
                 src='https://player.vimeo.com/video/842533893?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
