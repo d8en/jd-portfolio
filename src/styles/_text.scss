@@ -1,5 +1,6 @@
 @use "./font" as *;
 @use "./body" as *;
+@use "./colors" as *;
 
 p,
 li {
@@ -21,6 +22,7 @@ h1 {
     @include font-size-largest;
     @include font-weight-bold;
     line-height: 1.3em;
+    @include textGradient(right);
 }
 
 h2 {
@@ -28,6 +30,7 @@ h2 {
     @include font-size-large;
     @include font-weight-bold;
     line-height: 1.3em;
+    // @include textGradient(right);
 }
 
 h3 {
@@ -44,6 +47,7 @@ a {
     &:hover {
         cursor: pointer;
         color: var(--link);
+        // @include textGradient(right);
     }
 }
 

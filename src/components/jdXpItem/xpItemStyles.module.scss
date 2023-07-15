@@ -16,7 +16,7 @@ $skillGap: 16px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     place-items: center;
-    gap: $skillGap;
+    gap: 12px;
 }
 
 .xpTotal {
@@ -25,7 +25,8 @@ $skillGap: 16px;
     display: grid;
     place-items: center;
     @include font-size-small;
-    border: 1.5px solid var(--greyBg);
+    // border: 1.5px solid var(--greyBg);
+    background-color: var(--greyBg);
     border-radius: 4px;
     line-height: 1em;
 }
@@ -82,9 +83,22 @@ $skillGap: 16px;
 }
 
 .xpConnector {
+    border-radius: 200px;
+    overflow: hidden;
+    position: relative;
     display: grid;
     place-self: center;
-    width: 1.5px;
+    width: 4px;
     height: 100%;
     background-color: var(--greyBg);
+}
+
+.xpConnectorAmt {
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    opacity: 0.9;
+    @include bgGradient;
 }
