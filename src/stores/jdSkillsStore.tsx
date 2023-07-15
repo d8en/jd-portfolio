@@ -25,7 +25,7 @@ export class JdSkillsStore {
         icon: <TsIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>My roots in C# were super helpful in picking up Typescript. This is my primary language and I would consider myself an advanced user.</p>
+        component: <p>My roots in C# were super helpful in picking up Typescript. This is the primary language I've been using for the past 4 years.</p>
     }
 
     public react: IJdSkillCo = {
