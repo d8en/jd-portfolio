@@ -2,12 +2,15 @@
 
 $logoContainer: 56px;
 
-.homeLogo {
+.homeLogoContainer {
     display: grid;
     place-items: center;
     border-radius: 50%;
     height: $logoContainer;
     width: $logoContainer;
     background-color: var(--primBg);
-    @include baseShadow;
+}
+
+.homeLogo {
+    color: var(--brandGradient);
 }

@@ -22,7 +22,7 @@ export class JdCompaniesStore {
             <>
                 <p>At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. This work helped us secure $1.3 million funding over the course of 2 years.</p>
                 <p>I integrated all internal and third party APIs and constructed database architecture with fellow backend engineers.</p>
-                <p>I was also the sole designer for all web and mobile apps and marketing content.</p>
+                <p>I am also the sole designer for all web and mobile apps and marketing content.</p>
             </>
     }
 

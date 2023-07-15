@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import jdAniUtils from "../../utils/jdAniUtils";
 import { JdClose } from "../jdClose/jdClose";
 import { JdButton } from "../jdButton/jdButton";
+import { JdAutoCompleteType } from "../../models/JdAutoCompleteType";
 
 export const JdContactForm = observer(() => {
 
@@ -61,6 +62,7 @@ export const JdContactForm = observer(() => {
                                     value={jdContactStore.contactInfo.firstName}
                                     placeholder="First name"
                                     handleUpdate={(value: string) => jdContactManager.setContactProps({ firstName: value })}
+                                    autoComplete={JdAutoCompleteType.firstName}
                                 />
 
                                 {/* LAST NAME */}
@@ -70,17 +72,19 @@ export const JdContactForm = observer(() => {
                                     value={jdContactStore.contactInfo.lastName}
                                     placeholder="Last name"
                                     handleUpdate={(value: string) => jdContactManager.setContactProps({ lastName: value })}
+                                    autoComplete={JdAutoCompleteType.lastName}
                                 />
                             </div>
 
                             {/* EMAIL */}
                             <JdInput
-                                type="text"
+                                type="email"
                                 id="email"
                                 value={jdContactStore.contactInfo.email}
                                 placeholder="Email"
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ email: value })}
                                 errorTxt={jdContactManager.store.isValidEmail ? '' : 'Make sure your email is valid (ex: email@site.com).'}
+                                autoComplete={JdAutoCompleteType.email}
                             />
 
                             {/* MESSAGE */}
@@ -90,6 +94,7 @@ export const JdContactForm = observer(() => {
                                 value={jdContactStore.contactInfo.message}
                                 placeholder="What can I help you build?"
                                 handleUpdate={(value: string) => jdContactManager.setContactProps({ message: value })}
+                                autoComplete={JdAutoCompleteType.off}
                             />
 
                             <JdButton

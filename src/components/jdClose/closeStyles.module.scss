@@ -4,14 +4,16 @@
     position: fixed;
     display: grid;
     place-items: center;
-    height: 44px;
-    width: 44px;
-    right: 20px;
+    grid-auto-flow: column;
+    height: 56px;
+    width: 56px;
+    right: 24px;
     border-radius: 200px;
     @include font-size-small;
     path {
-        stroke: var(--primBg);
+        stroke: var(--primFg);
     }
     @include aniHoverBase;
-    @include darkBlur;
+    @include baseShadow;
+    @include baseBlur;
 }
