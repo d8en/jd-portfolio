@@ -48,7 +48,7 @@ class JdAniUtils {
         return {
             initial: { translateY: isOut ? 0 : 100, opacity: 0 },
             animate: { translateY: isOut ? 100 : 0, opacity: 1 },
-            transition: { ...isOut ? this.longEaseOut : this.longEase, delay }
+            transition: { ...isOut ? this.baseEaseOut : this.longEase, delay }
         }
     }
 

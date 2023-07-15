@@ -27,10 +27,7 @@ export const JdContactForm = observer(() => {
         <AnimatePresence>
             {jdContactManager.store.isOpen &&
                 <motion.div
-                    // initial={{ bottom: -140, opacity: 0 }}
-                    // animate={{ bottom: 0, opacity: 1 }}
-                    exit={jdAniUtils.aniElementMount()}
-                    // transition={jdAniUtils.baseEase}
+                    exit={{ translateY: 40, opacity: 0, transition: jdAniUtils.baseEaseOut }}
                     {...jdAniUtils.aniElementMount()}
                     className={styles.contactFormContainer}
                     onClick={() => jdContactManager.setStateAsync({ isOpen: false })}
