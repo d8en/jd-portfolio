@@ -28,9 +28,9 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
     }
 }
 
-@mixin aniBeforePulse($delay) {
+@mixin aniBeforePulse($delay, $radius: 8px) {
     &:before {
-        border-radius: 8px;
+        border-radius: $radius;
         position: absolute;
         content: "";
         background-color: var(--greyBg);

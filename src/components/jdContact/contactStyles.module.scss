@@ -12,6 +12,10 @@ $contactSize: 56px;
     right: 24px;
 }
 
+.contactPulse {
+    @include aniBeforePulse(0, 200px);
+}
+
 .contactContainer {
     @include flexCentered;
     gap: 12px;
