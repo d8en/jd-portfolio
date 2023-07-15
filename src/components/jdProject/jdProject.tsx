@@ -75,12 +75,12 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                 style={{
                     cursor: props.isOpen ? 'unset' : 'pointer',
                 }}
-                {...jdAniUtils.getMoveUp(props.idx / 4)}
+                {...jdAniUtils.aniElementMount(props.idx / 4)}
             >
 
                 {/* PREVIEW IMAGE */}
                 <motion.div
-                    {...jdAniUtils.getMoveUp(0)}
+                    {...jdAniUtils.aniElementMount(0)}
                     layoutDependency={[props.isOpen]}
                     className={styles.projectPreviewImgContainer}
                 >
