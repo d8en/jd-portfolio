@@ -82,9 +82,22 @@ $skillGap: 16px;
 }
 
 .xpConnector {
+    border-radius: 200px;
+    overflow: hidden;
+    position: relative;
     display: grid;
     place-self: center;
-    width: 1.5px;
+    width: 4px;
     height: 100%;
     background-color: var(--greyBg);
+}
+
+.xpConnectorAmt {
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    opacity: .9;
+    @include bgGradient;
 }

@@ -15,3 +15,11 @@
 }
 
 $navActiveBar: 4px;
+
+@mixin bgGradient {
+    background-image: linear-gradient(to top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -moz-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -webkit-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -ms-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -o-linear-gradient(top, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+}

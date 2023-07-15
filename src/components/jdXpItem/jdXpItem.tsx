@@ -45,7 +45,14 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
 
                 {/* CONNECTOR */}
                 {props.children &&
-                    <div className={styles.xpConnector} />
+                    <div className={styles.xpConnector}>
+                        <motion.div
+                            initial={{ top: '100%' }}
+                            animate={{ top: `${100 - ((props.xpPercentage / 1) * 100)}%` }}
+                            transition={jdAniUtils.longestEase}
+                            className={styles.xpConnectorAmt}
+                        />
+                    </div>
                 }
             </div>
 
