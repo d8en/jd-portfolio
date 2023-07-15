@@ -37,7 +37,7 @@ class JdAniUtils {
 
     public longEase: Transition = {
         ease: cubicBezier(0, 1, 0, 1),
-        duration: 2.5,
+        duration: 2,
     }
     public longEaseOut: Transition = {
         ease: cubicBezier(1, 0, 1, 0),

@@ -33,7 +33,9 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
     const innerDiv = useRef<HTMLDivElement | null>(null);
 
     const onClickProject = (): void => {
-        if (!props.isOpen) props.onToggleProject()
+        if (props.isOpen) return;
+
+        props.onToggleProject();
     }
 
     // Mount
@@ -43,8 +45,6 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
         // Set wrapper dims - we use a wrapper to make sure we maintain scroll position when a project is open.
         setInnerDivRect(innerDiv.current?.getBoundingClientRect());
         jdElementUtils.resetScrollTop(innerDiv.current);
-
-        // Listen for window resize events
 
     }, []);
 
@@ -80,8 +80,6 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
 
                 {/* PREVIEW IMAGE */}
                 <motion.div
-                    {...jdAniUtils.aniElementMount(0)}
-                    layoutDependency={[props.isOpen]}
                     className={styles.projectPreviewImgContainer}
                 >
                     <JdImg
@@ -92,7 +90,9 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                 </motion.div>
 
                 {/* CONTENT */}
-                <div className={styles.projectContent}>
+                <div
+                    className={styles.projectContent}
+                >
 
                     {/* CLOSE */}
                     {props.isOpen &&
@@ -101,12 +101,17 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
 
 
                     {/* TITLE */}
-                    <h2 className={styles.projectHeader}>{props.title}</h2>
+                    <h2
+                        id={props.title}
+                        className={styles.projectHeader}
+                    >
+                        {props.title}
+                    </h2>
 
                     {/* DESCRIPTION */}
                     <p className={props.isOpen ? '' : styles.projectDesc}>{props.desc}</p>
 
-                    {/* COMPANY HEADEAR */}
+                    {/* COMPANY HEADER */}
                     {props.isOpen &&
                         <>
                             <JdProjectSubHeader {...jdStringUtils.company} />
