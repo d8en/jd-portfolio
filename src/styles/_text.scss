@@ -47,6 +47,7 @@ a {
     &:hover {
         cursor: pointer;
         color: var(--link);
+        // @include textGradient(right);
     }
 }
 
