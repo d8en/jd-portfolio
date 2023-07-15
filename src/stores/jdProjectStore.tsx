@@ -134,7 +134,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obDashboard.webp?alt=media',
         component: <JdObApp />,
         title: `Designing a project management app for agencies`,
-        desc: `Talk about a LOT of personas. This was not only an fun research project but also an exciting design challenge.`,
+        desc: `Talk about a LOT of personas. This was not only a fun research project but also an exciting design challenge.`,
         isOpen: false,
     }
 

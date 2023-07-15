@@ -183,6 +183,7 @@ $containerBorder: 24px;
 }
 
 .projectNavArrowIcon {
+    z-index: -1;
     display: grid;
     place-items: center;
     border-radius: 50%;
