@@ -15,12 +15,12 @@ export const JdContactForm = observer(() => {
             e.preventDefault();
             e.stopPropagation();
         }
-        if (await jdContactManager.sendForm()) {
-            await jdContactManager.setStateAsync({ isSuccess: true, isOpen: false }, true);
+        jdContactManager.sendForm();
+        await jdContactManager.setStateAsync({ isSuccess: true });
+        setTimeout(async () => {
+            await jdContactManager.setStateAsync({ isOpen: false }, true);
             await jdContactManager.resetForm();
-            return;
-        }
-        jdContactManager.setStateAsync({ isSuccess: false });
+        }, 350);
     }
 
     return (
