@@ -4,6 +4,9 @@
     @include flexCentered;
     gap: 12px;
     @include projectGapReducer;
+    & > h2 {
+        @include textGradient(right);
+    }
 }
 
 .sectionIcon {

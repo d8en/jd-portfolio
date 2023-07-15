@@ -37,6 +37,10 @@ $inputGap: 12px;
     }
 }
 
+.contactFormText {
+    @include textGradient(right);
+}
+
 .contactForm {
     display: grid;
     grid-auto-rows: auto;

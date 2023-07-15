@@ -141,6 +141,7 @@ $containerBorder: 24px;
 .projectHeader {
     @include jdLineClamp(3);
     @include font-size-larger;
+    @include textGradient(right);
 }
 
 .projectDesc {
