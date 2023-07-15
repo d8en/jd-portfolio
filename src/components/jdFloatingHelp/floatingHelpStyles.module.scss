@@ -13,7 +13,7 @@ $closeSize: 28px;
     @include baseShadow;
     @include aniFloating;
     padding: 12px;
-    width: 180px;
+    max-width: 180px;
     gap: 12px;
     border: 1.5px solid var(--greyBg);
 }
@@ -21,6 +21,7 @@ $closeSize: 28px;
 .floatingHelpText {
     @include font-size-small;
     line-height: 1.5em;
+    white-space: nowrap;
 }
 
 .floatingClose {

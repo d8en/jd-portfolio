@@ -35,7 +35,7 @@ export function JdTypoApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live screenshot of the "create post" screen</figcaption>
 
-            <p>Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x). This ended up being pretty simple - use a timeout delay multiplier that is controled by the user.</p>
+            <p>Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x). This ended up being pretty simple - use a timeout delay multiplier that is controlled by the user.</p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
@@ -62,7 +62,7 @@ export function JdTypoApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Initial designs for the writing and reading screens</figcaption>
 
-            <p>This was the first time I would create an animated donut (for the countdown) in React Native, and I did not want to reach for a library.</p>
+            <p>This was the first time I would create an animated donut (for the countdown) in React Native, and I didn't want to reach for a "chart" library.</p>
 
             <p>I'm familiar with the <JdATag href="https://reactnative.dev/docs/animated">RN Animated API</JdATag>, but I had been reading a lot about <JdATag href="https://docs.swmansion.com/react-native-reanimated/docs">Reanimated</JdATag> and really wanted to give it a shot.</p>
 

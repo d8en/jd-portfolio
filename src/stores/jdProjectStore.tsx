@@ -35,7 +35,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
         component: <JdAirshopApp />,
         title: `Building an app in one month`,
-        desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef?`,
+        desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef.`,
         isOpen: false,
     }
 
@@ -57,7 +57,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
         component: <JdBoomNativeApp />,
         title: 'Building a mobile app to manage all returns',
-        desc: 'Returns can be a pain, but how nice would it be to manage all of them in one app?',
+        desc: 'Returns can be a pain, the least we can do is manage them in one app.',
         isOpen: false,
     }
 
@@ -134,7 +134,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obDashboard.webp?alt=media',
         component: <JdObApp />,
         title: `Designing a project management app for agencies`,
-        desc: `Talk about a LOT of personas. This was not only an fun research project but also an exciting design challenge.`,
+        desc: `Talk about a LOT of personas. This was not only a fun research project but also an exciting design challenge.`,
         isOpen: false,
     }
 

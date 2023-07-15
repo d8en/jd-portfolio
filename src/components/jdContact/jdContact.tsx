@@ -20,7 +20,7 @@ export const JdContact = observer(() => {
             >
 
                 {/* TEXT */}
-                <span>hit me up!</span>
+                <span>Hit me up!</span>
 
                 {/* ICON */}
                 <ContactIcon style={{ marginBottom: 3 }} />
@@ -31,7 +31,7 @@ export const JdContact = observer(() => {
                 <JdFloatingHelp
                     style={{ top: -72, right: 0, }}
                     onClose={() => { jdContactManager.setStateAsync({ isFloatingShowing: false }) }}
-                    text="Feel free to reach out!"
+                    text="Reach out!"
                     removeDelay
                 />
             }
