@@ -37,11 +37,11 @@ class JdAniUtils {
 
     public longEase: Transition = {
         ease: cubicBezier(0, 1, 0, 1),
-        duration: 2,
+        duration: 1,
     }
     public longEaseOut: Transition = {
         ease: cubicBezier(1, 0, 1, 0),
-        duration: 2.5,
+        duration: 1,
     }
 
     public aniElementMount(delay?: number, isOut?: boolean): AnimationProps {

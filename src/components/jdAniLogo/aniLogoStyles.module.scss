@@ -9,5 +9,5 @@ $logoContainer: 56px;
     height: $logoContainer;
     width: $logoContainer;
     background-color: var(--primBg);
-    @include baseShadow;
+    // @include baseShadow;
 }
