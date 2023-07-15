@@ -27,7 +27,7 @@ export function JdHomeView(): React.JSX.Element {
             {/* BG IMAGE */}
             <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: .65 }}
+                animate={{ opacity: .5 }}
                 transition={{ duration: 1, delay: jdAniUtils.mountDelay }}
                 className={styles.homeBgContainer}
             >
