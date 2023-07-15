@@ -8,7 +8,6 @@ import { observer } from 'mobx-react-lite';
 export const JdContact = observer(() => {
     return (
         <motion.div
-            layout
             initial={{ right: -90, opacity: 0 }}
             animate={{ right: 24, opacity: 1 }}
             transition={{ ...jdAniUtils.springTransitionExtra, delay: 2 }}

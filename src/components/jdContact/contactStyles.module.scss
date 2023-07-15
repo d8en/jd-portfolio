@@ -21,16 +21,19 @@ $contactSize: 56px;
     border-radius: 200px;
     @include baseShadow;
 
-    @include aniHoverBase {
+    transition: padding 0.2s;
+    @include aniLinkClick;
+    &:hover {
         @include media-desktop {
+            transition: padding 0.2s;
+            cursor: pointer;
             padding: 0 16px;
+            width: auto;
 
             & > span {
                 display: unset;
-                color: var(--primBg);
+                // color: var(--primBg);
             }
-
-            width: auto;
         }
     }
 

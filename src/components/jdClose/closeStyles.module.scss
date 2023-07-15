@@ -4,6 +4,7 @@
     position: fixed;
     display: grid;
     place-items: center;
+    grid-auto-flow: column;
     height: 56px;
     width: 56px;
     right: 24px;
