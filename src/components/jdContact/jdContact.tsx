@@ -13,7 +13,7 @@ export const JdContact = observer(() => {
     useEffect(() => {
         setTimeout(() => {
             jdContactManager.setStateAsync({ isFloatingShowing: true });
-        }, 0);
+        }, 6000);
     }, []);
 
     return (
