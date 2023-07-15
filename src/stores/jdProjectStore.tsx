@@ -26,6 +26,7 @@ export class JdProjectStore {
     }
 
     public projectParam: string = 'id';
+    public isFloatingHelp: boolean = false;
 
     public airshopApp: IJdProject = {
         id: '1',

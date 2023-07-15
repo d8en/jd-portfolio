@@ -4,7 +4,13 @@ import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
 import { AnimatePresence, MotionProps, motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 
-export function JdFloatingHelp(props: React.PropsWithChildren<MotionProps & { onClose?: () => void }>): React.JSX.Element {
+export interface IJdFloatingHelpProps {
+    text: string;
+    onClose?: () => void;
+    removeDelay?: boolean;
+}
+
+export function JdFloatingHelp(props: MotionProps & IJdFloatingHelpProps): React.JSX.Element {
 
     // Hide / Show
     const [isShowing, setIsShowing] = useState<boolean>(true);
@@ -13,7 +19,6 @@ export function JdFloatingHelp(props: React.PropsWithChildren<MotionProps & { on
         e.preventDefault();
         e.stopPropagation();
         setIsShowing(false);
-        console.log('is showing', isShowing);
         if (props.onClose) props.onClose();
     }
     return (
@@ -23,12 +28,11 @@ export function JdFloatingHelp(props: React.PropsWithChildren<MotionProps & { on
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ ...jdAniUtils.springTransition, delay: jdAniUtils.mountDelay + .5 }}
+                    transition={{ ...jdAniUtils.springTransition, delay: props.removeDelay ? 0 : jdAniUtils.mountDelay + .5 }}
                     className={styles.floatingHelpContainer}
                     {...props}
                 >
-                    {props.children}
-                    <p className={styles.floatingHelpText}>Checkout my projects!</p>
+                    <p className={styles.floatingHelpText}>{props.text}</p>
 
                     {/* CLOSE */}
                     <div
