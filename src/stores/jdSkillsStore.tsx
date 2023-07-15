@@ -33,7 +33,7 @@ export class JdSkillsStore {
         icon: <ReactIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>I've built many end-to-end web applications using hooks and, previously, class components. I excel at full app architecture, troubleshooting, refactoring, optimizing, bug fixing, and feature development.</p>
+        component: <p>I've built 10+ end-to-end web applications using React and React Native. I have experience with full app architecture, troubleshooting, refactoring, optimizing, bug fixing, and complex feature development.</p>
     }
 
     public reactNative: IJdSkillCo = {
@@ -41,7 +41,7 @@ export class JdSkillsStore {
         icon: <ReactIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>I'm a huge fan of React Native and have four years of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera interactions, share activities, and more.</p>
+        component: <p>I'm a huge fan of React Native and have 4 years of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera interactions, share activities, and more.</p>
     }
 
     public mobX: IJdSkillCo = {

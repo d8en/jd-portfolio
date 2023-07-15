@@ -62,7 +62,7 @@ export function JdTypoApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Initial designs for the writing and reading screens</figcaption>
 
-            <p>This was the first time I would create an animated donut (for the countdown) in React Native, and I did not want to reach for a library.</p>
+            <p>This was the first time I would create an animated donut (for the countdown) in React Native, and I didn't want to reach for a "chart" library.</p>
 
             <p>I'm familiar with the <JdATag href="https://reactnative.dev/docs/animated">RN Animated API</JdATag>, but I had been reading a lot about <JdATag href="https://docs.swmansion.com/react-native-reanimated/docs">Reanimated</JdATag> and really wanted to give it a shot.</p>
 
