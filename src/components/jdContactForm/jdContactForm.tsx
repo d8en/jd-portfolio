@@ -20,7 +20,7 @@ export const JdContactForm = observer(() => {
         setTimeout(async () => {
             await jdContactManager.setStateAsync({ isOpen: false }, true);
             await jdContactManager.resetForm();
-        }, 350);
+        }, 200);
     }
 
     return (
