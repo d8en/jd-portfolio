@@ -7,6 +7,7 @@ import jdAniUtils from '../../utils/jdAniUtils';
 export interface IJdFloatingHelpProps {
     text: string;
     onClose?: () => void;
+    removeDelay?: boolean;
 }
 
 export function JdFloatingHelp(props: MotionProps & IJdFloatingHelpProps): React.JSX.Element {
@@ -27,7 +28,7 @@ export function JdFloatingHelp(props: MotionProps & IJdFloatingHelpProps): React
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ ...jdAniUtils.springTransition, delay: jdAniUtils.mountDelay + .5 }}
+                    transition={{ ...jdAniUtils.springTransition, delay: props.removeDelay ? 0 : jdAniUtils.mountDelay + .5 }}
                     className={styles.floatingHelpContainer}
                     {...props}
                 >

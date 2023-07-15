@@ -10,6 +10,7 @@ export class JdContactStore {
     public isOpen: boolean = false;
     public isSuccess: boolean = false;
     public isFloatingShowing: boolean = false;
+    public hasFloatShown: boolean = false;
 
     public get isValidEmail(): boolean {
         return /^[^\s@]+@[^\s@]+\.[^\s@\W]+$/.test(this.contactInfo.email);

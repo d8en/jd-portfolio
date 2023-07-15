@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import jdAniUtils from "../../utils/jdAniUtils";
 import { JdFloatingHelp } from "../jdFloatingHelp/jdFloatingHelp";
+import jdContactManager from "../../managers/jdContactManager";
 
 export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
@@ -14,18 +15,27 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
     const [isProjects, setIsProjects] = useState<boolean>(false);
 
+    const toggleProjects = (newIsProjects: boolean): void => {
+        setIsProjects(newIsProjects);
+        if (!newIsProjects && !jdContactManager.store.hasFloatShown) {
+            setTimeout(() => {
+                jdContactManager.setStateAsync({ isFloatingShowing: true, hasFloatShown: true });
+            }, 6000);
+        }
+    }
+
     useEffect(() => {
         setIsActive(props.path === location.pathname);
-        if (jdRoutes.activeRoute.name === jdRoutes.projects.name) setIsProjects(false);
+        if (jdRoutes.activeRoute.name === jdRoutes.projects.name) toggleProjects(false);
     }, [location]);
 
     useEffect(() => {
-        if (props.name === jdRoutes.projects.name && jdRoutes.activeRoute.name !== jdRoutes.projects.name) setIsProjects(true);
+        if (props.name === jdRoutes.projects.name && jdRoutes.activeRoute.name !== jdRoutes.projects.name) toggleProjects(true);
     }, []);
 
     return (
         <Link
-            onClick={() => { if (isProjects) setIsProjects(false) }}
+            onClick={() => { if (isProjects) toggleProjects(false) }}
             to={props.path!}
             className={`${styles.navItemContainer} ${isActive ? styles.navItemActive : ''} ${isProjects ? styles.navItemPulse : ''}`}
         >
@@ -33,7 +43,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
             {isProjects &&
                 <JdFloatingHelp
                     style={{ top: -72, }}
-                    onClose={() => setIsProjects(false)}
+                    onClose={() => toggleProjects(false)}
                     text="Checkout my projects!"
                 />
             }

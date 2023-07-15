@@ -5,17 +5,8 @@ import jdAniUtils from '../../utils/jdAniUtils';
 import jdContactManager from '../../managers/jdContactManager';
 import { observer } from 'mobx-react-lite';
 import { JdFloatingHelp } from '../jdFloatingHelp/jdFloatingHelp';
-import { useEffect } from 'react';
 
 export const JdContact = observer(() => {
-
-    // Mount
-    useEffect(() => {
-        setTimeout(() => {
-            jdContactManager.setStateAsync({ isFloatingShowing: true });
-        }, 6000);
-    }, []);
-
     return (
         <motion.div
             initial={{ right: -90, opacity: 0 }}
@@ -41,6 +32,7 @@ export const JdContact = observer(() => {
                     style={{ top: -72, right: 0, }}
                     onClose={() => { jdContactManager.setStateAsync({ isFloatingShowing: false }) }}
                     text="Feel free to reach out!"
+                    removeDelay
                 />
             }
         </motion.div>
