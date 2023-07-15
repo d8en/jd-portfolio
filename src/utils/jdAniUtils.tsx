@@ -31,7 +31,7 @@ class JdAniUtils {
         duration: .5,
     }
     public baseEaseOut: Transition = {
-        ease: cubicBezier(1, 0, 1, 0),
+        ease: cubicBezier(.5, 0, 1, 0),
         duration: .5,
     }
 
