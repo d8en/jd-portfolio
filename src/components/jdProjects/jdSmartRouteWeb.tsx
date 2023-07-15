@@ -127,7 +127,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>Within about two weeks, we had designed, iterated, built, and shipped an entire website.</p>
+            <p>Within about two weeks, I had designed, iterated, built, and shipped an entire website.</p>
 
 
             <JdImg

@@ -107,7 +107,7 @@ $containerBorder: 24px;
 
     .projectHeader {
         margin-bottom: -28px;
-        @include jdLineClamp(4);
+        @include jdLineClamp(5);
     }
 }
 
