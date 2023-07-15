@@ -20,7 +20,7 @@ export const JdContact = observer(() => {
             >
 
                 {/* TEXT */}
-                <span>hit me up!</span>
+                <span>Hit me up!</span>
 
                 {/* ICON */}
                 <ContactIcon style={{ marginBottom: 3 }} />
