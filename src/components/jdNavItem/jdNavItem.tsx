@@ -34,6 +34,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
                 <JdFloatingHelp
                     style={{ top: -72, }}
                     onClose={() => setIsProjects(false)}
+                    text="Checkout my projects!"
                 />
             }
 
