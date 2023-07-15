@@ -11,7 +11,7 @@
     gap: 12px;
 }
 
-.homeTitle {
+.homeTitleContainer {
     gap: 16px;
     grid-template-columns: min-content max-content;
     display: grid;
@@ -23,4 +23,26 @@
     @include font-size-normal;
     @include font-weight-light;
     line-height: 1.6em;
+}
+
+.homeBgContainer {
+    z-index: -1;
+    display: grid;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    @include media-phone {
+        left: unset;
+        right: 40%;
+    }
+}
+
+.homeBgImg {
+    height: 100vh;
+    object-fit: contain;
+
+    @include media-phone {
+        height: 50vh;
+    }
 }

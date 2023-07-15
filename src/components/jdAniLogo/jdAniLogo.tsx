@@ -19,11 +19,14 @@ export function JdAniLogo(props: MotionProps): React.JSX.Element {
                 opacity: 1,
                 boxShadow: '0px 0px 9px 0px rgba(26, 26, 32, 0.15)'
             }}
-            className={styles.homeLogo}
+            className={styles.homeLogoContainer}
             layout
             {...props}
         >
-            <JdLogo style={{ width: 24, height: 24 }} />
+            <JdLogo
+                style={{ width: 24, height: 24 }}
+                className={styles.homeLogo}
+            />
         </motion.div>
     )
 }

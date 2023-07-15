@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { useEffect, useState } from 'react';
 import { JdAniLogo } from '../../components/jdAniLogo/jdAniLogo';
+import { JdImg } from '../../components/jdImg/jdImg';
 
 export function JdHomeView(): React.JSX.Element {
 
@@ -23,11 +24,25 @@ export function JdHomeView(): React.JSX.Element {
     return (
         <JdViewWrapper divProps={{ className: styles.homeContainer }}>
 
+            {/* BG IMAGE */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: .65 }}
+                transition={{ duration: 1, delay: jdAniUtils.mountDelay }}
+                className={styles.homeBgContainer}
+            >
+                <JdImg
+                    className={styles.homeBgImg}
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollageFullscreen.webp?alt=media&token=bd385b6a-8c37-4729-93d6-ccd745c30fc8'
+                    style={{ pointerEvents: 'none' }}
+                />
+            </motion.div>
+
             {/* TITLE */}
             <div className={styles.homeHeader}>
 
                 {/* TITLE / LOGO */}
-                <motion.div layout className={styles.homeTitle}>
+                <motion.div layout className={styles.homeTitleContainer}>
 
                     <JdAniLogo />
 
