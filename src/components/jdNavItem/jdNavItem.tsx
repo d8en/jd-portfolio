@@ -19,7 +19,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
         setIsProjects(newIsProjects);
         if (!newIsProjects && !jdContactManager.store.hasFloatShown) {
             setTimeout(() => {
-                jdContactManager.setStateAsync({ isFloatingShowing: true, hasFloatShown: true });
+                jdContactManager.setStateAsync({ isFloatingShowing: true });
             }, 6000);
         }
     }

@@ -44,7 +44,7 @@ export function JdInput(props: IJdInputProps): React.JSX.Element {
                     className={styles.closeBtn}
                     onClick={(e) => { e.preventDefault(); e.stopPropagation(); props.handleUpdate('') }}
                 >
-                    <ExIcon style={{ height: 12, width: 12 }} />
+                    <ExIcon style={{ height: 12, width: 12 }} className={styles.closeIcon} />
                 </div>
             </div>
 

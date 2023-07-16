@@ -1,0 +1,69 @@
+@use "../../styles/" as *;
+
+$themeIconSize: 32px;
+$themeContainerWidth: calc($themeIconSize * 2);
+$themeContainerPadding: 4px;
+$themeTransitionDuration: 0.2s;
+
+.themeToggleContainer {
+    z-index: 2;
+    display: grid;
+    grid-auto-columns: 1fr;
+    position: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    top: 20px;
+    @include media-phone {
+        top: unset;
+        bottom: $bottomWithNav;
+    }
+    left: 20px;
+    padding: 2px;
+    height: 34px;
+    border-radius: 200px;
+    width: $themeContainerWidth;
+    @include baseBlur;
+    @include baseShadow;
+    @include aniHoverBase {
+        .themeIconContainer {
+            background-color: var(--primBg);
+            path {
+                stroke: var(--primFg);
+            }
+        }
+    }
+}
+
+.themeIconContainer {
+    position: absolute;
+    background-color: var(--greyBg);
+    display: grid;
+    left: $themeContainerPadding;
+    place-items: center;
+    border-radius: 50%;
+    height: $themeIconSize;
+    width: $themeIconSize;
+    transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
+}
+
+.themeIconContainerDark {
+    transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
+    left: $themeIconSize;
+    background-color: var(--greyBg);
+    path {
+        stroke: var(--primFg);
+    }
+}
+
+.themeFloatingHelp {
+    top: 56px;
+    left: 0;
+
+    @include media-phone {
+        top: -72px;
+    }
+}
+
+.themeContactPulse {
+    @include aniBeforePulse(0, 200px);
+}

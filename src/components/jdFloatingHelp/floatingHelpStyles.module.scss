@@ -3,35 +3,43 @@
 $closeSize: 28px;
 
 .floatingHelpContainer {
+    z-index: 3;
     display: grid;
     grid-template-columns: auto min-content;
     grid-auto-flow: column;
     position: absolute;
-    // background-color: var(--primBg);
     @include bgGradient(top right);
-    border-radius: 12px;
+    border-radius: 200px;
     place-items: center;
     @include baseShadow;
     @include aniFloating;
     padding: 12px;
     max-width: 180px;
     gap: 12px;
-    border: 1.5px solid var(--greyBg);
 }
 
 .floatingHelpText {
     @include font-size-small;
     line-height: 1.5em;
     white-space: nowrap;
-    color: var(--primBg);
+    color: var(--primWhite);
 }
 
 .floatingClose {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background-color: var(--greyBg);
+    background-color: var(--primWhite);
     width: $closeSize;
     height: $closeSize;
-    @include aniHoverBase;
+
+    path {
+        stroke: var(--primBlack);
+    }
+
+    @include aniHoverBase {
+        path {
+            stroke: var(--primFg);
+        }
+    }
 }

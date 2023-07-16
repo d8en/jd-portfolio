@@ -60,7 +60,11 @@ input {
 
 .closeBtn {
     all: unset;
-    @include aniHoverBase;
+    @include aniHoverBase {
+        path {
+            stroke: var(--primWhite);
+        }
+    }
     height: 72px;
     @include media-phone {
         height: 68px;
@@ -69,6 +73,12 @@ input {
     @include flexCentered;
     flex-shrink: 0;
     background-color: var(--greyBg);
+}
+
+.closeIcon {
+    path {
+        stroke: var(--primFg);
+    }
 }
 
 .closeBtnContainer {

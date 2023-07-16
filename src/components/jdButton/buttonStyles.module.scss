@@ -14,14 +14,14 @@ button {
     overflow: hidden;
     @include flexCentered;
     padding: 24px;
-    background-color: var(--link);
+    @include bgGradient(left);
     position: relative;
-    color: var(--primBg);
+    color: var(--primWhite);
     border-radius: 20px;
     user-select: none;
 
     @include aniHoverBase {
-        color: var(--primBg);
+        color: var(--primWhite);
     }
 
     @include btnTransition;
@@ -29,6 +29,7 @@ button {
     &:disabled {
         @include btnTransition;
         background-color: var(--greyBg);
+        background-image: unset;
         color: var(--greyText);
         cursor: not-allowed;
     }

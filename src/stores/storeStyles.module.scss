@@ -1,0 +1,11 @@
+.themedIcon {
+    path,
+    rect {
+        &[stroke] {
+            stroke: var(--primFg);
+        }
+        &[fill] {
+            fill: var(--primFg);
+        }
+    }
+}

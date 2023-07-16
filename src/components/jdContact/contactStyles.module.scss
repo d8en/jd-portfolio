@@ -7,7 +7,7 @@ $contactSize: 56px;
     position: fixed;
     bottom: calc(100% + 24px);
     @include media-phone {
-        bottom: 102px;
+        bottom: $bottomWithNav;
     }
     right: 24px;
 }
@@ -16,17 +16,24 @@ $contactSize: 56px;
     @include aniBeforePulse(0, 200px);
 }
 
+.contactIcon {
+    path {
+        stroke: var(--primFg);
+    }
+}
+
 .contactContainer {
     @include flexCentered;
     gap: 12px;
     width: $contactSize;
     height: $contactSize;
-    background-color: var(--primBg);
     border-radius: 200px;
     @include baseShadow;
+    @include baseBlur;
 
     transition: padding 0.2s;
     @include aniLinkClick;
+
     &:hover {
         @include media-desktop {
             transition: padding 0.2s;

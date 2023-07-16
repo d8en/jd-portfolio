@@ -8,9 +8,17 @@ import jdAniUtils from "../../utils/jdAniUtils";
 import { JdClose } from "../jdClose/jdClose";
 import { JdButton } from "../jdButton/jdButton";
 import { JdAutoCompleteType } from "../../models/JdAutoCompleteType";
+import { useEffect } from "react";
 
 export const JdContactForm = observer(() => {
 
+    // Effect for showing contact form
+    useEffect(() => {
+        if (jdContactManager.store.isFloatingShowing) jdContactManager.setStateAsync({ hasFloatShown: true });
+    }, [jdContactManager.store.isOpen]);
+
+
+    // Submit form
     const onSubmit = async (e?: React.FormEvent<HTMLFormElement>): Promise<void> => {
         if (e) {
             e.preventDefault();
@@ -31,7 +39,6 @@ export const JdContactForm = observer(() => {
                     exit={{ translateY: 40, opacity: 0, transition: jdAniUtils.baseEaseOut }}
                     {...jdAniUtils.aniElementMount()}
                     className={styles.contactFormContainer}
-                    onClick={() => jdContactManager.setStateAsync({ isOpen: false })}
                 >
 
                     {/* CLOSE */}

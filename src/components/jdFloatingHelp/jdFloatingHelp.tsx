@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import styles from './floatingHelpStyles.module.scss';
 import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
-import { AnimatePresence, MotionProps, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 
 export interface IJdFloatingHelpProps {
     text: string;
     onClose?: () => void;
     removeDelay?: boolean;
+    className?: string;
+    style?: React.CSSProperties;
 }
 
-export function JdFloatingHelp(props: MotionProps & IJdFloatingHelpProps): React.JSX.Element {
+export function JdFloatingHelp(props: IJdFloatingHelpProps): React.JSX.Element {
 
     // Hide / Show
     const [isShowing, setIsShowing] = useState<boolean>(true);
@@ -21,6 +23,7 @@ export function JdFloatingHelp(props: MotionProps & IJdFloatingHelpProps): React
         setIsShowing(false);
         if (props.onClose) props.onClose();
     }
+
     return (
         <AnimatePresence>
             {isShowing &&
@@ -29,8 +32,8 @@ export function JdFloatingHelp(props: MotionProps & IJdFloatingHelpProps): React
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ ...jdAniUtils.springTransition, delay: props.removeDelay ? 0 : jdAniUtils.mountDelay + .5 }}
-                    className={styles.floatingHelpContainer}
-                    {...props}
+                    style={props.style}
+                    className={`${styles.floatingHelpContainer} ${props.className ?? ''} `}
                 >
                     <p className={styles.floatingHelpText}>{props.text}</p>
 

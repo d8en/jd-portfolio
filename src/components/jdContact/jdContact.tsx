@@ -12,7 +12,7 @@ export const JdContact = observer(() => {
             initial={{ right: -90, opacity: 0 }}
             animate={{ right: 24, opacity: 1 }}
             transition={{ ...jdAniUtils.springTransitionExtra, delay: 2 }}
-            className={`${styles.contactWrapper} ${jdContactManager.store.isFloatingShowing ? styles.contactPulse : ''}`}
+            className={`${styles.contactWrapper} ${jdContactManager.store.isFloatingShowing && !jdContactManager.store.hasFloatShown ? styles.contactPulse : ''}`}
             onClick={() => jdContactManager.setStateAsync({ isOpen: !jdContactManager.store.isOpen, isFloatingShowing: false, hasFloatShown: true })}
         >
             <div
@@ -23,14 +23,14 @@ export const JdContact = observer(() => {
                 <span>Hit me up!</span>
 
                 {/* ICON */}
-                <ContactIcon style={{ marginBottom: 3 }} />
+                <ContactIcon style={{ marginBottom: 3 }} className={styles.contactIcon} />
             </div>
 
             {/* FLOATING HELP */}
-            {jdContactManager.store.isFloatingShowing &&
+            {jdContactManager.store.isFloatingShowing && !jdContactManager.store.hasFloatShown &&
                 <JdFloatingHelp
-                    style={{ top: -72, right: 0, }}
-                    onClose={() => { jdContactManager.setStateAsync({ isFloatingShowing: false }) }}
+                    style={{ top: -72, right: 0 }}
+                    onClose={() => { jdContactManager.setStateAsync({ isFloatingShowing: false, hasFloatShown: true }) }}
                     text="Reach out!"
                     removeDelay
                 />

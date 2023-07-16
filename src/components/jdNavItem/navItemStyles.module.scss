@@ -50,6 +50,10 @@ $iconHeight: 32px;
     height: $iconHeight;
     width: $iconHeight;
     @include flexCentered;
+    path,
+    rect {
+        stroke: var(--primFg);
+    }
 }
 
 .navItemText {
