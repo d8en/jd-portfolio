@@ -44,15 +44,6 @@ $skillGap: 16px;
     place-items: center;
     height: $iconSize;
     width: $iconSize;
-    path,
-    rect {
-        &[stroke] {
-            stroke: var(--primFg);
-        }
-        &[fill] {
-            fill: var(--primFg);
-        }
-    }
 }
 
 .xpIconSmaller {
