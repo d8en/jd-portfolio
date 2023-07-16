@@ -11,9 +11,12 @@
     --red: #e42323;
     --primBg: var(--primWhite);
     --primFg: var(--primBlack);
-    // --darkModeBg: var(--primBlack);
-    // --darkModeFg: var(--primwhite);
-    background-color: var(--primBg);
+
+    --darkShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.35);
+    --lightShadow: 0px 0px 9px 0px rgba(26, 26, 32, 0.15);
+    --baseShadow: 0px 0px 9px 0px rgba(26, 26, 32, 0.15);
+
+    // background-color: var(--primBg);
     --gradientPink: $gradientPink;
     --gradientBlue: $gradientBlue;
 }

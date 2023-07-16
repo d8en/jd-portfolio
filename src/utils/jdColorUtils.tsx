@@ -21,3 +21,18 @@ export const primWhite: IJdThemeKeyValue = {
     key: '--primWhite',
     get value(): string { return rootStyles.getPropertyValue(this.key) }
 }
+
+export const baseShadow: IJdThemeKeyValue = {
+    key: '--baseShadow',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const darkShadow: IJdThemeKeyValue = {
+    key: '--darkShadow',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const lightShadow: IJdThemeKeyValue = {
+    key: '--lightShadow',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}

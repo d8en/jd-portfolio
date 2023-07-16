@@ -1,5 +1,5 @@
 import jdThemeStore, { JdThemeStore } from "../stores/jdThemeStore";
-import { primBg, primBlack, primFg, primWhite } from "../utils/jdColorUtils";
+import { baseShadow, darkShadow, lightShadow, primBg, primBlack, primFg, primWhite } from "../utils/jdColorUtils";
 
 import { JdManagerBase } from "./base/jdManagerBase";
 
@@ -13,6 +13,10 @@ class JdThemeManager extends JdManagerBase<JdThemeStore> {
         // Set bg and fg
         this.rootStyle.setProperty(primBg.key, this.store.isDarkTheme ? primBlack.value : primWhite.value);
         this.rootStyle.setProperty(primFg.key, this.store.isDarkTheme ? primWhite.value : primBlack.value);
+
+        // Set shadow
+        this.rootStyle.setProperty(baseShadow.key, this.store.isDarkTheme ? darkShadow.value : lightShadow.value);
+
     }
 }
 
