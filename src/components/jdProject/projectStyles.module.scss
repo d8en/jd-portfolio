@@ -34,28 +34,30 @@ $containerBorder: 24px;
         gap: 56px;
     }
 
-    &:hover {
-        .projectPreviewImg {
-            @include aniLinkScale;
-            transform: scale(1.09);
-        }
+    @include media-desktop {
+        &:hover {
+            .projectPreviewImg {
+                @include aniLinkScale;
+                transform: scale(1.09);
+            }
 
-        .projectHeader {
-            @include linkTransitions;
-            color: var(--link);
-        }
+            .projectHeader {
+                @include linkTransitions;
+                color: var(--link);
+            }
 
-        .projectLaunchIcon {
-            @include aniScaleIn;
-            opacity: 1;
-            transform: scale(1);
-            bottom: 12px;
-            visibility: visible;
-        }
+            .projectLaunchIcon {
+                @include aniScaleIn;
+                opacity: 1;
+                transform: scale(1);
+                bottom: 12px;
+                visibility: visible;
+            }
 
-        .projectPreviewImgContainer {
-            @include aniHoverOnly;
-            border-radius: 20px;
+            .projectPreviewImgContainer {
+                @include aniHoverOnly;
+                border-radius: 20px;
+            }
         }
     }
 }
