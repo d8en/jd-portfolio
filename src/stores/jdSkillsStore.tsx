@@ -14,6 +14,7 @@ import { ReactComponent as FramerIcon } from '../assets/svg/brands/framer.svg';
 import { makeAutoObservable } from "mobx";
 import jdObjUtils from "../utils/jdObjUtils";
 import { IJdSkillCo } from '../models/iJdSkillCo';
+import styles from './storeStyles.module.scss';
 
 export class JdSkillsStore {
     constructor() {
@@ -54,7 +55,7 @@ export class JdSkillsStore {
 
     public framerMotion: IJdSkillCo = {
         name: 'Framer Motion',
-        icon: <FramerIcon />,
+        icon: <FramerIcon className={styles.themedIcon} />,
         xp: 4,
         xpPercentage: 1,
         component: <p>I use css animations and transitions as much as possible but continue to be impressed by the Framer Motion team. This library is incredibly performant and can make lifecycle animations (specifically unmounting) and interpolation super simple.</p>
@@ -151,7 +152,7 @@ export class JdSkillsStore {
 
     public brandDesign: IJdSkillCo = {
         name: 'Brand Design',
-        icon: <BrandIcon />,
+        icon: <BrandIcon className={styles.themedIcon} />,
         xp: 8,
         xpPercentage: 1,
         component: <p>My first design projects were logo and branding design. I enjoy word-mark and logo design even to this day, as I got to work on a branding refresh at my most recent gig.</p>
