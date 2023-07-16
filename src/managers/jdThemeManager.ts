@@ -32,7 +32,7 @@ class JdThemeManager extends JdManagerBase<JdThemeStore> {
     public rootStyle: CSSStyleDeclaration = document.documentElement.style;
 
     public async toggleTheme(): Promise<void> {
-        await this.setStateAsync({ isDarkTheme: !this.store.isDarkTheme });
+        await this.setStateAsync({ isDarkTheme: !this.store.isDarkTheme, hasFloatShown: true });
         this.setTheme();
     }
 

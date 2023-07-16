@@ -6,14 +6,22 @@ import { observer } from 'mobx-react-lite';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { JdFloatingHelp } from '../jdFloatingHelp/jdFloatingHelp';
+import { useEffect } from 'react';
 
 export const JdThemeToggle = observer((): React.JSX.Element => {
+
+    useEffect(() => {
+        setTimeout(() => {
+            jdThemeManager.setStateAsync({ isFloatingShowing: true });
+        }, 5000);
+    }, []);
+
     return (
         <motion.div
             initial={{ left: -90, opacity: 0 }}
             animate={{ left: 20, opacity: 1 }}
             transition={{ ...jdAniUtils.springTransitionExtra, delay: 2.3 }}
-            className={`${styles.themeToggleContainer} ${jdThemeManager.store.isFloatingShowing ? styles.themeContactPulse : ''}`}
+            className={`${styles.themeToggleContainer} ${jdThemeManager.store.canShowFloat ? styles.themeContactPulse : ''}`}
             onClick={async () => await jdThemeManager.toggleTheme()}
         >
 
@@ -29,7 +37,7 @@ export const JdThemeToggle = observer((): React.JSX.Element => {
             </div>
 
             {/* FLOATING HELP */}
-            {jdThemeManager.store.isFloatingShowing &&
+            {jdThemeManager.store.canShowFloat &&
                 <JdFloatingHelp
                     className={styles.themeFloatingHelp}
                     onClose={() => { jdThemeManager.setStateAsync({ isFloatingShowing: false }) }}

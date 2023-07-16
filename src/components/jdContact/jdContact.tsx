@@ -30,7 +30,7 @@ export const JdContact = observer(() => {
             {jdContactManager.store.isFloatingShowing && !jdContactManager.store.hasFloatShown &&
                 <JdFloatingHelp
                     style={{ top: -72, right: 0 }}
-                    onClose={() => { jdContactManager.setStateAsync({ isFloatingShowing: false }) }}
+                    onClose={() => { jdContactManager.setStateAsync({ isFloatingShowing: false, hasFloatShown: true }) }}
                     text="Reach out!"
                     removeDelay
                 />
