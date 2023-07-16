@@ -1,8 +1,9 @@
 @use "../../styles/" as *;
 
-$themeIconHeight: 32px;
-$themeContainerWidth: calc($themeIconHeight * 2);
+$themeIconSize: 32px;
+$themeContainerWidth: calc($themeIconSize * 2);
 $themeContainerPadding: 4px;
+$themeTransitionDuration: 0.2s;
 
 .themeToggleContainer {
     display: grid;
@@ -35,7 +36,12 @@ $themeContainerPadding: 4px;
     left: $themeContainerPadding;
     place-items: center;
     border-radius: 50%;
-    height: $themeIconHeight;
-    width: $themeIconHeight;
-    transition: justify-content 4s;
+    height: $themeIconSize;
+    width: $themeIconSize;
+    transition: left $themeTransitionDuration cubic-bezier(1, 0, 1, 0);
+}
+
+.themeIconContainerDark {
+    transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
+    left: $themeIconSize;
 }

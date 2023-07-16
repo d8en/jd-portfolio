@@ -9,12 +9,11 @@ export const JdThemeToggle = observer((): React.JSX.Element => {
         <div
             className={styles.themeToggleContainer}
             onClick={async () => await jdThemeManager.toggleTheme()}
-            style={jdThemeManager.store.isDarkTheme ? { justifyContent: 'flex-end' } : { justifyContent: 'flex-start' }}
         >
 
             {/* ICONS */}
             <div
-                className={styles.themeIconContainer}
+                className={`${styles.themeIconContainer} ${jdThemeManager.store.isDarkTheme ? styles.themeIconContainerDark : ''}`}
             >
                 {jdThemeManager.store.isDarkTheme ?
                     <MoonIcon />
