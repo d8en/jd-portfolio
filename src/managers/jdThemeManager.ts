@@ -5,14 +5,14 @@ import { JdManagerBase } from "./base/jdManagerBase";
 
 class JdThemeManager extends JdManagerBase<JdThemeStore> {
     public store: JdThemeStore = jdThemeStore;
+    public rootStyle: CSSStyleDeclaration = document.documentElement.style;
 
     public async toggleTheme(): Promise<void> {
-        const root: HTMLElement = document.documentElement;
         await this.setStateAsync({ isDarkTheme: !this.store.isDarkTheme });
 
         // Set bg and fg
-        root.style.setProperty(primBg.key, this.store.isDarkTheme ? primBlack.value : primWhite.value);
-        root.style.setProperty(primFg.key, this.store.isDarkTheme ? primWhite.value : primBlack.value);
+        this.rootStyle.setProperty(primBg.key, this.store.isDarkTheme ? primBlack.value : primWhite.value);
+        this.rootStyle.setProperty(primFg.key, this.store.isDarkTheme ? primWhite.value : primBlack.value);
     }
 }
 

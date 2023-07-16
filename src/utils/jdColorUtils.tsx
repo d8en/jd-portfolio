@@ -1,6 +1,6 @@
 import { IJdThemeKeyValue } from "../models/iJdThemeKeyValue";
 
-const rootStyles = getComputedStyle(document.documentElement);
+export const rootStyles: CSSStyleDeclaration = getComputedStyle(document.documentElement);
 
 export const primFg: IJdThemeKeyValue = {
     key: '--primFg',
