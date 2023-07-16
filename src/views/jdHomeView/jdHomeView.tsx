@@ -1,12 +1,14 @@
 import { JdViewWrapper } from '../../components/jdViewWrapper/jdViewWrapper';
 import styles from './homeStyles.module.scss';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { useEffect, useState } from 'react';
 import { JdAniLogo } from '../../components/jdAniLogo/jdAniLogo';
 import { JdImg } from '../../components/jdImg/jdImg';
+import jdThemeManager from '../../managers/jdThemeManager';
+import { observer } from 'mobx-react-lite';
 
-export function JdHomeView(): React.JSX.Element {
+export const JdHomeView = observer((): React.JSX.Element => {
 
     const [isHeaderShowing, setIsHeaderShowing] = useState<boolean>(false);
     const [isTaglineShowing, setIsTaglineShowing] = useState<boolean>(false);
@@ -25,18 +27,23 @@ export function JdHomeView(): React.JSX.Element {
         <JdViewWrapper divProps={{ className: styles.homeContainer }}>
 
             {/* BG IMAGE */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: .5 }}
-                transition={{ duration: 1, delay: jdAniUtils.mountDelay }}
+            <div
                 className={styles.homeBgContainer}
+                style={{
+                    transition: 'opacity 1s',
+                    opacity: jdThemeManager.store.isDarkTheme ? .05 : .5,
+                }}
             >
-                <JdImg
-                    className={styles.homeBgImg}
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollageFullscreen.webp?alt=media&token=bd385b6a-8c37-4729-93d6-ccd745c30fc8'
-                    style={{ pointerEvents: 'none' }}
-                />
-            </motion.div>
+                <AnimatePresence>
+                    {isTaglineShowing &&
+                        <JdImg
+                            className={styles.homeBgImg}
+                            srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollageFullscreen.webp?alt=media&token=bd385b6a-8c37-4729-93d6-ccd745c30fc8'
+                            style={{ pointerEvents: 'none' }}
+                        />
+                    }
+                </AnimatePresence>
+            </div>
 
             {/* TITLE */}
             <div className={styles.homeHeader}>
@@ -75,4 +82,4 @@ export function JdHomeView(): React.JSX.Element {
 
         </JdViewWrapper>
     );
-}
+});

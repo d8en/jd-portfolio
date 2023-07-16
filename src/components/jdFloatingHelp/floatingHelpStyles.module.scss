@@ -31,8 +31,14 @@ $closeSize: 28px;
     background-color: var(--primBg);
     width: $closeSize;
     height: $closeSize;
-    @include aniHoverBase;
+
     path {
-        @include baseGradient(stroke, right);
+        stroke: var(--primFg);
+    }
+
+    @include aniHoverBase {
+        path {
+            stroke: var(--primFg);
+        }
     }
 }

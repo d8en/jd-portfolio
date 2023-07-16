@@ -13,7 +13,11 @@
     path {
         stroke: var(--primFg);
     }
-    @include aniHoverBase;
+    @include aniHoverBase {
+        path {
+            stroke: var(--primWhite);
+        }
+    }
     @include baseShadow;
     @include baseBlur;
 }

@@ -16,7 +16,7 @@ button {
     padding: 24px;
     @include bgGradient(left);
     position: relative;
-    color: var(--primBg);
+    color: var(--primWhite);
     border-radius: 20px;
     user-select: none;
 

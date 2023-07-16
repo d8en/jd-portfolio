@@ -39,7 +39,6 @@ export const JdContactForm = observer(() => {
                     exit={{ translateY: 40, opacity: 0, transition: jdAniUtils.baseEaseOut }}
                     {...jdAniUtils.aniElementMount()}
                     className={styles.contactFormContainer}
-                    onClick={() => jdContactManager.setStateAsync({ isOpen: false })}
                 >
 
                     {/* CLOSE */}
