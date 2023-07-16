@@ -40,7 +40,7 @@ export const JdThemeToggle = observer((): React.JSX.Element => {
             {jdThemeManager.store.canShowFloat &&
                 <JdFloatingHelp
                     className={styles.themeFloatingHelp}
-                    onClose={() => { jdThemeManager.setStateAsync({ isFloatingShowing: false }) }}
+                    onClose={() => { jdThemeManager.setStateAsync({ isFloatingShowing: false, hasFloatShown: true }) }}
                     text="Use dark or light mode!"
                     removeDelay
                 />

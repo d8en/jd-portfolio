@@ -58,12 +58,10 @@ $themeTransitionDuration: 0.2s;
 .themeFloatingHelp {
     top: 56px;
     left: 0;
-    // top:200;
 
-    // @include media-phone {
-    //     bottom: unset;
-    //     top: -100;
-    // }
+    @include media-phone {
+        top: -72px;
+    }
 }
 
 .themeContactPulse {
