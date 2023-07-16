@@ -1,5 +1,29 @@
 import jdThemeStore, { JdThemeStore } from "../stores/jdThemeStore";
-import { baseShadow, blurBg, darkBlurBg, darkGreyBg, darkGreyLine, darkGreyText, darkLink, darkPrimWhite, darkShadow, greyBg, greyLine, greyText, lightBlurBg, lightGreyBg, lightGreyLine, lightGreyText, lightLink, lightPrimWhite, lightShadow, link, primBg, primBlack, primFg, primWhite } from "../utils/jdColorUtils";
+import {
+    baseShadow,
+    blurBg,
+    darkBlurBg,
+    darkGreyBg,
+    darkGreyLine,
+    darkGreyText,
+    darkLink,
+    darkPrimWhite,
+    darkShadow,
+    greyBg,
+    greyLine,
+    greyText,
+    lightBlurBg,
+    lightGreyBg,
+    lightGreyLine,
+    lightGreyText,
+    lightLink,
+    lightShadow,
+    link,
+    primBg,
+    primBlack,
+    primFg,
+    primWhite,
+} from "../utils/jdColorUtils";
 
 import { JdManagerBase } from "./base/jdManagerBase";
 
@@ -17,9 +41,6 @@ class JdThemeManager extends JdManagerBase<JdThemeStore> {
         // Set bg and fg
         this.rootStyle.setProperty(primBg.key, this.store.isDarkTheme ? primBlack.value : primWhite.value);
         this.rootStyle.setProperty(primFg.key, this.store.isDarkTheme ? darkPrimWhite.value : primBlack.value);
-
-        // Set white
-        // this.rootStyle.setProperty(primWhite.key, this.store.isDarkTheme ? darkPrimWhite.value : lightPrimWhite.value);
 
         // Set shadow
         this.rootStyle.setProperty(baseShadow.key, this.store.isDarkTheme ? darkShadow.value : lightShadow.value);
