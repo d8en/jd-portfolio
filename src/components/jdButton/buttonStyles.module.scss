@@ -21,7 +21,7 @@ button {
     user-select: none;
 
     @include aniHoverBase {
-        color: var(--primBg);
+        color: var(--primWhite);
     }
 
     @include btnTransition;
