@@ -17,7 +17,6 @@ export function JdAniLogo(props: MotionProps): React.JSX.Element {
                 position: 'relative',
                 bottom: 0,
                 opacity: 1,
-                boxShadow: '0px 0px 9px 0px rgba(26, 26, 32, 0.15)'
             }}
             className={styles.homeLogoContainer}
             layout

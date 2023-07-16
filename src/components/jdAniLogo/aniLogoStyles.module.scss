@@ -8,12 +8,11 @@ $logoContainer: 56px;
     border-radius: 50%;
     height: $logoContainer;
     width: $logoContainer;
-    background-color: var(--primBg);
     @include bgGradient;
+    @include baseShadow;
 }
 
 .homeLogo {
-    // color: var(--primBg);
     path {
         fill: var(--primBg);
     }
