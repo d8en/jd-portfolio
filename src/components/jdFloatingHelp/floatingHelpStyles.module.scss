@@ -3,6 +3,7 @@
 $closeSize: 28px;
 
 .floatingHelpContainer {
+    z-index: 3;
     display: grid;
     grid-template-columns: auto min-content;
     grid-auto-flow: column;
@@ -21,19 +22,19 @@ $closeSize: 28px;
     @include font-size-small;
     line-height: 1.5em;
     white-space: nowrap;
-    color: var(--primBg);
+    color: var(--primWhite);
 }
 
 .floatingClose {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background-color: var(--primBg);
+    background-color: var(--primWhite);
     width: $closeSize;
     height: $closeSize;
 
     path {
-        stroke: var(--primFg);
+        stroke: var(--primBlack);
     }
 
     @include aniHoverBase {

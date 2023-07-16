@@ -6,13 +6,17 @@ $themeContainerPadding: 4px;
 $themeTransitionDuration: 0.2s;
 
 .themeToggleContainer {
-    z-index: 4;
+    z-index: 1;
     display: grid;
     grid-auto-columns: 1fr;
     position: fixed;
     align-items: center;
     justify-content: flex-start;
     top: 20px;
+    @include media-phone {
+        top: unset;
+        bottom: $bottomWithNav;
+    }
     left: 20px;
     padding: 2px;
     height: 34px;

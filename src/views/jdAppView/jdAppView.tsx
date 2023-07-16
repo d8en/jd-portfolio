@@ -8,14 +8,15 @@ export function JdAppView(): React.JSX.Element {
     return (
         <div className={styles.appContainer}>
 
+            {/* THEME TOGGLE */}
+            <JdThemeToggle />
+
             {/* ALL ROUTES */}
             <Outlet />
 
             {/* NAV BAR */}
             <JdNav />
 
-            {/* THEME TOGGLE */}
-            <JdThemeToggle />
 
         </div>
     );

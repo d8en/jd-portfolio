@@ -7,7 +7,7 @@ $contactSize: 56px;
     position: fixed;
     bottom: calc(100% + 24px);
     @include media-phone {
-        bottom: 102px;
+        bottom: $bottomWithNav;
     }
     right: 24px;
 }
@@ -27,7 +27,6 @@ $contactSize: 56px;
     gap: 12px;
     width: $contactSize;
     height: $contactSize;
-    // background-color: var(--primBg);
     border-radius: 200px;
     @include baseShadow;
     @include baseBlur;
