@@ -3,10 +3,15 @@ import { ReactComponent as SunIcon } from '../../assets/svg/icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../../assets/svg/icons/moon.svg';
 import jdThemeManager from '../../managers/jdThemeManager';
 import { observer } from 'mobx-react-lite';
+import { motion } from 'framer-motion';
+import jdAniUtils from '../../utils/jdAniUtils';
 
 export const JdThemeToggle = observer((): React.JSX.Element => {
     return (
-        <div
+        <motion.div
+            initial={{ left: -90, opacity: 0 }}
+            animate={{ left: 20, opacity: 1 }}
+            transition={{ ...jdAniUtils.springTransitionExtra, delay: 2.3 }}
             className={styles.themeToggleContainer}
             onClick={async () => await jdThemeManager.toggleTheme()}
         >
@@ -22,6 +27,6 @@ export const JdThemeToggle = observer((): React.JSX.Element => {
                 }
             </div>
 
-        </div>
+        </motion.div>
     )
 });

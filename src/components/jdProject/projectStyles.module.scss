@@ -12,7 +12,6 @@ $containerBorder: 24px;
 .projectsContainer {
     position: relative;
     border-radius: $containerBorder;
-    background-color: var(--primBg);
     display: grid;
     grid-auto-columns: 1fr;
     gap: 44px;
