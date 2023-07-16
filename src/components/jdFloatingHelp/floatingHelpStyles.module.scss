@@ -7,7 +7,6 @@ $closeSize: 28px;
     grid-template-columns: auto min-content;
     grid-auto-flow: column;
     position: absolute;
-    // background-color: var(--primBg);
     @include bgGradient(top right);
     border-radius: 12px;
     place-items: center;
@@ -16,7 +15,6 @@ $closeSize: 28px;
     padding: 12px;
     max-width: 180px;
     gap: 12px;
-    border: 1.5px solid var(--greyBg);
 }
 
 .floatingHelpText {

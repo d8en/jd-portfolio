@@ -11,9 +11,11 @@
     --red: #e42323;
     --primBg: var(--primWhite);
     --primFg: var(--primBlack);
-    --darkModeFg: var(--primwhite);
-    --darkModeBg: var(--primBlack);
+    // --darkModeBg: var(--primBlack);
+    // --darkModeFg: var(--primwhite);
     background-color: var(--primBg);
+    --gradientPink: #d65ed4;
+    --gradientBlue: #3062e3;
 }
 
 $navActiveBar: 2.5px;
