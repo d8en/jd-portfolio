@@ -1,7 +1,6 @@
 :root {
     --primBlack: #1a1a20;
     --primWhite: #ffffff;
-    --blurDark: rgba(28, 28, 32, 0.5);
     --greyText: #6b737b;
     --greyBg: #e5ebf0;
     --greyLine: #d8e0e9;
@@ -13,7 +12,7 @@
     // Blur backgrounds
     --blurBg: rgba(255, 255, 255, 0.85);
     --lightBlurBg: rgba(255, 255, 255, 0.85);
-    --darkBlurBg: rgba(255, 255, 255, 0);
+    --darkBlurBg: rgba(26, 26, 32, 0.6);
 
     // Shadows
     --darkShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.35);
