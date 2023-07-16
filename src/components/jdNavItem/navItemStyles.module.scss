@@ -50,7 +50,8 @@ $iconHeight: 32px;
     height: $iconHeight;
     width: $iconHeight;
     @include flexCentered;
-    path {
+    path,
+    rect {
         stroke: var(--primFg);
     }
 }

@@ -18,7 +18,7 @@ $contactSize: 56px;
 
 .contactIcon {
     path {
-        stroke: var(--primBg);
+        stroke: var(--primFg);
     }
 }
 
@@ -27,9 +27,10 @@ $contactSize: 56px;
     gap: 12px;
     width: $contactSize;
     height: $contactSize;
-    background-color: var(--primBg);
+    // background-color: var(--primBg);
     border-radius: 200px;
     @include baseShadow;
+    @include baseBlur;
 
     transition: padding 0.2s;
     @include aniLinkClick;
