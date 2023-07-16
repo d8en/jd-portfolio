@@ -78,7 +78,6 @@ $containerBorder: 24px;
     grid-auto-rows: min-content;
 
     .projectPreviewImgContainer {
-        // background-color: var(--greyBg);
         @include bgGradient(top left);
         padding-top: 56px;
         width: 100%;
@@ -131,6 +130,8 @@ $containerBorder: 24px;
 }
 
 .projectPreviewImg {
+    border-radius: 24px;
+    padding: 12px;
     @include aniLinkScale;
     object-fit: contain;
     place-self: center;
