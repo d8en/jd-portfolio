@@ -1,5 +1,5 @@
 import jdThemeStore, { JdThemeStore } from "../stores/jdThemeStore";
-import { baseShadow, darkShadow, lightShadow, primBg, primBlack, primFg, primWhite } from "../utils/jdColorUtils";
+import { baseShadow, blurBg, darkBlurBg, darkShadow, lightBlurBg, lightShadow, primBg, primBlack, primFg, primWhite } from "../utils/jdColorUtils";
 
 import { JdManagerBase } from "./base/jdManagerBase";
 
@@ -19,6 +19,9 @@ class JdThemeManager extends JdManagerBase<JdThemeStore> {
 
         // Set shadow
         this.rootStyle.setProperty(baseShadow.key, this.store.isDarkTheme ? darkShadow.value : lightShadow.value);
+
+        // Set blur styles
+        this.rootStyle.setProperty(blurBg.key, this.store.isDarkTheme ? darkBlurBg.value : lightBlurBg.value);
     }
 
 }

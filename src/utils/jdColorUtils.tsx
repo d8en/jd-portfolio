@@ -48,3 +48,8 @@ export const darkBlurBg: IJdThemeKeyValue = {
     key: '--darkBlurBg',
     get value(): string { return rootStyles.getPropertyValue(this.key) }
 }
+
+export const lightBlurBg: IJdThemeKeyValue = {
+    key: '--lightBlurBg',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
