@@ -15,10 +15,11 @@ $themeTransitionDuration: 0.2s;
     top: 20px;
     left: 20px;
     padding: 2px;
-    background-color: var(--primBg);
     height: 34px;
     border-radius: 200px;
     width: $themeContainerWidth;
+    // background-color: var(--primBg);
+    @include baseBlur;
     @include baseShadow;
     @include aniHoverBase {
         .themeIconContainer {
