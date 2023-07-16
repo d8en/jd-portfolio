@@ -1,5 +1,5 @@
 import jdThemeStore, { JdThemeStore } from "../stores/jdThemeStore";
-import { baseShadow, blurBg, darkBlurBg, darkLink, darkShadow, lightBlurBg, lightLink, lightShadow, link, primBg, primBlack, primFg, primWhite } from "../utils/jdColorUtils";
+import { baseShadow, blurBg, darkBlurBg, darkGreyLine, darkGreyText, darkLink, darkShadow, greyLine, greyText, lightBlurBg, lightGreyLine, lightGreyText, lightLink, lightShadow, link, primBg, primBlack, primFg, primWhite } from "../utils/jdColorUtils";
 
 import { JdManagerBase } from "./base/jdManagerBase";
 
@@ -25,6 +25,12 @@ class JdThemeManager extends JdManagerBase<JdThemeStore> {
 
         // Set link
         this.rootStyle.setProperty(link.key, this.store.isDarkTheme ? darkLink.value : lightLink.value);
+
+        // Set grey text
+        this.rootStyle.setProperty(greyText.key, this.store.isDarkTheme ? darkGreyText.value : lightGreyText.value);
+
+        // Set grey line
+        this.rootStyle.setProperty(greyLine.key, this.store.isDarkTheme ? darkGreyLine.value : lightGreyLine.value);
     }
 
 }
