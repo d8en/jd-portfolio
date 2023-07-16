@@ -4,7 +4,8 @@ export class JdThemeStore {
     constructor() {
         makeAutoObservable(this);
     }
-    public isDarkTheme: boolean = false;
+
+    public isDarkTheme: boolean = true;
 }
 
 const jdThemeStore = new JdThemeStore();
