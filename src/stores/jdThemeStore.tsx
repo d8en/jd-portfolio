@@ -6,6 +6,7 @@ export class JdThemeStore {
     }
 
     public isDarkTheme: boolean = true;
+    public isFloatingShowing: boolean = true;
 }
 
 const jdThemeStore = new JdThemeStore();

@@ -54,3 +54,14 @@ $themeTransitionDuration: 0.2s;
         stroke: var(--primFg);
     }
 }
+
+.themeFloatingHelp {
+    top: 56px;
+    left: 0;
+    // top:200;
+
+    // @include media-phone {
+    //     bottom: unset;
+    //     top: -100;
+    // }
+}

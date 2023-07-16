@@ -5,6 +5,7 @@ import jdThemeManager from '../../managers/jdThemeManager';
 import { observer } from 'mobx-react-lite';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
+import { JdFloatingHelp } from '../jdFloatingHelp/jdFloatingHelp';
 
 export const JdThemeToggle = observer((): React.JSX.Element => {
     return (
@@ -26,6 +27,16 @@ export const JdThemeToggle = observer((): React.JSX.Element => {
                     <SunIcon />
                 }
             </div>
+
+            {/* FLOATING HELP */}
+            {jdThemeManager.store.isFloatingShowing &&
+                <JdFloatingHelp
+                    className={styles.themeFloatingHelp}
+                    onClose={() => { jdThemeManager.setStateAsync({ isFloatingShowing: false }) }}
+                    text="Use dark or light mode!"
+                    removeDelay
+                />
+            }
 
         </motion.div>
     )
