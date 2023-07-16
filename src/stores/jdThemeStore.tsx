@@ -1,11 +1,10 @@
 import { makeAutoObservable } from "mobx";
-import { JdThemeType } from "../models/JdThemeType";
 
 export class JdThemeStore {
     constructor() {
         makeAutoObservable(this);
     }
-    public userTheme: JdThemeType = JdThemeType.System;
+    public isDarkTheme: boolean = false;
 }
 
 const jdThemeStore = new JdThemeStore();

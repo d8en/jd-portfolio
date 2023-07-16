@@ -1,0 +1,41 @@
+@use "../../styles/" as *;
+
+$themeIconHeight: 32px;
+$themeContainerWidth: calc($themeIconHeight * 2);
+$themeContainerPadding: 4px;
+
+.themeToggleContainer {
+    display: grid;
+    grid-auto-columns: 1fr;
+    position: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    top: 20px;
+    right: 20px;
+    padding: 2px;
+    background-color: var(--primBg);
+    height: 34px;
+    border-radius: 200px;
+    width: $themeContainerWidth;
+    @include baseShadow;
+    @include aniHoverBase {
+        .themeIconContainer {
+            background-color: var(--primBg);
+            path {
+                stroke: var(--primFg);
+            }
+        }
+    }
+}
+
+.themeIconContainer {
+    position: absolute;
+    background-color: var(--greyBg);
+    display: grid;
+    left: $themeContainerPadding;
+    place-items: center;
+    border-radius: 50%;
+    height: $themeIconHeight;
+    width: $themeIconHeight;
+    transition: justify-content 4s;
+}
