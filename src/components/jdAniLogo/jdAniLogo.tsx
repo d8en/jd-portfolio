@@ -6,7 +6,7 @@ export function JdAniLogo(props: MotionProps): React.JSX.Element {
     return (
         <motion.div
             initial={{
-                bottom: '-100vh',
+                bottom: -200,
                 opacity: 0
             }}
             transition={{

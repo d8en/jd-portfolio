@@ -70,12 +70,12 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
             {/* INNER MOVING DIV */}
             <motion.div
                 ref={innerDiv}
-                onClick={onClickProject}
+                onClickCapture={onClickProject}
                 className={`${props.isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
                 style={{
                     cursor: props.isOpen ? 'unset' : 'pointer',
                 }}
-                {...jdAniUtils.aniElementMount(props.idx / 4)}
+                {...jdAniUtils.aniElementMount(props.idx / 6)}
             >
 
                 {/* PREVIEW IMAGE */}

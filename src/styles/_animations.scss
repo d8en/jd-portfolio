@@ -1,4 +1,5 @@
 @use "./blur" as *;
+@use "./colors" as *;
 
 $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
@@ -19,11 +20,11 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
     }
 
     1% {
-        opacity: 1;
+        opacity: .2;
     }
 
     100% {
-        transform: scale(1.5);
+        transform: scale(1.7);
         opacity: 0;
     }
 }
@@ -33,7 +34,8 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
         border-radius: $radius;
         position: absolute;
         content: "";
-        background-color: var(--greyBg);
+        // background-color: var(--greyBg);
+        @include bgGradient;
         top: 0;
         left: 0;
         bottom: 0;
