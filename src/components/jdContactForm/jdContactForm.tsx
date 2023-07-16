@@ -8,9 +8,16 @@ import jdAniUtils from "../../utils/jdAniUtils";
 import { JdClose } from "../jdClose/jdClose";
 import { JdButton } from "../jdButton/jdButton";
 import { JdAutoCompleteType } from "../../models/JdAutoCompleteType";
+import { useEffect } from "react";
 
 export const JdContactForm = observer(() => {
 
+    // Mount
+    useEffect(() => {
+        jdContactManager.setStateAsync({ hasFloatShown: true })
+    }, []);
+
+    // Submit form
     const onSubmit = async (e?: React.FormEvent<HTMLFormElement>): Promise<void> => {
         if (e) {
             e.preventDefault();
