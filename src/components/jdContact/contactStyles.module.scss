@@ -16,6 +16,12 @@ $contactSize: 56px;
     @include aniBeforePulse(0, 200px);
 }
 
+.contactIcon {
+    path {
+        stroke: var(--primBg);
+    }
+}
+
 .contactContainer {
     @include flexCentered;
     gap: 12px;
@@ -27,6 +33,7 @@ $contactSize: 56px;
 
     transition: padding 0.2s;
     @include aniLinkClick;
+
     &:hover {
         @include media-desktop {
             transition: padding 0.2s;

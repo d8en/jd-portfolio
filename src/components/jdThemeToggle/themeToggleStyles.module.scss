@@ -39,7 +39,7 @@ $themeTransitionDuration: 0.2s;
     border-radius: 50%;
     height: $themeIconSize;
     width: $themeIconSize;
-    transition: left $themeTransitionDuration cubic-bezier(1, 0, 1, 0);
+    transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
 }
 
 .themeIconContainerDark {

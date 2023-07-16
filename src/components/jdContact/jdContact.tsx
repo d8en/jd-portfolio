@@ -23,7 +23,7 @@ export const JdContact = observer(() => {
                 <span>Hit me up!</span>
 
                 {/* ICON */}
-                <ContactIcon style={{ marginBottom: 3 }} />
+                <ContactIcon style={{ marginBottom: 3 }} className={styles.contactIcon} />
             </div>
 
             {/* FLOATING HELP */}
