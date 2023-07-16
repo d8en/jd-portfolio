@@ -30,7 +30,6 @@ export const JdHomeView = observer((): React.JSX.Element => {
             <div
                 className={styles.homeBgContainer}
                 style={{
-                    transition: 'opacity 1s',
                     opacity: jdThemeManager.store.isDarkTheme ? .05 : .5,
                 }}
             >
