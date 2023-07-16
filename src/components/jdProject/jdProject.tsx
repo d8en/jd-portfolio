@@ -75,7 +75,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                 style={{
                     cursor: props.isOpen ? 'unset' : 'pointer',
                 }}
-                {...jdAniUtils.aniElementMount(props.idx / 4)}
+                {...jdAniUtils.aniElementMount(props.idx / 6)}
             >
 
                 {/* PREVIEW IMAGE */}

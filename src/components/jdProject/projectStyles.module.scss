@@ -1,6 +1,7 @@
 @use "../../styles/" as *;
 
 $previewImgHeight: 348px;
+$previewImgHeightOPen: 500px;
 $containerBorder: 24px;
 
 .projectsHolder {
@@ -76,6 +77,8 @@ $containerBorder: 24px;
     grid-auto-rows: min-content;
 
     .projectPreviewImgContainer {
+        // background-color: var(--greyBg);
+        @include bgGradient(top left);
         padding-top: 56px;
         width: 100%;
     }
@@ -108,6 +111,10 @@ $containerBorder: 24px;
     .projectHeader {
         margin-bottom: -28px;
         @include jdLineClamp(5);
+    }
+
+    .projectPreviewImg {
+        height: $previewImgHeightOPen;
     }
 }
 
