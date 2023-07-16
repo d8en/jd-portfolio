@@ -8,7 +8,7 @@ $closeSize: 28px;
     grid-auto-flow: column;
     position: absolute;
     @include bgGradient(top right);
-    border-radius: 12px;
+    border-radius: 200px;
     place-items: center;
     @include baseShadow;
     @include aniFloating;
@@ -28,8 +28,11 @@ $closeSize: 28px;
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background-color: var(--greyBg);
+    background-color: var(--primBg);
     width: $closeSize;
     height: $closeSize;
     @include aniHoverBase;
+    path {
+        @include baseGradient(stroke, right);
+    }
 }

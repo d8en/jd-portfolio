@@ -9,8 +9,12 @@ $logoContainer: 56px;
     height: $logoContainer;
     width: $logoContainer;
     background-color: var(--primBg);
+    @include bgGradient;
 }
 
 .homeLogo {
-    color: var(--brandGradient);
+    // color: var(--primBg);
+    path {
+        fill: var(--primBg);
+    }
 }

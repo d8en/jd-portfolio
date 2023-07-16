@@ -14,19 +14,39 @@
     // --darkModeBg: var(--primBlack);
     // --darkModeFg: var(--primwhite);
     background-color: var(--primBg);
-    --gradientPink: #d65ed4;
-    --gradientBlue: #3062e3;
+    --gradientPink: $gradientPink;
+    --gradientBlue: $gradientBlue;
 }
 
 $navActiveBar: 2.5px;
+$gradientPink: #d65ed4;
+$gradientBlue: #3062e3;
 
 @mixin bgGradient($direction: top) {
-    background-image: linear-gradient(to $direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -moz-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -webkit-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -ms-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -o-linear-gradient($direction, #d65ed4 0%, #3062e3 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: linear-gradient(to $direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -moz-linear-gradient(
+        $direction,
+        $gradientPink 0%,
+        $gradientBlue 99.99%,
+        rgba(26, 26, 32, 0) 100%
+    );
+    background-image: -webkit-linear-gradient(
+        $direction,
+        $gradientPink 0%,
+        $gradientBlue 99.99%,
+        rgba(26, 26, 32, 0) 100%
+    );
+    background-image: -ms-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -o-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
     background-size: 150% auto;
+}
+
+@mixin baseGradient($property, $direction) {
+    $property: linear-gradient(to $direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    $property: -moz-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    $property: -webkit-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    $property: -ms-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    $property: -o-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
 }
 
 @mixin textGradient($direction: top) {
