@@ -12,10 +12,11 @@ import { useEffect } from "react";
 
 export const JdContactForm = observer(() => {
 
-    // Mount
+    // Effect for showing contact form
     useEffect(() => {
-        jdContactManager.setStateAsync({ hasFloatShown: true })
-    }, []);
+        if (jdContactManager.store.isFloatingShowing) jdContactManager.setStateAsync({ hasFloatShown: true });
+    }, [jdContactManager.store.isOpen]);
+
 
     // Submit form
     const onSubmit = async (e?: React.FormEvent<HTMLFormElement>): Promise<void> => {
