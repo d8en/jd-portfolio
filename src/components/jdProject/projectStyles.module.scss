@@ -201,8 +201,13 @@ $containerBorder: 24px;
     width: 40px;
     @include aniLinkClick;
 
-    &:hover {
-        @include aniHoverBase;
+    path {
+        stroke: var(--primWhite);
+    }
+    @include aniHoverBase {
+        path {
+            stroke: var(--primWhite);
+        }
     }
 }
 
