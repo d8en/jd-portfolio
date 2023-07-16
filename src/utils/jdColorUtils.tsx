@@ -96,3 +96,18 @@ export const lightGreyLine: IJdThemeKeyValue = {
     key: '--lightGreyLine',
     get value(): string { return rootStyles.getPropertyValue(this.key) }
 }
+
+export const greyBg: IJdThemeKeyValue = {
+    key: '--greyBg',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const darkGreyBg: IJdThemeKeyValue = {
+    key: '--darkGreyBg',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const lightGreyBg: IJdThemeKeyValue = {
+    key: '--lightGreyBg',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
