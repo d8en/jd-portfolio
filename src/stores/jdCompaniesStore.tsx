@@ -6,6 +6,7 @@ import { ReactComponent as TypoIcon } from '../assets/svg/brands/typo.svg';
 import { JdATag } from "../components/jdATag/jdATag";
 import jdObjUtils from "../utils/jdObjUtils";
 import { IJdSkillCo } from "../models/iJdSkillCo";
+import styles from './storeStyles.module.scss';
 
 export class JdCompaniesStore {
     constructor() {
@@ -72,7 +73,7 @@ export class JdCompaniesStore {
         companyName: 'gravix',
         xp: 4,
         xpPercentage: .8,
-        icon: <GravixIcon />,
+        icon: <GravixIcon className={styles.themedIcon} />,
         component:
             <>
                 <p>At gravix, I created a digital agency with branding, UX, and marketing services for 10+ clients.</p>
