@@ -66,3 +66,33 @@ export const lightLink: IJdThemeKeyValue = {
     key: '--lightLink',
     get value(): string { return rootStyles.getPropertyValue(this.key) }
 }
+
+export const greyText: IJdThemeKeyValue = {
+    key: '--greyText',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const lightGreyText: IJdThemeKeyValue = {
+    key: '--lightGreyText',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const darkGreyText: IJdThemeKeyValue = {
+    key: '--darkGreyText',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const greyLine: IJdThemeKeyValue = {
+    key: '--greyLine',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const darkGreyLine: IJdThemeKeyValue = {
+    key: '--darkGreyLine',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const lightGreyLine: IJdThemeKeyValue = {
+    key: '--lightGreyLine',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}

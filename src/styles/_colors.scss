@@ -1,16 +1,25 @@
 :root {
-    --primBlack: #1a1a20;
-    --primWhite: #ffffff;
+    // Grey
     --greyText: #6b737b;
+    --lightGreyText: #6b737b;
+    --darkGreyText: #818991;
+
     --greyBg: #e5ebf0;
+
     --greyLine: #d8e0e9;
+    --darkGreyLine: #1c2026;
+    --lightGreyLine: #d8e0e9;
+
     --red: #e42323;
+
+    // Primary
     --primBg: var(--primWhite);
     --primFg: var(--primBlack);
+    --primBlack: #1a1a20;
+    --primWhite: #ffffff;
 
     // Link color
     --link: #0064d9;
-    // --darkLink: #e873e6;
     --darkLink: #d57bd4;
     --lightLink: #0064d9;
 
