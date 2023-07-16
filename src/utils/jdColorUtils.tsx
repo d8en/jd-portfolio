@@ -2,6 +2,8 @@ import { IJdThemeKeyValue } from "../models/iJdThemeKeyValue";
 
 export const rootStyles: CSSStyleDeclaration = getComputedStyle(document.documentElement);
 
+console.log('computed styles', rootStyles);
+
 export const primFg: IJdThemeKeyValue = {
     key: '--primFg',
     get value(): string { return rootStyles.getPropertyValue(this.key) }
@@ -34,5 +36,15 @@ export const darkShadow: IJdThemeKeyValue = {
 
 export const lightShadow: IJdThemeKeyValue = {
     key: '--lightShadow',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const blurBg: IJdThemeKeyValue = {
+    key: '--blurBg',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const darkBlurBg: IJdThemeKeyValue = {
+    key: '--darkBlurBg',
     get value(): string { return rootStyles.getPropertyValue(this.key) }
 }
