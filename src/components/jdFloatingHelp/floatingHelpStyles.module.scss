@@ -7,7 +7,8 @@ $closeSize: 28px;
     grid-template-columns: auto min-content;
     grid-auto-flow: column;
     position: absolute;
-    background-color: var(--primBg);
+    // background-color: var(--primBg);
+    @include bgGradient(top right);
     border-radius: 12px;
     place-items: center;
     @include baseShadow;
@@ -22,6 +23,7 @@ $closeSize: 28px;
     @include font-size-small;
     line-height: 1.5em;
     white-space: nowrap;
+    color: var(--primBg);
 }
 
 .floatingClose {
