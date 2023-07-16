@@ -51,3 +51,18 @@ export const lightBlurBg: IJdThemeKeyValue = {
     key: '--lightBlurBg',
     get value(): string { return rootStyles.getPropertyValue(this.key) }
 }
+
+export const link: IJdThemeKeyValue = {
+    key: '--link',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const darkLink: IJdThemeKeyValue = {
+    key: '--darkLink',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}
+
+export const lightLink: IJdThemeKeyValue = {
+    key: '--lightLink',
+    get value(): string { return rootStyles.getPropertyValue(this.key) }
+}

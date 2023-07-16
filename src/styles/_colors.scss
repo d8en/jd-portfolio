@@ -4,10 +4,14 @@
     --greyText: #6b737b;
     --greyBg: #e5ebf0;
     --greyLine: #d8e0e9;
-    --link: #0064d9;
     --red: #e42323;
     --primBg: var(--primWhite);
     --primFg: var(--primBlack);
+
+    // Link color
+    --link: #0064d9;
+    --darkLink: #4b91e2;
+    --lightLink: #0064d9;
 
     // Blur backgrounds
     --blurBg: rgba(255, 255, 255, 0.85);
