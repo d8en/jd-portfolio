@@ -65,3 +65,7 @@ $themeTransitionDuration: 0.2s;
     //     top: -100;
     // }
 }
+
+.themeContactPulse {
+    @include aniBeforePulse(0, 200px);
+}

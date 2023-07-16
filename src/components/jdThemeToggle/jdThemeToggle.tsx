@@ -13,7 +13,7 @@ export const JdThemeToggle = observer((): React.JSX.Element => {
             initial={{ left: -90, opacity: 0 }}
             animate={{ left: 20, opacity: 1 }}
             transition={{ ...jdAniUtils.springTransitionExtra, delay: 2.3 }}
-            className={styles.themeToggleContainer}
+            className={`${styles.themeToggleContainer} ${jdThemeManager.store.isFloatingShowing ? styles.themeContactPulse : ''}`}
             onClick={async () => await jdThemeManager.toggleTheme()}
         >
 
