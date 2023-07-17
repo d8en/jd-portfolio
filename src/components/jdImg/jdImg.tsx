@@ -17,7 +17,7 @@ export function JdImg(props: HTMLMotionProps<"img">): React.JSX.Element {
             <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: .5 }}
+                transition={{ duration: 1 }}
                 onClick={onClick}
                 {...props}
             />
