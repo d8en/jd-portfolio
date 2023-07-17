@@ -22,7 +22,8 @@
 .homeSubHeader {
     @include font-size-normal;
     @include font-weight-light;
-    @include textGradient(right);
+    // @include textGradient(right);
+    color: var(--greyText);
     line-height: 1.6em;
 }
 
