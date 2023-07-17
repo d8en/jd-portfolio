@@ -33,7 +33,7 @@ export function JdObApp(): React.JSX.Element {
                 <li>Designers, writers, and developers</li>
             </ul>
 
-            <p className={styles.projectGapReducer}>Primary problems that we felt the app could help with:</p>
+            <p className={styles.projectGapReducer}>Primary problems that I felt the app could help with:</p>
             <ul>
                 <li>Too many meetings solely focused on "what's the latest?"</li>
                 <li>Important updates were posted in Slack and hard for PMs to track</li>
@@ -70,7 +70,7 @@ export function JdObApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototype for an executive dashboard</figcaption>
 
-            <p>We found that a robust search feature was super important to almost all of our persona groups, so we spent quite some time making sure that we had great filtering options and digestible results.</p>
+            <p>I found that a robust search feature was super important to almost all of our persona groups, so I spent quite some time making sure that I had useful filtering options and digestible results.</p>
 
             <JdImg
                 className={styles.projectsImage}

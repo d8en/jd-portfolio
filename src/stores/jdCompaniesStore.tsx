@@ -89,7 +89,7 @@ export class JdCompaniesStore {
         icon: <TypoIcon />,
         component:
             <>
-                <p>Typo is a text-only social media app that I came up with at 3:00 AM on a Tuesday. Do we really need another hellscape of a social media platform? Probably not, but it's been a super fun design and development exercise.</p>
+                <p>Typo is a text-only social media app that replays exactly how the post was written. Do we really need another hellscape of a social media app though?</p>
             </>
     }
 

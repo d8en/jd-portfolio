@@ -47,7 +47,7 @@ export class JdProjectStore {
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekPreview.webp?alt=media',
         component: <JdRekApp />,
         title: 'Building my dream - a native app to track recommendations',
-        desc: `Walking away from a dinner with friends, I couldn't remember a single TV show we talked about. How nice would it be to track it?`,
+        desc: `Walking away from a dinner with friends, I couldn't remember a single TV show that we talked about. How nice would it be to track it?`,
         isOpen: false,
     }
 

@@ -1,5 +1,7 @@
-$hoverDuration: 0.3s;
 @use "./colors" as *;
+@use "./animations" as *;
+
+$hoverDuration: 0.3s;
 
 @mixin linkTransitions {
     transition:

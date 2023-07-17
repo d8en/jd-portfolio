@@ -1,8 +1,9 @@
 import { useState } from "react";
 import styles from './imgStyles.module.scss';
 import { JdClose } from "../jdClose/jdClose";
+import { HTMLMotionProps, motion } from "framer-motion";
 
-export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>): React.JSX.Element {
+export function JdImg(props: HTMLMotionProps<"img">): React.JSX.Element {
 
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
@@ -13,7 +14,10 @@ export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTM
 
     return (
         <>
-            <img
+            <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 onClick={onClick}
                 {...props}
             />
@@ -25,7 +29,7 @@ export function JdImg(props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTM
                     onClick={onClick}
                 >
                     {/* IMAGE SCALED */}
-                    <img
+                    <motion.img
                         {...props}
                         className={`${props.className} ${styles.imageFullscreen}`}
                         style={{ boxShadow: 'unset' }}
