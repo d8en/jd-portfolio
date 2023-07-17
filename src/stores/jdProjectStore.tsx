@@ -28,27 +28,6 @@ export class JdProjectStore {
     public projectParam: string = 'id';
     public isFloatingHelp: boolean = false;
 
-    public airshopApp: IJdProject = {
-        id: '1',
-        company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
-        component: <JdAirshopApp />,
-        title: `Building an app in one month`,
-        desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef.`,
-        isOpen: false,
-    }
-
-    public shopifyApp: IJdProject = {
-        id: '2',
-        company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
-        component: <JdShoifyApp />,
-        title: 'Building a Shopify app with home pickup and inventory management',
-        desc: 'The success of our Chicago pilot led us to the next big project - build a Shopify app.',
-        isOpen: false,
-    }
 
     public boomNativeApp: IJdProject = {
         id: '3',
@@ -58,6 +37,28 @@ export class JdProjectStore {
         component: <JdBoomNativeApp />,
         title: 'Building a mobile app to manage all returns',
         desc: 'Returns can be a pain, the least we can do is manage them in one app.',
+        isOpen: false,
+    }
+
+    public rekApp: IJdProject = {
+        id: '6',
+        company: jdCompaniesStore.rek,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.mobX, jdSkillsStore.sql, jdSkillsStore.noSql, jdSkillsStore.nodeJs, jdSkillsStore.figma, jdSkillsStore.afterEffects, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekPreview.webp?alt=media',
+        component: <JdRekApp />,
+        title: 'Building my dream - a native app to track recommendations',
+        desc: `Walking away from a dinner with friends, I couldn't remember a single TV show we talked about. How nice would it be to track it?`,
+        isOpen: false,
+    }
+
+    public rekWeb: IJdProject = {
+        id: '7',
+        company: jdCompaniesStore.rek,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
+        component: <JdRekWeb />,
+        title: 'Building a website to promote "Rek it" - a social recommendations app',
+        desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
         isOpen: false,
     }
 
@@ -83,25 +84,25 @@ export class JdProjectStore {
         isOpen: false,
     }
 
-    public rekApp: IJdProject = {
-        id: '6',
-        company: jdCompaniesStore.rek,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.mobX, jdSkillsStore.sql, jdSkillsStore.noSql, jdSkillsStore.nodeJs, jdSkillsStore.figma, jdSkillsStore.afterEffects, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekPreview.webp?alt=media',
-        component: <JdRekApp />,
-        title: 'Building my dream - a native app to track recommendations',
-        desc: `Walking away from a dinner with friends, I couldn't remember a single TV show we talked about. How nice would it be to track it?`,
+    public airshopApp: IJdProject = {
+        id: '1',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
+        component: <JdAirshopApp />,
+        title: `Building an app in one month`,
+        desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef.`,
         isOpen: false,
     }
 
-    public rekWeb: IJdProject = {
-        id: '7',
-        company: jdCompaniesStore.rek,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
-        component: <JdRekWeb />,
-        title: 'Building a website to promote "Rek it" - a social recommendations app',
-        desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
+    public shopifyApp: IJdProject = {
+        id: '2',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
+        component: <JdShoifyApp />,
+        title: 'Building a Shopify app with home pickup and inventory management',
+        desc: 'The success of our Chicago pilot led us to the next big project - build a Shopify app.',
         isOpen: false,
     }
 
