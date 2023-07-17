@@ -36,14 +36,14 @@ $themeTransitionDuration: 0.2s;
     display: grid;
     place-items: center;
     border-radius: 50%;
-    left: $themeContainerPadding;
     height: $themeIconSize;
     width: $themeIconSize;
     transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
+    left: $themeIconSize;
 }
 
 .themeIconContainerDark {
-    left: $themeIconSize;
+    left: $themeContainerPadding;
     transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
     background-color: var(--greyBg);
     path {
