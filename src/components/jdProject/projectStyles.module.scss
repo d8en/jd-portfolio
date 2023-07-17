@@ -214,6 +214,7 @@ $containerBorder: 24px;
 
 .projectNavText {
     text-align: center;
+    @include textGradient(top right);
     flex: 1;
     @include jdLineClamp(1);
     @include media-phone {

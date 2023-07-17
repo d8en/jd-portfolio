@@ -34,6 +34,7 @@ export function JdFloatingHelp(props: IJdFloatingHelpProps): React.JSX.Element {
                     transition={{ ...jdAniUtils.springTransition, delay: props.removeDelay ? 0 : jdAniUtils.mountDelay + .5 }}
                     style={props.style}
                     className={`${styles.floatingHelpContainer} ${props.className ?? ''} `}
+                    onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => { onClickClose(e) }}
                 >
                     <p className={styles.floatingHelpText}>{props.text}</p>
 
