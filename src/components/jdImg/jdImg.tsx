@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from './imgStyles.module.scss';
 import { JdClose } from "../jdClose/jdClose";
 import { HTMLMotionProps, motion } from "framer-motion";
-import jdAniUtils from "../../utils/jdAniUtils";
 
 export function JdImg(props: HTMLMotionProps<"img">): React.JSX.Element {
 
@@ -18,7 +17,7 @@ export function JdImg(props: HTMLMotionProps<"img">): React.JSX.Element {
             <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: .5 }}
                 onClick={onClick}
                 {...props}
             />

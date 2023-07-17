@@ -3,7 +3,7 @@
 
 $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
-@mixin aniPulse($delay) {
+@mixin aniPulse($delay, $iterationCount: infinite) {
     animation-name: aniPulse;
     animation-duration: 2s;
     animation-play-state: running;
@@ -29,7 +29,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
     }
 }
 
-@mixin aniBeforePulse($delay, $radius: 8px) {
+@mixin aniBeforePulse($delay, $radius: 8px, $iterationCount: infinite) {
     &:before {
         border-radius: $radius;
         position: absolute;
@@ -41,7 +41,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
         bottom: 0;
         right: 0;
         z-index: -1;
-        @include aniPulse($delay);
+        @include aniPulse($delay, $iterationCount);
     }
 }
 
