@@ -27,7 +27,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>How could we integrate with so many stores? What type of integration would we need? What were the major problems around the returns experience for shoppers? How could retailers benefit?</p>
+            <p>How could I integrate with so many stores? What type of integration would we need? What were the major problems around the returns experience for shoppers? How could retailers benefit?</p>
 
             {/* NOTES SCREENSHOT */}
             <JdImg
@@ -97,7 +97,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
 
             <p>Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. We caught ourselves adding unnecessary complexity in a few places just to share small pieces of code.</p>
 
-            <p>For example, we initially wanted to share components across web and native. While this is entirely possible, it would have pushed our beta back by at least a month.</p>
+            <p>For example, I initially wanted to share components across web and native. While this is entirely possible, it would have pushed our beta back by at least a month.</p>
 
             <p>It was exponentially more valuable for us to get shopper feedback then to have 100% shared components.</p>
 
@@ -134,7 +134,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipeable" tutorial</figcaption>
 
-            <p>Shoppers said the return process was a bit overwhelming so we ended up creating more 'steps' with fewer selections on each step. This seemed to make the process more digestible and less overwhelming.</p>
+            <p>Shoppers said the return process was a bit overwhelming so I ended up creating more 'steps' with fewer selections on each step. This seemed to make the process more digestible and less overwhelming.</p>
 
             {/* LIVE SCREENSHOTS */}
             <div className={styles.multiMedia}>

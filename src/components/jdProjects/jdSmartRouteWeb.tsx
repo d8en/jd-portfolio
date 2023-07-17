@@ -136,7 +136,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             />
 
             {/* CAPTION */}
-            <figcaption className={styles.projectImageCaption}>Screenshot of the graphic we created to promote the cost savings around logistics</figcaption>
+            <figcaption className={styles.projectImageCaption}>Screenshot of the graphic I created to promote the cost savings around logistics</figcaption>
 
             <p>We were very quickly ready to market our latest <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>smart routing product</Link> and had a ton of positive feedback coming in from our retail partners and prospects.</p>
         </>

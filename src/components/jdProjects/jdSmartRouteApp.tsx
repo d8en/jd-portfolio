@@ -26,7 +26,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>How could we avoid both overstock and stockouts caused by traditional return routing? Could we build one app that works for any large retailer given the complexity and customizations around return logistics?</p>
+            <p>How could we avoid both overstock and stockouts caused by traditional return routing? Could I build one app that works for any large retailer given the complexity and customizations around return logistics?</p>
 
             <div className={styles.multiMedia}>
                 <JdImg
@@ -131,7 +131,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>Within about two months, we had gone from conceptions to a production ready app with <strong>robust client customization and an endpoint for clients to use</strong>.</p>
+            <p>Within about two months, I had gone from concepts to a production ready app with <strong>robust client customization and an endpoint for clients to use</strong>.</p>
 
             <p>We were gaining traction with <strong>three large national retailers</strong> who immediately saw the benefit of our app and the ease of use.</p>
 

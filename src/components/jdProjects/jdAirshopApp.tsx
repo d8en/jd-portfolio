@@ -64,7 +64,7 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Video walkthrough of the prototype</figcaption>
 
-            <p>With a few minor suggestions from our internal staff and client, we were ready to build.</p>
+            <p>With a few minor suggestions from our internal staff and client, I was ready to build.</p>
 
             {/* PROTOTYPE IMAGES */}
             <div className={styles.multiMedia}>
@@ -145,7 +145,7 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>28 days later, we shipped our app.</p>
+            <p>28 days later, I shipped our app.</p>
             <p>In the first month, we had <strong>20+ returns</strong> with positive feedback pouring in. Home pickup was a huge hit for end users and it drove brand loyalty and referral marketing for our client.</p>
             <p>The success of this product led us to our <strong>largest round of funding ($1 million)</strong> and would fuel our next big project - scaling this to any Shopify store.</p>
 
