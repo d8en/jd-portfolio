@@ -12,13 +12,8 @@ $themeTransitionDuration: 0.2s;
     position: fixed;
     align-items: center;
     justify-content: flex-start;
-    top: 20px;
+    bottom: $bottomWithNav;
     left: 20px;
-
-    @include media-phone {
-        top: unset;
-        bottom: $bottomWithNav;
-    }
     padding: 2px;
     height: 34px;
     border-radius: 200px;
