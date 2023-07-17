@@ -13,11 +13,12 @@ $themeTransitionDuration: 0.2s;
     align-items: center;
     justify-content: flex-start;
     top: 20px;
+    left: 20px;
+
     @include media-phone {
         top: unset;
         bottom: $bottomWithNav;
     }
-    left: 20px;
     padding: 2px;
     height: 34px;
     border-radius: 200px;
@@ -38,17 +39,17 @@ $themeTransitionDuration: 0.2s;
     position: absolute;
     background-color: var(--greyBg);
     display: grid;
-    left: $themeContainerPadding;
     place-items: center;
     border-radius: 50%;
+    left: $themeContainerPadding;
     height: $themeIconSize;
     width: $themeIconSize;
     transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
 }
 
 .themeIconContainerDark {
-    transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
     left: $themeIconSize;
+    transition: left $themeTransitionDuration cubic-bezier(0, 1, 0, 1);
     background-color: var(--greyBg);
     path {
         stroke: var(--primFg);
