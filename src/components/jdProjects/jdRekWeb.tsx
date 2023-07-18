@@ -10,6 +10,10 @@ export function JdRekWeb(): React.JSX.Element {
     return (
         <>
 
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Checkout the <JdATag href="https://rekit.app/">finished website here</JdATag>!</p>
+
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Communicate the value of the <Link to={jdProjectStore.getLinkToProject(jdProjectStore.rekApp)}>Rek app</Link> in a single page scrolling website.</p>

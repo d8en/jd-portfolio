@@ -9,6 +9,18 @@ import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
 export function JdBoomNativeApp(): React.JSX.Element {
     return (
         <>
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Below is a demo of the native app I built.</p>
+
+            {/* STORE INTEGRATION */}
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/841963693?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of an integrated returns experience</figcaption>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
