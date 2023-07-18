@@ -79,12 +79,12 @@ $inputGap: 12px;
     background-color: var(--greyBg);
     display: grid;
     place-items: center;
-    padding: 16px;
+    padding: 8px;
     rect[fill="white"] {
-        fill: var(--link);
+        fill: var(--primFg);
     }
     path[fill="white"] {
-        fill: var(--link);
+        fill: var(--primFg);
     }
     rect[fill="black"] {
         fill: var(--greyBg);
