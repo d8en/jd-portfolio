@@ -123,8 +123,10 @@ export const JdContactForm = observer(() => {
                             />
 
                             {/* LINKEDIN / GITHUB */}
-                            <LinkedInIcon className={styles.contactIcons} />
-                            <GitHubIcon className={styles.contactIcons} />
+                            <div className={styles.contactLinkContainer}>
+                                <LinkedInIcon className={styles.contactIcons} />
+                                <GitHubIcon className={styles.contactIcons} />
+                            </div>
 
 
 
