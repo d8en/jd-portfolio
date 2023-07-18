@@ -127,6 +127,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                                 icon={props.company.icon}
                                 xp={props.company.xp}
                                 xpPercentage={props.company.xpPercentage}
+                                invertImageColors={props.company.invertImageColors}
                             />
                         </>
                     }
