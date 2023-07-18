@@ -127,12 +127,12 @@ export const JdContactForm = observer(() => {
 
                         {/* LINKEDIN / GITHUB */}
                         <div className={styles.contactLinkContainer}>
-                            <JdATag href="https://www.linkedin.com/in/d8en/">
-                                <LinkedInIcon className={styles.contactIcons} />
+                            <JdATag href="https://www.linkedin.com/in/d8en/" className={styles.contactIcons}>
+                                <LinkedInIcon />
                             </JdATag>
 
-                            <JdATag href="https://github.com/jeffboom">
-                                <GitHubIcon className={styles.contactIcons} />
+                            <JdATag href="https://github.com/jeffboom" className={styles.contactIcons}>
+                                <GitHubIcon />
                             </JdATag>
                         </div>
 

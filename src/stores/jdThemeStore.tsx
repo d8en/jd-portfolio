@@ -13,6 +13,8 @@ export class JdThemeStore {
 
     public get canShowFloat(): boolean {
         if (
+            !jdContactManager.store.isFloatingShowing
+            &&
             jdContactManager.store.hasFloatShown
             &&
             !jdProjectManager.store.isFloatingHelp

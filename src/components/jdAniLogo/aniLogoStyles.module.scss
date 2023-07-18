@@ -5,7 +5,7 @@ $logoContainer: 56px;
 .homeLogoContainer {
     display: grid;
     place-items: center;
-    border-radius: 50%;
+    border-radius: 12px;
     height: $logoContainer;
     width: $logoContainer;
     background-color: var(--primBg);

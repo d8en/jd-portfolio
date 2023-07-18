@@ -75,17 +75,22 @@ $inputGap: 12px;
 }
 
 .contactIcons {
+    border-radius: 200px;
+    background-color: var(--greyBg);
+    display: grid;
+    place-items: center;
+    padding: 16px;
     rect[fill="white"] {
-        fill: var(--greyBg);
+        fill: var(--link);
     }
     path[fill="white"] {
-        fill: var(--greyBg);
+        fill: var(--link);
     }
     rect[fill="black"] {
-        fill: var(--primBg);
+        fill: var(--greyBg);
     }
     path[fill="black"] {
-        fill: var(--primBg);
+        fill: var(--greyBg);
     }
     &:hover {
         cursor: pointer;
