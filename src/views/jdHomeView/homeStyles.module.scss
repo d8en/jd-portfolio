@@ -8,7 +8,7 @@
     display: grid;
     place-self: center;
     max-width: $desktopMaxWidth;
-    gap: 12px;
+    gap: 24px;
 }
 
 .homeTitleContainer {
@@ -22,7 +22,6 @@
 .homeSubHeader {
     @include font-size-normal;
     @include font-weight-light;
-    // @include textGradient(right);
     color: var(--greyText);
     line-height: 1.6em;
 }
