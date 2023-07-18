@@ -10,7 +10,7 @@ export function JdProjectSubHeader(props: IJdProjectSubHeaderProps): React.JSX.E
         <div
             className={styles.sectionHeader}
         >
-            {/* <h2 className={styles.sectionIcon}>{props.icon}</h2> */}
+            <p className={styles.sectionIcon}>{props.icon}</p>
             <h2>{props.name}</h2>
         </div>
     )

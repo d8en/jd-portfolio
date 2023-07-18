@@ -7,6 +7,19 @@ export function JdObApp(): React.JSX.Element {
     return (
         <>
 
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Below is a prototype of the task management dashboard for writers, developers, and designers. This combines meetings, a drag-and-drop prioritization module, and visibility into upcoming work / backlog.</p>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto5.webp?alt=media"
+                alt="Dashboard with calendar of tasks"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Prototype of the task management calendar view</figcaption>
+
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Design a project management application that improves both internal and external communication while increasing revenue, quality of work, and improving work-life balance.</p>

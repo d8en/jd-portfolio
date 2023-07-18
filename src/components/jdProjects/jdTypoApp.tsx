@@ -10,6 +10,18 @@ export function JdTypoApp(): React.JSX.Element {
     return (
         <>
 
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Below is a demo of the native app I designed and built, showing a user writing a post and how that post is played back for readers.</p>
+
+            <JdVimeoPlayer
+                src="https://player.vimeo.com/video/842887806?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of the typo app on an iPhone</figcaption>
+
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Create a text-based social media app that shows the reader exactly how the post was written.</p>
