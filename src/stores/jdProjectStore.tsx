@@ -159,6 +159,8 @@ export class JdProjectStore {
         title: `Designing a brand for a quirky viral weather app`,
         desc: `Haven't you always dreamed about a weather app that insults you? Me too.`,
         isOpen: false,
+        invertImageColors: true,
+
     }
 
     public funProjects: IJdProject = {
@@ -170,6 +172,7 @@ export class JdProjectStore {
         title: `A collection of weekend projects`,
         desc: `Some of these side gigs refueled me when I needed it the most, some were relatively pointless, and others were valuable exercises that helped me learn new techniques.`,
         isOpen: false,
+        invertImageColors: true,
     }
 
     public get isAnyProjectOpen(): boolean {

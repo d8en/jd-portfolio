@@ -9,4 +9,6 @@ export interface IJdProject {
     image: string;
     component: React.JSX.Element;
     isOpen: boolean;
+    invertImageColors?: boolean;
+
 }

@@ -43,6 +43,7 @@ export class JdCompaniesStore {
     public primacy: IJdSkillCo = {
         name: 'Product Designer',
         companyName: 'Primacy',
+        invertImageColors: true,
         xp: 2,
         xpPercentage: .75,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media',

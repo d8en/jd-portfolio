@@ -17,6 +17,7 @@ export function JdXpView(): React.JSX.Element {
                         icon={company.icon}
                         xp={company.xp}
                         xpPercentage={company.xpPercentage}
+                        invertImageColors={company.invertImageColors}
                     >
                         {company.component}
                     </JdXpItem>

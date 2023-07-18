@@ -7,4 +7,5 @@ export interface IJdSkillCo {
     isSelected?: boolean;
     xp: number;
     xpPercentage: number;
+    invertImageColors?: boolean;
 }

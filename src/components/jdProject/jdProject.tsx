@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import jdProjectStore from '../../stores/jdProjectStore';
 import jdElementUtils from '../../utils/jdElementUtils';
 import jdAniUtils from '../../utils/jdAniUtils';
+import jdThemeManager from '../../managers/jdThemeManager';
 
 export interface IJdProjectProps {
     onToggleProject: () => void | Promise<void>;
@@ -88,6 +89,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                         className={styles.projectPreviewImg}
                         onClick={(e) => { e.preventDefault() }}
                         alt={props.imgPreviewAlt}
+                        style={props.invertImageColors && jdThemeManager.store.isDarkTheme ? { filter: 'invert()' } : undefined}
                     />
                 </motion.div>
 
