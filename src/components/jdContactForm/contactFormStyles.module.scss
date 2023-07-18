@@ -75,11 +75,13 @@ $inputGap: 12px;
 }
 
 .contactIcons {
-    border-radius: 200px;
-    background-color: var(--greyBg);
+    height: 28px;
+    width: 28px;
+}
+
+.contactIconsContainer {
     display: grid;
     place-items: center;
-    padding: 8px;
     rect[fill="white"] {
         fill: var(--primFg);
     }
@@ -87,10 +89,10 @@ $inputGap: 12px;
         fill: var(--primFg);
     }
     rect[fill="black"] {
-        fill: var(--greyBg);
+        fill: var(--primBg);
     }
     path[fill="black"] {
-        fill: var(--greyBg);
+        fill: var(--primBg);
     }
     &:hover {
         cursor: pointer;
