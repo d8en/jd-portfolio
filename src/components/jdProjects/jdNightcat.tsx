@@ -27,6 +27,7 @@ export function JdNightCat(): React.JSX.Element {
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs4.webp?alt=media'
                 className={styles.projectsImage}
                 style={{ boxShadow: 'unset' }}
+                alt="Logo on a mobile device"
             />
 
             {/* CAPTION */}
@@ -40,12 +41,14 @@ export function JdNightCat(): React.JSX.Element {
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs2.webp?alt=media'
                 className={styles.projectsImage}
                 style={{ width: '100%' }}
+                alt="Logo on a mobile device"
             />
 
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs1.webp?alt=media'
                 className={styles.projectsImage}
                 style={{ width: '100%', objectFit: 'fill' }}
+                alt="Logo mockup"
             />
 
             {/* CAPTION */}

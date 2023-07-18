@@ -60,6 +60,7 @@ export const JdProjectsView = observer((): React.JSX.Element => {
                         {...project}
                         onToggleProject={async () => onToggleProject(project)}
                         idx={idx}
+                        imgPreviewAlt="Screenshot from the project"
                     />
                 )}
             </div>

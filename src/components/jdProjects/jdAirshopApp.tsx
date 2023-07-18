@@ -34,14 +34,17 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes3.webp?alt=media"
+                    alt="Sticky notes from our discussion"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes1.webp?alt=media"
+                    alt="Sticky notes from our discussion"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoNotes2.webp?alt=media"
+                    alt="Sticky notes from our discussion"
                 />
             </div>
 
@@ -72,16 +75,19 @@ export function JdAirshopApp(): React.JSX.Element {
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS3.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the shopper experience"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS2.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the shopper experience"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/chicagoSS1.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the shopper experience"
                 />
             </div>
 
@@ -92,10 +98,12 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopEmail1.webp?alt=media"
+                    alt="Email template designs"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopEmail2.webp?alt=media"
+                    alt="Email template designs"
                 />
             </div>
 
@@ -122,6 +130,7 @@ export function JdAirshopApp(): React.JSX.Element {
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Production mobile web app"
                 />
 
                 {/* HELP SCREEN */}
@@ -129,6 +138,7 @@ export function JdAirshopApp(): React.JSX.Element {
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopHelp.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Production mobile web app"
                 />
 
                 {/* CALENDAR */}
@@ -136,6 +146,7 @@ export function JdAirshopApp(): React.JSX.Element {
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopCalendar.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Production mobile web app"
                 />
 
             </div>

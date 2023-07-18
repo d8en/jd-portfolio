@@ -20,6 +20,7 @@ export function JdWeekend(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aqi.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Code snipped"
             />
 
             {/* CAPTION */}
@@ -36,10 +37,12 @@ export function JdWeekend(): React.JSX.Element {
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch1.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ placeSelf: 'center' }}
+                    alt="Watch face designed by me"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Watch face designed by me"
                 />
             </div>
 
@@ -60,6 +63,7 @@ export function JdWeekend(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lkl3.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Brand promotion"
             />
 
             <div className={styles.multiMedia}>
@@ -67,10 +71,12 @@ export function JdWeekend(): React.JSX.Element {
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lkl1.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ placeSelf: 'center' }}
+                    alt="T-shirt design"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lkl2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="T-shirt design"
                 />
             </div>
 
@@ -83,10 +89,12 @@ export function JdWeekend(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto6.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of website"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto5.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of website"
                 />
             </div>
 
@@ -95,14 +103,17 @@ export function JdWeekend(): React.JSX.Element {
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto4.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ placeSelf: 'center' }}
+                    alt="Prototype of website"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto3.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of website"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/lklProto2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of website"
                 />
             </div>
 
@@ -117,10 +128,12 @@ export function JdWeekend(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollage1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Collage of branding projects"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollage2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Collage of branding projects in a picture frame"
                 />
             </div>
 

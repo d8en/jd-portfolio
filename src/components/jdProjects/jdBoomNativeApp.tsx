@@ -33,14 +33,17 @@ export function JdBoomNativeApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeNotes1.webp?alt=media"
+                alt="User flow chart"
             />
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeNotes2.webp?alt=media"
+                alt="Sticky notes from our discussion"
             />
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeNotes3.webp?alt=media"
+                alt="Sticky notes from our discussion"
             />
 
             {/* CAPTION */}
@@ -59,14 +62,17 @@ export function JdBoomNativeApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeSs3.webp?alt=media"
+                    alt="Prototype of the mobile app"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeSs5.webp?alt=media"
+                    alt="Prototype of the mobile app"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeSs4.webp?alt=media"
+                    alt="Prototype of the mobile app"
                 />
             </div>
 
@@ -141,14 +147,17 @@ export function JdBoomNativeApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeLiveSs3.webp?alt=media"
+                    alt="Mobile app pickup screen"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeLiveSs2.webp?alt=media"
+                    alt="Mobile app label scanning screen"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeLiveSs1.webp?alt=media"
+                    alt="Mobile app calendar screen"
                 />
             </div>
 
@@ -161,6 +170,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativeLiveSs4.webp?alt=media"
+                alt="Mobile app landing page"
             />
 
             {/* CAPTION */}

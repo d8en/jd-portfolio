@@ -19,6 +19,7 @@ import jdAniUtils from '../../utils/jdAniUtils';
 export interface IJdProjectProps {
     onToggleProject: () => void | Promise<void>;
     idx: number;
+    imgPreviewAlt: string;
 }
 
 export const JdProject = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
@@ -86,6 +87,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                         srcSet={props.image}
                         className={styles.projectPreviewImg}
                         onClick={(e) => { e.preventDefault() }}
+                        alt={props.imgPreviewAlt}
                     />
                 </motion.div>
 

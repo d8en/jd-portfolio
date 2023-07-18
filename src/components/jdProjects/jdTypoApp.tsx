@@ -30,6 +30,7 @@ export function JdTypoApp(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoSs1.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Mobile screen where users write a post"
             />
 
             {/* CAPTION */}
@@ -46,16 +47,19 @@ export function JdTypoApp(): React.JSX.Element {
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign3.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Mobile screen where users write a post"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign2.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Mobile screen where users write a post"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoDesign1.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Mobile screen where users read a post"
                 />
             </div>
 

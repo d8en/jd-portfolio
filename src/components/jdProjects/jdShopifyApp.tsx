@@ -35,6 +35,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifNotes1.webp?alt=media"
+                alt="Sticky notes documenting a user flow"
             />
 
             {/* CAPTION */}
@@ -65,16 +66,19 @@ export function JdShoifyApp(): React.JSX.Element {
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot3.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the mobile shopper experience"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot4.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the mobile shopper experience"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot2.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the mobile shopper experience"
                 />
             </div>
 
@@ -87,6 +91,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot1.webp?alt=media"
+                alt="Prototype of the desktop shopper experience"
             />
 
             {/* CAPTION */}
@@ -98,6 +103,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot5.webp?alt=media"
+                alt="Prototype of the retailer dashboard"
             />
 
             {/* CAPTION */}
@@ -108,6 +114,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/iconDesign.webp?alt=media'
+                alt="Icons I designed"
             />
 
             {/* BUILD */}

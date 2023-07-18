@@ -3,7 +3,7 @@ import styles from './imgStyles.module.scss';
 import { JdClose } from "../jdClose/jdClose";
 import { HTMLMotionProps, motion } from "framer-motion";
 
-export function JdImg(props: HTMLMotionProps<"img">): React.JSX.Element {
+export function JdImg(props: HTMLMotionProps<"img"> & { alt: string }): React.JSX.Element {
 
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 

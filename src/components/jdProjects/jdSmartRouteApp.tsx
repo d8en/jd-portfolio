@@ -32,14 +32,17 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNotes1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNotes2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNotes3.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
             </div>
 
@@ -58,10 +61,12 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteConditions2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the conditional logic"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteConditions1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the conditional logic"
                 />
             </div>
 
@@ -73,6 +78,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto1.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Prototype of the rule setup"
             />
 
             {/* CAPTION */}
@@ -84,10 +90,12 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto4.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the dashboard"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the dashboard"
                 />
             </div>
 
@@ -100,14 +108,17 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the retailer scanning items in store"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the retailer scanning items in store"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto3.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the retailer scanning items in store"
                 />
             </div>
 

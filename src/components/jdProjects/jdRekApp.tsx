@@ -33,6 +33,7 @@ export function JdRekApp(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekNotes.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Database diagram"
             />
 
             {/* CAPTION */}
@@ -49,16 +50,19 @@ export function JdRekApp(): React.JSX.Element {
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto3.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Initial prototype of the app"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto4.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Initial prototype of the app"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto5.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Initial prototype of the app"
                 />
             </div>
 
@@ -67,16 +71,19 @@ export function JdRekApp(): React.JSX.Element {
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto7.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Initial prototype of the app"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto1.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Initial prototype of the app"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekProto2.webp?alt=media'
                     className={styles.projectsImage}
                     style={{ boxShadow: 'unset' }}
+                    alt="Initial prototype of the app"
                 />
             </div>
 
@@ -88,6 +95,7 @@ export function JdRekApp(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekIcons.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Icons designed by me"
             />
 
             {/* CAPTION */}
@@ -103,14 +111,17 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot7.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Top reks page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot11.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Top reks page filtered"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot8.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Top reks page"
                 />
             </div>
 
@@ -123,14 +134,17 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot3.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="App listing in the iOS app store"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Profile page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot5.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Comment section of a rek"
                 />
             </div>
 
@@ -145,14 +159,17 @@ export function JdRekApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot4.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Send a rek page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot6.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Top reks page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot12.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Update app prompt"
                 />
             </div>
 

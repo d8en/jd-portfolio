@@ -34,10 +34,12 @@ export function JdSmartRouteWeb(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebNotes1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebNotes2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
             </div>
 
@@ -52,10 +54,12 @@ export function JdSmartRouteWeb(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/desktopProto.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the landing page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobileProto.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the landing page"
                 />
             </div>
 
@@ -68,14 +72,17 @@ export function JdSmartRouteWeb(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/desktopProto2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the landing page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobileProto2OldWay.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the landing page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobileProto2NewWay.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the landing page"
                 />
             </div>
 
@@ -91,6 +98,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteOldWay1.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Landing page desktop"
             />
 
             {/* CAPTION */}
@@ -104,10 +112,12 @@ export function JdSmartRouteWeb(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNews.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="News page"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNewsPost.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Blog post"
                 />
             </div>
 
@@ -120,6 +130,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteForm.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Contact form"
             />
 
             {/* CAPTION */}
@@ -133,6 +144,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/zoneGraphic.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Promotional graphic showing how smart routing can save money"
             />
 
             {/* CAPTION */}

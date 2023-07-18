@@ -49,10 +49,12 @@ export function JdObApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto4.webp?alt=media"
+                    alt="Dashboard for a project"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto5.webp?alt=media"
+                    alt="Dashboard with calendar of tasks"
                 />
             </div>
 
@@ -65,6 +67,7 @@ export function JdObApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto1.webp?alt=media"
+                alt="Dashboard for a company"
             />
 
             {/* CAPTION */}
@@ -75,6 +78,7 @@ export function JdObApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto3.webp?alt=media"
+                alt="Search features"
             />
 
             {/* CAPTION */}
@@ -88,6 +92,7 @@ export function JdObApp(): React.JSX.Element {
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/obProto2.webp?alt=media"
                 style={{ boxShadow: 'unset' }}
+                alt="Mobile login page"
             />
 
             {/* CAPTION */}
