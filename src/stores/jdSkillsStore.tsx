@@ -66,7 +66,7 @@ export class JdSkillsStore {
         icon: <CssIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>Sass is an incredibly useful pre-processing language that I use in all of my projects. Mixins, variables, and functions bring sanity to CSS.</p>
+        component: <p>I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use.</p>
     }
 
     public sass: IJdSkillCo = {
@@ -74,7 +74,7 @@ export class JdSkillsStore {
         icon: <SassIcon />,
         xp: 4,
         xpPercentage: 1,
-        component: <p>I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use.</p>
+        component: <p>Sass is an incredibly useful pre-processing language that I use in all of my projects. Mixins, variables, and functions bring sanity to CSS.</p>
     }
 
     public figma: IJdSkillCo = {

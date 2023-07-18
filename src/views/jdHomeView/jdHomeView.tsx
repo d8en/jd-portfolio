@@ -77,7 +77,7 @@ export const JdHomeView = observer((): React.JSX.Element => {
                         transition={jdAniUtils.longEase}
                         className={styles.homeSubHeader}
                     >
-                        Taking abstract ideas and bringing them to life. Software engineer and product designer with nearly a decade of experience.
+                        Software engineer and product designer with 8 years of experience. I take abstract ideas and bringing them to life.
                     </motion.h2>
                 }
             </div>
