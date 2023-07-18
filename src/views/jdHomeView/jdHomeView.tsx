@@ -40,6 +40,8 @@ export const JdHomeView = observer((): React.JSX.Element => {
                             srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollageFullscreen.webp?alt=media&token=bd385b6a-8c37-4729-93d6-ccd745c30fc8'
                             style={{ pointerEvents: 'none' }}
                             alt="Collage of branding projects"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1, transition: { duration: 4 } }}
                         />
                     }
                 </AnimatePresence>
@@ -75,7 +77,7 @@ export const JdHomeView = observer((): React.JSX.Element => {
                         transition={jdAniUtils.longEase}
                         className={styles.homeSubHeader}
                     >
-                        Software engineer and product designer with 8 years of experience designing and building products.
+                        Software engineer and product designer with 8 years of experience. I take abstract ideas and bringing them to life.
                     </motion.h2>
                 }
             </div>
