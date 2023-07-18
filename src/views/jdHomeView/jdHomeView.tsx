@@ -30,7 +30,7 @@ export const JdHomeView = observer((): React.JSX.Element => {
             <div
                 className={styles.homeBgContainer}
                 style={{
-                    opacity: jdThemeManager.store.isDarkTheme ? .02 : .5,
+                    opacity: jdThemeManager.store.isDarkTheme ? .1 : .2,
                 }}
             >
                 <AnimatePresence>
