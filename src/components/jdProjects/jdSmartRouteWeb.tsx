@@ -10,6 +10,10 @@ export function JdSmartRouteWeb(): React.JSX.Element {
     return (
         <>
 
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Here's a <JdATag href="https://boomreturns.io/">link to the website</JdATag> I designed and built!</p>
+
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Build a website that concisely communicates the benefits of <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>our return logistics app</Link> and get demos booked.</p>

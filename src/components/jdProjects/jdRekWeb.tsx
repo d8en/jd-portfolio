@@ -12,7 +12,7 @@ export function JdRekWeb(): React.JSX.Element {
 
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
-            <p>Checkout the <JdATag href="https://rekit.app/">finished website here</JdATag>!</p>
+            <p>Here's a <JdATag href="https://rekit.app/">link to the website</JdATag> I designed and built!</p>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />

@@ -11,7 +11,7 @@ export function JdRekApp(): React.JSX.Element {
 
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
-            <p>You can download the app via <JdATag href="https://rekit.app/">the website I built</JdATag> to promote it!</p>
+            <p>You can download the app via <JdATag href="https://rekit.app/">the website I designed and built</JdATag> to promote it!</p>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />

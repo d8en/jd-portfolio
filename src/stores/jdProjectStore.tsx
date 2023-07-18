@@ -84,17 +84,6 @@ export class JdProjectStore {
         isOpen: false,
     }
 
-    public airshopApp: IJdProject = {
-        id: '1',
-        company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
-        component: <JdAirshopApp />,
-        title: `Building an app in one month`,
-        desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef.`,
-        isOpen: false,
-    }
-
     public shopifyApp: IJdProject = {
         id: '2',
         company: jdCompaniesStore.boomerang,
@@ -103,6 +92,17 @@ export class JdProjectStore {
         component: <JdShoifyApp />,
         title: 'Building a Shopify app with home pickup and inventory management',
         desc: 'The success of our Chicago pilot led us to the next big project - build a Shopify app.',
+        isOpen: false,
+    }
+
+    public airshopApp: IJdProject = {
+        id: '1',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopPreview.webp?alt=media',
+        component: <JdAirshopApp />,
+        title: `Building an app in one month`,
+        desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef.`,
         isOpen: false,
     }
 

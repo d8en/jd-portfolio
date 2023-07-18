@@ -8,6 +8,19 @@ export function JdAirshopApp(): React.JSX.Element {
     return (
         <>
 
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Below is a demo of the app I designed and built!</p>
+
+            {/* VIDEO */}
+            <JdVimeoPlayer
+                src="https://player.vimeo.com/video/841311563?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Screen recording of our app right before we shipped to production</figcaption>
+
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Build an app for online-only shoppers to schedule at-home return pickups and an app for drivers to handle pickups.</p>
