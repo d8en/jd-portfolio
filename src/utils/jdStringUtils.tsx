@@ -31,6 +31,11 @@ class JdStringUtils {
         name: 'Results',
     }
 
+    public finished: IJdProjectSubHeaderProps = {
+        icon: '🚀',
+        name: 'Finished Product',
+    }
+
     public goal: IJdProjectSubHeaderProps = {
         icon: '🎯',
         name: 'The Goal',

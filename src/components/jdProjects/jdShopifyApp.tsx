@@ -10,6 +10,32 @@ import { JdATag } from '../jdATag/jdATag';
 export function JdShoifyApp(): React.JSX.Element {
     return (
         <>
+
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Below is a demo of the app I designed and built for shoppers to return items and book home pickups.</p>
+
+            {/* SHOPIFY APP WALKTHROUGH */}
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/841934938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Walkthrough of our Shopify app, with an embarrassing narration done by yours truly</figcaption>
+
+            <p>I also designed and built the admin app for shop owners to manage app settings and returns, including integration with Shopify for submitting refunds.</p>
+
+            {/* SHOPIFY ADMIN WALKTHROUGH */}
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/841945316?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                style={{ width: '100%' }}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Walkthrough of our admin experience for Shopify store owners</figcaption>
+
+
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>pilot app</Link> and create a multi-tenant scalable offering for the Shopify ecosystem.</p>
@@ -35,6 +61,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifNotes1.webp?alt=media"
+                alt="Sticky notes documenting a user flow"
             />
 
             {/* CAPTION */}
@@ -65,16 +92,19 @@ export function JdShoifyApp(): React.JSX.Element {
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot3.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the mobile shopper experience"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot4.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the mobile shopper experience"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot2.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Prototype of the mobile shopper experience"
                 />
             </div>
 
@@ -87,6 +117,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot1.webp?alt=media"
+                alt="Prototype of the desktop shopper experience"
             />
 
             {/* CAPTION */}
@@ -98,6 +129,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyScreenshot5.webp?alt=media"
+                alt="Prototype of the retailer dashboard"
             />
 
             {/* CAPTION */}
@@ -108,6 +140,7 @@ export function JdShoifyApp(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/iconDesign.webp?alt=media'
+                alt="Icons I designed"
             />
 
             {/* BUILD */}

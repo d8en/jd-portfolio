@@ -28,10 +28,10 @@ export function JdFloatingHelp(props: IJdFloatingHelpProps): React.JSX.Element {
         <AnimatePresence>
             {isShowing &&
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, }}
+                    animate={{ opacity: 1, }}
                     transition={{ ...jdAniUtils.springTransition, delay: props.removeDelay ? 0 : jdAniUtils.mountDelay + .5 }}
+                    exit={{ opacity: 0, translateX: -40 }}
                     style={props.style}
                     className={`${styles.floatingHelpContainer} ${props.className ?? ''} `}
                     onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => { onClickClose(e) }}

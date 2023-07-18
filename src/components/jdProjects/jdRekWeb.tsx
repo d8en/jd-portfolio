@@ -10,6 +10,10 @@ export function JdRekWeb(): React.JSX.Element {
     return (
         <>
 
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Here's a <JdATag href="https://rekit.app/">link to the website</JdATag> I designed and built!</p>
+
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Communicate the value of the <Link to={jdProjectStore.getLinkToProject(jdProjectStore.rekApp)}>Rek app</Link> in a single page scrolling website.</p>
@@ -29,6 +33,7 @@ export function JdRekWeb(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebProto.webp?alt=media"
+                alt="Prototype of the landing page"
             />
 
             {/* CAPTION */}
@@ -42,11 +47,13 @@ export function JdRekWeb(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebProto2.webp?alt=media"
-                    style={{ maxHeight: 700 }}
+                    style={{ maxHeight: 500 }}
+                    alt="Prototype of the entire website"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebProto3.webp?alt=media"
+                    alt="Prototype of the download app page"
                 />
             </div>
 
@@ -61,11 +68,13 @@ export function JdRekWeb(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot2.webp?alt=media"
+                    alt="Landing page on mobile"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot.webp?alt=media"
                     style={{ placeSelf: 'center' }}
+                    alt="Landing page with download slideout on desktop"
                 />
             </div>
 
@@ -83,6 +92,7 @@ export function JdRekWeb(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekScreenshot3.webp?alt=media"
+                alt="Mobile app listed on iOS app store"
             />
 
             {/* CAPTION */}

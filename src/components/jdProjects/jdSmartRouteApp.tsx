@@ -8,6 +8,18 @@ import styles from './proejctsStyles.module.scss';
 export function JdSmartRouteApp(): React.JSX.Element {
     return (
         <>
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Below is a demo of the smart routing admin app I designed and built.</p>
+
+            <JdVimeoPlayer
+                src='https://player.vimeo.com/video/842533893?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                className={styles.projectVideo}
+                style={{ width: '100%', height: 'auto', padding: 0 }}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of the Smart Route admin screens</figcaption>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
@@ -32,14 +44,17 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNotes1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNotes2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteNotes3.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Sticky notes from our discussion"
                 />
             </div>
 
@@ -58,10 +73,12 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteConditions2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the conditional logic"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteConditions1.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the conditional logic"
                 />
             </div>
 
@@ -73,6 +90,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto1.webp?alt=media'
                 className={styles.projectsImage}
+                alt="Prototype of the rule setup"
             />
 
             {/* CAPTION */}
@@ -84,10 +102,12 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto4.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the dashboard"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto2.webp?alt=media'
                     className={styles.projectsImage}
+                    alt="Prototype of the dashboard"
                 />
             </div>
 
@@ -100,14 +120,20 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto1.webp?alt=media'
                     className={styles.projectsImage}
+                    style={{ borderRadius: 20 }}
+                    alt="Prototype of the retailer scanning items in store"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto2.webp?alt=media'
                     className={styles.projectsImage}
+                    style={{ borderRadius: 20 }}
+                    alt="Prototype of the retailer scanning items in store"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto3.webp?alt=media'
                     className={styles.projectsImage}
+                    style={{ borderRadius: 20 }}
+                    alt="Prototype of the retailer scanning items in store"
                 />
             </div>
 

@@ -39,6 +39,7 @@ export const JdHomeView = observer((): React.JSX.Element => {
                             className={styles.homeBgImg}
                             srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollageFullscreen.webp?alt=media&token=bd385b6a-8c37-4729-93d6-ccd745c30fc8'
                             style={{ pointerEvents: 'none' }}
+                            alt="Collage of branding projects"
                         />
                     }
                 </AnimatePresence>

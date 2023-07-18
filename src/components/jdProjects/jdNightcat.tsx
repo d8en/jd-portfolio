@@ -7,6 +7,19 @@ import styles from './proejctsStyles.module.scss';
 export function JdNightCat(): React.JSX.Element {
     return (
         <>
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Checkout the <JdATag href="https://nightcatproductions.com/">brand in action</JdATag> on the Nightcat Productions website. Below is a mockup of the finished logo and wordmark I designed.</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs4.webp?alt=media'
+                className={styles.projectsImage}
+                style={{ borderRadius: 24 }}
+                alt="Logo on a mobile device"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Finished logo</figcaption>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
@@ -26,7 +39,8 @@ export function JdNightCat(): React.JSX.Element {
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs4.webp?alt=media'
                 className={styles.projectsImage}
-                style={{ boxShadow: 'unset' }}
+                style={{ borderRadius: 24 }}
+                alt="Logo on a mobile device"
             />
 
             {/* CAPTION */}
@@ -40,12 +54,14 @@ export function JdNightCat(): React.JSX.Element {
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs2.webp?alt=media'
                 className={styles.projectsImage}
                 style={{ width: '100%' }}
+                alt="Logo on a mobile device"
             />
 
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightcatSs1.webp?alt=media'
                 className={styles.projectsImage}
                 style={{ width: '100%', objectFit: 'fill' }}
+                alt="Logo mockup"
             />
 
             {/* CAPTION */}

@@ -7,10 +7,23 @@ import styles from './proejctsStyles.module.scss';
 export function JdAether(): React.JSX.Element {
     return (
         <>
+            {/* PRODUCT */}
+            <JdProjectSubHeader {...jdStringUtils.finished} />
+            <p>Checkout the <JdATag href="https://www.aitherhealth.com/">brand in action</JdATag> on the Aither website. Below is a mockup of the finished logo and wordmark I designed.</p>
+
+            <JdImg
+                className={styles.projectsImage}
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aitherSs1.webp?alt=media"
+                style={{ boxShadow: 'unset' }}
+                alt="Aither brand mockup on a phone"
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Mobile mockup with brand and wordmark</figcaption>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Design an <JdATag href="https://www.aitherhealth.com/">insurance brand</JdATag> that feels transparent and refreshing.</p>
+            <p>Design an insurance brand that feels transparent and refreshing.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -31,6 +44,7 @@ export function JdAether(): React.JSX.Element {
             <JdImg
                 className={styles.projectsImage}
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aitherNotes.webp?alt=media"
+                alt="Sticky notes from our brainstorm discussion"
             />
 
             {/* CAPTION */}
@@ -45,10 +59,12 @@ export function JdAether(): React.JSX.Element {
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aitherSs1.webp?alt=media"
                     style={{ boxShadow: 'unset' }}
+                    alt="Aither brand mockup on a phone"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aitherSs4.webp?alt=media"
+                    alt="Aither brand mockup on a tote bag"
                 />
             </div>
 
@@ -61,10 +77,12 @@ export function JdAether(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/styleGuide4.webp?alt=media"
+                    alt="Aither logo with wordmark on blue background"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/styleGuide2.webp?alt=media"
+                    alt="Aither wordmark with text styles for the brand defined"
                 />
             </div>
 
@@ -72,10 +90,12 @@ export function JdAether(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/styleGuide3.webp?alt=media"
+                    alt="Aither wordmark with size definitions"
                 />
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/styleGuide1.webp?alt=media"
+                    alt="Aither logo with all color schemes"
                 />
             </div>
 

@@ -203,11 +203,12 @@ $containerBorder: 24px;
     @include aniLinkClick;
 
     path {
-        stroke: var(--primWhite);
+        stroke: var(--primFg);
     }
+
     @include aniHoverBase {
         path {
-            stroke: var(--primWhite);
+            stroke: var(--primFg);
         }
     }
 }

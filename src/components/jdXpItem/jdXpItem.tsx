@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { JdImg } from '../jdImg/jdImg';
 import styles from './xpItemStyles.module.scss';
 import jdAniUtils from '../../utils/jdAniUtils';
+import jdThemeManager from '../../managers/jdThemeManager';
+import { observer } from 'mobx-react-lite';
 
 export interface IJdXpItemProps {
     name: string;
@@ -11,9 +13,10 @@ export interface IJdXpItemProps {
     xp: number;
     xpPercentage: number;
     idx: number;
+    invertImageColors?: boolean;
 }
 
-export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element {
+export const JdXpItem = observer((props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element => {
 
     return (
         <motion.div
@@ -36,7 +39,8 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
                             <JdImg
                                 srcSet={props.imgSrc}
                                 className={`${styles.xpImage} ${props.children ? '' : styles.xpIconSmaller}`}
-                                style={{ margin: 0 }}
+                                style={{ margin: 0, filter: props.invertImageColors && jdThemeManager.store.isDarkTheme ? 'invert()' : undefined }}
+                                alt="Brand icon"
                             />
                             :
                             undefined
@@ -89,4 +93,4 @@ export function JdXpItem(props: React.PropsWithChildren<IJdXpItemProps>): React.
 
         </motion.div>
     )
-}
+}); 
