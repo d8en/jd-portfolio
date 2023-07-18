@@ -156,7 +156,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.brandDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/nightCatPreview.webp?alt=media',
         component: <JdNightCat />,
-        title: `Designing a brand for a viral quirky weather app`,
+        title: `Designing a brand for a quirky viral weather app`,
         desc: `Haven't you always dreamed about a weather app that insults you? Me too.`,
         isOpen: false,
     }
