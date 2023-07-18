@@ -65,3 +65,29 @@ $inputGap: 12px;
 .contactPulse {
     @include aniPushInOut(0);
 }
+
+.contactIcons {
+    rect[fill="white"] {
+        /* CSS styles for SVG elements with fill color #FF0000 (red) */
+        fill: var(--primFg);
+    }
+    path[fill="white"] {
+        /* CSS styles for SVG elements with fill color #FF0000 (red) */
+        fill: var(--primFg);
+    }
+    rect[fill="black"] {
+        fill: var(--primBg);
+    }
+    path[fill="black"] {
+        fill: var(--primBg);
+    }
+    // path[fill="white"] {
+    //     /* CSS styles for SVG elements with fill color #FF0000 (red) */
+    //     fill: var(--primFg);
+    // }
+
+    // path,
+    // rect[fill="#ffffff"] {
+    //     fill: var(--primFg);
+    // }
+}

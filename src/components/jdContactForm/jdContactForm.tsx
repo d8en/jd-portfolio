@@ -9,6 +9,8 @@ import { JdClose } from "../jdClose/jdClose";
 import { JdButton } from "../jdButton/jdButton";
 import { JdAutoCompleteType } from "../../models/JdAutoCompleteType";
 import { useEffect } from "react";
+import { ReactComponent as LinkedInIcon } from '../../assets/svg/brands/linkedin.svg';
+import { ReactComponent as GitHubIcon } from '../../assets/svg/brands/github.svg';
 
 export const JdContactForm = observer(() => {
 
@@ -119,6 +121,11 @@ export const JdContactForm = observer(() => {
                                 }
                                 onClick={async () => await onSubmit()}
                             />
+
+                            {/* LINKEDIN / GITHUB */}
+                            <LinkedInIcon className={styles.contactIcons} />
+                            <GitHubIcon className={styles.contactIcons} />
+
 
 
                         </form>
