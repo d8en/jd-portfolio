@@ -46,7 +46,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.mobX, jdSkillsStore.sql, jdSkillsStore.noSql, jdSkillsStore.nodeJs, jdSkillsStore.figma, jdSkillsStore.afterEffects, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekPreview.webp?alt=media',
         component: <JdRekApp />,
-        title: 'Building my dream - a native app to track recommendations',
+        title: 'Building a mobile app to track recommendations',
         desc: `Walking away from a dinner with friends, I couldn't remember a single TV show that we talked about. How nice would it be to track it?`,
         isOpen: false,
     }
@@ -208,7 +208,8 @@ export class JdProjectStore {
     }
 
     public getParamForProject(project: IJdProject): string {
-        return project.title.split(' ').join('-');
+        // return project.title.split(' ').join('-');
+        return project.id;
     }
 
     public getLinkToProject(project: IJdProject): To {
