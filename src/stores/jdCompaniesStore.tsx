@@ -83,7 +83,7 @@ export class JdCompaniesStore {
             </>
     }
 
-    public hobbies: IJdSkillCo = {
+    public weekendProjects: IJdSkillCo = {
         name: 'Curious Human',
         companyName: 'Weekend Projects',
         xp: 15,

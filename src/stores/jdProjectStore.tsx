@@ -120,7 +120,7 @@ export class JdProjectStore {
 
     public aqiWebService: IJdProject = {
         id: '14',
-        company: jdCompaniesStore.gravix,
+        company: jdCompaniesStore.weekendProjects,
         skills: [jdSkillsStore.typescript, jdSkillsStore.nodeJs],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aqiPreview.webp?alt=media',
         component: <JdAqiService />,
@@ -178,7 +178,7 @@ export class JdProjectStore {
 
     public funProjects: IJdProject = {
         id: '13',
-        company: jdCompaniesStore.gravix,
+        company: jdCompaniesStore.weekendProjects,
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.nodeJs, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.brandDesign, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/weekendPreview.webp?alt=media',
         component: <JdWeekend />,
