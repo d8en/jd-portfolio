@@ -117,6 +117,18 @@ export class JdProjectStore {
         isOpen: false,
     }
 
+    public aqiWebService: IJdProject = {
+        id: '14',
+        company: jdCompaniesStore.gravix,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.nodeJs],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aqiPreview.webp?alt=media',
+        component: <JdWeekend />,
+        title: `Building a web service to send alerts when air quality changes`,
+        desc: `During the Canadian wildfires, I got tired of going to the airnow.gov site to see if it was safe to play pickleball. So I built a web service to notify me of changes.`,
+        isOpen: false,
+        invertImageColors: false,
+    }
+
     public higApp: IJdProject = {
         id: '9',
         company: jdCompaniesStore.primacy,
