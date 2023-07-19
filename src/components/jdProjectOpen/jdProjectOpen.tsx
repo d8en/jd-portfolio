@@ -14,8 +14,9 @@ import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import { JdXpItem } from "../jdXpItem/jdXpItem";
 import { useState } from "react";
 import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
+import { observer } from "mobx-react-lite";
 
-export function JdProjectOpen(props: IJdProject & IJdProjectProps): React.JSX.Element {
+export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
 
     // Hover over arrows to replace 'up next'
     const [isHoverLeft, setIsHoverLeft] = useState<boolean>(false);
@@ -112,10 +113,10 @@ export function JdProjectOpen(props: IJdProject & IJdProjectProps): React.JSX.El
                     }
 
                     {jdProjectStore.nextProject && !isHoverLeft ?
-                        <p className={styles.projectNavText}><strong>Up Next:</strong> {jdProjectStore.nextProject.title}</p>
+                        <p className={styles.projectNavText}><strong>Up Next:</strong>{jdProjectStore.nextProject.title}</p>
                         :
                         jdProjectStore.prevProject &&
-                        <p className={styles.projectNavText}><strong>Go Back:</strong> {jdProjectStore.prevProject.title}</p>
+                        <p className={styles.projectNavText}><strong>Go Back:</strong>{jdProjectStore.prevProject.title}</p>
                     }
 
                     {/* NEXT PROJECT */}
@@ -131,4 +132,4 @@ export function JdProjectOpen(props: IJdProject & IJdProjectProps): React.JSX.El
             </div>
         </motion.div>
     )
-}
+});

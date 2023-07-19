@@ -3,16 +3,9 @@ import { IJdProject } from '../../models/iJdProject';
 import { IJdSkillCo } from '../../models/iJdSkillCo';
 import { JdHashtag } from '../jdHashtag/jdHashtag';
 import { JdImg } from '../jdImg/jdImg';
-import { JdXpItem } from '../jdXpItem/jdXpItem';
 import styles from './projectStyles.module.scss';
-import jdStringUtils from '../../utils/jdStringUtils';
 import { motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
-import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
-import { JdClose } from '../jdClose/jdClose';
-import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
-import { Link } from 'react-router-dom';
-import jdProjectStore from '../../stores/jdProjectStore';
 import jdElementUtils from '../../utils/jdElementUtils';
 import jdAniUtils from '../../utils/jdAniUtils';
 import jdThemeManager from '../../managers/jdThemeManager';
@@ -27,9 +20,6 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
 
     // Sizing used for wrapper container to maintain scroll position when an article is position:absolute (opened)
     const [innerDivRect, setInnerDivRect] = useState<DOMRect>();
-
-    // Hover over arrows to replace 'up next'
-    const [isHoverLeft, setIsHoverLeft] = useState<boolean>(false);
 
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
@@ -57,69 +47,55 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
     }, [props.isOpen]);
 
     return (
-
-        // OUTER PLACEHOLDER
-        <div
-            className={styles.projectsHolder}
-            style={innerDivRect ?
-                {
-                    maxHeight: innerDivRect.height,
-                    maxWidth: innerDivRect.width,
-                }
-                : undefined}
+        <motion.div
+            ref={innerDiv}
+            onClickCapture={onClickProject}
+            className={styles.projectsContainer}
+            {...jdAniUtils.aniElementMount(props.idx / 6)}
         >
 
-            {/* INNER MOVING DIV */}
+            {/* PREVIEW IMAGE */}
             <motion.div
-                ref={innerDiv}
-                onClickCapture={onClickProject}
-                className={styles.projectsContainer}
-                {...jdAniUtils.aniElementMount(props.idx / 6)}
+                className={styles.projectPreviewImgContainer}
+            >
+                <JdImg
+                    srcSet={props.image}
+                    className={styles.projectPreviewImg}
+                    onClick={(e) => { e.preventDefault() }}
+                    alt={props.imgPreviewAlt}
+                    style={props.invertImageColors && jdThemeManager.store.isDarkTheme ? { filter: 'invert()' } : undefined}
+                />
+            </motion.div>
+
+            {/* CONTENT */}
+            <div
+                className={styles.projectContent}
             >
 
-                {/* PREVIEW IMAGE */}
-                <motion.div
-                    className={styles.projectPreviewImgContainer}
+                {/* TITLE */}
+                <h2
+                    id={props.title}
+                    className={styles.projectHeader}
                 >
-                    <JdImg
-                        srcSet={props.image}
-                        className={styles.projectPreviewImg}
-                        onClick={(e) => { e.preventDefault() }}
-                        alt={props.imgPreviewAlt}
-                        style={props.invertImageColors && jdThemeManager.store.isDarkTheme ? { filter: 'invert()' } : undefined}
-                    />
-                </motion.div>
+                    {props.title}
+                </h2>
 
-                {/* CONTENT */}
-                <div
-                    className={styles.projectContent}
-                >
+                {/* DESCRIPTION */}
+                <p className={styles.projectDesc}>{props.desc}</p>
 
-                    {/* TITLE */}
-                    <h2
-                        id={props.title}
-                        className={styles.projectHeader}
-                    >
-                        {props.title}
-                    </h2>
-
-                    {/* DESCRIPTION */}
-                    <p className={styles.projectDesc}>{props.desc}</p>
-
-                    {/* SKILLS */}
-                    <div className={styles.projectSkills}>
-                        {props.skills.map((skill: IJdSkillCo) => {
-                            return (
-                                <JdHashtag
-                                    key={skill.name}
-                                    name={skill.name}
-                                    onClick={() => { }}
-                                />
-                            )
-                        })}
-                    </div>
+                {/* SKILLS */}
+                <div className={styles.projectSkills}>
+                    {props.skills.map((skill: IJdSkillCo) => {
+                        return (
+                            <JdHashtag
+                                key={skill.name}
+                                name={skill.name}
+                                onClick={() => { }}
+                            />
+                        )
+                    })}
                 </div>
-            </motion.div>
-        </div>
+            </div>
+        </motion.div>
     )
 });
