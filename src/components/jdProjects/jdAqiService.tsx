@@ -33,8 +33,8 @@ export function JdAqiService(): React.JSX.Element {
 
             <p>After that, I just needed to understand the shape of the request and response in order to build some type safety around it in my web service.</p>
 
-            {/* DESIGN */}
-            <JdProjectSubHeader {...jdStringUtils.results} />
+            {/* BUILD */}
+            <JdProjectSubHeader {...jdStringUtils.build} />
             <p>After writing some relatively simple methods to retrieve the AQI, I quickly read up on the SendGrid API so that I could send email/SMS alerts.</p>
 
             <JdImg
