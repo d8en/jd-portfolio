@@ -27,7 +27,7 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
 
     useEffect(() => {
         if (!innerDiv.current) return;
-        console.log('effect fired');
+        setIsHoverLeft(false);
         jdElementUtils.resetScrollTop(innerDiv.current);
     }, [props.component]);
 
