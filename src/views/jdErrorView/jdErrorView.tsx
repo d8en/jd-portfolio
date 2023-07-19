@@ -5,12 +5,14 @@ import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
 import styles from './errorViewStyles.module.scss';
 import jdAniUtils from "../../utils/jdAniUtils";
 import { useEffect, useState } from "react";
+import jdThemeManager from "../../managers/jdThemeManager";
 
 export function JdErrorView(): React.JSX.Element {
 
     const [isTextShowing, setIsTextShowing] = useState<boolean>(false);
 
     useEffect(() => {
+        jdThemeManager.setTheme();
         setTimeout(() => {
             setIsTextShowing(true);
         }, 800);
