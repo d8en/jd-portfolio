@@ -3,6 +3,7 @@ import { ReactComponent as BoomIcon } from '../assets/svg/brands/boomerang.svg';
 import { ReactComponent as RekIcon } from '../assets/svg/brands/rek.svg';
 import { ReactComponent as GravixIcon } from '../assets/svg/brands/gravix.svg';
 import { ReactComponent as TypoIcon } from '../assets/svg/brands/typo.svg';
+import { ReactComponent as JdIcon } from '../assets/svg/brands/jdSmall.svg';
 import { JdATag } from "../components/jdATag/jdATag";
 import jdObjUtils from "../utils/jdObjUtils";
 import { IJdSkillCo } from "../models/iJdSkillCo";
@@ -88,6 +89,18 @@ export class JdCompaniesStore {
         xp: 1,
         xpPercentage: .2,
         icon: <TypoIcon />,
+        component:
+            <>
+                <p>Typo is a text-only social media app that replays exactly how the post was written. Do we really need another hellscape of a social media app though?</p>
+            </>
+    }
+
+    public hobbies: IJdSkillCo = {
+        name: 'Curious Human',
+        companyName: 'Weekend Projects',
+        xp: 10,
+        xpPercentage: 1,
+        icon: <JdIcon />,
         component:
             <>
                 <p>Typo is a text-only social media app that replays exactly how the post was written. Do we really need another hellscape of a social media app though?</p>

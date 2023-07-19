@@ -19,6 +19,7 @@ import { JdObApp } from "../components/jdProjects/jdObApp";
 import { JdAether } from "../components/jdProjects/jdAether";
 import { JdNightCat } from "../components/jdProjects/jdNightcat";
 import { JdWeekend } from "../components/jdProjects/jdWeekend";
+import { JdAqiService } from "../components/jdProjects/jdAqiService";
 
 export class JdProjectStore {
     constructor() {
@@ -122,7 +123,7 @@ export class JdProjectStore {
         company: jdCompaniesStore.gravix,
         skills: [jdSkillsStore.typescript, jdSkillsStore.nodeJs],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/aqiPreview.webp?alt=media',
-        component: <JdWeekend />,
+        component: <JdAqiService />,
         title: `Building a web service to send alerts when air quality changes`,
         desc: `During the Canadian wildfires, I got tired of going to the airnow.gov site to see if it was safe to play pickleball. So I built a web service to notify me of changes.`,
         isOpen: false,
