@@ -12,17 +12,27 @@ import jdProjectStore from "../../stores/jdProjectStore";
 import jdStringUtils from "../../utils/jdStringUtils";
 import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
 import { JdXpItem } from "../jdXpItem/jdXpItem";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
 import { observer } from "mobx-react-lite";
+import jdElementUtils from "../../utils/jdElementUtils";
 
 export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
 
     // Hover over arrows to replace 'up next'
     const [isHoverLeft, setIsHoverLeft] = useState<boolean>(false);
 
+    // Inner div ref
+    const innerDiv = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (!innerDiv.current) return;
+        jdElementUtils.resetScrollTop(innerDiv.current);
+    }, [props.isOpen]);
+
     return (
         <motion.div
+            ref={innerDiv}
             {...jdAniUtils.aniElementMount()}
             className={styles.projectsContainerOpen}
         >

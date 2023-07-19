@@ -18,37 +18,13 @@ export interface IJdProjectProps {
 
 export const JdProject = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
 
-    // Sizing used for wrapper container to maintain scroll position when an article is position:absolute (opened)
-    const [innerDivRect, setInnerDivRect] = useState<DOMRect>();
-
-    // Inner div ref
-    const innerDiv = useRef<HTMLDivElement | null>(null);
-
     const onClickProject = (): void => {
         if (props.isOpen) return;
-
         props.onToggleProject();
     }
 
-    // Mount
-    useEffect(() => {
-        if (!innerDiv.current) return;
-
-        // Set wrapper dims - we use a wrapper to make sure we maintain scroll position when a project is open.
-        setInnerDivRect(innerDiv.current?.getBoundingClientRect());
-        jdElementUtils.resetScrollTop(innerDiv.current);
-
-    }, []);
-
-    // When opened
-    useEffect(() => {
-        if (!innerDiv.current) return;
-        jdElementUtils.resetScrollTop(innerDiv.current);
-    }, [props.isOpen]);
-
     return (
         <motion.div
-            ref={innerDiv}
             onClickCapture={onClickProject}
             className={styles.projectsContainer}
             {...jdAniUtils.aniElementMount(props.idx / 6)}
