@@ -10,6 +10,7 @@ $containerBorder: 24px;
 }
 
 .projectsContainer {
+    cursor: pointer;
     position: relative;
     border-radius: $containerBorder;
     display: grid;

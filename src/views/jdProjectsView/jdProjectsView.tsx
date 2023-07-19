@@ -10,6 +10,7 @@ import jdProjectManager from "../../managers/jdProjectManager";
 import jdStringUtils from "../../utils/jdStringUtils";
 import jdRoutes from "../../utils/jdRoutes";
 import React from "react";
+import { JdProjectOpen } from "../../components/jdProjectOpen/jdProjectOpen";
 
 export const JdProjectsView = observer((): React.JSX.Element => {
 
@@ -63,6 +64,14 @@ export const JdProjectsView = observer((): React.JSX.Element => {
                         imgPreviewAlt="Screenshot from the project"
                     />
                 )}
+                {jdProjectStore.openProject &&
+                    <JdProjectOpen
+                        idx={0}
+                        {...jdProjectStore.openProject}
+                        onToggleProject={async () => onToggleProject(jdProjectStore.openProject!)}
+                        imgPreviewAlt="Screenshot from the project"
+                    />
+                }
             </div>
         </JdViewWrapper>
     )
