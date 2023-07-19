@@ -126,10 +126,10 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
                     }
 
                     {jdProjectStore.nextProject && !isHoverLeft ?
-                        <p className={styles.projectNavText}><strong>Up Next:</strong>{jdProjectStore.nextProject.title}</p>
+                        <p className={styles.projectNavText}><strong>Up Next: </strong>{jdProjectStore.nextProject.title}</p>
                         :
                         jdProjectStore.prevProject &&
-                        <p className={styles.projectNavText}><strong>Go Back:</strong>{jdProjectStore.prevProject.title}</p>
+                        <p className={styles.projectNavText}><strong>Go Back: </strong>{jdProjectStore.prevProject.title}</p>
                     }
 
                     {/* NEXT PROJECT */}
