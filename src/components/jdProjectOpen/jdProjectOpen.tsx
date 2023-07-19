@@ -27,8 +27,9 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
 
     useEffect(() => {
         if (!innerDiv.current) return;
+        console.log('effect fired');
         jdElementUtils.resetScrollTop(innerDiv.current);
-    }, [props.isOpen]);
+    }, [props.component]);
 
     return (
         <motion.div
