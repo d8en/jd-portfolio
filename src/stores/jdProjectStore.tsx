@@ -223,6 +223,12 @@ export class JdProjectStore {
         return this.projects.findIndex((proj: IJdProject) => proj.isOpen);
     }
 
+    public get openProject(): IJdProject | undefined {
+        if (this.idxOfOpenProj === -1) return;
+
+        return this.projects[this.idxOfOpenProj];
+    }
+
     public get nextProject(): IJdProject | undefined {
         if (this.idxOfOpenProj === -1 || (this.idxOfOpenProj + 1) > (this.projects.length - 1)) return;
         return this.projects[this.idxOfOpenProj + 1];

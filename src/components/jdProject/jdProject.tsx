@@ -73,10 +73,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
             <motion.div
                 ref={innerDiv}
                 onClickCapture={onClickProject}
-                className={`${props.isOpen ? styles.projectsContainerOpen : styles.projectsContainer}`}
-                style={{
-                    cursor: props.isOpen ? 'unset' : 'pointer',
-                }}
+                className={styles.projectsContainer}
                 {...jdAniUtils.aniElementMount(props.idx / 6)}
             >
 
@@ -98,12 +95,6 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                     className={styles.projectContent}
                 >
 
-                    {/* CLOSE */}
-                    {props.isOpen &&
-                        <JdClose onClick={() => props.onToggleProject()} />
-                    }
-
-
                     {/* TITLE */}
                     <h2
                         id={props.title}
@@ -113,100 +104,20 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                     </h2>
 
                     {/* DESCRIPTION */}
-                    <p className={props.isOpen ? '' : styles.projectDesc}>{props.desc}</p>
-
-                    {/* COMPANY HEADER */}
-                    {props.isOpen &&
-                        <>
-                            <JdProjectSubHeader {...jdStringUtils.company} />
-                            <JdXpItem
-                                idx={0}
-                                name={props.company.name}
-                                companyName={props.company.companyName}
-                                imgSrc={props.company.imgSrc}
-                                icon={props.company.icon}
-                                xp={props.company.xp}
-                                xpPercentage={props.company.xpPercentage}
-                                invertImageColors={props.company.invertImageColors}
-                            />
-                        </>
-                    }
-
-                    {/* SKILLS HEADER */}
-                    {props.isOpen &&
-                        <JdProjectSubHeader {...jdStringUtils.skillsUsed} />
-                    }
+                    <p className={styles.projectDesc}>{props.desc}</p>
 
                     {/* SKILLS */}
                     <div className={styles.projectSkills}>
-                        {
-                            props.isOpen ?
-                                <>
-                                    {props.skills.map((skill: IJdSkillCo, idx: number) => {
-                                        return (
-                                            <JdXpItem
-                                                idx={idx}
-                                                key={skill.name}
-                                                xp={skill.xp}
-                                                xpPercentage={skill.xpPercentage}
-                                                icon={skill.icon}
-                                                imgSrc={skill.imgSrc}
-                                                name={skill.name}
-                                            />
-                                        )
-                                    })}
-                                </>
-                                :
-                                props.skills.map((skill: IJdSkillCo) => {
-                                    return (
-                                        <JdHashtag
-                                            key={skill.name}
-                                            name={skill.name}
-                                            onClick={() => { }}
-                                        />
-                                    )
-                                })
-                        }
+                        {props.skills.map((skill: IJdSkillCo) => {
+                            return (
+                                <JdHashtag
+                                    key={skill.name}
+                                    name={skill.name}
+                                    onClick={() => { }}
+                                />
+                            )
+                        })}
                     </div>
-
-                    {/* ARTICLE CONTENT */}
-                    {props.isOpen && props.component}
-
-                    {/* UP NEXT */}
-                    {props.isOpen &&
-                        <div className={styles.projectNav}>
-
-                            {/* PREVIOUS PROJECT */}
-                            {jdProjectStore.prevProject &&
-                                <Link
-                                    onMouseEnter={() => setIsHoverLeft(true)}
-                                    onMouseLeave={() => setIsHoverLeft(false)}
-                                    to={jdProjectStore.getLinkToProject(jdProjectStore.prevProject)}
-                                    className={styles.projectNavArrowIcon}
-                                >
-                                    <ArrowIcon style={{ transform: 'rotate(180deg)' }} />
-                                </Link>
-                            }
-
-                            {jdProjectStore.nextProject && !isHoverLeft ?
-                                <p className={styles.projectNavText}><strong>Up Next:</strong> {jdProjectStore.nextProject.title}</p>
-                                :
-                                jdProjectStore.prevProject &&
-                                <p className={styles.projectNavText}><strong>Go Back:</strong> {jdProjectStore.prevProject.title}</p>
-                            }
-
-                            {/* NEXT PROJECT */}
-                            {jdProjectStore.nextProject &&
-                                <Link
-                                    to={jdProjectStore.getLinkToProject(jdProjectStore.nextProject)}
-                                    className={styles.projectNavArrowIcon}
-                                >
-                                    <ArrowIcon />
-                                </Link>
-                            }
-                        </div>
-                    }
-
                 </div>
             </motion.div>
         </div>
