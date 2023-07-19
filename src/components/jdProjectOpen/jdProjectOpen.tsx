@@ -34,7 +34,9 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
     return (
         <motion.div
             ref={innerDiv}
-            {...jdAniUtils.aniElementMount()}
+            initial={{ translateY: 20, opacity: .5 }}
+            animate={{ translateY: 0, opacity: 1 }}
+            transition={jdAniUtils.baseEase}
             className={styles.projectsContainerOpen}
         >
             {/* CLOSE */}

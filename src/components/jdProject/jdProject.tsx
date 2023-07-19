@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import { IJdProject } from '../../models/iJdProject';
 import { IJdSkillCo } from '../../models/iJdSkillCo';
 import { JdHashtag } from '../jdHashtag/jdHashtag';
@@ -6,7 +5,6 @@ import { JdImg } from '../jdImg/jdImg';
 import styles from './projectStyles.module.scss';
 import { motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
-import jdElementUtils from '../../utils/jdElementUtils';
 import jdAniUtils from '../../utils/jdAniUtils';
 import jdThemeManager from '../../managers/jdThemeManager';
 
