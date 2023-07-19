@@ -83,24 +83,24 @@ export class JdCompaniesStore {
             </>
     }
 
+    public hobbies: IJdSkillCo = {
+        name: 'Curious Human',
+        companyName: 'Weekend Projects',
+        xp: 15,
+        xpPercentage: 1,
+        icon: <JdIcon />,
+        component:
+            <>
+                <p>Weekend projects are super important to me. I'm ever curious and always need some sort of creative outlet to recharge.</p>
+            </>
+    }
+
     public typo: IJdSkillCo = {
         name: 'Founder & Dev',
         companyName: 'Typo',
         xp: 1,
         xpPercentage: .2,
-        icon: <TypoIcon />,
-        component:
-            <>
-                <p>Typo is a text-only social media app that replays exactly how the post was written. Do we really need another hellscape of a social media app though?</p>
-            </>
-    }
-
-    public hobbies: IJdSkillCo = {
-        name: 'Curious Human',
-        companyName: 'Weekend Projects',
-        xp: 10,
-        xpPercentage: 1,
-        icon: <JdIcon />,
+        icon: <TypoIcon className={styles.themedIcon} />,
         component:
             <>
                 <p>Typo is a text-only social media app that replays exactly how the post was written. Do we really need another hellscape of a social media app though?</p>
