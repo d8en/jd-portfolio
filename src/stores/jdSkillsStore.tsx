@@ -53,22 +53,6 @@ export class JdSkillsStore {
         component: <p>By far my favorite state management library, I have 4 years of experience using it with large scale projects. The simplicity and familiar architecture makes this my go-to for all projects.</p>
     }
 
-    public framerMotion: IJdSkillCo = {
-        name: 'Framer Motion',
-        icon: <FramerIcon className={styles.themedIcon} />,
-        xp: 4,
-        xpPercentage: 1,
-        component: <p>I use css animations and transitions as much as possible but continue to be impressed by the Framer Motion team. This library is incredibly performant and can make lifecycle animations (specifically unmounting) and interpolation super simple.</p>
-    }
-
-    public css: IJdSkillCo = {
-        name: 'CSS',
-        icon: <CssIcon />,
-        xp: 4,
-        xpPercentage: 1,
-        component: <p>I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use.</p>
-    }
-
     public sass: IJdSkillCo = {
         name: 'Sass',
         icon: <SassIcon />,
@@ -77,28 +61,12 @@ export class JdSkillsStore {
         component: <p>Sass is an incredibly useful pre-processing language that I use in all of my projects. Mixins, variables, and functions bring sanity to CSS.</p>
     }
 
-    public figma: IJdSkillCo = {
-        name: 'Figma',
-        icon: <FigmaIcon />,
-        xp: 7,
+    public css: IJdSkillCo = {
+        name: 'CSS',
+        icon: <CssIcon />,
+        xp: 4,
         xpPercentage: 1,
-        component: <p>It's fascinating to see which applications each product designer has gone through. My progression goes something like this: Inkscape, Illustrator, XD, Sketch, then Figma. I can't imagine using anything else, from advanced prototyping and large scale design systems to branding and typeface design, I'm an fanboy and power user.</p>,
-    }
-
-    public productDesign: IJdSkillCo = {
-        name: 'Product Design',
-        icon: <ProductIcon />,
-        xp: 7,
-        xpPercentage: 1,
-        component: <p>I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industries with many happy clients, profitable products, and growing user bases.</p>
-    }
-
-    public reanimated: IJdSkillCo = {
-        name: 'RN Reanimated',
-        icon: <ReanimatedIcon />,
-        xp: 3,
-        xpPercentage: .75,
-        component: <p>Software Mansion has built some incredible libraries and this is no exception. I use this library in almost every project and prefer it over the Animated API for almost all animations (responsive pan responders, donut loaders, etc.).</p>
+        component: <p>I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use.</p>
     }
 
     public redux: IJdSkillCo = {
@@ -117,15 +85,6 @@ export class JdSkillsStore {
         component: <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>,
     }
 
-    public cSharp: IJdSkillCo = {
-        name: 'C#',
-        imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media',
-        xp: 1,
-        xpPercentage: .1,
-        component: <p>I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get to where I'm at today.</p>
-
-    }
-
     public noSql: IJdSkillCo = {
         name: 'NoSQL',
         icon: <FirebaseIcon />,
@@ -139,7 +98,47 @@ export class JdSkillsStore {
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media',
         xp: 2,
         xpPercentage: .25,
-        component: <p>My mental model for database design is still relational. I use MySQL to support one of my published apps and used MSSQL daily as a product analyst.</p>,
+        component: <p>I use MySQL to support one of my published apps and used MSSQL daily as a product analyst.</p>,
+    }
+
+    public cSharp: IJdSkillCo = {
+        name: 'C#',
+        imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media',
+        xp: 1,
+        xpPercentage: .1,
+        component: <p>I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get to where I'm at today.</p>
+    }
+
+    public reanimated: IJdSkillCo = {
+        name: 'RN Reanimated',
+        icon: <ReanimatedIcon />,
+        xp: 3,
+        xpPercentage: .75,
+        component: <p>Software Mansion has built some incredible libraries and this is no exception. I use this library in almost every project and prefer it over the Animated API for almost all animations (responsive pan responders, donut loaders, etc.).</p>
+    }
+
+    public framerMotion: IJdSkillCo = {
+        name: 'Framer Motion',
+        icon: <FramerIcon className={styles.themedIcon} />,
+        xp: 4,
+        xpPercentage: 1,
+        component: <p>I use css animations and transitions as much as possible but continue to be impressed by the Framer Motion team. This library is incredibly performant and can make lifecycle animations (specifically unmounting) and interpolation super simple.</p>
+    }
+
+    public figma: IJdSkillCo = {
+        name: 'Figma',
+        icon: <FigmaIcon />,
+        xp: 7,
+        xpPercentage: 1,
+        component: <p>It's fascinating to see which applications each product designer has gone through. My progression goes something like this: Inkscape, Illustrator, XD, Sketch, then Figma. I can't imagine using anything else, from advanced prototyping and large scale design systems to branding and typeface design, I'm an fanboy and power user.</p>,
+    }
+
+    public productDesign: IJdSkillCo = {
+        name: 'Product Design',
+        icon: <ProductIcon />,
+        xp: 7,
+        xpPercentage: 1,
+        component: <p>I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industries with many happy clients, profitable products, and growing user bases.</p>
     }
 
     public afterEffects: IJdSkillCo = {

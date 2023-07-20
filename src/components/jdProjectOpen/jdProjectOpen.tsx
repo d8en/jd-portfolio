@@ -34,10 +34,11 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
     return (
         <motion.div
             ref={innerDiv}
-            initial={{ translateY: 20, opacity: .5 }}
+            initial={{ translateY: 100, opacity: .5 }}
             animate={{ translateY: 0, opacity: 1 }}
             transition={jdAniUtils.baseEase}
             className={styles.projectsContainerOpen}
+            exit={{ opacity: 0, translateY: 100, transition: jdAniUtils.baseEaseOut }}
         >
             {/* CLOSE */}
             <JdClose onClick={() => props.onToggleProject()} />
@@ -126,10 +127,10 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
                     }
 
                     {jdProjectStore.nextProject && !isHoverLeft ?
-                        <p className={styles.projectNavText}><strong>Up Next:</strong>{jdProjectStore.nextProject.title}</p>
+                        <p className={styles.projectNavText}><strong>Up Next: </strong>{jdProjectStore.nextProject.title}</p>
                         :
                         jdProjectStore.prevProject &&
-                        <p className={styles.projectNavText}><strong>Go Back:</strong>{jdProjectStore.prevProject.title}</p>
+                        <p className={styles.projectNavText}><strong>Go Back: </strong>{jdProjectStore.prevProject.title}</p>
                     }
 
                     {/* NEXT PROJECT */}

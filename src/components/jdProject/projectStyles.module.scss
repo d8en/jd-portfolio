@@ -3,60 +3,47 @@
 $previewImgHeight: 348px;
 $previewImgHeightOPen: 500px;
 $containerBorder: 24px;
-
-.projectsHolder {
-    position: relative;
-    border-radius: $containerBorder;
-}
+$hoverDuration: 0.5s;
+$projectHoverTransition:
+    $hoverDuration box-shadow,
+    $hoverDuration border,
+    $hoverDuration background-color;
 
 .projectsContainer {
+    overflow: hidden;
     cursor: pointer;
     position: relative;
     border-radius: $containerBorder;
+    border: 1.5px solid var(--greyBg);
     display: grid;
     grid-auto-columns: 1fr;
-    gap: 44px;
+    // gap: 12px;
     max-width: 1200px;
-
-    @include media-phone {
-        gap: 0;
-    }
 
     @include media-desktop4k {
         max-width: $desktopMaxWidth4k;
     }
 
-    @include aniScaleIn;
-    @include aniHoverOnly;
     @include media-desktop {
-        padding: 0 20px;
         grid-auto-flow: column;
-        gap: 56px;
+        gap: 32px;
     }
 
     @include media-desktop {
+        transition: $projectHoverTransition;
         &:hover {
+            transition: $projectHoverTransition;
+            @include baseShadow;
+            border: 1.5px solid var(--link);
+
             .projectPreviewImg {
                 @include aniLinkScale;
                 transform: scale(1.09);
             }
 
-            .projectHeader {
-                @include linkTransitions;
-                color: var(--link);
-            }
-
-            .projectLaunchIcon {
-                @include aniScaleIn;
-                opacity: 1;
-                transform: scale(1);
-                bottom: 12px;
-                visibility: visible;
-            }
-
             .projectPreviewImgContainer {
-                @include aniHoverOnly;
-                border-radius: 20px;
+                // @include aniHoverOnly;
+                background-color: var(--link);
             }
         }
     }
@@ -121,11 +108,13 @@ $containerBorder: 24px;
 
 .projectPreviewImgContainer {
     @include boxSizingBorder;
+    background-color: var(--greyBg);
     padding: 56px 28px;
 
     @include media-phone {
-        padding: 20px;
+        padding: 24px;
     }
+
     display: flex;
     position: relative;
 }
@@ -145,12 +134,14 @@ $containerBorder: 24px;
 .projectContent {
     display: grid;
     grid-auto-rows: min-content;
-    place-self: center;
+    place-self: center start;
     gap: 20px;
+    padding: 12px;
 }
 
 .projectHeader {
-    @include jdLineClamp(3);
+    @include jdLineClamp(6);
+    position: relative;
     @include font-size-larger;
     @include textGradient(right);
 }

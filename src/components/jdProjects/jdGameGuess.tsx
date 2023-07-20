@@ -36,7 +36,7 @@ export function JdGameGuess(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>I designed the primary screens then came up with the scoring mechanics. I thought it might be fun if the players lost points for every clue they used, with some clues costing more points then others (eg: screenshots are more telling).</p>
+            <p>I designed the primary screens then came up with the scoring mechanics. I thought it might be fun if the players lost points for every clue they used, with some clues costing more points than others (eg: screenshots are more telling).</p>
 
             <p>I also built a custom typeahead search input that looked up games as you typed.</p>
 

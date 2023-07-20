@@ -8,6 +8,7 @@
     grid-auto-rows: min-content;
     overflow-y: auto;
     place-items: center;
+    padding: 20px;
 
     @include media-phone {
         padding: 0 20px;
