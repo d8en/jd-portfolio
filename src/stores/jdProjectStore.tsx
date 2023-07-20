@@ -137,7 +137,7 @@ export class JdProjectStore {
         skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.sass, jdSkillsStore.mobX, jdSkillsStore.figma],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/gameGuessPreview.webp?alt=media',
         component: <JdGameGuess />,
-        title: `Building a "guess the game" web app using the Steam API`,
+        title: `Building a game using the Steam API`,
         desc: `Players are given clues, then they have to guess the Steam game.`,
         isOpen: false,
         invertImageColors: false,
