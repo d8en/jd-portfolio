@@ -1,10 +1,5 @@
 @use "../../styles/" as *;
 
-.imageContainer {
-    display: inline-block;
-    position: relative;
-}
-
 .fullscreenContainer {
     z-index: 1;
     display: flex;

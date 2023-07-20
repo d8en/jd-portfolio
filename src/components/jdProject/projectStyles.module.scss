@@ -64,6 +64,7 @@ $projectHoverTransition:
     overflow-y: scroll;
     @include boxSizingBorder;
     grid-auto-rows: min-content;
+    @include themeColorTransition;
 
     .projectPreviewImgContainer {
         @include bgGradient(top left);
@@ -73,7 +74,7 @@ $projectHoverTransition:
 
     .projectContent {
         max-width: $desktopMaxWidth;
-
+        // @include themeColorTransition;
         place-self: start center;
         place-items: start;
         gap: 56px;
@@ -132,6 +133,7 @@ $projectHoverTransition:
 }
 
 .projectContent {
+    @include themeColorTransition;
     display: grid;
     grid-auto-rows: min-content;
     place-self: center start;

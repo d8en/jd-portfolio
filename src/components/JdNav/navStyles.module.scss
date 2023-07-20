@@ -1,6 +1,7 @@
 @use "../../styles/" as *;
 
 .navContainer {
+    @include themeColorTransition;
     position: absolute;
     bottom: 0;
     @include baseBlur;
