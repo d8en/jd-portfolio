@@ -17,12 +17,8 @@ $projectHoverTransition:
     border: 1.5px solid var(--greyBg);
     display: grid;
     grid-auto-columns: 1fr;
-    gap: 44px;
+    // gap: 12px;
     max-width: 1200px;
-
-    @include media-phone {
-        gap: 0;
-    }
 
     @include media-desktop4k {
         max-width: $desktopMaxWidth4k;
@@ -30,7 +26,7 @@ $projectHoverTransition:
 
     @include media-desktop {
         grid-auto-flow: column;
-        gap: 56px;
+        gap: 32px;
     }
 
     @include media-desktop {
@@ -138,7 +134,7 @@ $projectHoverTransition:
 .projectContent {
     display: grid;
     grid-auto-rows: min-content;
-    place-self: center;
+    place-self: center start;
     gap: 20px;
     padding: 12px;
 }
