@@ -10,6 +10,7 @@ $logoContainer: 56px;
     width: $logoContainer;
     background-color: var(--primBg);
     @include baseShadow;
+    @include themeColorTransition;
 }
 
 .homeLogo {
