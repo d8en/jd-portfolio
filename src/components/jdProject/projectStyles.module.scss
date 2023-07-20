@@ -4,15 +4,12 @@ $previewImgHeight: 348px;
 $previewImgHeightOPen: 500px;
 $containerBorder: 24px;
 
-.projectsHolder {
-    position: relative;
-    border-radius: $containerBorder;
-}
-
 .projectsContainer {
+    overflow: hidden;
     cursor: pointer;
     position: relative;
     border-radius: $containerBorder;
+    border: 1.5px solid var(--greyBg);
     display: grid;
     grid-auto-columns: 1fr;
     gap: 44px;
@@ -29,13 +26,14 @@ $containerBorder: 24px;
     @include aniScaleIn;
     @include aniHoverOnly;
     @include media-desktop {
-        padding: 0 20px;
         grid-auto-flow: column;
         gap: 56px;
     }
 
     @include media-desktop {
         &:hover {
+            @include baseShadow;
+            border: 1.5px solid transparent;
             .projectPreviewImg {
                 @include aniLinkScale;
                 transform: scale(1.09);
@@ -56,7 +54,8 @@ $containerBorder: 24px;
 
             .projectPreviewImgContainer {
                 @include aniHoverOnly;
-                border-radius: 20px;
+                // border-radius: 20px;
+                background-color: var(--link);
             }
         }
     }
@@ -121,11 +120,13 @@ $containerBorder: 24px;
 
 .projectPreviewImgContainer {
     @include boxSizingBorder;
+    background-color: var(--greyBg);
     padding: 56px 28px;
 
     @include media-phone {
-        padding: 20px;
+        padding: 24px;
     }
+
     display: flex;
     position: relative;
 }
@@ -147,10 +148,12 @@ $containerBorder: 24px;
     grid-auto-rows: min-content;
     place-self: center;
     gap: 20px;
+    padding: 12px;
 }
 
 .projectHeader {
-    @include jdLineClamp(3);
+    @include jdLineClamp(6);
+    position: relative;
     @include font-size-larger;
     @include textGradient(right);
 }

@@ -2,8 +2,8 @@
 
 .projectViewContainer {
     display: grid;
-    @include media-desktop {
-        gap: 0;
-    }
-    gap: 56px;
+    // @include media-desktop {
+    //     gap: 0;
+    // }
+    gap: 72px
 }
