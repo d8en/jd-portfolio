@@ -132,6 +132,7 @@ $projectHoverTransition:
 }
 
 .projectContent {
+    @include themeColorTransition;
     display: grid;
     grid-auto-rows: min-content;
     place-self: center start;

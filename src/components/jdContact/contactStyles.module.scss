@@ -23,6 +23,7 @@ $contactSize: 56px;
 }
 
 .contactContainer {
+    @include themeColorTransition;
     @include flexCentered;
     gap: 12px;
     width: $contactSize;

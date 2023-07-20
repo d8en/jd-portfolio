@@ -181,3 +181,12 @@ $aniFloatAmt: 8px;
         transform: scale(1);
     }
 }
+
+$themeTransitionDuration: 0.5s;
+@mixin themeColorTransition {
+    transition:
+        $themeTransitionDuration background-color,
+        $themeTransitionDuration color,
+        $themeTransitionDuration border,
+        $themeTransitionDuration stroke;
+}

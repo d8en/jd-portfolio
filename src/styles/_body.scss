@@ -1,5 +1,6 @@
 @use "./responsive" as *;
 @use "./font" as *;
+@use "./animations" as *;
 
 $globalPadding: 20px;
 $desktopMaxWidth: 720px;
@@ -43,6 +44,7 @@ body {
     margin: 0 auto;
     background-color: var(--primBg);
     @include fullVh;
+    @include themeColorTransition;
 }
 
 html {
