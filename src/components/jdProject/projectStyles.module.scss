@@ -3,6 +3,11 @@
 $previewImgHeight: 348px;
 $previewImgHeightOPen: 500px;
 $containerBorder: 24px;
+$hoverDuration: 0.5s;
+$projectHoverTransition:
+    $hoverDuration box-shadow,
+    $hoverDuration border,
+    $hoverDuration background-color;
 
 .projectsContainer {
     overflow: hidden;
@@ -23,38 +28,25 @@ $containerBorder: 24px;
         max-width: $desktopMaxWidth4k;
     }
 
-    @include aniScaleIn;
-    @include aniHoverOnly;
     @include media-desktop {
         grid-auto-flow: column;
         gap: 56px;
     }
 
     @include media-desktop {
+        transition: $projectHoverTransition;
         &:hover {
+            transition: $projectHoverTransition;
             @include baseShadow;
-            border: 1.5px solid transparent;
+            border: 1.5px solid var(--link);
+
             .projectPreviewImg {
                 @include aniLinkScale;
                 transform: scale(1.09);
             }
 
-            .projectHeader {
-                @include linkTransitions;
-                color: var(--link);
-            }
-
-            .projectLaunchIcon {
-                @include aniScaleIn;
-                opacity: 1;
-                transform: scale(1);
-                bottom: 12px;
-                visibility: visible;
-            }
-
             .projectPreviewImgContainer {
-                @include aniHoverOnly;
-                // border-radius: 20px;
+                // @include aniHoverOnly;
                 background-color: var(--link);
             }
         }
