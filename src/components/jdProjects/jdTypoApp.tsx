@@ -29,7 +29,7 @@ export function JdTypoApp(): React.JSX.Element {
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
-                <li>Animated donut timer</li>
+                <li>Animated doughnut timer</li>
                 <li>Record and playback of keystrokes and selections</li>
                 <li>TikTok style scroll locking</li>
                 <li>Super minimal text input</li>
@@ -79,13 +79,13 @@ export function JdTypoApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Initial designs for the writing and reading screens</figcaption>
 
-            <p>This was the first time I would create an animated donut (for the countdown) in React Native, and I didn't want to reach for a "chart" library.</p>
+            <p>This was the first time I would create an animated doughnut (for the countdown) in React Native, and I didn't want to reach for a "chart" library.</p>
 
             <p>I'm familiar with the <JdATag href="https://reactnative.dev/docs/animated">RN Animated API</JdATag>, but I had been reading a lot about <JdATag href="https://docs.swmansion.com/react-native-reanimated/docs">Reanimated</JdATag> and really wanted to give it a shot.</p>
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>I started with figuring out how to animate the donut timer, using the <JdATag href="https://docs.swmansion.com/react-native-reanimated/docs">Reanimated library</JdATag>. After that, I spent the majority of the time building the mechanism to track selection changes and the timing of each keystroke so that I could play it back accurately.</p>
+            <p>I started with figuring out how to animate the doughnut timer, using the <JdATag href="https://docs.swmansion.com/react-native-reanimated/docs">Reanimated library</JdATag>. After that, I spent the majority of the time building the mechanism to track selection changes and the timing of each keystroke so that I could play it back accurately.</p>
 
             <JdVimeoPlayer
                 src="https://player.vimeo.com/video/842887806?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
