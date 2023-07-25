@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './jdLoaderBarStyles.module.scss';
 
 export interface IJdLoaderBarProps {
@@ -9,7 +9,17 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
 
     const [scrollAmt, setScrollAmt] = useState<number>(0);
 
-    console.log('scroll thing', props.scrollElementRef?.onscroll);
+    const handleScroll = (ev: Event): any => {
+        console.log('scroll thing', (props.scrollElementRef!.scrollTop + props.scrollElementRef!.clientHeight) / props.scrollElementRef!.scrollHeight);
+        setScrollAmt(props.scrollElementRef?.scrollTop ?? 1);
+    }
+
+
+    // Setup scroll handler
+    useEffect(() => {
+        if (!props.scrollElementRef) return;
+        props.scrollElementRef!.onscroll = handleScroll;
+    }, [props.scrollElementRef]);
 
     return (
         <div className={styles.loaderBarContainer}>
@@ -17,7 +27,7 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
             {/* LOADER BAR */}
             <div
                 className={styles.loaderBar}
-                // style={{ width: `${scrollAmt / (props.scrollElementRef ? props.scrollElementRef.scrollHeight : 1)}%` }}
+                style={{ width: `${props.scrollElementRef ? ((props.scrollElementRef!.scrollTop + props.scrollElementRef!.clientHeight) / props.scrollElementRef!.scrollHeight) * 100 : 5}%` }}
             />
 
         </div>
