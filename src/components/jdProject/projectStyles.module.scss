@@ -18,7 +18,6 @@ $projectHoverTransition:
     border: 1.5px solid var(--greyBg);
     display: grid;
     grid-auto-columns: 1fr;
-    // gap: 12px;
     max-width: 1200px;
 
     @include media-desktop4k {

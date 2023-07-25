@@ -1,0 +1,14 @@
+@use "../../styles/" as *;
+
+.loaderBarContainer {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    position: relative;
+}
+
+.loaderBar {
+    position: absolute;
+    background-color: var(--link);
+    height: inherit;
+}
