@@ -12,6 +12,7 @@ export const JdHomeView = observer((): React.JSX.Element => {
 
     const [isHeaderShowing, setIsHeaderShowing] = useState<boolean>(false);
     const [isTaglineShowing, setIsTaglineShowing] = useState<boolean>(false);
+    const [isBgImageShowing, setIsBgImageShowing] = useState<boolean>(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -21,6 +22,10 @@ export const JdHomeView = observer((): React.JSX.Element => {
         setTimeout(() => {
             setIsTaglineShowing(true);
         }, jdAniUtils.taglineDelay);
+
+        setTimeout(() => {
+            setIsBgImageShowing(true);
+        }, jdAniUtils.taglineDelay + 400);
     }, []);
 
     return (
@@ -34,7 +39,7 @@ export const JdHomeView = observer((): React.JSX.Element => {
                 }}
             >
                 <AnimatePresence>
-                    {isTaglineShowing &&
+                    {isBgImageShowing &&
                         <JdImg
                             className={styles.homeBgImg}
                             srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollageFullscreen.webp?alt=media&token=bd385b6a-8c37-4729-93d6-ccd745c30fc8'

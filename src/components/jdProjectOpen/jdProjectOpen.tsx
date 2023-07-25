@@ -16,6 +16,7 @@ import { useEffect, useRef, useState } from "react";
 import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
 import { observer } from "mobx-react-lite";
 import jdElementUtils from "../../utils/jdElementUtils";
+import { JdLoaderBar } from "../jdLoaderBar/jdLoaderBar";
 
 export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
 
@@ -24,11 +25,6 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
 
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
-
-    const onScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
-        console.log('scrolling', e.currentTarget.scrollTop);
-        console.log('scrolling', e.currentTarget.scrollHeight);
-    }
 
     useEffect(() => {
         if (!innerDiv.current) return;
@@ -44,10 +40,12 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
             transition={jdAniUtils.baseEase}
             className={styles.projectsContainerOpen}
             exit={{ opacity: 0, translateY: 100, transition: jdAniUtils.baseEaseOut }}
-            onScroll={onScroll}
         >
             {/* CLOSE */}
             <JdClose onClick={() => props.onToggleProject()} />
+
+            {/* SCROLL LOADER */}
+            <JdLoaderBar scrollElementRef={innerDiv.current} />
 
             {/* PREVIEW IMAGE */}
             <motion.div
