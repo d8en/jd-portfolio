@@ -4,12 +4,16 @@
     display: inline-block;
     width: 100%;
     height: 4px;
-    position: absolute;
+    position: fixed;
     background-color: var(--greyBg);
+    z-index: 4;
 }
 
 .loaderBar {
     position: absolute;
+    left: 0;
+    bottom: 0;
     background-color: var(--link);
     height: inherit;
+    width: 25%;
 }

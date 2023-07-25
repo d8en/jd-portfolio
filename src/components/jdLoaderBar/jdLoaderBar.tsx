@@ -17,7 +17,7 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
             {/* LOADER BAR */}
             <div
                 className={styles.loaderBar}
-                style={{ width: `${scrollAmt / (props.scrollElementRef ? props.scrollElementRef.scrollHeight : 1)}%` }}
+                // style={{ width: `${scrollAmt / (props.scrollElementRef ? props.scrollElementRef.scrollHeight : 1)}%` }}
             />
 
         </div>
