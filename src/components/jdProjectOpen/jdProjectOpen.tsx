@@ -16,11 +16,13 @@ import { useEffect, useRef, useState } from "react";
 import { ReactComponent as ArrowIcon } from '../../assets/svg/icons/arrow.svg';
 import { observer } from "mobx-react-lite";
 import jdElementUtils from "../../utils/jdElementUtils";
+import { JdLoaderBar } from "../jdLoaderBar/jdLoaderBar";
 
 export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
 
     // Hover over arrows to replace 'up next'
     const [isHoverLeft, setIsHoverLeft] = useState<boolean>(false);
+    const [hasScrollLoader, setHasScrollLoader] = useState<boolean>(false);
 
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
@@ -30,6 +32,12 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
         setIsHoverLeft(false);
         jdElementUtils.resetScrollTop(innerDiv.current);
     }, [props.component]);
+
+    useEffect(() => {
+        if (!innerDiv.current || hasScrollLoader) return;
+
+        setHasScrollLoader(true);
+    }, [innerDiv.current]);
 
     return (
         <motion.div
@@ -42,6 +50,11 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
         >
             {/* CLOSE */}
             <JdClose onClick={() => props.onToggleProject()} />
+
+            {/* SCROLL LOADER */}
+            {hasScrollLoader &&
+                <JdLoaderBar scrollElementRef={innerDiv.current} />
+            }
 
             {/* PREVIEW IMAGE */}
             <motion.div

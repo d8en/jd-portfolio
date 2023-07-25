@@ -45,14 +45,6 @@ export class JdSkillsStore {
         component: <p>I'm a huge fan of React Native and have 4 years of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera interactions, share activities, and more.</p>
     }
 
-    public mobX: IJdSkillCo = {
-        name: 'MobX',
-        imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media',
-        xp: 4,
-        xpPercentage: 1,
-        component: <p>By far my favorite state management library, I have 4 years of experience using it with large scale projects. The simplicity and familiar architecture makes this my go-to for all projects.</p>
-    }
-
     public sass: IJdSkillCo = {
         name: 'Sass',
         icon: <SassIcon />,
@@ -67,14 +59,6 @@ export class JdSkillsStore {
         xp: 4,
         xpPercentage: 1,
         component: <p>I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful language to use.</p>
-    }
-
-    public redux: IJdSkillCo = {
-        name: 'Redux Toolkit',
-        icon: <ReduxIcon />,
-        xp: 1,
-        xpPercentage: .25,
-        component: <p>I took some time to rewrite about 60% of a production app in Redux to get a feel for how it compared to Mobx. While I prefer Mobx, I enjoyed using Redux and would love to use it in more projects.</p>,
     }
 
     public nodeJs: IJdSkillCo = {
@@ -109,12 +93,28 @@ export class JdSkillsStore {
         component: <p>I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get to where I'm at today.</p>
     }
 
+    public mobX: IJdSkillCo = {
+        name: 'MobX',
+        imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media',
+        xp: 4,
+        xpPercentage: 1,
+        component: <p>By far my favorite state management library, I have 4 years of experience using it with large scale projects. The simplicity and familiar architecture makes this my go-to for all projects.</p>
+    }
+
+    public redux: IJdSkillCo = {
+        name: 'Redux Toolkit',
+        icon: <ReduxIcon />,
+        xp: 1,
+        xpPercentage: .25,
+        component: <p>I took some time to rewrite about 60% of a production app in Redux to get a feel for how it compared to Mobx. While I prefer Mobx, I enjoyed using Redux and would love to use it in more projects.</p>,
+    }
+
     public reanimated: IJdSkillCo = {
         name: 'RN Reanimated',
         icon: <ReanimatedIcon />,
         xp: 3,
         xpPercentage: .75,
-        component: <p>Software Mansion has built some incredible libraries and this is no exception. I use this library in almost every project and prefer it over the Animated API for almost all animations (responsive pan responders, donut loaders, etc.).</p>
+        component: <p>Software Mansion has built some incredible libraries and this is no exception. I use this library in almost every project and prefer it over the Animated API for almost all animations (responsive pan responders, doughnut loaders, etc.).</p>
     }
 
     public framerMotion: IJdSkillCo = {
