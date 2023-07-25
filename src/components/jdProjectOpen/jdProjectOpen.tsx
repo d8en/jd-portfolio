@@ -22,6 +22,7 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
 
     // Hover over arrows to replace 'up next'
     const [isHoverLeft, setIsHoverLeft] = useState<boolean>(false);
+    const [hasScrollLoader, setHasScrollLoader] = useState<boolean>(false);
 
     // Inner div ref
     const innerDiv = useRef<HTMLDivElement | null>(null);
@@ -31,6 +32,12 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
         setIsHoverLeft(false);
         jdElementUtils.resetScrollTop(innerDiv.current);
     }, [props.component]);
+
+    useEffect(() => {
+        if (!innerDiv.current || hasScrollLoader) return;
+
+        setHasScrollLoader(true);
+    }, [innerDiv.current]);
 
     return (
         <motion.div
@@ -45,7 +52,9 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
             <JdClose onClick={() => props.onToggleProject()} />
 
             {/* SCROLL LOADER */}
-            <JdLoaderBar scrollElementRef={innerDiv.current} />
+            {hasScrollLoader &&
+                <JdLoaderBar scrollElementRef={innerDiv.current} />
+            }
 
             {/* PREVIEW IMAGE */}
             <motion.div

@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import styles from './jdLoaderBarStyles.module.scss';
 import { cubicBezier, motion } from 'framer-motion';
-import jdAniUtils from '../../utils/jdAniUtils';
 
 export interface IJdLoaderBarProps {
     scrollElementRef: HTMLElement | null;
@@ -20,9 +19,13 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
 
         scrollUpdateTimeout.current = setTimeout(() => {
             setScrollAmt(props.scrollElementRef?.scrollTop ?? 1);
-        }, 5);
+        }, 10);
     }
 
+    const scrollWidth: string = useMemo(() => {
+        if (!props.scrollElementRef) return '1%';
+        return `${((scrollAmt + props.scrollElementRef!.clientHeight) / props.scrollElementRef!.scrollHeight) * 100}%`;
+    }, [scrollAmt]);
 
     // Setup scroll handler
     useEffect(() => {
@@ -38,7 +41,7 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
                 layout
                 transition={{ ease: cubicBezier(0, 1, 0, 1), duration: 4 }}
                 className={styles.loaderBar}
-                style={{ width: `${props.scrollElementRef ? ((scrollAmt + props.scrollElementRef!.clientHeight) / props.scrollElementRef!.scrollHeight) * 100 : 0}%` }}
+                style={{ width: `${scrollWidth}` }}
             />
 
         </div>
