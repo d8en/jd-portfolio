@@ -8,7 +8,7 @@ $projectHoverTransition:
     $hoverDuration box-shadow,
     $hoverDuration border,
     $hoverDuration background-color,
-    $hoverDuration transform;
+    $hoverDuration translate;
 
 .projectsContainer {
     overflow: hidden;
@@ -35,7 +35,7 @@ $projectHoverTransition:
             transition: $projectHoverTransition;
             @include baseShadow;
             border: 1.5px solid var(--link);
-            transform: translateY(-8px) !important;
+            translate: 0 -8px;
 
             .projectPreviewImg {
                 @include aniLinkScale;
