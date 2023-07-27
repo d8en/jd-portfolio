@@ -23,13 +23,13 @@ export class JdCompaniesStore {
         component:
             <>
                 <p>At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. These products helped us secure $1.3 million funding over the course of 2 years.</p>
-                <p>I integrated all internal and third party APIs and constructed database architecture with fellow backend engineers.</p>
-                <p>I am also the sole designer for all web and mobile apps and marketing content.</p>
+                <p>I integrate all internal and third party APIs and model database architecture with fellow backend engineers.</p>
+                <p>I am also the lead product designer for all web and mobile apps and marketing content.</p>
             </>
     }
 
     public rek: IJdSkillCo = {
-        name: 'Founder / Full-Stack',
+        name: 'Founder / Full Stack',
         companyName: 'Rek it.',
         xp: 4,
         xpPercentage: .75,
