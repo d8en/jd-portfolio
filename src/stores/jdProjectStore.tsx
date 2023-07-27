@@ -31,17 +31,6 @@ export class JdProjectStore {
     public isFloatingHelp: boolean = false;
 
 
-    public boomNativeApp: IJdProject = {
-        id: '3',
-        company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
-        component: <JdBoomNativeApp />,
-        title: 'Building a mobile app to manage all returns',
-        desc: 'Returns can be a pain, the least we can do is manage them in one app.',
-        isOpen: false,
-    }
-
     public rekApp: IJdProject = {
         id: '6',
         company: jdCompaniesStore.rek,
@@ -50,6 +39,17 @@ export class JdProjectStore {
         component: <JdRekApp />,
         title: 'Building a mobile app to track recommendations',
         desc: `Walking away from a dinner with friends, I couldn't remember a single TV show that we talked about. How nice would it be to track it?`,
+        isOpen: false,
+    }
+
+    public boomNativeApp: IJdProject = {
+        id: '3',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
+        component: <JdBoomNativeApp />,
+        title: 'Building a mobile app to manage all returns',
+        desc: 'Returns can be a pain, the least we can do is manage them in one app.',
         isOpen: false,
     }
 
