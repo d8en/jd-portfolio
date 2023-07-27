@@ -142,7 +142,6 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopDriver1.webp?alt=media"
-                    style={{ borderRadius: 20 }}
                     alt="Production mobile web app"
                 />
 
@@ -150,7 +149,6 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopHelp.webp?alt=media"
-                    style={{ borderRadius: 20 }}
                     alt="Production mobile web app"
                 />
 
@@ -158,7 +156,6 @@ export function JdAirshopApp(): React.JSX.Element {
                 <JdImg
                     className={styles.projectsImage}
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopCalendar.webp?alt=media"
-                    style={{ borderRadius: 20 }}
                     alt="Production mobile web app"
                 />
 

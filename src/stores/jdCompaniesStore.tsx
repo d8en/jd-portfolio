@@ -37,7 +37,7 @@ export class JdCompaniesStore {
         component:
             <>
                 <p>At <JdATag href="https://rekit.app/">Rek</JdATag>, I designed and built a native mobile app (iOS and Android) and a website to promote the product.</p>
-                <p>I grew the product to 200+ users in the first month and used user feedback to manage feature development and product roadmaps.</p>
+                <p>I grew the product to 200+ users in the first month with over 600 recommendations and a 5 star rating in the iOS app store.</p>
             </>
     }
 

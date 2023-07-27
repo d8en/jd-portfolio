@@ -120,19 +120,16 @@ export function JdSmartRouteApp(): React.JSX.Element {
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto1.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
                     alt="Prototype of the retailer scanning items in store"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto2.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
                     alt="Prototype of the retailer scanning items in store"
                 />
                 <JdImg
                     srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/inStoreProto3.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ borderRadius: 20 }}
                     alt="Prototype of the retailer scanning items in store"
                 />
             </div>
