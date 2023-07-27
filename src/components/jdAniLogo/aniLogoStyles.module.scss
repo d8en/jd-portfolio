@@ -1,11 +1,11 @@
 @use "../../styles/" as *;
 
-$logoContainer: 56px;
+$logoContainer: 64px;
 
 .homeLogoContainer {
     display: grid;
     place-items: center;
-    border-radius: 12px;
+    border-radius: 50%;
     height: $logoContainer;
     width: $logoContainer;
     background-color: var(--primBg);
@@ -15,7 +15,6 @@ $logoContainer: 56px;
 
 .homeLogo {
     path {
-        // fill: var(--primFg);
         @include bgGradient;
     }
 }

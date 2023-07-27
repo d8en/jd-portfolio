@@ -2,7 +2,7 @@ import { AnimationProps, Transition, cubicBezier } from "framer-motion";
 
 class JdAniUtils {
 
-    public logoDelay: number = 600;
+    public logoDelay: number = 700;
     public taglineDelay: number = 1200;
     public mountDelay: number = (300 + this.taglineDelay) / 1000;
 
