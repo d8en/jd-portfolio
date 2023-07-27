@@ -12,6 +12,9 @@ $imgMaxHeight: 440px;
 
 .projectsImage {
     border-radius: 24px;
+    @include media-phone {
+        border-radius: 16px;
+    }
     place-self: start center;
     max-width: 100%;
     max-height: $imgMaxHeight;

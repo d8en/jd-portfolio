@@ -1,6 +1,6 @@
 @use "../../styles/" as *;
 
-$closeSize: 28px;
+$closeSize: 32px;
 
 .floatingHelpContainer {
     z-index: 3;
@@ -8,12 +8,12 @@ $closeSize: 28px;
     grid-template-columns: auto min-content;
     grid-auto-flow: column;
     position: absolute;
-    @include bgGradient(top right);
+    @include bgGradient(bottom right);
     border-radius: 200px;
     place-items: center;
     @include baseShadow;
     @include aniFloating;
-    padding: 12px;
+    padding: 12px 12px 12px 20px;
     max-width: 180px;
     gap: 12px;
 }
