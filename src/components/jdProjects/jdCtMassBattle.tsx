@@ -11,7 +11,7 @@ export function JdCtMassBattle(): React.JSX.Element {
 
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
-            <p>Checkout the <JdATag href="https://www.youtube.com/watch?v=yQDzVleAov4&t=4775s">live stream of the event</JdATag> youtube.</p>
+            <p>Checkout the <JdATag href="https://www.youtube.com/watch?v=yQDzVleAov4&t=4775s">live stream</JdATag> on YouTube.</p>
 
             <JdImg
                 srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/ctMass1.webp?alt=media'
