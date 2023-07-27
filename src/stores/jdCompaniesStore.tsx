@@ -15,7 +15,7 @@ export class JdCompaniesStore {
     }
 
     public boomerang: IJdSkillCo = {
-        name: 'VP, Dev & Design',
+        name: 'Lead Frontend Engineer',
         companyName: 'boomerang',
         xp: 2,
         xpPercentage: .75,
@@ -29,7 +29,7 @@ export class JdCompaniesStore {
     }
 
     public rek: IJdSkillCo = {
-        name: 'Founder / Full Stack',
+        name: 'Founder / Full-Stack',
         companyName: 'Rek it.',
         xp: 4,
         xpPercentage: .75,
@@ -42,7 +42,7 @@ export class JdCompaniesStore {
     }
 
     public primacy: IJdSkillCo = {
-        name: 'Product Designer',
+        name: 'Lead Product Designer',
         companyName: 'Primacy',
         invertImageColors: true,
         xp: 2,
