@@ -21,6 +21,7 @@ import { JdNightCat } from "../components/jdProjects/jdNightcat";
 import { JdWeekend } from "../components/jdProjects/jdWeekend";
 import { JdAqiService } from "../components/jdProjects/jdAqiService";
 import { JdGameGuess } from "../components/jdProjects/jdGameGuess";
+import { JdCtMassBattle } from "../components/jdProjects/jdCtMassBattle";
 
 export class JdProjectStore {
     constructor() {
@@ -30,17 +31,6 @@ export class JdProjectStore {
     public projectParam: string = 'id';
     public isFloatingHelp: boolean = false;
 
-
-    public boomNativeApp: IJdProject = {
-        id: '3',
-        company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
-        component: <JdBoomNativeApp />,
-        title: 'Building a mobile app to manage all returns',
-        desc: 'Returns can be a pain, the least we can do is manage them in one app.',
-        isOpen: false,
-    }
 
     public rekApp: IJdProject = {
         id: '6',
@@ -53,14 +43,25 @@ export class JdProjectStore {
         isOpen: false,
     }
 
-    public rekWeb: IJdProject = {
-        id: '7',
-        company: jdCompaniesStore.rek,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
-        component: <JdRekWeb />,
-        title: 'Building a website to promote a social recommendations app',
-        desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
+    public boomNativeApp: IJdProject = {
+        id: '3',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
+        component: <JdBoomNativeApp />,
+        title: 'Building a mobile app to manage all returns',
+        desc: 'Returns can be a pain, the least we can do is manage them in one app.',
+        isOpen: false,
+    }
+
+    public typoApp: IJdProject = {
+        id: '8',
+        company: jdCompaniesStore.typo,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.figma, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
+        component: <JdTypoApp />,
+        title: `Building a text-based social media app`,
+        desc: `I love the idea of returning to text-only social media, but let's be honest, we don't need another social media app.`,
         isOpen: false,
     }
 
@@ -72,17 +73,6 @@ export class JdProjectStore {
         component: <JdSmartRouteApp />,
         title: 'Building an app to optimize return routing',
         desc: 'Most retailers send all of their returns to a warehouse across the country. Why not route them to a local store, warehouse, or consolidation center?',
-        isOpen: false,
-    }
-
-    public boomSmartWeb: IJdProject = {
-        id: '5',
-        company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebPreview.webp?alt=media',
-        component: <JdSmartRouteWeb />,
-        title: 'Building a website to promote a return routing app',
-        desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
         isOpen: false,
     }
 
@@ -108,15 +98,16 @@ export class JdProjectStore {
         isOpen: false,
     }
 
-    public typoApp: IJdProject = {
-        id: '8',
-        company: jdCompaniesStore.typo,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.figma, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
-        component: <JdTypoApp />,
-        title: `Building "Typo" - a text-based social media app that shows every keystroke`,
-        desc: `I love the idea of returning to text-only social media, but let's be honest, we don't need another social media app.`,
+    public gameGuesser: IJdProject = {
+        id: '15',
+        company: jdCompaniesStore.weekendProjects,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.sass, jdSkillsStore.mobX, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/gameGuessPreview.webp?alt=media',
+        component: <JdGameGuess />,
+        title: `Building a game using the Steam API`,
+        desc: `Players are given clues, then they have to guess the Steam game.`,
         isOpen: false,
+        invertImageColors: false,
     }
 
     public aqiWebService: IJdProject = {
@@ -131,16 +122,26 @@ export class JdProjectStore {
         invertImageColors: false,
     }
 
-    public gameGuesser: IJdProject = {
-        id: '15',
-        company: jdCompaniesStore.weekendProjects,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.sass, jdSkillsStore.mobX, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/gameGuessPreview.webp?alt=media',
-        component: <JdGameGuess />,
-        title: `Building a game using the Steam API`,
-        desc: `Players are given clues, then they have to guess the Steam game.`,
+    public rekWeb: IJdProject = {
+        id: '7',
+        company: jdCompaniesStore.rek,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
+        component: <JdRekWeb />,
+        title: 'Building a website to promote a social recommendations app',
+        desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
         isOpen: false,
-        invertImageColors: false,
+    }
+
+    public boomSmartWeb: IJdProject = {
+        id: '5',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebPreview.webp?alt=media',
+        component: <JdSmartRouteWeb />,
+        title: 'Building a website to promote a return routing app',
+        desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
+        isOpen: false,
     }
 
     public higApp: IJdProject = {
@@ -186,7 +187,18 @@ export class JdProjectStore {
         desc: `Haven't you always dreamed about a weather app that insults you? Me too.`,
         isOpen: false,
         invertImageColors: true,
+    }
 
+    public ctMassBattle: IJdProject = {
+        id: '16',
+        company: jdCompaniesStore.gravix,
+        skills: [jdSkillsStore.brandDesign, jdSkillsStore.afterEffects],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/ctMassPreview.webp?alt=media',
+        component: <JdCtMassBattle />,
+        title: `Designing a brand for a video game tournament`,
+        desc: `Being a gamer myself, I genuinely enjoyed this project from start to finish.`,
+        isOpen: false,
+        invertImageColors: false,
     }
 
     public funProjects: IJdProject = {

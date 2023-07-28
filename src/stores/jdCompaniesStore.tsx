@@ -15,7 +15,7 @@ export class JdCompaniesStore {
     }
 
     public boomerang: IJdSkillCo = {
-        name: 'VP, Dev & Design',
+        name: 'Lead Frontend Engineer',
         companyName: 'boomerang',
         xp: 2,
         xpPercentage: .75,
@@ -23,8 +23,8 @@ export class JdCompaniesStore {
         component:
             <>
                 <p>At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. These products helped us secure $1.3 million funding over the course of 2 years.</p>
-                <p>I integrated all internal and third party APIs and constructed database architecture with fellow backend engineers.</p>
-                <p>I am also the sole designer for all web and mobile apps and marketing content.</p>
+                <p>I integrate all internal and third party APIs and model database architecture with fellow backend engineers.</p>
+                <p>I am also the lead product designer for all web and mobile apps and marketing content.</p>
             </>
     }
 
@@ -37,12 +37,12 @@ export class JdCompaniesStore {
         component:
             <>
                 <p>At <JdATag href="https://rekit.app/">Rek</JdATag>, I designed and built a native mobile app (iOS and Android) and a website to promote the product.</p>
-                <p>I grew the product to 200+ users in the first month and used user feedback to manage feature development and product roadmaps.</p>
+                <p>I grew the product to 200+ users in the first month with over 600 recommendations and a 5 star rating in the iOS app store.</p>
             </>
     }
 
     public primacy: IJdSkillCo = {
-        name: 'Product Designer',
+        name: 'Lead Product Designer',
         companyName: 'Primacy',
         invertImageColors: true,
         xp: 2,

@@ -11,16 +11,25 @@ export function JdRekApp(): React.JSX.Element {
 
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
-            <p>You can download the app via <JdATag href="https://rekit.app/">the website I designed and built</JdATag> to promote it!</p>
+            <p>You can download the app via <JdATag href="https://rekit.app/">the website I designed and built</JdATag> to promote it! Below is a live demo.</p>
+
+            {/* VIDEO */}
+            <JdVimeoPlayer
+                src="https://player.vimeo.com/video/849466863?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of Rek</figcaption>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Create an app where friends can track recommendations amongst friends.</p>
+            <p>Create an app for friends to track recommendations.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
             <ul>
-                <li>Site scraper for link previews</li>
+                <li>Homegrown site scraper for link previews</li>
                 <li>Native share activity ("share with")</li>
                 <li>Haptics</li>
                 <li>Social data models (friends, commenting, etc.)</li>
@@ -131,6 +140,17 @@ export function JdRekApp(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app</figcaption>
+
+            <p>Sending a Rek was still "more work" than texting or DM'ing a link on social media platforms. As an attempt to optimize the interaction of sending a rek, I built a native share activity.</p>
+
+            {/* VIDEO */}
+            <JdVimeoPlayer
+                src="https://player.vimeo.com/video/849466893?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                className={styles.projectVideo}
+            />
+
+            {/* CAPTION */}
+            <figcaption className={styles.projectImageCaption}>Live demo of the native share activity</figcaption>
 
             <p>The relationships between friends, the conversations, and the notification features were all fun challenges.</p>
 

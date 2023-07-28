@@ -1,18 +1,16 @@
 import { JdViewWrapper } from '../../components/jdViewWrapper/jdViewWrapper';
 import styles from './homeStyles.module.scss';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import { useEffect, useState } from 'react';
 import { JdAniLogo } from '../../components/jdAniLogo/jdAniLogo';
-import { JdImg } from '../../components/jdImg/jdImg';
-import jdThemeManager from '../../managers/jdThemeManager';
 import { observer } from 'mobx-react-lite';
 
 export const JdHomeView = observer((): React.JSX.Element => {
 
     const [isHeaderShowing, setIsHeaderShowing] = useState<boolean>(false);
     const [isTaglineShowing, setIsTaglineShowing] = useState<boolean>(false);
-    const [isBgImageShowing, setIsBgImageShowing] = useState<boolean>(false);
+
 
     useEffect(() => {
         setTimeout(() => {
@@ -22,36 +20,10 @@ export const JdHomeView = observer((): React.JSX.Element => {
         setTimeout(() => {
             setIsTaglineShowing(true);
         }, jdAniUtils.taglineDelay);
-
-        setTimeout(() => {
-            setIsBgImageShowing(true);
-        }, jdAniUtils.taglineDelay + 400);
     }, []);
 
     return (
         <JdViewWrapper divProps={{ className: styles.homeContainer }}>
-
-            {/* BG IMAGE */}
-            <div
-                className={styles.homeBgContainer}
-                style={{
-                    opacity: jdThemeManager.store.isDarkTheme ? .1 : .2,
-                }}
-            >
-                <AnimatePresence>
-                    {isBgImageShowing &&
-                        <JdImg
-                            className={styles.homeBgImg}
-                            srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/brandCollageFullscreen.webp?alt=media&token=bd385b6a-8c37-4729-93d6-ccd745c30fc8'
-                            style={{ pointerEvents: 'none' }}
-                            alt="Collage of branding projects"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1, transition: { duration: 4 } }}
-                        />
-                    }
-                </AnimatePresence>
-            </div>
-
             {/* TITLE */}
             <div className={styles.homeHeader}>
 

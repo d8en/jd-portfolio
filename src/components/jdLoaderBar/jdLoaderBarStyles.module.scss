@@ -5,16 +5,14 @@
     width: 100%;
     height: 6px;
     position: fixed;
-    background-color: var(--greyBg);
     z-index: 4;
-    @include baseBlur;
 }
 
 .loaderBar {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: var(--link);
+    @include bgGradient(left);
     height: inherit;
     // transition: 1s width;
 }
