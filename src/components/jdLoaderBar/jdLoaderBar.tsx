@@ -17,9 +17,9 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
             scrollUpdateTimeout.current = null;
         }
 
-        scrollUpdateTimeout.current = setTimeout(() => {
-            setScrollAmt(props.scrollElementRef?.scrollTop ?? 1);
-        }, 10);
+        // scrollUpdateTimeout.current = setTimeout(() => {
+        setScrollAmt(props.scrollElementRef?.scrollTop ?? 1);
+        // }, 10);
     }
 
     const scrollWidth: string = useMemo(() => {
