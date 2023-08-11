@@ -18,13 +18,13 @@ export function JdWeekend(): React.JSX.Element {
 
             <div className={styles.multiMedia}>
                 <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch1.webp?alt=media'
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch2.webp?alt=media'
                     className={styles.projectsImage}
-                    style={{ placeSelf: 'center' }}
                     alt="Watch face designed by me"
                 />
                 <JdImg
-                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch2.webp?alt=media'
+                    srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch3.webp?alt=media'
+                    style={{ placeSelf: 'center', borderRadius: 800 }}
                     className={styles.projectsImage}
                     alt="Watch face designed by me"
                 />
@@ -36,6 +36,12 @@ export function JdWeekend(): React.JSX.Element {
             <p>I started with a design using <JdATag href="https://www.theprimacy.com/">Primacy's logo</JdATag> (agency I was working at), but liked the second concept better.</p>
 
             <p>I enjoyed making the coffee cup and shoe icons the most.</p>
+
+            <JdImg
+                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/watch1.webp?alt=media'
+                className={styles.projectsImage}
+                alt="Watch face designed by me"
+            />
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Watch face with custom icons</figcaption>
