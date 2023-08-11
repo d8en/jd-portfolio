@@ -1,15 +1,15 @@
 :root {
     // Grey
-    --greyText: #6b737b;
+    --greyText: #818991;
     --lightGreyText: #6b737b;
     --darkGreyText: #818991;
 
     // --greyBg: #e5ebf0;
-    --greyBg: #dbe3eb;
+    --greyBg: #26272d;
     --darkGreyBg: #26272d;
     --lightGreyBg: #dbe3eb;
 
-    --greyLine: #d8e0e9;
+    --greyLine: #1c2026;
     --darkGreyLine: #1c2026;
     --lightGreyLine: #d8e0e9;
 
@@ -24,21 +24,20 @@
     --darkPrimWhite: #d7d7d7;
 
     // Link color
-    --link: #0064d9;
+    --link: #687cfd;
     // --darkLink: #5c72ff;
     --darkLink: #687cfd;
     --lightLink: #0064d9;
 
     // Blur backgrounds
-    --blurBg: rgba(255, 255, 255, 0.85);
+    --blurBg: rgba(26, 26, 32, 0.8);
     --lightBlurBg: rgba(255, 255, 255, 0.85);
-    // --darkBlurBg: rgba(16, 16, 34, 0.75);
     --darkBlurBg: rgba(26, 26, 32, 0.8);
 
     // Shadows
     --darkShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.2);
     --lightShadow: 0px 0px 9px 0px rgba(26, 26, 32, 0.3);
-    --baseShadow: 0px 0px 9px 0px rgba(26, 26, 32, 0.3);
+    --baseShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.2);
 
     // Gradients
     --gradientPink: $gradientPink;

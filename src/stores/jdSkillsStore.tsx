@@ -64,16 +64,16 @@ export class JdSkillsStore {
     public nodeJs: IJdSkillCo = {
         name: 'Node.js',
         icon: <NodeIcon />,
-        xp: 2,
-        xpPercentage: .25,
+        xp: 3,
+        xpPercentage: .75,
         component: <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>,
     }
 
     public noSql: IJdSkillCo = {
         name: 'NoSQL',
         icon: <FirebaseIcon />,
-        xp: 1,
-        xpPercentage: .25,
+        xp: 2,
+        xpPercentage: .4,
         component: <p>Heavily debated amongst my DBA friends, I believe the NoSQL paradigm has many use cases. I've used this to develop rapid prototypes but also feel its the appropriate database for specific projects.</p>,
     }
 
@@ -81,7 +81,7 @@ export class JdSkillsStore {
         name: 'SQL',
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media',
         xp: 2,
-        xpPercentage: .25,
+        xpPercentage: .4,
         component: <p>I use MySQL to support one of my published apps and used MSSQL daily as a product analyst.</p>,
     }
 
