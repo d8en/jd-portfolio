@@ -20,4 +20,5 @@
     }
     @include baseShadow;
     @include baseBlur;
+    z-index: 3;
 }
