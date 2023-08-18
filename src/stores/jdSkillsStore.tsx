@@ -7,7 +7,7 @@ import { ReactComponent as ReanimatedIcon } from '../assets/svg/brands/swm.svg';
 import { ReactComponent as ReduxIcon } from '../assets/svg/brands/redux.svg';
 import { ReactComponent as NodeIcon } from '../assets/svg/brands/node.svg';
 import { ReactComponent as AdobeAeIcon } from '../assets/svg/brands/ae.svg';
-import { ReactComponent as FirebaseIcon } from '../assets/svg/brands/firebase.svg';
+import { ReactComponent as MongoIcon } from '../assets/svg/brands/mongo.svg';
 import { ReactComponent as BrandIcon } from '../assets/svg/brands/brand.svg';
 import { ReactComponent as ProductIcon } from '../assets/svg/brands/product.svg';
 import { ReactComponent as FramerIcon } from '../assets/svg/brands/framer.svg';
@@ -71,10 +71,10 @@ export class JdSkillsStore {
 
     public noSql: IJdSkillCo = {
         name: 'NoSQL',
-        icon: <FirebaseIcon />,
+        icon: <MongoIcon />,
         xp: 2,
         xpPercentage: .4,
-        component: <p>Heavily debated amongst my DBA friends, I believe the NoSQL paradigm has many use cases. I've used this to develop rapid prototypes but also feel its the appropriate database for specific projects.</p>,
+        component: <p>I'm a huge fan of MongoDB and I've also experimented with Firebase Realtime DB. The only other major NoSQL db that I'd like to try is DynamoDB, which also seems useful I just don't love being restricted to AWS.</p>,
     }
 
     public sql: IJdSkillCo = {
