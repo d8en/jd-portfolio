@@ -75,7 +75,7 @@ export class JdSkillsStore {
         icon: <GraphQL />,
         xp: 1,
         xpPercentage: 0.25,
-        component: <p>While I still beleive there is a place in the world for REST, I'm enjoying GraphQL at my current role and plan on using it in future projects.</p>,
+        component: <p>While I still believe there is a place in the world for REST, I'm enjoying GraphQL at my current role and plan on using it in future projects.</p>,
     };
 
     public noSql: IJdSkillCo = {
