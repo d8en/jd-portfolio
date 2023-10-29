@@ -24,9 +24,9 @@ export class JdCompaniesStore {
         component: (
             <>
                 <p>
-                    At <JdATag href="https://www.marketaxess.com/">MarketAxess</JdATag>, I'm leading the development of an Electron desktop application and GraphQL service used by 600+ bond traders.
+                    At <JdATag href="https://www.marketaxess.com/">MarketAxess</JdATag>, I'm leading the development of a web app used by 600+ bond traders.
                 </p>
-                <p>I work with stakeholders and our enterprise architects to design, build, and test new features and contribute towards overall application strategy / architecture.</p>
+                <p>I work with stakeholders and our enterprise architects to design, build, and test new applications and features while contributing towards overall application strategy / architecture.</p>
             </>
         ),
     };
