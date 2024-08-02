@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 $contactPosition: 24px;
 $contactSize: 56px;
@@ -45,7 +45,6 @@ $contactSize: 56px;
 
             & > span {
                 display: unset;
-                // color: var(--primBg);
             }
         }
     }

@@ -1,6 +1,6 @@
-@use './responsive' as *;
-@use './font' as *;
-@use './animations' as *;
+@use "./responsive" as *;
+@use "./font" as *;
+@use "./animations" as *;
 
 $globalPadding: 20px;
 $desktopMaxWidth: 720px;
@@ -16,7 +16,6 @@ $desktopMaxWidth4k: 1400px;
 
 @mixin fullVh {
     height: 100vh;
-    overflow-y: hidden;
     overflow-x: hidden;
 
     @include media-phone {
@@ -44,13 +43,13 @@ $desktopMaxWidth4k: 1400px;
 body {
     margin: 0 auto;
     background-color: var(--primBg);
-    @include fullVh;
     @include themeColorTransition;
+    @include fullVh;
 }
 
 html {
-    @include fullVh;
     @include base-font;
+    @include fullVh;
 }
 
 @mixin globalBottomAfter {

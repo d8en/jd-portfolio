@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 .viewContent {
     display: grid;
@@ -10,11 +10,9 @@
     @include scroll-bar;
     @include boxSizingBorder;
     @include fullVh;
-
+    @include globalBottomAfter;
+    @include globalTopAfter;
     @include media-phone {
         padding: 0 20px;
     }
-
-    @include globalBottomAfter;
-    @include globalTopAfter;
 }

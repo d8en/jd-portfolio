@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 $dotSize: 12px;
 
@@ -19,9 +19,9 @@ $dotSize: 12px;
 }
 
 .dotLoaderContent {
-    @include flexCentered;
     gap: 8px;
     border-radius: 12px;
+    @include flexCentered;
 }
 
 .dotLoading {

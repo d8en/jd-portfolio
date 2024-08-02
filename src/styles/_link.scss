@@ -1,5 +1,5 @@
-@use './colors' as *;
-@use './animations' as *;
+@use "./colors" as *;
+@use "./animations" as *;
 
 $hoverDuration: 0.3s;
 
@@ -32,18 +32,17 @@ $hoverDuration: 0.3s;
 @mixin aniHoverBase {
     &:not(:disabled) {
         @include linkTransitions;
+        @include aniLinkClick;
         &:hover {
+            @include aniLinkScale;
             background-color: var(--link);
-            // @include bgGradient(left);
             color: var(--primFg);
+            cursor: pointer;
+            @content;
             path,
             rect {
                 stroke: var(--primBg);
             }
-            cursor: pointer;
-            @content;
-            @include aniLinkScale;
         }
-        @include aniLinkClick;
     }
 }

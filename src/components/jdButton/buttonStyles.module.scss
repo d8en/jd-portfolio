@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 @mixin btnTransition {
     transition:
@@ -18,14 +18,13 @@ button {
     border-radius: 20px;
     user-select: none;
 
+    @include btnTransition;
     @include flexCentered;
     @include bgGradient(left);
 
     @include aniHoverBase {
         color: var(--primWhite);
     }
-
-    @include btnTransition;
 
     &:disabled {
         @include btnTransition;

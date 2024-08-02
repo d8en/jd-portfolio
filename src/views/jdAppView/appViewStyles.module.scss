@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 .appContainer {
     position: fixed;
@@ -7,4 +7,5 @@
     margin: 0 auto;
 
     @include fullVh;
+    overflow-y: hidden;
 }

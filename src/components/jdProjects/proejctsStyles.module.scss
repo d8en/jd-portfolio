@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 $imgMaxHeight: 440px;
 
@@ -16,11 +16,11 @@ $imgMaxHeight: 440px;
     max-height: $imgMaxHeight;
     object-fit: contain;
 
+    @include linkTransitions;
+    @include baseShadow;
     @include media-phone {
         border-radius: 16px;
     }
-    @include linkTransitions;
-    @include baseShadow;
 
     &:hover {
         @include aniLinkScale;

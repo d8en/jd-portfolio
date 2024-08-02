@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 $inputPadding: 20px 0 20px 16px;
 $transition:
@@ -65,12 +65,12 @@ input {
     flex-shrink: 0;
     background-color: var(--greyBg);
 
+    @include flexCentered;
     @include aniHoverBase {
         path {
             stroke: var(--primWhite);
         }
     }
-    @include flexCentered;
     @include media-phone {
         height: 68px;
     }
