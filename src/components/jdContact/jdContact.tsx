@@ -1,5 +1,5 @@
 import styles from './contactStyles.module.scss';
-import { ReactComponent as ContactIcon } from '../../assets/svg/icons/mailOpen.svg';
+import ContactIcon from '../../assets/svg/icons/mailOpen.svg?react';
 import { motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 import jdContactManager from '../../managers/jdContactManager';
@@ -15,26 +15,28 @@ export const JdContact = observer(() => {
             className={`${styles.contactWrapper} ${jdContactManager.store.isFloatingShowing && !jdContactManager.store.hasFloatShown ? styles.contactPulse : ''}`}
             onClick={() => jdContactManager.setStateAsync({ isOpen: !jdContactManager.store.isOpen, isFloatingShowing: false, hasFloatShown: true })}
         >
-            <div
-                className={styles.contactContainer}
-            >
-
+            <div className={styles.contactContainer}>
                 {/* TEXT */}
                 <span>Hit me up!</span>
 
                 {/* ICON */}
-                <ContactIcon style={{ marginBottom: 3 }} className={styles.contactIcon} />
+                <ContactIcon
+                    style={{ marginBottom: 3 }}
+                    className={styles.contactIcon}
+                />
             </div>
 
             {/* FLOATING HELP */}
-            {jdContactManager.store.isFloatingShowing && !jdContactManager.store.hasFloatShown &&
+            {jdContactManager.store.isFloatingShowing && !jdContactManager.store.hasFloatShown && (
                 <JdFloatingHelp
                     style={{ top: -72, right: 0 }}
-                    onClose={() => { jdContactManager.setStateAsync({ isFloatingShowing: false, hasFloatShown: true }) }}
+                    onClose={() => {
+                        jdContactManager.setStateAsync({ isFloatingShowing: false, hasFloatShown: true });
+                    }}
                     text="Reach out!"
                     removeDelay
                 />
-            }
+            )}
         </motion.div>
-    )
+    );
 });

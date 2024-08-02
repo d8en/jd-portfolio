@@ -1,13 +1,12 @@
-import jdStringUtils from "../../utils/jdStringUtils";
-import { JdImg } from "../jdImg/jdImg";
-import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
-import { JdVimeoPlayer } from "../jdVimeoPlayer/jdVimeoPlayer";
+import jdStringUtils from '../../utils/jdStringUtils';
+import { JdImg } from '../jdImg/jdImg';
+import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
+import { JdVimeoPlayer } from '../jdVimeoPlayer/jdVimeoPlayer';
 import styles from './proejctsStyles.module.scss';
 
 export function JdAirshopApp(): React.JSX.Element {
     return (
         <>
-
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
             <p>Below is a demo of the app I designed and built!</p>
@@ -39,8 +38,9 @@ export function JdAirshopApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>How could we offer <strong>same-day</strong> pickups in our pilot area (Chicago)? A grass-roots approach - our staff would be our drivers for the pilot.</p>
-
+            <p>
+                How could we offer <strong>same-day</strong> pickups in our pilot area (Chicago)? A grass-roots approach - our staff would be our drivers for the pilot.
+            </p>
 
             {/* WHITEBOARD */}
             <div className={styles.multiMedia}>
@@ -126,7 +126,10 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
 
-            <p>I met with our backend engineer to layout our db/ui models, api structure, authentication, and notifications. We decided to keep two separate repos: one for front end, one for backend.</p>
+            <p>
+                I met with our backend engineer to layout our db/ui models, api structure, authentication, and notifications. We decided to keep two separate repos: one for front
+                end, one for backend.
+            </p>
 
             {/* VIDEO */}
             <JdVimeoPlayer
@@ -158,7 +161,6 @@ export function JdAirshopApp(): React.JSX.Element {
                     srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/airshopCalendar.webp?alt=media"
                     alt="Production mobile web app"
                 />
-
             </div>
 
             {/* CAPTION */}
@@ -167,9 +169,14 @@ export function JdAirshopApp(): React.JSX.Element {
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>28 days later, I shipped our app.</p>
-            <p>In the first month, we had <strong>20+ returns</strong> with positive feedback pouring in. Home pickup was a huge hit for end users and it drove brand loyalty and referral marketing for our client.</p>
-            <p>The success of this product led us to our <strong>largest round of funding ($1 million)</strong> and would fuel our next big project - scaling this to any Shopify store.</p>
-
+            <p>
+                In the first month, we had <strong>20+ returns</strong> with positive feedback pouring in. Home pickup was a huge hit for end users and it drove brand loyalty and
+                referral marketing for our client.
+            </p>
+            <p>
+                The success of this product led us to our <strong>largest round of funding ($1 million)</strong> and would fuel our next big project - scaling this to any Shopify
+                store.
+            </p>
         </>
-    )
+    );
 }

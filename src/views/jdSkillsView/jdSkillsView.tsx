@@ -1,13 +1,12 @@
-import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
-import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
+import { JdViewWrapper } from '../../components/jdViewWrapper/jdViewWrapper';
+import { JdXpItem } from '../../components/jdXpItem/jdXpItem';
 import styles from './skillsViewStyles.module.scss';
-import jdSkillsStore from "../../stores/jdSkillsStore";
-import { IJdSkillCo } from "../../models/iJdSkillCo";
+import jdSkillsStore from '../../stores/jdSkillsStore';
+import { IJdSkillCo } from '../../models/iJdSkillCo';
 
 export function JdSkillsView(): React.JSX.Element {
     return (
         <JdViewWrapper divProps={{ className: styles.skillsContainer }}>
-
             {/* SKILLS */}
             {/* <div className={styles.skillsContainer}> */}
 
@@ -24,10 +23,10 @@ export function JdSkillsView(): React.JSX.Element {
                     >
                         {skill.component}
                     </JdXpItem>
-                )
+                );
             })}
 
             {/* </div> */}
         </JdViewWrapper>
-    )
+    );
 }

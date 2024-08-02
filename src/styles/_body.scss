@@ -1,6 +1,6 @@
-@use "./responsive" as *;
-@use "./font" as *;
-@use "./animations" as *;
+@use './responsive' as *;
+@use './font' as *;
+@use './animations' as *;
 
 $globalPadding: 20px;
 $desktopMaxWidth: 720px;
@@ -16,23 +16,24 @@ $desktopMaxWidth4k: 1400px;
 
 @mixin fullVh {
     height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
     @include media-phone {
         height: -webkit-fill-available;
         height: -moz-available;
-        // height: 100vh;
     }
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 @mixin fullVw {
     width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
     @include media-phone {
         width: -webkit-fill-available;
         width: -moz-available;
     }
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 @mixin boxSizingBorder {

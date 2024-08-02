@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $previewImgHeight: 348px;
 $previewImgHeightOPen: 500px;
@@ -33,9 +33,9 @@ $projectHoverTransition:
         transition: $projectHoverTransition;
         &:hover {
             transition: $projectHoverTransition;
-            @include baseShadow;
             border: 1.5px solid var(--link);
             translate: 0 -8px;
+            @include baseShadow;
 
             .projectPreviewImg {
                 @include aniLinkScale;
@@ -61,25 +61,26 @@ $projectHoverTransition:
     bottom: 0;
     background-color: var(--primBg);
     max-width: unset;
-    @include scroll-bar;
     overflow-y: scroll;
-    @include boxSizingBorder;
     grid-auto-rows: min-content;
+
     @include themeColorTransition;
+    @include boxSizingBorder;
+    @include scroll-bar;
 
     .projectPreviewImgContainer {
-        @include bgGradient(top left);
         padding-top: 56px;
         width: 100%;
+        @include bgGradient(top left);
     }
 
     .projectContent {
         max-width: $desktopMaxWidth;
-        // @include themeColorTransition;
         place-self: start center;
         place-items: start;
         gap: 72px;
         padding: 24px 20px;
+
         @include globalBottomAfter;
         & > p,
         ul,
@@ -109,49 +110,50 @@ $projectHoverTransition:
 }
 
 .projectPreviewImgContainer {
-    @include boxSizingBorder;
     background-color: var(--greyBg);
     padding: 56px 28px;
+    display: flex;
+    position: relative;
 
+    @include boxSizingBorder;
     @include media-phone {
         padding: 24px;
     }
-
-    display: flex;
-    position: relative;
 }
 
 .projectPreviewImg {
-    @include boxSizingBorder;
     border-radius: 24px;
     padding: 12px;
-    @include aniLinkScale;
     object-fit: contain;
     place-self: center;
     height: $previewImgHeight;
     width: 100%;
     height: 288px;
+
+    @include boxSizingBorder;
+    @include aniLinkScale;
 }
 
 .projectContent {
-    @include themeColorTransition;
     display: grid;
     grid-auto-rows: min-content;
     place-self: center start;
     gap: 20px;
     padding: 12px;
+
+    @include themeColorTransition;
 }
 
 .projectHeader {
-    @include jdLineClamp(6);
     position: relative;
     @include font-size-larger;
     @include textGradient(right);
+    @include jdLineClamp(6);
 }
 
 .projectDesc {
-    @include jdLineClamp(2);
     color: var(--greyText);
+    @include jdLineClamp(2);
 }
 
 .projectSkills {
@@ -210,8 +212,8 @@ $projectHoverTransition:
 
 .projectNavText {
     text-align: center;
-    @include textGradient(top right);
     flex: 1;
+    @include textGradient(top right);
     @include jdLineClamp(1);
     @include media-phone {
         @include jdLineClamp(2);

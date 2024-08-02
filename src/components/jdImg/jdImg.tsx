@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 import styles from './imgStyles.module.scss';
-import { JdClose } from "../jdClose/jdClose";
-import { HTMLMotionProps, motion } from "framer-motion";
+import { JdClose } from '../jdClose/jdClose';
+import { HTMLMotionProps, motion } from 'framer-motion';
 
-export function JdImg(props: HTMLMotionProps<"img"> & { alt: string }): React.JSX.Element {
-
+export function JdImg(props: HTMLMotionProps<'img'> & { alt: string }): React.JSX.Element {
     // State
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -12,7 +11,7 @@ export function JdImg(props: HTMLMotionProps<"img"> & { alt: string }): React.JS
     // Open/close fullscreen
     const onClick = (): void => {
         setIsFullscreen(!isFullscreen);
-    }
+    };
 
     return (
         <>
@@ -27,7 +26,7 @@ export function JdImg(props: HTMLMotionProps<"img"> & { alt: string }): React.JS
             />
 
             {/* OPENED */}
-            {isFullscreen &&
+            {isFullscreen && (
                 <div
                     className={styles.fullscreenContainer}
                     onClick={onClick}
@@ -40,11 +39,9 @@ export function JdImg(props: HTMLMotionProps<"img"> & { alt: string }): React.JS
                     />
 
                     {/* CLOSE BTN */}
-                    <JdClose
-                        onClick={onClick}
-                    />
+                    <JdClose onClick={onClick} />
                 </div>
-            }
+            )}
         </>
-    )
+    );
 }

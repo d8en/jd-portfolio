@@ -4,6 +4,8 @@ export function JdATag(props: React.PropsWithChildren<React.AnchorHTMLAttributes
             target="_blank"
             rel="noopener noreferrer"
             {...props}
-        >{props.children}</a>
-    )
+        >
+            {props.children}
+        </a>
+    );
 }

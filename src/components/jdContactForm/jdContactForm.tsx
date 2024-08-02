@@ -1,25 +1,23 @@
-import { observer } from "mobx-react-lite";
+import { observer } from 'mobx-react-lite';
 import styles from './contactFormStyles.module.scss';
-import { JdInput } from "../jdInput/jdInput";
-import jdContactStore from "../../stores/jdContactStore";
-import jdContactManager from "../../managers/jdContactManager";
-import { AnimatePresence, motion } from "framer-motion";
-import jdAniUtils from "../../utils/jdAniUtils";
-import { JdClose } from "../jdClose/jdClose";
-import { JdButton } from "../jdButton/jdButton";
-import { JdAutoCompleteType } from "../../models/JdAutoCompleteType";
-import { useEffect } from "react";
-import { ReactComponent as LinkedInIcon } from '../../assets/svg/brands/linkedin.svg';
-import { ReactComponent as GitHubIcon } from '../../assets/svg/brands/github.svg';
-import { JdATag } from "../jdATag/jdATag";
+import { JdInput } from '../jdInput/jdInput';
+import jdContactStore from '../../stores/jdContactStore';
+import jdContactManager from '../../managers/jdContactManager';
+import { AnimatePresence, motion } from 'framer-motion';
+import jdAniUtils from '../../utils/jdAniUtils';
+import { JdClose } from '../jdClose/jdClose';
+import { JdButton } from '../jdButton/jdButton';
+import { JdAutoCompleteType } from '../../models/JdAutoCompleteType';
+import { useEffect } from 'react';
+import LinkedInIcon from '../../assets/svg/brands/linkedin.svg?react';
+import GitHubIcon from '../../assets/svg/brands/github.svg?react';
+import { JdATag } from '../jdATag/jdATag';
 
 export const JdContactForm = observer(() => {
-
     // Effect for showing contact form
     useEffect(() => {
         if (jdContactManager.store.isFloatingShowing) jdContactManager.setStateAsync({ hasFloatShown: true });
     }, [jdContactManager.store.isOpen]);
-
 
     // Submit form
     const onSubmit = async (e?: React.FormEvent<HTMLFormElement>): Promise<void> => {
@@ -33,17 +31,16 @@ export const JdContactForm = observer(() => {
             await jdContactManager.setStateAsync({ isOpen: false }, true);
             await jdContactManager.resetForm();
         }, 200);
-    }
+    };
 
     return (
         <AnimatePresence>
-            {jdContactManager.store.isOpen &&
+            {jdContactManager.store.isOpen && (
                 <motion.div
                     exit={{ translateY: 40, opacity: 0, transition: jdAniUtils.baseEaseOut }}
                     {...jdAniUtils.aniElementMount()}
                     className={styles.contactFormContainer}
                 >
-
                     {/* CLOSE */}
                     <JdClose
                         onClick={() => jdContactManager.setStateAsync({ isOpen: false })}
@@ -51,20 +48,22 @@ export const JdContactForm = observer(() => {
                     />
 
                     <div className={styles.contactContent}>
-
                         {/* HEADLINE */}
                         <h1>Reach out!</h1>
-                        <p className={styles.contactFormText}>I'm lookin' for <strong>fulltime gigs</strong> - let me know what you're up to!</p>
+                        <p className={styles.contactFormText}>
+                            I'm lookin' for <strong>fulltime gigs</strong> - let me know what you're up to!
+                        </p>
 
                         <form
                             className={styles.contactForm}
                             onSubmit={async (e: React.FormEvent<HTMLFormElement>) => await onSubmit(e)}
-                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                            }}
                         >
-
                             {/* ROW */}
                             <div className={styles.contactRow}>
-
                                 {/* FIRST NAME */}
                                 <JdInput
                                     type="text"
@@ -109,37 +108,32 @@ export const JdContactForm = observer(() => {
 
                             <JdButton
                                 type="submit"
-                                id='sendIt'
+                                id="sendIt"
                                 isDisabled={jdContactManager.store.isDisabled}
-                                text={
-                                    jdContactManager.store.isSuccess ?
-                                        'Message sent!'
-                                        :
-                                        jdContactManager.store.isDisabled ?
-                                            'Fill out all fields above'
-                                            :
-                                            'Send it!'
-                                }
+                                text={jdContactManager.store.isSuccess ? 'Message sent!' : jdContactManager.store.isDisabled ? 'Fill out all fields above' : 'Send it!'}
                                 onClick={async () => await onSubmit()}
                             />
-
                         </form>
 
                         {/* LINKEDIN / GITHUB */}
                         <div className={styles.contactLinkContainer}>
-                            <JdATag href="https://www.linkedin.com/in/d8en/" className={styles.contactIconsContainer}>
+                            <JdATag
+                                href="https://www.linkedin.com/in/d8en/"
+                                className={styles.contactIconsContainer}
+                            >
                                 <LinkedInIcon className={styles.contactIcons} />
                             </JdATag>
 
-                            <JdATag href="https://github.com/jeffboom" className={styles.contactIconsContainer}>
+                            <JdATag
+                                href="https://github.com/jeffboom"
+                                className={styles.contactIconsContainer}
+                            >
                                 <GitHubIcon className={styles.contactIcons} />
                             </JdATag>
                         </div>
-
-
                     </div>
                 </motion.div>
-            }
+            )}
         </AnimatePresence>
     );
-})
+});

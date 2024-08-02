@@ -1,19 +1,22 @@
-import { runInAction } from "mobx";
+import { runInAction } from 'mobx';
 
 export abstract class JdManagerBase<T extends object> {
     public abstract store: T;
-    private delayedTimeout: number | undefined = undefined;
+    private delayedTimeout: NodeJS.Timeout | undefined = undefined;
 
     public async setStateAsync(newState: Partial<T>, isDelayed?: boolean): Promise<void> {
         return new Promise((resolve: (value: void | PromiseLike<void>) => void, reject: (reason?: any) => void) => {
             try {
-                clearTimeout(this.delayedTimeout);
-                this.delayedTimeout = setTimeout(() => {
-                    runInAction(() => {
-                        Object.assign(this.store, { ...newState });
-                    });
-                    resolve();
-                }, isDelayed ? 800 : 0);
+                if (this.delayedTimeout) clearTimeout(this.delayedTimeout);
+                this.delayedTimeout = setTimeout(
+                    () => {
+                        runInAction(() => {
+                            Object.assign(this.store, { ...newState });
+                        });
+                        resolve();
+                    },
+                    isDelayed ? 800 : 0,
+                );
             } catch (error) {
                 reject();
             }

@@ -7,7 +7,6 @@ import { useEffect } from 'react';
 import jdThemeManager from '../../managers/jdThemeManager';
 
 export function JdAppView(): React.JSX.Element {
-
     // Mount
     useEffect(() => {
         setTimeout(() => {
@@ -17,7 +16,6 @@ export function JdAppView(): React.JSX.Element {
 
     return (
         <div className={styles.appContainer}>
-
             {/* THEME TOGGLE */}
             <JdThemeToggle />
 
@@ -26,8 +24,6 @@ export function JdAppView(): React.JSX.Element {
 
             {/* NAV BAR */}
             <JdNav />
-
-
         </div>
     );
 }

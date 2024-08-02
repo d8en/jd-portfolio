@@ -1,24 +1,26 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .navContainer {
-    @include themeColorTransition;
     position: absolute;
     bottom: 0;
-    @include baseBlur;
     z-index: 2;
+    width: 100%;
+
+    @include themeColorTransition;
+    @include baseBlur;
     @include boxSizingBorder;
     @include flexCentered;
-    width: 100%;
     @include baseShadow;
 }
 
 .navRoutes {
-    @include flexCentered;
     flex: 1;
     max-width: 400px;
+    flex-wrap: wrap;
+    align-self: center;
+
+    @include flexCentered;
     @include media-phone {
         max-width: unset;
     }
-    flex-wrap: wrap;
-    align-self: center;
 }

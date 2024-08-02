@@ -7,10 +7,8 @@ import { JdAniLogo } from '../../components/jdAniLogo/jdAniLogo';
 import { observer } from 'mobx-react-lite';
 
 export const JdHomeView = observer((): React.JSX.Element => {
-
     const [isHeaderShowing, setIsHeaderShowing] = useState<boolean>(false);
     const [isTaglineShowing, setIsTaglineShowing] = useState<boolean>(false);
-
 
     useEffect(() => {
         setTimeout(() => {
@@ -26,14 +24,15 @@ export const JdHomeView = observer((): React.JSX.Element => {
         <JdViewWrapper divProps={{ className: styles.homeContainer }}>
             {/* TITLE */}
             <div className={styles.homeHeader}>
-
                 {/* TITLE / LOGO */}
-                <motion.div layout className={styles.homeTitleContainer}>
-
+                <motion.div
+                    layout
+                    className={styles.homeTitleContainer}
+                >
                     <JdAniLogo />
 
                     {/* TITLE */}
-                    {isHeaderShowing &&
+                    {isHeaderShowing && (
                         <motion.h1
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -42,11 +41,11 @@ export const JdHomeView = observer((): React.JSX.Element => {
                         >
                             Jeff Dayton
                         </motion.h1>
-                    }
+                    )}
                 </motion.div>
 
                 {/* HEADLINE */}
-                {isTaglineShowing &&
+                {isTaglineShowing && (
                     <motion.h2
                         layout
                         initial={{ bottom: -40, opacity: 0 }}
@@ -56,9 +55,8 @@ export const JdHomeView = observer((): React.JSX.Element => {
                     >
                         Software engineer and product designer with 8 years of experience. I take abstract ideas and bring them to life.
                     </motion.h2>
-                }
+                )}
             </div>
-
         </JdViewWrapper>
     );
 });

@@ -1,8 +1,9 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .sectionHeader {
-    @include flexCentered;
     gap: 12px;
+
+    @include flexCentered;
     @include projectGapReducer;
     & > h2 {
         @include textGradient(right);

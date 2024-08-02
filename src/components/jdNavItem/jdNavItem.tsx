@@ -1,14 +1,13 @@
-import { Link, useLocation, Location } from "react-router-dom";
-import jdRoutes, { IJdRouteObj } from "../../utils/jdRoutes";
+import { Link, useLocation, Location } from 'react-router-dom';
+import jdRoutes, { IJdRouteObj } from '../../utils/jdRoutes';
 import styles from './navItemStyles.module.scss';
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import jdAniUtils from "../../utils/jdAniUtils";
-import { JdFloatingHelp } from "../jdFloatingHelp/jdFloatingHelp";
-import jdContactManager from "../../managers/jdContactManager";
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import jdAniUtils from '../../utils/jdAniUtils';
+import { JdFloatingHelp } from '../jdFloatingHelp/jdFloatingHelp';
+import jdContactManager from '../../managers/jdContactManager';
 
 export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
-
     // Location changes
     const [isActive, setIsActive] = useState<boolean>(false);
     const location: Location = useLocation();
@@ -22,7 +21,7 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
                 jdContactManager.setStateAsync({ isFloatingShowing: true });
             }, 6000);
         }
-    }
+    };
 
     useEffect(() => {
         setIsActive(props.path === location.pathname);
@@ -35,18 +34,19 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
 
     return (
         <Link
-            onClick={() => { if (isProjects) toggleProjects(false) }}
+            onClick={() => {
+                if (isProjects) toggleProjects(false);
+            }}
             to={props.path!}
             className={`${styles.navItemContainer} ${isActive ? styles.navItemActive : ''} ${isProjects ? styles.navItemPulse : ''}`}
         >
-
-            {isProjects &&
+            {isProjects && (
                 <JdFloatingHelp
-                    style={{ top: -72, }}
+                    style={{ top: -72 }}
                     onClose={() => toggleProjects(false)}
                     text="Checkout my projects!"
                 />
-            }
+            )}
 
             {/* ICON */}
             <motion.div
@@ -64,13 +64,13 @@ export function JdNavItem(props: IJdRouteObj): React.JSX.Element {
                 {props.name}
             </motion.p>
 
-            {isActive &&
+            {isActive && (
                 <motion.div
                     className={styles.navActiveBar}
                     layoutId="activeNav"
                     transition={jdAniUtils.springTransitionExtra}
                 />
-            }
+            )}
         </Link>
     );
 }

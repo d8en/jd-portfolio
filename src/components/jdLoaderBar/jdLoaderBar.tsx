@@ -7,7 +7,6 @@ export interface IJdLoaderBarProps {
 }
 
 export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
-
     const [scrollAmt, setScrollAmt] = useState<number>(0);
     const scrollUpdateTimeout = useRef<number | null>(null);
 
@@ -20,7 +19,7 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
         // scrollUpdateTimeout.current = setTimeout(() => {
         setScrollAmt(props.scrollElementRef?.scrollTop ?? 1);
         // }, 10);
-    }
+    };
 
     const scrollWidth: string = useMemo(() => {
         if (!props.scrollElementRef) return '1%';
@@ -35,7 +34,6 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
 
     return (
         <div className={styles.loaderBarContainer}>
-
             {/* LOADER BAR */}
             <motion.div
                 layout
@@ -43,7 +41,6 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
                 className={styles.loaderBar}
                 style={{ width: `${scrollWidth}` }}
             />
-
         </div>
     );
 }

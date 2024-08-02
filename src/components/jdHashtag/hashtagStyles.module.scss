@@ -1,23 +1,14 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .hashtagContainer {
-    @include flexCentered;
     align-self: flex-start;
-    // background-color: var(--greyBg);
-    // border-radius: 4px;
-    // padding: 4px;
-
-    // @include aniHoverBase {
-    //     .hashtagText {
-    //         color: var(--primBg);
-    //     }
-    // }
+    @include flexCentered;
 }
 
 .hashtagText {
     text-transform: lowercase;
     margin: 0;
-    @include font-size-small;
     color: var(--greyText);
     line-height: 1.25em;
+    @include font-size-small;
 }

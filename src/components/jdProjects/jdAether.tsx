@@ -1,7 +1,7 @@
-import jdStringUtils from "../../utils/jdStringUtils";
-import { JdATag } from "../jdATag/jdATag";
-import { JdImg } from "../jdImg/jdImg";
-import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
+import jdStringUtils from '../../utils/jdStringUtils';
+import { JdATag } from '../jdATag/jdATag';
+import { JdImg } from '../jdImg/jdImg';
+import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import styles from './proejctsStyles.module.scss';
 
 export function JdAether(): React.JSX.Element {
@@ -9,7 +9,10 @@ export function JdAether(): React.JSX.Element {
         <>
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
-            <p>Checkout the <JdATag href="https://www.aitherhealth.com/">brand in action</JdATag> on the Aither website. Below is a mockup of the finished logo and wordmark I designed.</p>
+            <p>
+                Checkout the <JdATag href="https://www.aitherhealth.com/">brand in action</JdATag> on the Aither website. Below is a mockup of the finished logo and wordmark I
+                designed.
+            </p>
 
             <JdImg
                 className={styles.projectsImage}
@@ -37,7 +40,10 @@ export function JdAether(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>Like most founders I've worked with, the <JdATag href="https://www.aitherhealth.com/">aither health</JdATag> folks had a clear vision - cut through the noise and build trust with clients.</p>
+            <p>
+                Like most founders I've worked with, the <JdATag href="https://www.aitherhealth.com/">aither health</JdATag> folks had a clear vision - cut through the noise and
+                build trust with clients.
+            </p>
 
             <p>I met to review their vision, expected deliverables, timelines, and compensation.</p>
 
@@ -71,7 +77,10 @@ export function JdAether(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Finished brand mockups</figcaption>
 
-            <p>This project was super fast with no revisions needed so all that was left was to prepare the <strong>final assets (style guide, deck template, and logo exports)</strong>.</p>
+            <p>
+                This project was super fast with no revisions needed so all that was left was to prepare the{' '}
+                <strong>final assets (style guide, deck template, and logo exports)</strong>.
+            </p>
 
             <div className={styles.multiMedia}>
                 <JdImg
@@ -101,7 +110,6 @@ export function JdAether(): React.JSX.Element {
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots from the branding guide</figcaption>
-
         </>
-    )
+    );
 }

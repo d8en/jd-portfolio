@@ -1,10 +1,10 @@
 import { makeAutoObservable } from 'mobx';
-import { ReactComponent as BoomIcon } from '../assets/svg/brands/boomerang.svg';
-import { ReactComponent as RekIcon } from '../assets/svg/brands/rek.svg';
-import { ReactComponent as GravixIcon } from '../assets/svg/brands/gravix.svg';
-import { ReactComponent as TypoIcon } from '../assets/svg/brands/typo.svg';
-import { ReactComponent as JdIcon } from '../assets/svg/brands/jdSmall.svg';
-import { ReactComponent as MarketAxess } from '../assets/svg/brands/marketAxess.svg';
+import BoomIcon from '../assets/svg/brands/boomerang.svg?react';
+import RekIcon from '../assets/svg/brands/rek.svg?react';
+import GravixIcon from '../assets/svg/brands/gravix.svg?react';
+import TypoIcon from '../assets/svg/brands/typo.svg?react';
+import JdIcon from '../assets/svg/brands/jdSmall.svg?react';
+import MarketAxess from '../assets/svg/brands/marketAxess.svg?react';
 import { JdATag } from '../components/jdATag/jdATag';
 import jdObjUtils from '../utils/jdObjUtils';
 import { IJdSkillCo } from '../models/iJdSkillCo';
@@ -26,7 +26,10 @@ export class JdCompaniesStore {
                 <p>
                     At <JdATag href="https://www.marketaxess.com/">MarketAxess</JdATag>, I'm leading the development of a web app used by 600+ bond traders.
                 </p>
-                <p>I work with stakeholders and our enterprise architects to design, build, and test new applications and features while contributing towards overall application strategy / architecture.</p>
+                <p>
+                    I work with stakeholders and our enterprise architects to design, build, and test new applications and features while contributing towards overall application
+                    strategy / architecture.
+                </p>
             </>
         ),
     };
@@ -40,7 +43,8 @@ export class JdCompaniesStore {
         component: (
             <>
                 <p>
-                    At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. These products helped us secure $1.3 million funding over the course of 2 years.
+                    At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. These
+                    products helped us secure $1.3 million funding over the course of 2 years.
                 </p>
                 <p>I integrate all internal and third party APIs and model database architecture with fellow backend engineers.</p>
                 <p>I am also the lead product designer for all web and mobile apps and marketing content.</p>
@@ -91,7 +95,8 @@ export class JdCompaniesStore {
         component: (
             <>
                 <p>
-                    At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I designed and managed the implementation of 200+ features across 3 flagship products for 120+ clients and 1.2 million users, including 20+ third party integrations.
+                    At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I designed and managed the implementation of 200+ features across 3 flagship products for 120+ clients
+                    and 1.2 million users, including 20+ third party integrations.
                 </p>
                 <p>I also managed and retained a team of 5 analysts and worked directly with C-level executives on roadmaps, strategy, and growth.</p>
                 <p>The products I was responsible for contributed towards annual revenue growth of 60%.</p>

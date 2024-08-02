@@ -1,5 +1,5 @@
-@use "./blur" as *;
-@use "./colors" as *;
+@use './blur' as *;
+@use './colors' as *;
 
 $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
@@ -33,14 +33,14 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
     &:before {
         border-radius: $radius;
         position: absolute;
-        content: "";
-        // background-color: var(--greyBg);
-        @include bgGradient;
+        content: '';
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
         z-index: -1;
+
+        @include bgGradient;
         @include aniPulse($delay, $iterationCount);
     }
 }
@@ -71,7 +71,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
         left: 0;
         right: 0;
         bottom: 0;
-        content: "";
+        content: '';
         color: transparent;
         @include baseBlur;
     }

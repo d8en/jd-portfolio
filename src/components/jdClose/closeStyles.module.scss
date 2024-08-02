@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .closeContainer {
     position: fixed;
@@ -9,16 +9,18 @@
     width: 56px;
     right: 24px;
     border-radius: 200px;
+    z-index: 3;
     @include font-size-small;
+    @include baseShadow;
+    @include baseBlur;
+
     path {
         stroke: var(--primFg);
     }
+
     @include aniHoverBase {
         path {
             stroke: var(--primWhite);
         }
     }
-    @include baseShadow;
-    @include baseBlur;
-    z-index: 3;
 }

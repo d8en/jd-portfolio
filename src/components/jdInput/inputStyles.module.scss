@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $inputPadding: 20px 0 20px 16px;
 $transition:
@@ -60,19 +60,20 @@ input {
 
 .closeBtn {
     all: unset;
+    height: 72px;
+    width: 44px;
+    flex-shrink: 0;
+    background-color: var(--greyBg);
+
     @include aniHoverBase {
         path {
             stroke: var(--primWhite);
         }
     }
-    height: 72px;
+    @include flexCentered;
     @include media-phone {
         height: 68px;
     }
-    width: 44px;
-    @include flexCentered;
-    flex-shrink: 0;
-    background-color: var(--greyBg);
 }
 
 .closeIcon {
@@ -91,9 +92,10 @@ input {
 .errorText {
     position: absolute;
     left: 16px;
-    @include jdLineClamp(1);
     bottom: -3px;
-    @include font-size-smallest;
     color: var(--greyText);
     transform: translateY();
+
+    @include jdLineClamp(1);
+    @include font-size-smallest;
 }

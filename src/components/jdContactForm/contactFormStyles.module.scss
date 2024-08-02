@@ -1,26 +1,26 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $inputGap: 12px;
 
 .contactFormContainer {
     position: absolute;
     background-color: var(--primBg);
-    @include zeroPostion;
     display: grid;
     place-items: center;
+    z-index: 2;
+    grid-auto-rows: auto;
 
+    @include zeroPostion;
     @include media-phone {
         place-items: start center;
     }
-
-    z-index: 2;
-    grid-auto-rows: auto;
 }
 
 .contactContent {
     display: grid;
     gap: 56px;
     place-items: center;
+    max-width: 600px;
 
     & > p {
         margin-top: -44px;
@@ -28,7 +28,6 @@ $inputGap: 12px;
             width: 100%;
         }
     }
-    max-width: 600px;
 
     @include media-phone {
         margin-top: 56px;
@@ -82,16 +81,20 @@ $inputGap: 12px;
 .contactIconsContainer {
     display: grid;
     place-items: center;
-    rect[fill="white"] {
+
+    rect[fill='white'] {
         fill: var(--primFg);
     }
-    path[fill="white"] {
+
+    path[fill='white'] {
         fill: var(--primFg);
     }
-    rect[fill="black"] {
+
+    rect[fill='black'] {
         fill: var(--primBg);
     }
-    path[fill="black"] {
+
+    path[fill='black'] {
         fill: var(--primBg);
     }
     &:hover {
@@ -99,10 +102,12 @@ $inputGap: 12px;
         @include aniLinkScale;
         @include aniHoverOnly;
         @include aniLinkClick;
-        rect[fill="white"] {
+
+        rect[fill='white'] {
             fill: var(--link);
         }
-        path[fill="white"] {
+
+        path[fill='white'] {
             fill: var(--link);
         }
     }

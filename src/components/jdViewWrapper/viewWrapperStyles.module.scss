@@ -1,14 +1,15 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .viewContent {
-    @include scroll-bar;
-    @include boxSizingBorder;
-    @include fullVh;
     display: grid;
     grid-auto-rows: min-content;
     overflow-y: auto;
     place-items: center;
     padding: 20px;
+
+    @include scroll-bar;
+    @include boxSizingBorder;
+    @include fullVh;
 
     @include media-phone {
         padding: 0 20px;

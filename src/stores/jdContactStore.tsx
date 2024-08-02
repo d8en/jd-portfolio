@@ -1,5 +1,5 @@
-import { makeAutoObservable } from "mobx";
-import { IJdContactDto, sampleJdContactDto } from "../models/iJdContactDto";
+import { makeAutoObservable } from 'mobx';
+import { IJdContactDto, sampleJdContactDto } from '../models/iJdContactDto';
 
 export class JdContactStore {
     constructor() {
@@ -17,19 +17,7 @@ export class JdContactStore {
     }
 
     public get isDisabled(): boolean {
-        if (
-            this.contactInfo.firstName
-            &&
-            this.contactInfo.lastName
-            &&
-            this.contactInfo.email
-            &&
-            this.contactInfo.message
-            &&
-            !this.isSuccess
-            &&
-            this.isValidEmail
-        ) return false;
+        if (this.contactInfo.firstName && this.contactInfo.lastName && this.contactInfo.email && this.contactInfo.message && !this.isSuccess && this.isValidEmail) return false;
 
         return true;
     }

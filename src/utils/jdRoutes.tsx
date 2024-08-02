@@ -1,30 +1,29 @@
-import { RouteObject } from "react-router-dom";
-import { JdHomeView } from "../views/jdHomeView/jdHomeView";
-import { JdAppView } from "../views/jdAppView/jdAppView";
-import { JdErrorView } from "../views/jdErrorView/jdErrorView";
-import { ReactComponent as HomeIcon } from '../assets/svg/icons/house.svg';
-import { ReactComponent as ProjectsIcon } from '../assets/svg/icons/checklist.svg';
-import { ReactComponent as SkillsIcon } from '../assets/svg/icons/tools.svg';
-import { ReactComponent as BriefcaseIcon } from '../assets/svg/icons/briefcase.svg';
-import { JdSkillsView } from "../views/jdSkillsView/jdSkillsView";
-import { JdXpView } from "../views/jdXpView/jdXpView";
-import { JdProjectsView } from "../views/jdProjectsView/jdProjectsView";
+import { RouteObject } from 'react-router-dom';
+import { JdHomeView } from '../views/jdHomeView/jdHomeView';
+import { JdAppView } from '../views/jdAppView/jdAppView';
+import { JdErrorView } from '../views/jdErrorView/jdErrorView';
+import HomeIcon from '../assets/svg/icons/house.svg?react';
+import ProjectsIcon from '../assets/svg/icons/checklist.svg?react';
+import SkillsIcon from '../assets/svg/icons/tools.svg?react';
+import BriefcaseIcon from '../assets/svg/icons/briefcase.svg?react';
+import { JdSkillsView } from '../views/jdSkillsView/jdSkillsView';
+import { JdXpView } from '../views/jdXpView/jdXpView';
+import { JdProjectsView } from '../views/jdProjectsView/jdProjectsView';
 
 export type IJdRouteObj = RouteObject & {
     name: string;
     icon: React.JSX.Element;
     isHidden?: boolean;
     idx?: number;
-}
+};
 class JdRoutes {
-
     public home: IJdRouteObj = {
         name: 'Home',
         path: '/',
         element: <JdHomeView />,
         errorElement: <JdErrorView />,
         icon: <HomeIcon />,
-    }
+    };
 
     public projects: IJdRouteObj = {
         name: 'Projects',
@@ -32,7 +31,7 @@ class JdRoutes {
         element: <JdProjectsView />,
         errorElement: <JdErrorView />,
         icon: <ProjectsIcon />,
-    }
+    };
 
     public skills: IJdRouteObj = {
         name: 'Skills',
@@ -40,7 +39,7 @@ class JdRoutes {
         element: <JdSkillsView />,
         errorElement: <JdErrorView />,
         icon: <SkillsIcon />,
-    }
+    };
 
     public experience: IJdRouteObj = {
         name: 'Experience',
@@ -48,14 +47,14 @@ class JdRoutes {
         element: <JdXpView />,
         errorElement: <JdErrorView />,
         icon: <BriefcaseIcon />,
-    }
+    };
 
     public registerRoutes: RouteObject = {
         path: '/',
         element: <JdAppView />,
         errorElement: <JdErrorView />,
         children: this.allRoutes,
-    }
+    };
 
     public get allRoutes(): IJdRouteObj[] {
         const routes: IJdRouteObj[] = [];
@@ -70,10 +69,7 @@ class JdRoutes {
         const routes: IJdRouteObj[] = [];
         for (const route of Object.entries(this)) {
             const routeObj: IJdRouteObj = route[1];
-            if (
-                !routeObj.name ||
-                routeObj.isHidden
-            ) continue;
+            if (!routeObj.name || routeObj.isHidden) continue;
 
             routes.push(routeObj);
         }

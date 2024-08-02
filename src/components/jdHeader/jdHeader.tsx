@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import jdRoutes, { IJdRouteObj } from '../../utils/jdRoutes';
 
 export function JdHeader(): React.JSX.Element {
-
     // State
     const [title, setTitle] = useState<string>('home');
 
@@ -17,12 +16,11 @@ export function JdHeader(): React.JSX.Element {
     }, [location]);
 
     // Don't show header on specified pages
-    if (jdRoutes.routesToHideNav.find((route: IJdRouteObj) => route === jdRoutes.activeRoute)) return <></>
+    if (jdRoutes.routesToHideNav.find((route: IJdRouteObj) => route === jdRoutes.activeRoute)) return <></>;
 
     return (
         <div className={styles.viewHeader}>
             <h2>{title}</h2>
         </div>
-
-    )
+    );
 }

@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .homeContainer {
     grid-auto-rows: unset;
@@ -20,10 +20,11 @@
 }
 
 .homeSubHeader {
-    @include font-size-normal;
-    @include font-weight-light;
     color: var(--greyText);
     line-height: 1.6em;
+
+    @include font-size-normal;
+    @include font-weight-light;
 }
 
 .homeBgContainer {
@@ -33,6 +34,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 0;
+
     @include media-phone {
         left: unset;
         right: 40%;

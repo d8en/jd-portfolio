@@ -1,13 +1,13 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $iconHeight: 32px;
 
 .navItemContainer {
     position: relative;
-    @include flexCentered;
     flex-direction: column;
     flex: 1 1 0;
     padding: 12px;
+    @include flexCentered;
 
     &:active {
         .navItemIcon {
@@ -57,8 +57,8 @@ $iconHeight: 32px;
 }
 
 .navItemText {
-    @include font-size-small;
     color: var(--primFg);
+    @include font-size-small;
 }
 
 .navActiveBar {

@@ -50,18 +50,8 @@ $gradientBlue: #3062e3;
 
 @mixin bgGradient($direction: top) {
     background-image: linear-gradient(to $direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -moz-linear-gradient(
-        $direction,
-        $gradientPink 0%,
-        $gradientBlue 99.99%,
-        rgba(26, 26, 32, 0) 100%
-    );
-    background-image: -webkit-linear-gradient(
-        $direction,
-        $gradientPink 0%,
-        $gradientBlue 99.99%,
-        rgba(26, 26, 32, 0) 100%
-    );
+    background-image: -moz-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -webkit-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
     background-image: -ms-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
     background-image: -o-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
     background-size: 150% auto;
@@ -76,12 +66,11 @@ $gradientBlue: #3062e3;
 }
 
 @mixin textGradient($direction: top) {
-    @include bgGradient($direction);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    // animation: gradientAnimation 4s infinite;
+    @include bgGradient($direction);
 }
 
 @keyframes gradientAnimation {

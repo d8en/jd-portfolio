@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $iconSize: 28px;
 $skillGap: 16px;
@@ -24,11 +24,10 @@ $skillGap: 16px;
     padding: 4px 8px;
     display: grid;
     place-items: center;
-    @include font-size-small;
-    // border: 1.5px solid var(--greyBg);
     background-color: var(--greyBg);
     border-radius: 4px;
     line-height: 1em;
+    @include font-size-small;
 }
 
 .xpColumn {
@@ -66,14 +65,15 @@ $skillGap: 16px;
 }
 
 .xpHeader {
-    @include jdLineClamp(1);
     width: 100%;
+    @include jdLineClamp(1);
 }
 
 .xpCoName {
-    @include jdLineClamp(1);
     width: 100%;
     height: 22px;
+
+    @include jdLineClamp(1);
     @include font-size-normal;
     @include font-weight-light;
 }

@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $closeSize: 32px;
 
@@ -8,21 +8,23 @@ $closeSize: 32px;
     grid-template-columns: auto min-content;
     grid-auto-flow: column;
     position: absolute;
-    @include bgGradient(bottom right);
     border-radius: 200px;
     place-items: center;
-    @include baseShadow;
-    @include aniFloating;
     padding: 12px 12px 12px 20px;
     max-width: 180px;
     gap: 12px;
+
+    @include bgGradient(bottom right);
+    @include baseShadow;
+    @include aniFloating;
 }
 
 .floatingHelpText {
-    @include font-size-small;
     line-height: 1.5em;
     white-space: nowrap;
     color: var(--primWhite);
+
+    @include font-size-small;
 }
 
 .floatingClose {

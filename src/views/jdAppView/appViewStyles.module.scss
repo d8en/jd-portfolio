@@ -1,9 +1,10 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .appContainer {
     position: fixed;
     display: grid;
     width: 100vw;
-    @include fullVh;
     margin: 0 auto;
+
+    @include fullVh;
 }

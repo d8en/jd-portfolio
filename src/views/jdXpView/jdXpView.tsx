@@ -1,8 +1,8 @@
-import { JdViewWrapper } from "../../components/jdViewWrapper/jdViewWrapper";
-import { JdXpItem } from "../../components/jdXpItem/jdXpItem";
+import { JdViewWrapper } from '../../components/jdViewWrapper/jdViewWrapper';
+import { JdXpItem } from '../../components/jdXpItem/jdXpItem';
 import styles from './xpViewStyles.module.scss';
-import jdCompaniesStore from "../../stores/jdCompaniesStore";
-import { IJdSkillCo } from "../../models/iJdSkillCo";
+import jdCompaniesStore from '../../stores/jdCompaniesStore';
+import { IJdSkillCo } from '../../models/iJdSkillCo';
 
 export function JdXpView(): React.JSX.Element {
     return (
@@ -21,8 +21,8 @@ export function JdXpView(): React.JSX.Element {
                     >
                         {company.component}
                     </JdXpItem>
-                )
+                );
             })}
         </JdViewWrapper>
-    )
+    );
 }
