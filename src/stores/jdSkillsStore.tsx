@@ -117,8 +117,8 @@ export class JdSkillsStore {
     public cSharp: IJdSkillCo = {
         name: 'C#',
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media',
-        startYear: '2024',
-        xpPercentage: 0.1,
+        startYear: '2023',
+        xpPercentage: 0.3,
         component: (
             <p>
                 I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get
