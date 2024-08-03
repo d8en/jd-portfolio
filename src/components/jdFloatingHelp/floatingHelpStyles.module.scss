@@ -29,7 +29,7 @@ $closeSize: 32px;
     display: grid;
     place-items: center;
     border-radius: 50%;
-    @include bgGradient;
+    @include bgGradient(bottom right);
     width: $closeSize;
     height: $closeSize;
 

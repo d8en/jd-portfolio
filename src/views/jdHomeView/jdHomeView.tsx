@@ -5,6 +5,7 @@ import jdAniUtils from '../../utils/jdAniUtils';
 import { useEffect, useState } from 'react';
 import { JdAniLogo } from '../../components/jdAniLogo/jdAniLogo';
 import { observer } from 'mobx-react-lite';
+import { JdDateUtils } from '../../utils/jdDateUtilts';
 
 export const JdHomeView = observer((): React.JSX.Element => {
     const [isHeaderShowing, setIsHeaderShowing] = useState<boolean>(false);
@@ -53,7 +54,8 @@ export const JdHomeView = observer((): React.JSX.Element => {
                         transition={jdAniUtils.longEase}
                         className={styles.homeSubHeader}
                     >
-                        👋&nbsp; Software engineer and product designer with 8 years of experience. I take abstract ideas and bring them to life!
+                        👋&nbsp; <strong>Senior software engineer</strong> and product designer with {JdDateUtils.getYearDiff('2015')} of experience. I take
+                        <strong> abstract ideas</strong> and bring them to <strong>life</strong>!
                     </motion.h2>
                 )}
             </div>
