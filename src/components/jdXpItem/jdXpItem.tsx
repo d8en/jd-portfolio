@@ -4,6 +4,7 @@ import styles from './xpItemStyles.module.scss';
 import jdAniUtils from '../../utils/jdAniUtils';
 import jdThemeManager from '../../managers/jdThemeManager';
 import { observer } from 'mobx-react-lite';
+import { useState } from 'react';
 
 export interface IJdXpItemProps {
     name: string;
@@ -17,6 +18,7 @@ export interface IJdXpItemProps {
 }
 
 export const JdXpItem = observer((props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element => {
+    const [isHeaderClamped, setIsHeaderClamped] = useState<boolean>(true);
     return (
         <motion.div
             {...jdAniUtils.aniElementMount(props.idx / 6)}
@@ -63,7 +65,13 @@ export const JdXpItem = observer((props: React.PropsWithChildren<IJdXpItemProps>
                 {/* FIRST ROW */}
                 <div className={styles.xpRow}>
                     {/* TITLE */}
-                    <h2 className={`${styles.xpHeader} ${!props.children ? styles.xpCoName : ''}`}>{props.companyName ?? props.name}</h2>
+                    <h2
+                        style={{ WebkitLineClamp: isHeaderClamped ? 1 : 3 }}
+                        className={`${styles.xpHeader} ${!props.children ? styles.xpCoName : ''}`}
+                        onClick={() => setIsHeaderClamped((oldValue: boolean) => !oldValue)}
+                    >
+                        {props.companyName ?? props.name}
+                    </h2>
 
                     {/* XP BAR */}
                     {props.children && (
