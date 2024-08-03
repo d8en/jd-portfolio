@@ -23,7 +23,8 @@
 
 // Sizes
 @mixin font-size-smallest {
-    font-size: 10px;
+    font-size: 0.6em;
+    line-height: 1.2em;
 }
 
 @mixin font-size-small {

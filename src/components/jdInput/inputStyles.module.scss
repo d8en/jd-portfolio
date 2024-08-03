@@ -91,9 +91,8 @@ input {
 .errorText {
     position: absolute;
     left: 16px;
-    bottom: -3px;
-    color: var(--greyText);
-    transform: translateY();
+    bottom: 8px;
+    color: var(--link);
 
     @include jdLineClamp(1);
     @include font-size-smallest;

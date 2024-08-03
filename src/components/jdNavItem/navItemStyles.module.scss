@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 $iconHeight: 32px;
 
@@ -8,6 +8,7 @@ $iconHeight: 32px;
     flex: 1 1 0;
     padding: 12px;
     @include flexCentered;
+    gap: 8px;
 
     &:active {
         .navItemIcon {
@@ -58,7 +59,7 @@ $iconHeight: 32px;
 
 .navItemText {
     color: var(--primFg);
-    @include font-size-small;
+    @include font-size-smallest;
 }
 
 .navActiveBar {
