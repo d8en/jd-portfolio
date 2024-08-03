@@ -1,6 +1,6 @@
 @use "../../styles/" as *;
 
-$iconSize: 32px;
+$iconSize: 36px;
 $skillGap: 16px;
 
 .xpContainer {
@@ -13,6 +13,7 @@ $skillGap: 16px;
 }
 
 .xpRow {
+    margin-top: -2px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     place-items: center;

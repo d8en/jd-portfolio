@@ -1,7 +1,10 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 .hashtagContainer {
     align-self: flex-start;
+    background-color: var(--greyBg);
+    padding: 4px 8px;
+    border-radius: 4px;
     @include flexCentered;
 }
 

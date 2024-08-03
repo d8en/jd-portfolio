@@ -72,9 +72,6 @@ export const JdXpItem = observer((props: React.PropsWithChildren<IJdXpItemProps>
                             <p className={styles.xpText}>
                                 {props.xp} year{props.xp !== 1 ? 's' : ''}
                             </p>
-
-                            {/* BAR */}
-                            {/* <div className={styles.xpBar} style={{ width: `${(props.xpPercentage / 1) * 100}%` }} /> */}
                         </div>
                     )}
                 </div>
