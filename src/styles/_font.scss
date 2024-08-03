@@ -27,23 +27,20 @@
 }
 
 @mixin font-size-small {
-    // font-size: 12px;
     font-size: 0.8em;
 }
 
 @mixin font-size-normal {
-    font-size: 1em;
-    // font-size: 16px;
+    font-size: 1.2em;
 }
 
 @mixin font-size-large {
-    // font-size: 22px;
+    line-height: 1em;
     font-size: 1.7em;
 }
 
 @mixin font-size-larger {
     font-size: 2em;
-    font-size: 28px;
     line-height: 1.3em;
 }
 
@@ -58,7 +55,7 @@
 }
 
 @mixin font-weight-regular {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 @mixin font-weight-bold {

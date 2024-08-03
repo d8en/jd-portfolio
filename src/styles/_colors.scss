@@ -35,9 +35,9 @@
     --darkBlurBg: rgba(26, 26, 32, 0.8);
 
     // Shadows
-    --darkShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.2);
-    --lightShadow: 0px 0px 9px 0px rgba(26, 26, 32, 0.3);
-    --baseShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.2);
+    --darkShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.1);
+    --lightShadow: 0px 0px 9px 0px rgba(26, 26, 32, 0.1);
+    --baseShadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.1);
 
     // Gradients
     --gradientPink: $gradientPink;
@@ -45,13 +45,23 @@
 }
 
 $navActiveBar: 2.5px;
-$gradientPink: #d65ed4;
+$gradientPink: #b334b1;
 $gradientBlue: #3062e3;
 
 @mixin bgGradient($direction: top) {
     background-image: linear-gradient(to $direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -moz-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
-    background-image: -webkit-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
+    background-image: -moz-linear-gradient(
+        $direction,
+        $gradientPink 0%,
+        $gradientBlue 99.99%,
+        rgba(26, 26, 32, 0) 100%
+    );
+    background-image: -webkit-linear-gradient(
+        $direction,
+        $gradientPink 0%,
+        $gradientBlue 99.99%,
+        rgba(26, 26, 32, 0) 100%
+    );
     background-image: -ms-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
     background-image: -o-linear-gradient($direction, $gradientPink 0%, $gradientBlue 99.99%, rgba(26, 26, 32, 0) 100%);
     background-size: 150% auto;

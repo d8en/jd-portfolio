@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 $previewImgHeight: 348px;
 $previewImgHeightOPen: 500px;
@@ -11,7 +11,7 @@ $projectHoverTransition:
     $hoverDuration translate;
 
 .projectsContainer {
-    overflow: hidden;
+    // overflow: hidden;
     cursor: pointer;
     position: relative;
     border-radius: $containerBorder;
@@ -31,9 +31,11 @@ $projectHoverTransition:
 
     @include media-desktop {
         transition: $projectHoverTransition;
+
         &:hover {
             transition: $projectHoverTransition;
-            border: 1.5px solid var(--link);
+            border: 1.5px solid transparent;
+            @include rotateBorder(103%, 101%);
             translate: 0 -8px;
             @include baseShadow;
 
@@ -43,8 +45,8 @@ $projectHoverTransition:
             }
 
             .projectPreviewImgContainer {
-                // @include aniHoverOnly;
-                background-color: var(--link);
+                // background-color: var(--link);
+                @include bgGradient;
             }
         }
     }
@@ -66,7 +68,7 @@ $projectHoverTransition:
 
     @include themeColorTransition;
     @include boxSizingBorder;
-    @include scroll-bar;
+    // @include scroll-bar;
 
     .projectPreviewImgContainer {
         padding-top: 56px;
@@ -114,6 +116,8 @@ $projectHoverTransition:
     padding: 56px 28px;
     display: flex;
     position: relative;
+    overflow: hidden;
+    border-radius: 24px 0 0 24px;
 
     @include boxSizingBorder;
     @include media-phone {
@@ -122,7 +126,6 @@ $projectHoverTransition:
 }
 
 .projectPreviewImg {
-    border-radius: 24px;
     padding: 12px;
     object-fit: contain;
     place-self: center;

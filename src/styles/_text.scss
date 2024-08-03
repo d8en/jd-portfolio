@@ -1,10 +1,10 @@
-@use './font' as *;
-@use './body' as *;
-@use './colors' as *;
+@use "./font" as *;
+@use "./body" as *;
+@use "./colors" as *;
 
 p,
 li {
-    color: var(--primFg);
+    color: var(--greyText);
     margin: 0;
 
     @include font-weight-light;
@@ -23,7 +23,6 @@ h1 {
     margin: 12px 0;
     line-height: 1.3em;
 
-    @include textGradient(right);
     @include font-size-largest;
     @include font-weight-bold;
 }

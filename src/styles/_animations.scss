@@ -1,5 +1,5 @@
-@use './blur' as *;
-@use './colors' as *;
+@use "./blur" as *;
+@use "./colors" as *;
 
 $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
 
@@ -33,7 +33,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
     &:before {
         border-radius: $radius;
         position: absolute;
-        content: '';
+        content: "";
         top: 0;
         left: 0;
         bottom: 0;
@@ -71,7 +71,7 @@ $bezierScale: 0.2s cubic-bezier(0, 1.4, 0.41, 1.56);
         left: 0;
         right: 0;
         bottom: 0;
-        content: '';
+        content: "";
         color: transparent;
         @include baseBlur;
     }
@@ -189,4 +189,54 @@ $themeTransitionDuration: 0.5s;
         $themeTransitionDuration color,
         $themeTransitionDuration border,
         $themeTransitionDuration stroke;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@mixin rotateBorder($height: 100%, $width: 100%, $bgColor: var(--primBg)) {
+    &:before {
+        content: "";
+        position: absolute;
+        height: $height;
+        width: $width;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -2;
+        background-image: conic-gradient(
+            from var(--angle),
+            transparent 60%,
+            $gradientPink,
+            $gradientBlue,
+            $gradientPink
+        );
+        border-radius: inherit;
+        animation: rotateBorder 2s linear infinite;
+    }
+
+    &:after {
+        z-index: -2;
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background-color: $bgColor;
+        border-radius: inherit;
+    }
+}
+
+@keyframes rotateBorder {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
