@@ -24,12 +24,9 @@ $projectHoverTransition:
     }
 
     @include media-desktop {
+        transition: $projectHoverTransition;
         grid-auto-flow: column;
         gap: 32px;
-    }
-
-    @include media-desktop {
-        transition: $projectHoverTransition;
 
         &:hover {
             transition: $projectHoverTransition;
@@ -119,6 +116,7 @@ $projectHoverTransition:
     @include boxSizingBorder;
     @include media-phone {
         padding: 24px;
+        border-radius: inherit;
     }
 }
 
