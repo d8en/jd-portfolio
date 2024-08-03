@@ -94,7 +94,7 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
                     companyName={props.company.companyName}
                     imgSrc={props.company.imgSrc}
                     icon={props.company.icon}
-                    xp={props.company.xp}
+                    startYear={props.company.startYear}
                     xpPercentage={props.company.xpPercentage}
                     invertImageColors={props.company.invertImageColors}
                 />
@@ -109,7 +109,7 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
                             <JdXpItem
                                 idx={idx}
                                 key={skill.name}
-                                xp={skill.xp}
+                                startYear={skill.startYear}
                                 xpPercentage={skill.xpPercentage}
                                 icon={skill.icon}
                                 imgSrc={skill.imgSrc}

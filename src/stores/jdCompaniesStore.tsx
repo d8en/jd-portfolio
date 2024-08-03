@@ -18,7 +18,7 @@ export class JdCompaniesStore {
     public marketAxess: IJdSkillCo = {
         name: 'Senior Software Engineer',
         companyName: 'MarketAxess',
-        xp: 1,
+        startYear: '2023',
         xpPercentage: 0.7,
         icon: <MarketAxess className={styles.themedIcon} />,
         component: (
@@ -37,7 +37,7 @@ export class JdCompaniesStore {
     public boomerang: IJdSkillCo = {
         name: 'Lead Frontend Engineer',
         companyName: 'boomerang',
-        xp: 2,
+        startYear: '2022',
         xpPercentage: 0.75,
         icon: <BoomIcon />,
         component: (
@@ -55,7 +55,7 @@ export class JdCompaniesStore {
     public rek: IJdSkillCo = {
         name: 'Founder / Full Stack',
         companyName: 'Rek it.',
-        xp: 4,
+        startYear: '2020',
         xpPercentage: 0.75,
         icon: <RekIcon />,
         component: (
@@ -72,7 +72,7 @@ export class JdCompaniesStore {
         name: 'Lead Product Designer',
         companyName: 'Primacy',
         invertImageColors: true,
-        xp: 2,
+        startYear: '2022',
         xpPercentage: 0.75,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media',
         component: (
@@ -89,7 +89,7 @@ export class JdCompaniesStore {
     public cocc: IJdSkillCo = {
         name: 'Product Manager',
         companyName: 'COCC',
-        xp: 7,
+        startYear: '2016',
         xpPercentage: 1,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media',
         component: (
@@ -107,7 +107,7 @@ export class JdCompaniesStore {
     public gravix: IJdSkillCo = {
         name: 'Co-Founder & Designer',
         companyName: 'gravix',
-        xp: 4,
+        startYear: '2020',
         xpPercentage: 0.8,
         icon: <GravixIcon className={styles.themedIcon} />,
         component: (
@@ -121,7 +121,7 @@ export class JdCompaniesStore {
     public weekendProjects: IJdSkillCo = {
         name: 'Curious Human',
         companyName: 'Weekend Projects',
-        xp: 15,
+        startYear: '2010',
         xpPercentage: 1,
         icon: <JdIcon />,
         component: (
@@ -134,12 +134,12 @@ export class JdCompaniesStore {
     public typo: IJdSkillCo = {
         name: 'Founder & Dev',
         companyName: 'Typo',
-        xp: 1,
+        startYear: '2023',
         xpPercentage: 0.2,
         icon: <TypoIcon className={styles.themedIcon} />,
         component: (
             <>
-                <p>Typo is a text-only social media app that replays exactly how the post was written. Do we really need another hellscape of a social media app though?</p>
+                <p>Typo is a text-only social media app that replays exactly how the post was written. It's more of a fun dev experiment that is collecting dust.</p>
             </>
         ),
     };

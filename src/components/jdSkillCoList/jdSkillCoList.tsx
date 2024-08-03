@@ -18,7 +18,7 @@ export function JdSkillCoList(props: IJdSkillCoListProps): React.JSX.Element {
                         name={skillCo.name}
                         icon={skillCo.icon}
                         imgSrc={skillCo.imgSrc}
-                        xp={skillCo.xp}
+                        startYear={skillCo.startYear}
                         xpPercentage={skillCo.xpPercentage}
                         invertImageColors={skillCo.invertImageColors}
                     >

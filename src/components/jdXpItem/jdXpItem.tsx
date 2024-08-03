@@ -5,19 +5,10 @@ import jdAniUtils from '../../utils/jdAniUtils';
 import jdThemeManager from '../../managers/jdThemeManager';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
+import { IJdSkillCo } from '../../models/iJdSkillCo';
+import { JdDateUtils } from '../../utils/jdDateUtilts';
 
-export interface IJdXpItemProps {
-    name: string;
-    companyName?: string;
-    icon?: React.JSX.Element;
-    imgSrc?: string;
-    xp: number;
-    xpPercentage: number;
-    idx: number;
-    invertImageColors?: boolean;
-}
-
-export const JdXpItem = observer((props: React.PropsWithChildren<IJdXpItemProps>): React.JSX.Element => {
+export const JdXpItem = observer((props: React.PropsWithChildren<Omit<IJdSkillCo, 'component'> & { idx: number }>): React.JSX.Element => {
     const [isHeaderClamped, setIsHeaderClamped] = useState<boolean>(true);
     return (
         <motion.div
@@ -77,9 +68,7 @@ export const JdXpItem = observer((props: React.PropsWithChildren<IJdXpItemProps>
                     {props.children && (
                         <div className={styles.xpTotal}>
                             {/* XP TEXT */}
-                            <p className={styles.xpText}>
-                                {props.xp} year{props.xp !== 1 ? 's' : ''}
-                            </p>
+                            <p className={styles.xpText}>{JdDateUtils.getYearDiff(props.startYear)}</p>
                         </div>
                     )}
                 </div>

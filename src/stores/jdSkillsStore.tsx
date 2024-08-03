@@ -25,7 +25,7 @@ export class JdSkillsStore {
     public typescript: IJdSkillCo = {
         name: 'Typescript',
         icon: <TsIcon />,
-        xp: 4,
+        startYear: '2019',
         xpPercentage: 1,
         component: <p>My roots in C# were super helpful in picking up Typescript. This is the primary language I've been using for the past 4 years.</p>,
     };
@@ -33,7 +33,7 @@ export class JdSkillsStore {
     public react: IJdSkillCo = {
         name: 'React',
         icon: <ReactIcon />,
-        xp: 4,
+        startYear: '2019',
         xpPercentage: 1,
         component: (
             <p>
@@ -46,7 +46,7 @@ export class JdSkillsStore {
     public reactNative: IJdSkillCo = {
         name: 'React Native',
         icon: <ReactIcon />,
-        xp: 4,
+        startYear: '2019',
         xpPercentage: 1,
         component: (
             <p>
@@ -59,7 +59,7 @@ export class JdSkillsStore {
     public sass: IJdSkillCo = {
         name: 'Sass',
         icon: <SassIcon />,
-        xp: 4,
+        startYear: '2019',
         xpPercentage: 1,
         component: <p>Sass is an incredibly useful pre-processing language that I use in all of my projects. Mixins, variables, and functions bring sanity to CSS.</p>,
     };
@@ -67,7 +67,7 @@ export class JdSkillsStore {
     public css: IJdSkillCo = {
         name: 'CSS',
         icon: <CssIcon />,
-        xp: 4,
+        startYear: '2019',
         xpPercentage: 1,
         component: (
             <p>
@@ -80,24 +80,24 @@ export class JdSkillsStore {
     public nodeJs: IJdSkillCo = {
         name: 'Node.js',
         icon: <NodeIcon />,
-        xp: 3,
-        xpPercentage: 0.75,
-        component: <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects (using Express as well).</p>,
+        startYear: '2019',
+        xpPercentage: 1,
+        component: <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects. I'm also a big fan of bun.sh.</p>,
     };
 
     public graphQL: IJdSkillCo = {
         name: 'GraphQL',
         icon: <GraphQL />,
-        xp: 1,
-        xpPercentage: 0.25,
+        startYear: '2023',
+        xpPercentage: 0.5,
         component: <p>While I still believe there is a place in the world for REST, I'm enjoying GraphQL at my current role and plan on using it in future projects.</p>,
     };
 
     public noSql: IJdSkillCo = {
         name: 'MongoDB',
         icon: <MongoIcon />,
-        xp: 2,
-        xpPercentage: 0.7,
+        startYear: '2021',
+        xpPercentage: 0.9,
         component: (
             <p>
                 I'm a huge fan of MongoDB and I've also experimented with Firebase Realtime DB. The only other major NoSQL db that I'd like to try is DynamoDB, which also seems
@@ -109,15 +109,15 @@ export class JdSkillsStore {
     public sql: IJdSkillCo = {
         name: 'SQL',
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media',
-        xp: 2,
-        xpPercentage: 0.4,
+        startYear: '2021',
+        xpPercentage: 0.5,
         component: <p>I use MySQL to support one of my published apps and used MSSQL daily as a product analyst.</p>,
     };
 
     public cSharp: IJdSkillCo = {
         name: 'C#',
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media',
-        xp: 1,
+        startYear: '2024',
         xpPercentage: 0.1,
         component: (
             <p>
@@ -130,7 +130,7 @@ export class JdSkillsStore {
     public mobX: IJdSkillCo = {
         name: 'MobX',
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/mobx.webp?alt=media',
-        xp: 4,
+        startYear: '2019',
         xpPercentage: 1,
         component: (
             <p>
@@ -143,8 +143,8 @@ export class JdSkillsStore {
     public redux: IJdSkillCo = {
         name: 'Redux Toolkit',
         icon: <ReduxIcon />,
-        xp: 1,
-        xpPercentage: 0.25,
+        startYear: '2022',
+        xpPercentage: 0.5,
         component: (
             <p>
                 I took some time to rewrite about 60% of a production app in Redux to get a feel for how it compared to Mobx. While I prefer Mobx, I enjoyed using Redux and would
@@ -156,7 +156,7 @@ export class JdSkillsStore {
     public reanimated: IJdSkillCo = {
         name: 'RN Reanimated',
         icon: <ReanimatedIcon />,
-        xp: 3,
+        startYear: '2019',
         xpPercentage: 0.75,
         component: (
             <p>
@@ -169,7 +169,7 @@ export class JdSkillsStore {
     public framerMotion: IJdSkillCo = {
         name: 'Framer Motion',
         icon: <FramerIcon className={styles.themedIcon} />,
-        xp: 4,
+        startYear: '2019',
         xpPercentage: 1,
         component: (
             <p>
@@ -182,7 +182,7 @@ export class JdSkillsStore {
     public figma: IJdSkillCo = {
         name: 'Figma',
         icon: <FigmaIcon />,
-        xp: 7,
+        startYear: '2017',
         xpPercentage: 1,
         component: (
             <p>
@@ -195,7 +195,7 @@ export class JdSkillsStore {
     public productDesign: IJdSkillCo = {
         name: 'Product Design',
         icon: <ProductIcon />,
-        xp: 7,
+        startYear: '2017',
         xpPercentage: 1,
         component: (
             <p>
@@ -208,7 +208,7 @@ export class JdSkillsStore {
     public afterEffects: IJdSkillCo = {
         name: 'After Effects',
         icon: <AdobeAeIcon />,
-        xp: 4,
+        startYear: '2022',
         xpPercentage: 0.5,
         component: (
             <p>
@@ -220,7 +220,7 @@ export class JdSkillsStore {
     public brandDesign: IJdSkillCo = {
         name: 'Brand Design',
         icon: <BrandIcon className={styles.themedIcon} />,
-        xp: 8,
+        startYear: '2017',
         xpPercentage: 1,
         component: (
             <p>
