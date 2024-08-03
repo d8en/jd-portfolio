@@ -18,10 +18,6 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
         setScrollAmt(props.scrollElementRef?.scrollTop ?? 1);
     };
 
-    useEffect(() => {
-        return () => console.log('unmount');
-    }, []);
-
     const scrollWidth: string = useMemo(() => {
         if (!props.scrollElementRef) return '1%';
         return `${((scrollAmt + props.scrollElementRef!.clientHeight) / props.scrollElementRef!.scrollHeight) * 100}%`;

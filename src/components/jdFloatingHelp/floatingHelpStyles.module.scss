@@ -19,7 +19,6 @@ $closeSize: 32px;
 }
 
 .floatingHelpText {
-    line-height: 1.5em;
     white-space: nowrap;
     color: var(--primFg);
 
@@ -30,7 +29,6 @@ $closeSize: 32px;
     display: grid;
     place-items: center;
     border-radius: 50%;
-    // background-color: var(--lightGreyBg);
     @include bgGradient;
     width: $closeSize;
     height: $closeSize;

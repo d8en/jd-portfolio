@@ -39,10 +39,6 @@ $projectHoverTransition:
                 @include aniLinkScale;
                 transform: scale(1.09);
             }
-
-            .projectPreviewImgContainer {
-                @include bgGradient;
-            }
         }
     }
 }
@@ -67,7 +63,6 @@ $projectHoverTransition:
     .projectPreviewImgContainer {
         padding-top: 56px;
         width: 100%;
-        @include bgGradient(top left);
     }
 
     .projectContent {
@@ -111,12 +106,16 @@ $projectHoverTransition:
     display: flex;
     position: relative;
     overflow: hidden;
-    border-radius: 24px 0 0 24px;
+    border-radius: $containerBorder $containerBorder 0 0;
 
     @include boxSizingBorder;
     @include media-phone {
         padding: 24px;
-        border-radius: inherit;
+        border-radius: $containerBorder $containerBorder 0 0;
+    }
+
+    @include media-desktop {
+        border-radius: $containerBorder 0 0 $containerBorder;
     }
 }
 

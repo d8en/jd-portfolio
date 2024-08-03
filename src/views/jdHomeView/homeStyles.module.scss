@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use "../../styles/" as *;
 
 .homeContainer {
     grid-auto-rows: unset;
@@ -21,8 +21,6 @@
 
 .homeSubHeader {
     color: var(--greyText);
-    line-height: 1.6em;
-
     @include font-size-normal;
     @include font-weight-light;
 }

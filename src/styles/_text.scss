@@ -21,16 +21,12 @@ ol {
 
 h1 {
     margin: 12px 0;
-    line-height: 1.3em;
-
     @include font-size-largest;
     @include font-weight-bold;
 }
 
 h2 {
     margin: 0;
-    line-height: 1.5em;
-
     color: var(--primFg);
     @include font-size-large;
     @include font-weight-bold;
