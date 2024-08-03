@@ -29,8 +29,9 @@ h1 {
 
 h2 {
     margin: 0;
-    line-height: 1.3em;
+    line-height: 1.5em;
 
+    color: var(--primFg);
     @include font-size-large;
     @include font-weight-bold;
 }

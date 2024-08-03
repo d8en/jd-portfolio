@@ -15,11 +15,12 @@ export function JdLoaderBar(props: IJdLoaderBarProps): React.JSX.Element {
             clearTimeout(scrollUpdateTimeout.current);
             scrollUpdateTimeout.current = null;
         }
-
-        // scrollUpdateTimeout.current = setTimeout(() => {
         setScrollAmt(props.scrollElementRef?.scrollTop ?? 1);
-        // }, 10);
     };
+
+    useEffect(() => {
+        return () => console.log('unmount');
+    }, []);
 
     const scrollWidth: string = useMemo(() => {
         if (!props.scrollElementRef) return '1%';

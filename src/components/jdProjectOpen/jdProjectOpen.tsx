@@ -51,7 +51,12 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
             <JdClose onClick={() => props.onToggleProject()} />
 
             {/* SCROLL LOADER */}
-            {hasScrollLoader && <JdLoaderBar scrollElementRef={innerDiv.current} />}
+            {hasScrollLoader && (
+                <JdLoaderBar
+                    key={props.id}
+                    scrollElementRef={innerDiv.current}
+                />
+            )}
 
             {/* PREVIEW IMAGE */}
             <motion.div className={styles.projectPreviewImgContainer}>

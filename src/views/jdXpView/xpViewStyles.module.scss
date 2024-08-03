@@ -1,4 +1,6 @@
+@use "../../styles/" as *;
+
 .xpViewContainer {
     display: grid;
-    gap: 44px;
+    gap: $xpGap;
 }
