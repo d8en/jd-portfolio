@@ -65,6 +65,7 @@ export const JdProjectsView = observer((): React.JSX.Element => {
                 <AnimatePresence>
                     {jdProjectStore.openProject && (
                         <JdProjectOpen
+                            key={jdProjectStore.openProject.id}
                             idx={0}
                             {...jdProjectStore.openProject}
                             onToggleProject={async () => onToggleProject(jdProjectStore.openProject!)}
