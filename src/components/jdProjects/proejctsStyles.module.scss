@@ -5,22 +5,22 @@ $imgMaxHeight: 440px;
 .multiMedia {
     display: grid;
     grid-auto-flow: column;
-    // grid-auto-columns: 1fr;
     gap: 20px;
     place-self: center;
 }
 
 .projectsImage {
     border-radius: 24px;
-    @include media-phone {
-        border-radius: 16px;
-    }
     place-self: start center;
     max-width: 100%;
     max-height: $imgMaxHeight;
     object-fit: contain;
+
     @include linkTransitions;
     @include baseShadow;
+    @include media-phone {
+        border-radius: 16px;
+    }
 
     &:hover {
         @include aniLinkScale;
@@ -29,11 +29,11 @@ $imgMaxHeight: 440px;
 }
 
 .projectImageCaption {
-    @include font-size-smallest;
     font-style: italic;
     color: var(--greyText);
     width: 100%;
     text-align: center;
+    @include font-size-smallest;
 }
 
 .projectGapReducer {

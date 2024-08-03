@@ -1,9 +1,6 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .projectViewContainer {
     display: grid;
-    // @include media-desktop {
-    //     gap: 0;
-    // }
-    gap: 72px
+    gap: 72px;
 }

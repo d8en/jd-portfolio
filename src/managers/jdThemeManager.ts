@@ -1,4 +1,4 @@
-import jdThemeStore, { JdThemeStore } from "../stores/jdThemeStore";
+import jdThemeStore, { JdThemeStore } from '../stores/jdThemeStore';
 import {
     baseShadow,
     blurBg,
@@ -23,9 +23,9 @@ import {
     primBlack,
     primFg,
     primWhite,
-} from "../utils/jdColorUtils";
+} from '../utils/jdColorUtils';
 
-import { JdManagerBase } from "./base/jdManagerBase";
+import { JdManagerBase } from './base/jdManagerBase';
 
 class JdThemeManager extends JdManagerBase<JdThemeStore> {
     public store: JdThemeStore = jdThemeStore;
@@ -37,7 +37,6 @@ class JdThemeManager extends JdManagerBase<JdThemeStore> {
     }
 
     public setTheme(): void {
-
         // Set bg and fg
         this.rootStyle.setProperty(primBg.key, this.store.isDarkTheme ? primBlack.value : primWhite.value);
         this.rootStyle.setProperty(primFg.key, this.store.isDarkTheme ? darkPrimWhite.value : primBlack.value);
@@ -54,14 +53,12 @@ class JdThemeManager extends JdManagerBase<JdThemeStore> {
         // Set grey bg
         this.rootStyle.setProperty(greyBg.key, this.store.isDarkTheme ? darkGreyBg.value : lightGreyBg.value);
 
-
         // Set grey text
         this.rootStyle.setProperty(greyText.key, this.store.isDarkTheme ? darkGreyText.value : lightGreyText.value);
 
         // Set grey line
         this.rootStyle.setProperty(greyLine.key, this.store.isDarkTheme ? darkGreyLine.value : lightGreyLine.value);
     }
-
 }
 
 const jdThemeManager: JdThemeManager = new JdThemeManager();

@@ -1,4 +1,4 @@
-import { IJdSkillCo } from "./iJdSkillCo";
+import { IJdSkillCo } from './iJdSkillCo';
 
 export interface IJdProject {
     id: string;
@@ -10,5 +10,4 @@ export interface IJdProject {
     component: React.JSX.Element;
     isOpen: boolean;
     invertImageColors?: boolean;
-
 }

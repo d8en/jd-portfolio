@@ -1,18 +1,16 @@
 @use "../../styles/" as *;
 
 .sectionHeader {
-    @include flexCentered;
     gap: 12px;
+
+    @include flexCentered;
     @include projectGapReducer;
-    & > h2 {
-        @include textGradient(right);
-    }
 }
 
 .sectionIcon {
     background-color: var(--greyBg);
-    height: 44px;
-    width: 44px;
+    height: 60px;
+    width: 60px;
     border-radius: 12px;
     @include flexCentered;
     @include font-size-large;

@@ -1,19 +1,17 @@
 @use "../../styles/" as *;
 
 .viewContent {
-    @include scroll-bar;
-    @include boxSizingBorder;
-    @include fullVh;
     display: grid;
     grid-auto-rows: min-content;
     overflow-y: auto;
     place-items: center;
     padding: 20px;
 
+    @include boxSizingBorder;
+    @include fullVh(auto);
+    @include globalTopAfter;
+    @include globalBottomAfter;
     @include media-phone {
         padding: 0 20px;
     }
-
-    @include globalBottomAfter;
-    @include globalTopAfter;
 }

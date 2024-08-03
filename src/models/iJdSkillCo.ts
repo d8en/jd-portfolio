@@ -5,7 +5,7 @@ export interface IJdSkillCo {
     icon?: React.JSX.Element;
     component: React.JSX.Element;
     isSelected?: boolean;
-    xp: number;
+    startYear: string;
     xpPercentage: number;
     invertImageColors?: boolean;
 }

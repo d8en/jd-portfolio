@@ -19,7 +19,6 @@ input {
     word-wrap: break-word;
     overflow: hidden;
     caret-color: var(--primFg);
-    line-height: 1.2em;
     display: -webkit-box;
     -webkit-box-orient: horizontal;
 
@@ -60,19 +59,20 @@ input {
 
 .closeBtn {
     all: unset;
+    height: 72px;
+    width: 44px;
+    flex-shrink: 0;
+    background-color: var(--greyBg);
+
+    @include flexCentered;
     @include aniHoverBase {
         path {
             stroke: var(--primWhite);
         }
     }
-    height: 72px;
     @include media-phone {
         height: 68px;
     }
-    width: 44px;
-    @include flexCentered;
-    flex-shrink: 0;
-    background-color: var(--greyBg);
 }
 
 .closeIcon {
@@ -91,9 +91,9 @@ input {
 .errorText {
     position: absolute;
     left: 16px;
+    bottom: 8px;
+    color: var(--link);
+
     @include jdLineClamp(1);
-    bottom: -3px;
     @include font-size-smallest;
-    color: var(--greyText);
-    transform: translateY();
 }

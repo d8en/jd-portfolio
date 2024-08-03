@@ -10,14 +10,13 @@ import { JdATag } from '../jdATag/jdATag';
 export function JdShoifyApp(): React.JSX.Element {
     return (
         <>
-
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
             <p>Below is a demo of the app I designed and built for shoppers to return items and book home pickups.</p>
 
             {/* SHOPIFY APP WALKTHROUGH */}
             <JdVimeoPlayer
-                src='https://player.vimeo.com/video/841934938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                src="https://player.vimeo.com/video/841934938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 className={styles.projectVideo}
             />
 
@@ -28,17 +27,19 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* SHOPIFY ADMIN WALKTHROUGH */}
             <JdVimeoPlayer
-                src='https://player.vimeo.com/video/841945316?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                src="https://player.vimeo.com/video/841945316?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 style={{ width: '100%' }}
             />
 
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Walkthrough of our admin experience for Shopify store owners</figcaption>
 
-
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>pilot app</Link> and create a multi-tenant scalable offering for the Shopify ecosystem.</p>
+            <p>
+                Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>pilot app</Link> and create a multi-tenant scalable offering
+                for the Shopify ecosystem.
+            </p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -55,7 +56,9 @@ export function JdShoifyApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p>We needed to figure out how we could <strong>scale home pickup</strong>.</p>
+            <p>
+                We needed to figure out how we could <strong>scale home pickup</strong>.
+            </p>
 
             {/* NOTES SCREENSHOT */}
             <JdImg
@@ -68,13 +71,21 @@ export function JdShoifyApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             <p>Creating a widespread network of drivers and vehicles in every city/state would be time-consuming and difficult to scale.</p>
-            <p>The best economic and eco-friendly option was to use existing logistics providers (UPS, FedEx, USPS). Each of these providers had APIs that offered pickup, most of which were affordable.</p>
+            <p>
+                The best economic and eco-friendly option was to use existing logistics providers (UPS, FedEx, USPS). Each of these providers had APIs that offered pickup, most of
+                which were affordable.
+            </p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>We had some excellent shopper feedback from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>first returns app</Link>, so we used that to improve interactions, verbiage, code architecture, and overall design.</p>
+            <p>
+                We had some excellent shopper feedback from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>first returns app</Link>, so we used that to
+                improve interactions, verbiage, code architecture, and overall design.
+            </p>
 
-            <p className={styles.projectGapReducer}>The <strong>requirements</strong> were similar, with a few extra challenges:</p>
+            <p className={styles.projectGapReducer}>
+                The <strong>requirements</strong> were similar, with a few extra challenges:
+            </p>
 
             <ul>
                 <li>Self-service client onboarding</li>
@@ -135,21 +146,26 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots of the admin prototype for desktop</figcaption>
 
-            <p>I've always enjoyed <strong>icon design</strong> so I took some extra time on this project to build our own set.</p>
+            <p>
+                I've always enjoyed <strong>icon design</strong> so I took some extra time on this project to build our own set.
+            </p>
 
             <JdImg
                 className={styles.projectsImage}
-                srcSet='https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/iconDesign.webp?alt=media'
+                srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/iconDesign.webp?alt=media"
                 alt="Icons I designed"
             />
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>We built a <strong>monorepo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.</p>
+            <p>
+                We built a <strong>monorepo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods
+                across our apps.
+            </p>
 
             {/* SHOPIFY APP WALKTHROUGH */}
             <JdVimeoPlayer
-                src='https://player.vimeo.com/video/841934938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                src="https://player.vimeo.com/video/841934938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 className={styles.projectVideo}
             />
 
@@ -172,11 +188,14 @@ export function JdShoifyApp(): React.JSX.Element {
                 <li>Carrier Integration</li>
             </ul>
 
-            <p>We shared code across our Shopify admin and shopper experiences, and eventually our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.</p>
+            <p>
+                We shared code across our Shopify admin and shopper experiences, and eventually our{' '}
+                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.
+            </p>
 
             {/* SHOPIFY ADMIN WALKTHROUGH */}
             <JdVimeoPlayer
-                src='https://player.vimeo.com/video/841945316?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                src="https://player.vimeo.com/video/841945316?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 style={{ width: '100%' }}
             />
 
@@ -186,17 +205,22 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>About a month and a half later, we shipped our Shopify app.</p>
-            <p>Our marketing team had <strong>3 beta clients</strong> lined up so I demoed the app and onboarded them the following week.</p>
+            <p>
+                Our marketing team had <strong>3 beta clients</strong> lined up so I demoed the app and onboarded them the following week.
+            </p>
 
             {/* SHOPIFY APP WALKTHROUGH */}
             <JdVimeoPlayer
-                src='https://player.vimeo.com/video/841937403?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+                src="https://player.vimeo.com/video/841937403?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 className={styles.projectVideo}
             />
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Video walkthrough of the Shopify app from our first client</figcaption>
 
-            <p>Two months later, we had <strong>4 clients</strong> signed with around <strong>30 returns per month</strong> and growing! The product was generating revenue, while getting <JdATag href="https://boomreturns.io/news">great press</JdATag>.</p>
+            <p>
+                Two months later, we had <strong>4 clients</strong> signed with around <strong>30 returns per month</strong> and growing! The product was generating revenue, while
+                getting <JdATag href="https://boomreturns.io/news">great press</JdATag>.
+            </p>
         </>
-    )
+    );
 }

@@ -1,7 +1,6 @@
-import { IJdContactDto } from "../models/iJdContactDto";
+import { IJdContactDto } from '../models/iJdContactDto';
 
 class JdContactApi {
-
     // private url: string = 'http://localhost:3000/api/v1/contact';
     private url: string = 'https://jd-proxy.onrender.com/api/v1/contact';
 
@@ -10,7 +9,7 @@ class JdContactApi {
             await fetch(this.url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(body),
             });
@@ -19,8 +18,6 @@ class JdContactApi {
             return false;
         }
     }
-
-
 }
 const jdContactApi: JdContactApi = new JdContactApi();
 export default jdContactApi;

@@ -21,5 +21,5 @@ export function JdVimeoPlayer(props: IJdVimeoPlayerProps): React.JSX.Element {
             style={props.style}
         />
         // </div>
-    )
+    );
 }

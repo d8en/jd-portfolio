@@ -1,11 +1,10 @@
-import jdStringUtils from "../../utils/jdStringUtils";
-import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
+import jdStringUtils from '../../utils/jdStringUtils';
+import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
 import styles from './proejctsStyles.module.scss';
 
 export function JdInsuranceApp(): React.JSX.Element {
     return (
         <>
-
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>Design an experience that ultimately helps underwriters produce profitable quotes faster.</p>
@@ -22,7 +21,7 @@ export function JdInsuranceApp(): React.JSX.Element {
 
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
-            <p className={styles.projectGapReducer}>We took a cyclical approach to our research, validating ideas weekly:</p >
+            <p className={styles.projectGapReducer}>We took a cyclical approach to our research, validating ideas weekly:</p>
 
             <ol>
                 <li>Interview stakeholders and underwriters</li>
@@ -41,10 +40,12 @@ export function JdInsuranceApp(): React.JSX.Element {
                 <li>One set that we could start working on immediately</li>
             </ol>
 
-            <p>I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work. This video was an excellent communication tool for stakeholders, underwriters, and executives.</p>
+            <p>
+                I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work. This video was an
+                excellent communication tool for stakeholders, underwriters, and executives.
+            </p>
 
             <p>This project contains highly confidential information so unfortunately I can't share the video or UI design.</p>
-
         </>
-    )
+    );
 }

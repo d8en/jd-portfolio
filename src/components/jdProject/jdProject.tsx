@@ -15,11 +15,10 @@ export interface IJdProjectProps {
 }
 
 export const JdProject = observer((props: IJdProject & IJdProjectProps): React.JSX.Element => {
-
     const onClickProject = (): void => {
         if (props.isOpen) return;
         props.onToggleProject();
-    }
+    };
 
     return (
         <motion.div
@@ -27,25 +26,21 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
             className={styles.projectsContainer}
             {...jdAniUtils.aniElementMount(props.idx / 6)}
         >
-
             {/* PREVIEW IMAGE */}
-            <motion.div
-                className={styles.projectPreviewImgContainer}
-            >
+            <motion.div className={styles.projectPreviewImgContainer}>
                 <JdImg
                     srcSet={props.image}
                     className={styles.projectPreviewImg}
-                    onClick={(e) => { e.preventDefault() }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                    }}
                     alt={props.imgPreviewAlt}
                     style={props.invertImageColors && jdThemeManager.store.isDarkTheme ? { filter: 'invert()' } : undefined}
                 />
             </motion.div>
 
             {/* CONTENT */}
-            <div
-                className={styles.projectContent}
-            >
-
+            <div className={styles.projectContent}>
                 {/* TITLE */}
                 <h2
                     id={props.title}
@@ -64,12 +59,12 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
                             <JdHashtag
                                 key={skill.name}
                                 name={skill.name}
-                                onClick={() => { }}
+                                onClick={() => {}}
                             />
-                        )
+                        );
                     })}
                 </div>
             </div>
         </motion.div>
-    )
+    );
 });

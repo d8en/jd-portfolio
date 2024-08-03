@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $themeIconSize: 32px;
 $themeContainerWidth: calc($themeIconSize * 2);
@@ -6,7 +6,6 @@ $themeContainerPadding: 4px;
 $themeTransitionDuration: 0.2s;
 
 .themeToggleContainer {
-    @include themeColorTransition;
     z-index: 2;
     display: grid;
     grid-auto-columns: 1fr;
@@ -19,6 +18,8 @@ $themeTransitionDuration: 0.2s;
     height: 34px;
     border-radius: 200px;
     width: $themeContainerWidth;
+
+    @include themeColorTransition;
     @include baseBlur;
     @include baseShadow;
     @include aniHoverBase {

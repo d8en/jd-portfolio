@@ -9,7 +9,6 @@ export interface IJdViewWrapperProps {
 }
 
 export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps>): JSX.Element {
-
     // Scroll view ref
     const divRef = useRef<HTMLDivElement | null>(null);
 
@@ -28,5 +27,5 @@ export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps
             {/* CHILDREN */}
             {props.children}
         </div>
-    )
+    );
 }

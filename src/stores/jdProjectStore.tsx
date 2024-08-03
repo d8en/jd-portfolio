@@ -1,27 +1,27 @@
-import { makeAutoObservable } from "mobx";
-import { IJdProject } from "../models/iJdProject";
-import jdCompaniesStore from "./jdCompaniesStore";
-import jdSkillsStore from "./jdSkillsStore";
-import { JdAirshopApp } from "../components/jdProjects/jdAirshopApp";
-import { IJdSkillCo } from "../models/iJdSkillCo";
-import jdObjUtils from "../utils/jdObjUtils";
-import { JdShoifyApp } from "../components/jdProjects/jdShopifyApp";
-import jdRoutes from "../utils/jdRoutes";
-import { To } from "react-router-dom";
-import { JdBoomNativeApp } from "../components/jdProjects/jdBoomNativeApp";
-import { JdSmartRouteApp } from "../components/jdProjects/jdSmartRouteApp";
-import { JdSmartRouteWeb } from "../components/jdProjects/jdSmartRouteWeb";
-import { JdRekApp } from "../components/jdProjects/jdRekApp";
-import { JdRekWeb } from "../components/jdProjects/jdRekWeb";
-import { JdTypoApp } from "../components/jdProjects/jdTypoApp";
-import { JdInsuranceApp } from "../components/jdProjects/jdInsuranceApp";
-import { JdObApp } from "../components/jdProjects/jdObApp";
-import { JdAether } from "../components/jdProjects/jdAether";
-import { JdNightCat } from "../components/jdProjects/jdNightcat";
-import { JdWeekend } from "../components/jdProjects/jdWeekend";
-import { JdAqiService } from "../components/jdProjects/jdAqiService";
-import { JdGameGuess } from "../components/jdProjects/jdGameGuess";
-import { JdCtMassBattle } from "../components/jdProjects/jdCtMassBattle";
+import { makeAutoObservable } from 'mobx';
+import { IJdProject } from '../models/iJdProject';
+import jdCompaniesStore from './jdCompaniesStore';
+import jdSkillsStore from './jdSkillsStore';
+import { JdAirshopApp } from '../components/jdProjects/jdAirshopApp';
+import { IJdSkillCo } from '../models/iJdSkillCo';
+import jdObjUtils from '../utils/jdObjUtils';
+import { JdShoifyApp } from '../components/jdProjects/jdShopifyApp';
+import jdRoutes from '../utils/jdRoutes';
+import { To } from 'react-router-dom';
+import { JdBoomNativeApp } from '../components/jdProjects/jdBoomNativeApp';
+import { JdSmartRouteApp } from '../components/jdProjects/jdSmartRouteApp';
+import { JdSmartRouteWeb } from '../components/jdProjects/jdSmartRouteWeb';
+import { JdRekApp } from '../components/jdProjects/jdRekApp';
+import { JdRekWeb } from '../components/jdProjects/jdRekWeb';
+import { JdTypoApp } from '../components/jdProjects/jdTypoApp';
+import { JdInsuranceApp } from '../components/jdProjects/jdInsuranceApp';
+import { JdObApp } from '../components/jdProjects/jdObApp';
+import { JdAether } from '../components/jdProjects/jdAether';
+import { JdNightCat } from '../components/jdProjects/jdNightcat';
+import { JdWeekend } from '../components/jdProjects/jdWeekend';
+import { JdAqiService } from '../components/jdProjects/jdAqiService';
+import { JdGameGuess } from '../components/jdProjects/jdGameGuess';
+import { JdCtMassBattle } from '../components/jdProjects/jdCtMassBattle';
 
 export class JdProjectStore {
     constructor() {
@@ -31,61 +31,108 @@ export class JdProjectStore {
     public projectParam: string = 'id';
     public isFloatingHelp: boolean = false;
 
-
     public rekApp: IJdProject = {
         id: '6',
         company: jdCompaniesStore.rek,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.mobX, jdSkillsStore.sql, jdSkillsStore.noSql, jdSkillsStore.nodeJs, jdSkillsStore.figma, jdSkillsStore.afterEffects, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
+        skills: [
+            jdSkillsStore.typescript,
+            jdSkillsStore.react,
+            jdSkillsStore.reactNative,
+            jdSkillsStore.mobX,
+            jdSkillsStore.sql,
+            jdSkillsStore.noSql,
+            jdSkillsStore.nodeJs,
+            jdSkillsStore.figma,
+            jdSkillsStore.afterEffects,
+            jdSkillsStore.productDesign,
+            jdSkillsStore.brandDesign,
+        ],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekPreview.webp?alt=media',
         component: <JdRekApp />,
         title: 'Building a mobile app to track recommendations',
         desc: `Walking away from a dinner with friends, I couldn't remember a single TV show that we talked about. How nice would it be to track it?`,
         isOpen: false,
-    }
+    };
 
     public boomNativeApp: IJdProject = {
         id: '3',
         company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        skills: [
+            jdSkillsStore.typescript,
+            jdSkillsStore.react,
+            jdSkillsStore.reactNative,
+            jdSkillsStore.reanimated,
+            jdSkillsStore.css,
+            jdSkillsStore.mobX,
+            jdSkillsStore.sass,
+            jdSkillsStore.figma,
+            jdSkillsStore.productDesign,
+        ],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/boomNativePreview.webp?alt=media',
         component: <JdBoomNativeApp />,
         title: 'Building a mobile app to manage all returns',
         desc: 'Returns can be a pain, the least we can do is manage them in one app.',
         isOpen: false,
-    }
+    };
 
     public typoApp: IJdProject = {
         id: '8',
         company: jdCompaniesStore.typo,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.reactNative, jdSkillsStore.reanimated, jdSkillsStore.figma, jdSkillsStore.productDesign, jdSkillsStore.brandDesign],
+        skills: [
+            jdSkillsStore.typescript,
+            jdSkillsStore.react,
+            jdSkillsStore.reactNative,
+            jdSkillsStore.reanimated,
+            jdSkillsStore.figma,
+            jdSkillsStore.productDesign,
+            jdSkillsStore.brandDesign,
+        ],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
         component: <JdTypoApp />,
         title: `Building a text-based social media app`,
         desc: `I love the idea of returning to text-only social media, but let's be honest, we don't need another social media app.`,
         isOpen: false,
-    }
+    };
 
     public boomSmartApp: IJdProject = {
         id: '4',
         company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma, jdSkillsStore.productDesign],
+        skills: [
+            jdSkillsStore.typescript,
+            jdSkillsStore.react,
+            jdSkillsStore.css,
+            jdSkillsStore.mobX,
+            jdSkillsStore.framerMotion,
+            jdSkillsStore.sass,
+            jdSkillsStore.figma,
+            jdSkillsStore.productDesign,
+        ],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRoutePreview.webp?alt=media',
         component: <JdSmartRouteApp />,
         title: 'Building an app to optimize return routing',
         desc: 'Most retailers send all of their returns to a warehouse across the country. Why not route them to a local store, warehouse, or consolidation center?',
         isOpen: false,
-    }
+    };
 
     public shopifyApp: IJdProject = {
         id: '2',
         company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.figma],
+        skills: [
+            jdSkillsStore.typescript,
+            jdSkillsStore.react,
+            jdSkillsStore.css,
+            jdSkillsStore.mobX,
+            jdSkillsStore.redux,
+            jdSkillsStore.sass,
+            jdSkillsStore.productDesign,
+            jdSkillsStore.figma,
+        ],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/shopifyApp.webp?alt=media',
         component: <JdShoifyApp />,
         title: 'Building a Shopify app with home pickup and inventory management',
         desc: 'The success of our Chicago pilot led us to the next big project - build a Shopify app.',
         isOpen: false,
-    }
+    };
 
     public airshopApp: IJdProject = {
         id: '1',
@@ -96,7 +143,7 @@ export class JdProjectStore {
         title: `Building an app in one month`,
         desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef.`,
         isOpen: false,
-    }
+    };
 
     public gameGuesser: IJdProject = {
         id: '15',
@@ -108,7 +155,7 @@ export class JdProjectStore {
         desc: `Players are given clues, then they have to guess the Steam game.`,
         isOpen: false,
         invertImageColors: false,
-    }
+    };
 
     public aqiWebService: IJdProject = {
         id: '14',
@@ -120,7 +167,7 @@ export class JdProjectStore {
         desc: `During the Canadian wildfires, I got tired of going to the airnow.gov site to see if it was safe to play pickleball. So I built a web service to notify me of changes.`,
         isOpen: false,
         invertImageColors: false,
-    }
+    };
 
     public rekWeb: IJdProject = {
         id: '7',
@@ -131,7 +178,7 @@ export class JdProjectStore {
         title: 'Building a website to promote a social recommendations app',
         desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
         isOpen: false,
-    }
+    };
 
     public boomSmartWeb: IJdProject = {
         id: '5',
@@ -142,7 +189,7 @@ export class JdProjectStore {
         title: 'Building a website to promote a return routing app',
         desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
         isOpen: false,
-    }
+    };
 
     public higApp: IJdProject = {
         id: '9',
@@ -153,7 +200,7 @@ export class JdProjectStore {
         title: `Designing an app for insurance underwriters`,
         desc: `How do you take some of the most complex data structures and present them in a digestible and actionable UI? Lots of research and iteration.`,
         isOpen: false,
-    }
+    };
 
     public obApp: IJdProject = {
         id: '10',
@@ -164,7 +211,7 @@ export class JdProjectStore {
         title: `Designing a project management app for agencies`,
         desc: `Talk about a LOT of personas. This was not only a fun research project but also an exciting design challenge.`,
         isOpen: false,
-    }
+    };
 
     public aether: IJdProject = {
         id: '11',
@@ -175,7 +222,7 @@ export class JdProjectStore {
         title: `Designing a brand for an insurance company`,
         desc: `It's tiring navigating through the complex world of health insurance. Trust and transparency are often lacking.`,
         isOpen: false,
-    }
+    };
 
     public nightcat: IJdProject = {
         id: '12',
@@ -187,7 +234,7 @@ export class JdProjectStore {
         desc: `Haven't you always dreamed about a weather app that insults you? Me too.`,
         isOpen: false,
         invertImageColors: true,
-    }
+    };
 
     public ctMassBattle: IJdProject = {
         id: '16',
@@ -199,19 +246,30 @@ export class JdProjectStore {
         desc: `Being a gamer myself, I genuinely enjoyed this project from start to finish.`,
         isOpen: false,
         invertImageColors: false,
-    }
+    };
 
     public funProjects: IJdProject = {
         id: '13',
         company: jdCompaniesStore.weekendProjects,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.nodeJs, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.redux, jdSkillsStore.sass, jdSkillsStore.productDesign, jdSkillsStore.brandDesign, jdSkillsStore.figma],
+        skills: [
+            jdSkillsStore.typescript,
+            jdSkillsStore.react,
+            jdSkillsStore.nodeJs,
+            jdSkillsStore.css,
+            jdSkillsStore.mobX,
+            jdSkillsStore.redux,
+            jdSkillsStore.sass,
+            jdSkillsStore.productDesign,
+            jdSkillsStore.brandDesign,
+            jdSkillsStore.figma,
+        ],
         image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/weekendPreview.webp?alt=media',
         component: <JdWeekend />,
         title: `A collection of weekend projects`,
         desc: `Some of these side gigs refueled me when I needed it the most, some were relatively pointless, and others were valuable exercises that helped me learn new techniques.`,
         isOpen: false,
         invertImageColors: true,
-    }
+    };
 
     public get isAnyProjectOpen(): boolean {
         if (this.projects.find((proj: IJdProject) => proj.isOpen)) return true;
@@ -242,7 +300,7 @@ export class JdProjectStore {
     }
 
     public get nextProject(): IJdProject | undefined {
-        if (this.idxOfOpenProj === -1 || (this.idxOfOpenProj + 1) > (this.projects.length - 1)) return;
+        if (this.idxOfOpenProj === -1 || this.idxOfOpenProj + 1 > this.projects.length - 1) return;
         return this.projects[this.idxOfOpenProj + 1];
     }
 
@@ -260,7 +318,7 @@ export class JdProjectStore {
         return {
             pathname: jdRoutes.projects.path,
             search: `?${this.projectParam}=${this.getParamForProject(project)}`,
-        }
+        };
     }
 
     public getProjectFromParam(param: string | null): IJdProject | undefined {
@@ -270,7 +328,6 @@ export class JdProjectStore {
             return project;
         }
     }
-
 }
 const jdProjectStore: JdProjectStore = new JdProjectStore();
 export default jdProjectStore;

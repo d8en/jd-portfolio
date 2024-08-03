@@ -12,7 +12,6 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    @include bgGradient(left);
     height: inherit;
-    // transition: 1s width;
+    @include bgGradient(left);
 }

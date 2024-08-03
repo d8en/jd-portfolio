@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './floatingHelpStyles.module.scss';
-import { ReactComponent as Close } from '../../assets/svg/icons/close.svg';
+import Close from '../../assets/svg/icons/close.svg?react';
 import { AnimatePresence, motion } from 'framer-motion';
 import jdAniUtils from '../../utils/jdAniUtils';
 
@@ -13,7 +13,6 @@ export interface IJdFloatingHelpProps {
 }
 
 export function JdFloatingHelp(props: IJdFloatingHelpProps): React.JSX.Element {
-
     // Hide / Show
     const [isShowing, setIsShowing] = useState<boolean>(true);
 
@@ -22,19 +21,21 @@ export function JdFloatingHelp(props: IJdFloatingHelpProps): React.JSX.Element {
         e.stopPropagation();
         setIsShowing(false);
         if (props.onClose) props.onClose();
-    }
+    };
 
     return (
         <AnimatePresence>
-            {isShowing &&
+            {isShowing && (
                 <motion.div
-                    initial={{ opacity: 0, }}
-                    animate={{ opacity: 1, }}
-                    transition={{ ...jdAniUtils.springTransition, delay: props.removeDelay ? 0 : jdAniUtils.mountDelay + .5 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ ...jdAniUtils.springTransition, delay: props.removeDelay ? 0 : jdAniUtils.mountDelay + 0.5 }}
                     exit={{ opacity: 0, translateX: -40 }}
                     style={props.style}
                     className={`${styles.floatingHelpContainer} ${props.className ?? ''} `}
-                    onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => { onClickClose(e) }}
+                    onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+                        onClickClose(e);
+                    }}
                 >
                     <p className={styles.floatingHelpText}>{props.text}</p>
 
@@ -46,7 +47,7 @@ export function JdFloatingHelp(props: IJdFloatingHelpProps): React.JSX.Element {
                         <Close style={{ width: 10 }} />
                     </div>
                 </motion.div>
-            }
+            )}
         </AnimatePresence>
-    )
+    );
 }

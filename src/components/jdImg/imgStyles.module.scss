@@ -1,17 +1,17 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .fullscreenContainer {
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include baseBlur;
     position: fixed;
     padding: 40px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    @include baseBlur;
 }
 
 .imageFullscreen {

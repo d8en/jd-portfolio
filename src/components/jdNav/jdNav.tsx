@@ -14,22 +14,23 @@ export const JdNav = observer(() => {
                 {...jdAniUtils.aniElementMount(jdAniUtils.mountDelay)}
                 className={styles.navContainer}
             >
-
                 {/* ROUTES */}
                 <div className={styles.navRoutes}>
-                    {jdRoutes.visibleRoutes.map((route: IJdRouteObj, idx: number) =>
-                        <JdNavItem {...route} key={route.path} idx={idx} />
-                    )}
+                    {jdRoutes.visibleRoutes.map((route: IJdRouteObj, idx: number) => (
+                        <JdNavItem
+                            {...route}
+                            key={route.path}
+                            idx={idx}
+                        />
+                    ))}
                 </div>
 
                 {/* CONTACT ICON */}
                 <JdContact />
-
             </motion.div>
 
             {/* CONTACT FORM */}
             <JdContactForm />
-
         </>
     );
 });

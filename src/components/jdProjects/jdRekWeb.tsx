@@ -1,22 +1,25 @@
-import { Link } from "react-router-dom";
-import jdStringUtils from "../../utils/jdStringUtils";
-import { JdProjectSubHeader } from "../jdProjectSubHeader/jdProjectSubHeader";
-import jdProjectStore from "../../stores/jdProjectStore";
+import { Link } from 'react-router-dom';
+import jdStringUtils from '../../utils/jdStringUtils';
+import { JdProjectSubHeader } from '../jdProjectSubHeader/jdProjectSubHeader';
+import jdProjectStore from '../../stores/jdProjectStore';
 import styles from './proejctsStyles.module.scss';
-import { JdImg } from "../jdImg/jdImg";
-import { JdATag } from "../jdATag/jdATag";
+import { JdImg } from '../jdImg/jdImg';
+import { JdATag } from '../jdATag/jdATag';
 
 export function JdRekWeb(): React.JSX.Element {
     return (
         <>
-
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
-            <p>Here's a <JdATag href="https://rekit.app/">link to the website</JdATag> I designed and built!</p>
+            <p>
+                Here's a <JdATag href="https://rekit.app/">link to the website</JdATag> I designed and built!
+            </p>
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>Communicate the value of the <Link to={jdProjectStore.getLinkToProject(jdProjectStore.rekApp)}>Rek app</Link> in a single page scrolling website.</p>
+            <p>
+                Communicate the value of the <Link to={jdProjectStore.getLinkToProject(jdProjectStore.rekApp)}>Rek app</Link> in a single page scrolling website.
+            </p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -81,13 +84,20 @@ export function JdRekWeb(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots from the website</figcaption>
 
-            <p>Using the <JdATag href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</JdATag> was quite interesting. It was something I had always wanted to explore and I'm glad I didn't reach for a library for the scroll interactions.</p>
+            <p>
+                Using the <JdATag href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</JdATag> was quite interesting. It was
+                something I had always wanted to explore and I'm glad I didn't reach for a library for the scroll interactions.
+            </p>
 
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
-            <p>In the first month, I had <strong>400+ unique hits</strong> on the site with <strong>200+ user downloads</strong> across Android and iOS.</p>
+            <p>
+                In the first month, I had <strong>400+ unique hits</strong> on the site with <strong>200+ user downloads</strong> across Android and iOS.
+            </p>
 
-            <p>You can <JdATag href="https://rekit.app/">checkout the site here</JdATag>.</p>
+            <p>
+                You can <JdATag href="https://rekit.app/">checkout the site here</JdATag>.
+            </p>
 
             <JdImg
                 className={styles.projectsImage}
@@ -98,7 +108,10 @@ export function JdRekWeb(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Screenshots from the app store listing</figcaption>
 
-            <p>Users seemed to really love the social aspect around recommendations. Most people didn't care so much about remembering the recommendation but genuinely enjoyed the conversation around it.</p>
+            <p>
+                Users seemed to really love the social aspect around recommendations. Most people didn't care so much about remembering the recommendation but genuinely enjoyed the
+                conversation around it.
+            </p>
         </>
-    )
+    );
 }

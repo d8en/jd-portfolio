@@ -1,10 +1,8 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .playerContainer {
     min-height: 644px;
     border: unset;
-    // @include baseShadow;
     border-radius: 24px;
-    // padding: 12px 0;
     margin: 0;
 }

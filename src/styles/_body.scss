@@ -14,25 +14,26 @@ $desktopMaxWidth4k: 1400px;
     margin: 0 $globalPadding;
 }
 
-@mixin fullVh {
+@mixin fullVh($overflowY: hidden) {
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: $overflowY;
+
     @include media-phone {
         height: -webkit-fill-available;
         height: -moz-available;
-        // height: 100vh;
     }
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 @mixin fullVw {
     width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
     @include media-phone {
         width: -webkit-fill-available;
         width: -moz-available;
     }
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 @mixin boxSizingBorder {
@@ -43,13 +44,13 @@ $desktopMaxWidth4k: 1400px;
 body {
     margin: 0 auto;
     background-color: var(--primBg);
-    @include fullVh;
     @include themeColorTransition;
+    @include fullVh;
 }
 
 html {
-    @include fullVh;
     @include base-font;
+    @include fullVh;
 }
 
 @mixin globalBottomAfter {
@@ -65,5 +66,44 @@ html {
         content: "Firefox appears to treat bottom padding in scrollable divs differently, or it's bugged.";
         height: 20px;
         color: transparent;
+    }
+}
+
+* {
+    scrollbar-color: var(--greyText) transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-width: 24px;
+    &::-webkit-scrollbar,
+    -moz-scrollbar {
+        width: 8px;
+
+        /* width of the entire scrollbar */
+        // &:hover {
+        // }
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 20px;
+
+        // &:hover {
+
+        // }
+
+        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--greyText);
+        /* color of the scroll thumb */
+        border-radius: 20px;
+        /* roundness of the scroll thumb */
+        border: 0px solid transparent;
+
+        /* creates padding around scroll thumb */
+        &:hover {
+            background-color: var(--primWhite);
+        }
     }
 }

@@ -8,7 +8,7 @@ export interface IJdButtonProps {
     text: string;
     isDisabled: boolean;
     onClick: () => void | Promise<void>;
-    type: "submit" | "reset" | "button" | undefined;
+    type: 'submit' | 'reset' | 'button' | undefined;
     isWhiteLoader?: boolean;
 
     style?: React.CSSProperties;
@@ -16,17 +16,19 @@ export interface IJdButtonProps {
 }
 
 export function JdButton(props: IJdButtonProps): React.JSX.Element {
-
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isTempDisabled, setIsTempDisabled] = useState<boolean>(false);
 
     const toggleLoader = (newLoadingState: boolean): void => {
         if (newLoadingState) setIsTempDisabled(true);
-        setTimeout(() => {
-            setIsLoading(newLoadingState);
-            if (isTempDisabled) setIsTempDisabled(false);
-        }, isLoading === true ? 0 : 800);
-    }
+        setTimeout(
+            () => {
+                setIsLoading(newLoadingState);
+                if (isTempDisabled) setIsTempDisabled(false);
+            },
+            isLoading === true ? 0 : 800,
+        );
+    };
 
     const onClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> => {
         e.preventDefault();
@@ -34,7 +36,7 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
         toggleLoader(true);
         await props.onClick();
         toggleLoader(false);
-    }
+    };
 
     return (
         <button
@@ -47,7 +49,7 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
             style={props.style}
         >
             {props.text}
-            {isLoading &&
+            {isLoading && (
                 <AnimatePresence>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -57,7 +59,7 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
                         <JdDotLoader isWhite={props.isWhiteLoader} />
                     </motion.div>
                 </AnimatePresence>
-            }
+            )}
         </button>
-    )
+    );
 }

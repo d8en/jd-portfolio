@@ -10,4 +10,4 @@ export const sampleJdContactDto: IJdContactDto = {
     lastName: '',
     email: '',
     message: '',
-}
+};

@@ -1,6 +1,6 @@
-import { makeAutoObservable } from "mobx";
-import jdContactManager from "../managers/jdContactManager";
-import jdProjectManager from "../managers/jdProjectManager";
+import { makeAutoObservable } from 'mobx';
+import jdContactManager from '../managers/jdContactManager';
+import jdProjectManager from '../managers/jdProjectManager';
 
 export class JdThemeStore {
     constructor() {
@@ -13,16 +13,13 @@ export class JdThemeStore {
 
     public get canShowFloat(): boolean {
         if (
-            !jdContactManager.store.isFloatingShowing
-            &&
-            jdContactManager.store.hasFloatShown
-            &&
-            !jdProjectManager.store.isFloatingHelp
-            &&
-            this.isFloatingShowing
-            &&
+            !jdContactManager.store.isFloatingShowing &&
+            jdContactManager.store.hasFloatShown &&
+            !jdProjectManager.store.isFloatingHelp &&
+            this.isFloatingShowing &&
             !this.hasFloatShown
-        ) return true;
+        )
+            return true;
         return false;
     }
 }

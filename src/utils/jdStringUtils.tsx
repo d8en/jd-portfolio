@@ -1,7 +1,6 @@
-import { IJdProjectSubHeaderProps } from "../components/jdProjectSubHeader/jdProjectSubHeader";
+import { IJdProjectSubHeaderProps } from '../components/jdProjectSubHeader/jdProjectSubHeader';
 
 class JdStringUtils {
-
     public pageTitlePrefix: string = 'Jeff Dayton - ';
     public pageTitleSuffix: string = 'Software Engineer';
     public pageTitleReset: string = this.pageTitlePrefix + this.pageTitleSuffix;
@@ -9,47 +8,47 @@ class JdStringUtils {
     public favoriteStuff: IJdProjectSubHeaderProps = {
         icon: '🥳',
         name: 'Highlights',
-    }
+    };
 
     public ideation: IJdProjectSubHeaderProps = {
         icon: '🧠',
         name: 'Brainstorm',
-    }
+    };
 
     public design: IJdProjectSubHeaderProps = {
         icon: '🎨',
         name: 'Design',
-    }
+    };
 
     public build: IJdProjectSubHeaderProps = {
         icon: '🚧',
         name: 'Build',
-    }
+    };
 
     public results: IJdProjectSubHeaderProps = {
         icon: '📊',
         name: 'Results',
-    }
+    };
 
     public finished: IJdProjectSubHeaderProps = {
         icon: '🚀',
         name: 'Finished Product',
-    }
+    };
 
     public goal: IJdProjectSubHeaderProps = {
         icon: '🎯',
         name: 'The Goal',
-    }
+    };
 
     public skillsUsed: IJdProjectSubHeaderProps = {
         icon: '🛠️',
         name: 'Skills Used',
-    }
+    };
 
     public company: IJdProjectSubHeaderProps = {
         icon: '🏢',
         name: 'Company',
-    }
+    };
 }
 
 const jdStringUtils = new JdStringUtils();

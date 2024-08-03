@@ -11,7 +11,6 @@ $projectHoverTransition:
     $hoverDuration translate;
 
 .projectsContainer {
-    overflow: hidden;
     cursor: pointer;
     position: relative;
     border-radius: $containerBorder;
@@ -25,26 +24,20 @@ $projectHoverTransition:
     }
 
     @include media-desktop {
+        transition: $projectHoverTransition;
         grid-auto-flow: column;
         gap: 32px;
-    }
 
-    @include media-desktop {
-        transition: $projectHoverTransition;
         &:hover {
             transition: $projectHoverTransition;
-            @include baseShadow;
-            border: 1.5px solid var(--link);
+            border: 1.5px solid transparent;
             translate: 0 -8px;
+            @include baseShadow;
+            @include rotateBorder(103%, 101%);
 
             .projectPreviewImg {
                 @include aniLinkScale;
                 transform: scale(1.09);
-            }
-
-            .projectPreviewImgContainer {
-                // @include aniHoverOnly;
-                background-color: var(--link);
             }
         }
     }
@@ -61,25 +54,25 @@ $projectHoverTransition:
     bottom: 0;
     background-color: var(--primBg);
     max-width: unset;
-    @include scroll-bar;
     overflow-y: scroll;
-    @include boxSizingBorder;
     grid-auto-rows: min-content;
+
     @include themeColorTransition;
+    @include boxSizingBorder;
 
     .projectPreviewImgContainer {
-        @include bgGradient(top left);
         padding-top: 56px;
         width: 100%;
+        border-radius: 0;
     }
 
     .projectContent {
         max-width: $desktopMaxWidth;
-        // @include themeColorTransition;
         place-self: start center;
         place-items: start;
         gap: 72px;
         padding: 24px 20px;
+
         @include globalBottomAfter;
         & > p,
         ul,
@@ -94,7 +87,7 @@ $projectHoverTransition:
     }
 
     .projectSkills {
-        gap: 16px;
+        gap: 20px;
         flex-direction: column;
     }
 
@@ -109,55 +102,61 @@ $projectHoverTransition:
 }
 
 .projectPreviewImgContainer {
-    @include boxSizingBorder;
     background-color: var(--greyBg);
     padding: 56px 28px;
-
-    @include media-phone {
-        padding: 24px;
-    }
-
     display: flex;
     position: relative;
+    overflow: hidden;
+    border-radius: $containerBorder $containerBorder 0 0;
+
+    @include boxSizingBorder;
+    @include media-phone {
+        padding: 24px;
+        border-radius: $containerBorder $containerBorder 0 0;
+    }
+
+    @include media-desktop {
+        border-radius: $containerBorder 0 0 $containerBorder;
+    }
 }
 
 .projectPreviewImg {
-    @include boxSizingBorder;
-    border-radius: 24px;
     padding: 12px;
-    @include aniLinkScale;
     object-fit: contain;
     place-self: center;
     height: $previewImgHeight;
     width: 100%;
     height: 288px;
+
+    @include boxSizingBorder;
+    @include aniLinkScale;
 }
 
 .projectContent {
-    @include themeColorTransition;
     display: grid;
     grid-auto-rows: min-content;
     place-self: center start;
     gap: 20px;
     padding: 12px;
+
+    @include themeColorTransition;
 }
 
 .projectHeader {
-    @include jdLineClamp(6);
     position: relative;
     @include font-size-larger;
-    @include textGradient(right);
+    @include jdLineClamp(6);
 }
 
 .projectDesc {
-    @include jdLineClamp(2);
     color: var(--greyText);
+    @include jdLineClamp(2);
 }
 
 .projectSkills {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 8px;
 }
 
 .projectLaunchIcon {
@@ -210,8 +209,8 @@ $projectHoverTransition:
 
 .projectNavText {
     text-align: center;
-    @include textGradient(top right);
     flex: 1;
+    @include textGradient(top right);
     @include jdLineClamp(1);
     @include media-phone {
         @include jdLineClamp(2);

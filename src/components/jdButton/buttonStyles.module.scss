@@ -12,19 +12,19 @@ button {
 
 .buttonContainer {
     overflow: hidden;
-    @include flexCentered;
     padding: 24px;
-    @include bgGradient(left);
     position: relative;
     color: var(--primWhite);
     border-radius: 20px;
     user-select: none;
 
+    @include btnTransition;
+    @include flexCentered;
+    @include bgGradient(left);
+
     @include aniHoverBase {
         color: var(--primWhite);
     }
-
-    @include btnTransition;
 
     &:disabled {
         @include btnTransition;
