@@ -35,9 +35,9 @@ $projectHoverTransition:
         &:hover {
             transition: $projectHoverTransition;
             border: 1.5px solid transparent;
-            @include rotateBorder(103%, 101%);
             translate: 0 -8px;
             @include baseShadow;
+            @include rotateBorder(103%, 101%);
 
             .projectPreviewImg {
                 @include aniLinkScale;
@@ -45,7 +45,6 @@ $projectHoverTransition:
             }
 
             .projectPreviewImgContainer {
-                // background-color: var(--link);
                 @include bgGradient;
             }
         }
