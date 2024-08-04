@@ -1,11 +1,13 @@
 export interface IJdSkillCo {
     name: string;
-    companyName?: string;
-    imgSrc?: string;
-    icon?: React.JSX.Element;
     component: React.JSX.Element;
-    isSelected?: boolean;
-    startYear: string;
     xpPercentage: number;
+    startYear: string;
+
+    companyName?: string;
     invertImageColors?: boolean;
+    endYear?: string;
+    isSelected?: boolean;
+    icon?: React.JSX.Element;
+    imgSrc?: string;
 }

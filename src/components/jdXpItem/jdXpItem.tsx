@@ -68,7 +68,7 @@ export const JdXpItem = observer((props: React.PropsWithChildren<Omit<IJdSkillCo
                     {props.children && (
                         <div className={styles.xpTotal}>
                             {/* XP TEXT */}
-                            <p className={styles.xpText}>{JdDateUtils.getYearDiff(props.startYear)}</p>
+                            <p className={styles.xpText}>{JdDateUtils.getYearDiff(props.startYear, props.endYear)}</p>
                         </div>
                     )}
                 </div>

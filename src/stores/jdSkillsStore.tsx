@@ -56,27 +56,6 @@ export class JdSkillsStore {
         ),
     };
 
-    public sass: IJdSkillCo = {
-        name: 'Sass',
-        icon: <SassIcon />,
-        startYear: '2019',
-        xpPercentage: 1,
-        component: <p>Sass is an incredibly useful pre-processing language that I use in all of my projects. Mixins, variables, and functions bring sanity to CSS.</p>,
-    };
-
-    public css: IJdSkillCo = {
-        name: 'CSS',
-        icon: <CssIcon />,
-        startYear: '2019',
-        xpPercentage: 1,
-        component: (
-            <p>
-                I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a
-                less painful language to use.
-            </p>
-        ),
-    };
-
     public nodeJs: IJdSkillCo = {
         name: 'Node.js',
         icon: <NodeIcon />,
@@ -110,6 +89,7 @@ export class JdSkillsStore {
         name: 'SQL',
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/sql.webp?alt=media',
         startYear: '2021',
+        endYear: '2024',
         xpPercentage: 0.5,
         component: <p>I use MySQL to support one of my published apps and used MSSQL daily as a product analyst.</p>,
     };
@@ -117,12 +97,74 @@ export class JdSkillsStore {
     public cSharp: IJdSkillCo = {
         name: 'C#',
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/c%23.webp?alt=media',
-        startYear: '2023',
+        startYear: '2019',
+        endYear: '2020',
         xpPercentage: 0.3,
         component: (
             <p>
                 I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get
                 to where I'm at today.
+            </p>
+        ),
+    };
+
+    public sass: IJdSkillCo = {
+        name: 'Sass',
+        icon: <SassIcon />,
+        startYear: '2019',
+        xpPercentage: 1,
+        component: <p>Sass is an incredibly useful pre-processing language that I use in all of my projects. Mixins, variables, and functions bring sanity to CSS.</p>,
+    };
+
+    public css: IJdSkillCo = {
+        name: 'CSS',
+        icon: <CssIcon />,
+        startYear: '2019',
+        xpPercentage: 1,
+        component: (
+            <p>
+                I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a
+                less painful language to use.
+            </p>
+        ),
+    };
+
+    public productDesign: IJdSkillCo = {
+        name: 'Product Design',
+        icon: <ProductIcon />,
+        startYear: '2017',
+        xpPercentage: 1,
+        component: (
+            <p>
+                I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industries with many happy clients,
+                profitable products, and growing user bases.
+            </p>
+        ),
+    };
+
+    public figma: IJdSkillCo = {
+        name: 'Figma',
+        icon: <FigmaIcon />,
+        startYear: '2017',
+        xpPercentage: 1,
+        component: (
+            <p>
+                It's fascinating to see which applications each product designer has gone through. My progression goes something like this: Inkscape, Illustrator, XD, Sketch, then
+                Figma. I can't imagine using anything else, from advanced prototyping and large scale design systems to branding and typeface design, I'm an fanboy and power user.
+            </p>
+        ),
+    };
+
+    public brandDesign: IJdSkillCo = {
+        name: 'Brand Design',
+        icon: <BrandIcon className={styles.themedIcon} />,
+        startYear: '2014',
+        endYear: '2019',
+        xpPercentage: 1,
+        component: (
+            <p>
+                My first design projects were logo and branding design. I enjoy word-mark and logo design even to this day, as I got to work on a branding refresh at my most recent
+                gig.
             </p>
         ),
     };
@@ -179,36 +221,11 @@ export class JdSkillsStore {
         ),
     };
 
-    public figma: IJdSkillCo = {
-        name: 'Figma',
-        icon: <FigmaIcon />,
-        startYear: '2017',
-        xpPercentage: 1,
-        component: (
-            <p>
-                It's fascinating to see which applications each product designer has gone through. My progression goes something like this: Inkscape, Illustrator, XD, Sketch, then
-                Figma. I can't imagine using anything else, from advanced prototyping and large scale design systems to branding and typeface design, I'm an fanboy and power user.
-            </p>
-        ),
-    };
-
-    public productDesign: IJdSkillCo = {
-        name: 'Product Design',
-        icon: <ProductIcon />,
-        startYear: '2017',
-        xpPercentage: 1,
-        component: (
-            <p>
-                I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industries with many happy clients,
-                profitable products, and growing user bases.
-            </p>
-        ),
-    };
-
     public afterEffects: IJdSkillCo = {
         name: 'After Effects',
         icon: <AdobeAeIcon />,
         startYear: '2022',
+        endYear: '2024',
         xpPercentage: 0.5,
         component: (
             <p>
@@ -217,21 +234,8 @@ export class JdSkillsStore {
         ),
     };
 
-    public brandDesign: IJdSkillCo = {
-        name: 'Brand Design',
-        icon: <BrandIcon className={styles.themedIcon} />,
-        startYear: '2017',
-        xpPercentage: 1,
-        component: (
-            <p>
-                My first design projects were logo and branding design. I enjoy word-mark and logo design even to this day, as I got to work on a branding refresh at my most recent
-                gig.
-            </p>
-        ),
-    };
-
     public get skills(): IJdSkillCo[] {
-        return jdObjUtils.getAllProperties(this);
+        return jdObjUtils.getValues(this);
     }
 }
 
