@@ -75,25 +75,6 @@ export class JdProjectStore {
         isOpen: false,
     };
 
-    public typoApp: IJdProject = {
-        id: '8',
-        company: jdCompaniesStore.typo,
-        skills: [
-            jdSkillsStore.typescript,
-            jdSkillsStore.react,
-            jdSkillsStore.reactNative,
-            jdSkillsStore.reanimated,
-            jdSkillsStore.figma,
-            jdSkillsStore.productDesign,
-            jdSkillsStore.brandDesign,
-        ],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
-        component: <JdTypoApp />,
-        title: `Building a text-based social media app`,
-        desc: `I love the idea of returning to text-only social media, but let's be honest, we don't need another social media app.`,
-        isOpen: false,
-    };
-
     public boomSmartApp: IJdProject = {
         id: '4',
         company: jdCompaniesStore.boomerang,
@@ -134,6 +115,28 @@ export class JdProjectStore {
         isOpen: false,
     };
 
+    public boomSmartWeb: IJdProject = {
+        id: '5',
+        company: jdCompaniesStore.boomerang,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebPreview.webp?alt=media',
+        component: <JdSmartRouteWeb />,
+        title: 'Building a website to promote a return routing app',
+        desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
+        isOpen: false,
+    };
+
+    public rekWeb: IJdProject = {
+        id: '7',
+        company: jdCompaniesStore.rek,
+        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
+        component: <JdRekWeb />,
+        title: 'Building a website to promote a social recommendations app',
+        desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
+        isOpen: false,
+    };
+
     public airshopApp: IJdProject = {
         id: '1',
         company: jdCompaniesStore.boomerang,
@@ -142,6 +145,25 @@ export class JdProjectStore {
         component: <JdAirshopApp />,
         title: `Building an app in one month`,
         desc: `We had one month to build a returns app for a dark store in Chicago. It felt like an episode of 24, or Master Chef.`,
+        isOpen: false,
+    };
+
+    public typoApp: IJdProject = {
+        id: '8',
+        company: jdCompaniesStore.weekendProjects,
+        skills: [
+            jdSkillsStore.typescript,
+            jdSkillsStore.react,
+            jdSkillsStore.reactNative,
+            jdSkillsStore.reanimated,
+            jdSkillsStore.figma,
+            jdSkillsStore.productDesign,
+            jdSkillsStore.brandDesign,
+        ],
+        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/typoPreview.webp?alt=media',
+        component: <JdTypoApp />,
+        title: `Building a text-based social media app`,
+        desc: `I love the idea of returning to text-only social media, but let's be honest, we don't need another social media app.`,
         isOpen: false,
     };
 
@@ -167,28 +189,6 @@ export class JdProjectStore {
         desc: `During the Canadian wildfires, I got tired of going to the airnow.gov site to see if it was safe to play pickleball. So I built a web service to notify me of changes.`,
         isOpen: false,
         invertImageColors: false,
-    };
-
-    public rekWeb: IJdProject = {
-        id: '7',
-        company: jdCompaniesStore.rek,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/rekWebPreview.webp?alt=media',
-        component: <JdRekWeb />,
-        title: 'Building a website to promote a social recommendations app',
-        desc: `After spending months in the React Native realm, it was time to revisit the wonderful world wide web.`,
-        isOpen: false,
-    };
-
-    public boomSmartWeb: IJdProject = {
-        id: '5',
-        company: jdCompaniesStore.boomerang,
-        skills: [jdSkillsStore.typescript, jdSkillsStore.react, jdSkillsStore.css, jdSkillsStore.mobX, jdSkillsStore.framerMotion, jdSkillsStore.sass, jdSkillsStore.figma],
-        image: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteWebPreview.webp?alt=media',
-        component: <JdSmartRouteWeb />,
-        title: 'Building a website to promote a return routing app',
-        desc: `Everyone's tired of hearing "simplify" but I suppose it was a relevant verb for this project.`,
-        isOpen: false,
     };
 
     public higApp: IJdProject = {
@@ -277,7 +277,7 @@ export class JdProjectStore {
     }
 
     public get projects(): IJdProject[] {
-        return jdObjUtils.getAllProperties<IJdProject>(this).filter((proj: IJdProject) => proj.id);
+        return jdObjUtils.getValues<IJdProject>(this).filter((proj: IJdProject) => proj.id);
     }
 
     public get filter(): IJdSkillCo[] {
@@ -285,7 +285,7 @@ export class JdProjectStore {
     }
 
     public get filteredProjects(): IJdProject[] {
-        if (this.filter.length === 0) return jdObjUtils.getAllProperties(this);
+        if (this.filter.length === 0) return jdObjUtils.getValues(this);
         return [];
     }
 

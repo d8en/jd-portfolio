@@ -11,18 +11,14 @@ export function JdSkillCoList(props: IJdSkillCoListProps): React.JSX.Element {
     return (
         <div className={styles.jdSkillCoListContainer}>
             {props.list.map((skillCo: IJdSkillCo, idx: number) => {
+                const { component, ...props } = skillCo;
                 return (
                     <JdXpItem
                         idx={idx}
                         key={skillCo.name}
-                        name={skillCo.name}
-                        icon={skillCo.icon}
-                        imgSrc={skillCo.imgSrc}
-                        startYear={skillCo.startYear}
-                        xpPercentage={skillCo.xpPercentage}
-                        invertImageColors={skillCo.invertImageColors}
+                        {...props}
                     >
-                        {skillCo.component}
+                        {component}
                     </JdXpItem>
                 );
             })}

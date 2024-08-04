@@ -2,7 +2,6 @@ import { makeAutoObservable } from 'mobx';
 import BoomIcon from '../assets/svg/brands/boomerang.svg?react';
 import RekIcon from '../assets/svg/brands/rek.svg?react';
 import GravixIcon from '../assets/svg/brands/gravix.svg?react';
-import TypoIcon from '../assets/svg/brands/typo.svg?react';
 import JdIcon from '../assets/svg/brands/jdSmall.svg?react';
 import MarketAxess from '../assets/svg/brands/marketAxess.svg?react';
 import { JdATag } from '../components/jdATag/jdATag';
@@ -36,8 +35,9 @@ export class JdCompaniesStore {
 
     public boomerang: IJdSkillCo = {
         name: 'Lead Frontend Engineer',
-        companyName: 'boomerang',
-        startYear: '2022',
+        companyName: 'Boomerang',
+        endYear: '2023',
+        startYear: '2021',
         xpPercentage: 0.75,
         icon: <BoomIcon />,
         component: (
@@ -72,7 +72,8 @@ export class JdCompaniesStore {
         name: 'Lead Product Designer',
         companyName: 'Primacy',
         invertImageColors: true,
-        startYear: '2022',
+        startYear: '2018',
+        endYear: '2021',
         xpPercentage: 0.75,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/primacy.webp?alt=media',
         component: (
@@ -89,7 +90,8 @@ export class JdCompaniesStore {
     public cocc: IJdSkillCo = {
         name: 'Product Manager',
         companyName: 'COCC',
-        startYear: '2016',
+        startYear: '2012',
+        endYear: '2019',
         xpPercentage: 1,
         imgSrc: 'https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/cocc.webp?alt=media',
         component: (
@@ -106,13 +108,14 @@ export class JdCompaniesStore {
 
     public gravix: IJdSkillCo = {
         name: 'Co-Founder & Designer',
-        companyName: 'gravix',
-        startYear: '2020',
+        companyName: 'Gravix',
+        startYear: '2014',
+        endYear: '2019',
         xpPercentage: 0.8,
         icon: <GravixIcon className={styles.themedIcon} />,
         component: (
             <>
-                <p>At gravix, I created a digital agency with branding, UX, and marketing services for 10+ clients.</p>
+                <p>At Gravix, I created a digital agency with branding, UX, and marketing services for 10+ clients.</p>
                 <p>I worked directly with co-founders, executives, and middle management to develop branding, UX/CX, and growth plans for products and services.</p>
             </>
         ),
@@ -131,21 +134,8 @@ export class JdCompaniesStore {
         ),
     };
 
-    public typo: IJdSkillCo = {
-        name: 'Founder & Dev',
-        companyName: 'Typo',
-        startYear: '2023',
-        xpPercentage: 0.2,
-        icon: <TypoIcon className={styles.themedIcon} />,
-        component: (
-            <>
-                <p>Typo is a text-only social media app that replays exactly how the post was written. It's more of a fun dev experiment that is collecting dust.</p>
-            </>
-        ),
-    };
-
     public get companies(): IJdSkillCo[] {
-        return jdObjUtils.getAllProperties(this);
+        return jdObjUtils.getValues(this);
     }
 }
 

@@ -1,5 +1,5 @@
 class JdObjUtils {
-    public getAllProperties<T>(object: Object): T[] {
+    public getValues<T>(object: Object): T[] {
         return Object.entries(object).map((obj: [string, any]) => obj[1]);
     }
 }
