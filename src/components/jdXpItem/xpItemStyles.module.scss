@@ -6,7 +6,7 @@ $skillGap: 16px;
 .xpContainer {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    place-items: start;
+    place-items: center;
     gap: $skillGap;
     border-radius: 12px;
     max-width: $desktopMaxWidth;
