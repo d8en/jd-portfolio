@@ -2,7 +2,7 @@ import { runInAction } from 'mobx';
 
 export abstract class JdManagerBase<T extends object> {
     public abstract store: T;
-    private delayedTimeout: NodeJS.Timeout | undefined = undefined;
+    private delayedTimeout: Timer | undefined = undefined;
 
     public async setStateAsync(newState: Partial<T>, isDelayed?: boolean): Promise<void> {
         return new Promise((resolve: (value: void | PromiseLike<void>) => void, reject: (reason?: any) => void) => {
