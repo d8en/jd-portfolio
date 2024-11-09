@@ -5,7 +5,7 @@ import CssIcon from '../assets/svg/brands/css.svg?react';
 import FigmaIcon from '../assets/svg/brands/figma.svg?react';
 import ReanimatedIcon from '../assets/svg/brands/swm.svg?react';
 import ReduxIcon from '../assets/svg/brands/redux.svg?react';
-import NodeIcon from '../assets/svg/brands/node.svg?react';
+import BunIcon from '../assets/svg/brands/bun.svg?react';
 import AdobeAeIcon from '../assets/svg/brands/ae.svg?react';
 import MongoIcon from '../assets/svg/brands/mongo.svg?react';
 import BrandIcon from '../assets/svg/brands/brand.svg?react';
@@ -16,6 +16,7 @@ import { makeAutoObservable } from 'mobx';
 import jdObjUtils from '../utils/jdObjUtils';
 import { IJdSkillCo } from '../models/iJdSkillCo';
 import styles from './storeStyles.module.scss';
+import { JdDateUtils } from '../utils/jdDateUtilts';
 
 export class JdSkillsStore {
     constructor() {
@@ -27,7 +28,7 @@ export class JdSkillsStore {
         icon: <TsIcon />,
         startYear: '2019',
         xpPercentage: 1,
-        component: <p>My roots in C# were super helpful in picking up Typescript. This is the primary language I've been using for the past 4 years.</p>,
+        component: <p>My roots in C# were super helpful in picking up Typescript. This is the primary language I've been using for the past {JdDateUtils.getYearDiff('2019')}.</p>,
     };
 
     public react: IJdSkillCo = {
@@ -50,18 +51,18 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                I have 4 years of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera interactions, share activities, and
-                more.
+                I have {JdDateUtils.getYearDiff('2019')} of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera
+                interactions, share activities, and more.
             </p>
         ),
     };
 
     public nodeJs: IJdSkillCo = {
-        name: 'Node.js',
-        icon: <NodeIcon />,
+        name: 'Bun.sh / Node.js',
+        icon: <BunIcon />,
         startYear: '2019',
         xpPercentage: 1,
-        component: <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects. I'm also a big fan of bun.sh.</p>,
+        component: <p>I'm a big fan of bun.sh and use node.js in several production apps (w/Typescript).</p>,
     };
 
     public graphQL: IJdSkillCo = {
@@ -136,8 +137,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industries with many happy clients,
-                profitable products, and growing user bases.
+                I've always wanted to be an "inventor" and I think product designers are exactly that. I have {JdDateUtils.getYearDiff('2017')} of experience across 10+ industries
+                with many happy clients, profitable products, and growing user bases.
             </p>
         ),
     };
@@ -176,8 +177,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                By far my favorite state management library, I have 4 years of experience using it with large scale projects. The simplicity and familiar architecture makes this my
-                go-to for all projects.
+                By far my favorite state management library, I have {JdDateUtils.getYearDiff('2019')} of experience using it with large scale projects. The simplicity and familiar
+                architecture makes this my go-to for all projects.
             </p>
         ),
     };

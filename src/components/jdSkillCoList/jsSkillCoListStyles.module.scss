@@ -1,6 +1,7 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .jdSkillCoListContainer {
     display: grid;
+    place-items: start;
     gap: 60px;
 }

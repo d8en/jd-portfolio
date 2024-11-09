@@ -7,12 +7,15 @@ export interface IJdButtonProps {
     id: string;
     text: string;
     isDisabled: boolean;
-    onClick: () => void | Promise<void>;
     type: 'submit' | 'reset' | 'button' | undefined;
-    isWhiteLoader?: boolean;
 
+    onClick?: () => void | Promise<void>;
+
+    isWhiteLoader?: boolean;
     style?: React.CSSProperties;
     className?: string;
+    disabledText?: string;
+    href?: string;
 }
 
 export function JdButton(props: IJdButtonProps): React.JSX.Element {
@@ -24,19 +27,31 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
         setTimeout(
             () => {
                 setIsLoading(newLoadingState);
-                if (isTempDisabled) setIsTempDisabled(false);
+                setIsTempDisabled(false);
             },
-            isLoading === true ? 0 : 800,
+            isLoading === true ? 0 : 1000,
         );
     };
 
     const onClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> => {
+        if (!props.onClick) return;
         e.preventDefault();
         e.stopPropagation();
         toggleLoader(true);
         await props.onClick();
         toggleLoader(false);
     };
+
+    if (props.href) {
+        return (
+            <a
+                href={props.href}
+                className={styles.buttonContainer}
+            >
+                {props.text}
+            </a>
+        );
+    }
 
     return (
         <button
@@ -48,7 +63,7 @@ export function JdButton(props: IJdButtonProps): React.JSX.Element {
             disabled={isTempDisabled || props.isDisabled}
             style={props.style}
         >
-            {props.text}
+            {isTempDisabled ? (props.disabledText ?? props.text) : props.text}
             {isLoading && (
                 <AnimatePresence>
                     <motion.div
