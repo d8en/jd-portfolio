@@ -27,11 +27,11 @@ class JdAniUtils {
 
     public baseEase: Transition = {
         ease: cubicBezier(0, 1, 0, 1),
-        duration: 0.5,
+        duration: 0.2,
     };
     public baseEaseOut: Transition = {
         ease: cubicBezier(0.5, 0, 1, 0),
-        duration: 0.5,
+        duration: 0.2,
     };
 
     public longEase: Transition = {

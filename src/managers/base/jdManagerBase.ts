@@ -1,8 +1,9 @@
 import { runInAction } from 'mobx';
+import { undef } from '../../models/undef';
 
 export abstract class JdManagerBase<T extends object> {
     public abstract store: T;
-    private delayedTimeout: NodeJS.Timeout | undefined = undefined;
+    private delayedTimeout: undef<number> = undefined;
 
     public async setStateAsync(newState: Partial<T>, isDelayed?: boolean): Promise<void> {
         return new Promise((resolve: (value: void | PromiseLike<void>) => void, reject: (reason?: any) => void) => {
