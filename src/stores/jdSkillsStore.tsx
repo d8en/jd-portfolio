@@ -11,7 +11,8 @@ import MongoIcon from '../assets/svg/brands/mongo.svg?react';
 import BrandIcon from '../assets/svg/brands/brand.svg?react';
 import ProductIcon from '../assets/svg/brands/product.svg?react';
 import FramerIcon from '../assets/svg/brands/framer.svg?react';
-import GraphQL from '../assets/svg/brands/graphQL.svg?react';
+import GraphQLIcon from '../assets/svg/brands/graphQL.svg?react';
+import ElectronIcon from '../assets/svg/brands/electron.svg?react';
 import { makeAutoObservable } from 'mobx';
 import jdObjUtils from '../utils/jdObjUtils';
 import { IJdSkillCo } from '../models/iJdSkillCo';
@@ -52,6 +53,19 @@ export class JdSkillsStore {
         component: <p>I have 4 years of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera interactions, share activities, and more.</p>,
     };
 
+    public electron: IJdSkillCo = {
+        name: 'Electron',
+        icon: <ElectronIcon />,
+        startYear: '2023',
+        xpPercentage: 0.7,
+        component: (
+            <p>
+                I'm a huge fan of building more native experiences, even if they're an illusion...I mean a PWA. Electron is very fun to work with and I've built a handful of projects both
+                professionally and in my free time.
+            </p>
+        ),
+    };
+
     public nodeJs: IJdSkillCo = {
         name: 'Bun.sh / Node.js',
         icon: <BunIcon />,
@@ -62,7 +76,7 @@ export class JdSkillsStore {
 
     public graphQL: IJdSkillCo = {
         name: 'GraphQL',
-        icon: <GraphQL />,
+        icon: <GraphQLIcon />,
         startYear: '2023',
         xpPercentage: 0.5,
         component: <p>While I still believe there is a place in the world for REST, I'm enjoying GraphQL at my current role and plan on using it in future projects.</p>,
