@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $inputGap: 12px;
 
@@ -82,19 +82,19 @@ $inputGap: 12px;
     display: grid;
     place-items: center;
 
-    rect[fill="white"] {
+    rect[fill='white'] {
         fill: var(--primFg);
     }
 
-    path[fill="white"] {
+    path[fill='white'] {
         fill: var(--primFg);
     }
 
-    rect[fill="black"] {
+    rect[fill='black'] {
         fill: var(--primBg);
     }
 
-    path[fill="black"] {
+    path[fill='black'] {
         fill: var(--primBg);
     }
 
@@ -104,11 +104,11 @@ $inputGap: 12px;
         @include aniHoverOnly;
         @include aniLinkClick;
 
-        rect[fill="white"] {
+        rect[fill='white'] {
             fill: var(--link);
         }
 
-        path[fill="white"] {
+        path[fill='white'] {
             fill: var(--link);
         }
     }

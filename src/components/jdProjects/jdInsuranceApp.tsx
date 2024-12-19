@@ -41,8 +41,8 @@ export function JdInsuranceApp(): React.JSX.Element {
             </ol>
 
             <p>
-                I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work. This video was an
-                excellent communication tool for stakeholders, underwriters, and executives.
+                I created a high-fidelity animated prototype for the "future" experience, combining a years worth of research, iteration, and design work. This video was an excellent communication
+                tool for stakeholders, underwriters, and executives.
             </p>
 
             <p>This project contains highly confidential information so unfortunately I can't share the video or UI design.</p>

@@ -23,8 +23,8 @@ export function JdGameGuess(): React.JSX.Element {
             <p>I first needed to figure out "clues" I could present, based on what the Steam API could provide.</p>
 
             <p>
-                When you fetch details for a specific game, you get all sorts of wonderful information but the tricky part was trimming that down to what could be a helpful clue,
-                but didn't give away the game.
+                When you fetch details for a specific game, you get all sorts of wonderful information but the tricky part was trimming that down to what could be a helpful clue, but didn't give away
+                the game.
             </p>
 
             <JdImg
@@ -39,8 +39,8 @@ export function JdGameGuess(): React.JSX.Element {
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
             <p>
-                I designed the primary screens then came up with the scoring mechanics. I thought it might be fun if the players lost points for every clue they used, with some
-                clues costing more points than others (eg: screenshots are more telling).
+                I designed the primary screens then came up with the scoring mechanics. I thought it might be fun if the players lost points for every clue they used, with some clues costing more
+                points than others (eg: screenshots are more telling).
             </p>
 
             <p>I also built a custom typeahead search input that looked up games as you typed.</p>

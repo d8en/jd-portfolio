@@ -47,8 +47,8 @@ export function JdTypoApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Live screenshot of the "create post" screen</figcaption>
 
             <p>
-                Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x). This ended up being pretty simple - use
-                a timeout delay multiplier that is controlled by the user.
+                Aside from that, I also wanted a feature that allowed the reader to adjust the playback speed of the post (ex: 2x, 4x, 8x). This ended up being pretty simple - use a timeout delay
+                multiplier that is controlled by the user.
             </p>
 
             {/* DESIGN */}
@@ -89,9 +89,8 @@ export function JdTypoApp(): React.JSX.Element {
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
             <p>
-                I started with figuring out how to animate the doughnut timer, using the{' '}
-                <JdATag href="https://docs.swmansion.com/react-native-reanimated/docs">Reanimated library</JdATag>. After that, I spent the majority of the time building the
-                mechanism to track selection changes and the timing of each keystroke so that I could play it back accurately.
+                I started with figuring out how to animate the doughnut timer, using the <JdATag href="https://docs.swmansion.com/react-native-reanimated/docs">Reanimated library</JdATag>. After that,
+                I spent the majority of the time building the mechanism to track selection changes and the timing of each keystroke so that I could play it back accurately.
             </p>
 
             <JdVimeoPlayer

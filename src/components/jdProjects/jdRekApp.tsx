@@ -105,8 +105,7 @@ export function JdRekApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Prototype screenshots of the various versions of Rek I had designed</figcaption>
 
             <p>
-                I love when I get the chance to <strong>design my own icons</strong>. There are so many great icon sets out there, so it's not something I often get to do on most
-                projects.
+                I love when I get the chance to <strong>design my own icons</strong>. There are so many great icon sets out there, so it's not something I often get to do on most projects.
             </p>
 
             <JdImg
@@ -120,14 +119,11 @@ export function JdRekApp(): React.JSX.Element {
 
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
-            <p>
-                I finally carved out time to start building the app, starting with a super quick prototype using Firebase functions and their NoSQL implementation (Cloud
-                Firestore).
-            </p>
+            <p>I finally carved out time to start building the app, starting with a super quick prototype using Firebase functions and their NoSQL implementation (Cloud Firestore).</p>
 
             <p>
-                This was a quick way to get the app into alpha (~1 month), but I decided to migrate the database to MySql as it felt much easier to manage the more complex
-                relationships (friends, commenting, search, etc.).
+                This was a quick way to get the app into alpha (~1 month), but I decided to migrate the database to MySql as it felt much easier to manage the more complex relationships (friends,
+                commenting, search, etc.).
             </p>
 
             <div className={styles.multiMedia}>
@@ -152,8 +148,8 @@ export function JdRekApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app</figcaption>
 
             <p>
-                Sending a Rek was still "more work" than texting or DM'ing a link on social media platforms. As an attempt to optimize the interaction of sending a rek, I built a
-                native share activity.
+                Sending a Rek was still "more work" than texting or DM'ing a link on social media platforms. As an attempt to optimize the interaction of sending a rek, I built a native share
+                activity.
             </p>
 
             {/* VIDEO */}
@@ -191,8 +187,7 @@ export function JdRekApp(): React.JSX.Element {
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>
-                I will always remember the day I shipped <JdATag href="https://rekit.app/">Rek</JdATag>. People were so supportive and it was so exciting to see people using the
-                app.
+                I will always remember the day I shipped <JdATag href="https://rekit.app/">Rek</JdATag>. People were so supportive and it was so exciting to see people using the app.
             </p>
 
             <div className={styles.multiMedia}>
@@ -217,8 +212,8 @@ export function JdRekApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Live screenshots of the Rek it app</figcaption>
 
             <p>
-                Launch day and the following weeks were fun, exciting, and stressful with the app attracting <strong>200+ users</strong> and over{' '}
-                <strong>1,000 recommendations</strong> in the first month!
+                Launch day and the following weeks were fun, exciting, and stressful with the app attracting <strong>200+ users</strong> and over <strong>1,000 recommendations</strong> in the first
+                month!
             </p>
 
             <JdVimeoPlayer

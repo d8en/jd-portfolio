@@ -10,8 +10,8 @@ export function JdNightCat(): React.JSX.Element {
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
             <p>
-                Checkout the <JdATag href="https://nightcatproductions.com/">brand in action</JdATag> on the Nightcat Productions website. Below is a mockup of the finished logo
-                and wordmark I designed.
+                Checkout the <JdATag href="https://nightcatproductions.com/">brand in action</JdATag> on the Nightcat Productions website. Below is a mockup of the finished logo and wordmark I
+                designed.
             </p>
 
             <JdImg

@@ -52,8 +52,8 @@ export function JdWeekend(): React.JSX.Element {
             {/* LKL PKL; */}
             <h2 className={styles.projectGapReducer}>LKL PKL - Pickleball Apparel</h2>
             <p>
-                Pickleball became an obsession almost immediately after I started playing in April 2023. I wanted to design a brand to represent all the awesome local pickleball
-                cults... I mean communities.
+                Pickleball became an obsession almost immediately after I started playing in April 2023. I wanted to design a brand to represent all the awesome local pickleball cults... I mean
+                communities.
             </p>
 
             <JdImg

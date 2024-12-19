@@ -12,14 +12,7 @@ export class JdThemeStore {
     public hasFloatShown: boolean = false;
 
     public get canShowFloat(): boolean {
-        if (
-            !jdContactManager.store.isFloatingShowing &&
-            jdContactManager.store.hasFloatShown &&
-            !jdProjectManager.store.isFloatingHelp &&
-            this.isFloatingShowing &&
-            !this.hasFloatShown
-        )
-            return true;
+        if (!jdContactManager.store.isFloatingShowing && jdContactManager.store.hasFloatShown && !jdProjectManager.store.isFloatingHelp && this.isFloatingShowing && !this.hasFloatShown) return true;
         return false;
     }
 }
