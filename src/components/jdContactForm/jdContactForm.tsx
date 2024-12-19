@@ -6,6 +6,7 @@ import jdAniUtils from '../../utils/jdAniUtils';
 import { JdClose } from '../jdClose/jdClose';
 import { useEffect, useRef, useState } from 'react';
 import { JdButton } from '../jdButton/jdButton';
+import { undef } from '../../models/undef';
 
 export const JdContactForm = observer(() => {
     // Effect for showing contact form
@@ -15,7 +16,7 @@ export const JdContactForm = observer(() => {
 
     const startingText: string = 'Copy my email!';
     const [buttonTxt, setButtonTxt] = useState<string>(startingText);
-    const timeoutBtnText = useRef<Timer>();
+    const timeoutBtnText = useRef<undef<number>>(undefined);
 
     const onCopy = async (): Promise<void> => {
         try {
@@ -49,9 +50,8 @@ export const JdContactForm = observer(() => {
                         {/* HEADLINE */}
                         <h1>👋 Hello!</h1>
                         <p>
-                            I'm <strong>happily employed</strong> at the moment...
+                            I'm <strong>happily employed</strong> at the moment but always like to hear ideas!
                         </p>
-                        <p>...but if you have some interesting side projects or app ideas, feel free to email me!</p>
                         <JdButton
                             id={'email'}
                             text={buttonTxt}

@@ -43,6 +43,7 @@ a {
     position: relative;
     all: unset;
     color: var(--link);
+    text-decoration: underline;
 
     &:hover {
         cursor: pointer;

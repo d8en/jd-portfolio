@@ -6,7 +6,7 @@ $inputGap: 12px;
     position: absolute;
     background-color: var(--primBg);
     display: grid;
-    place-items: center;
+    place-content: center;
     z-index: 2;
     grid-auto-rows: auto;
 
@@ -20,7 +20,8 @@ $inputGap: 12px;
     display: grid;
     gap: 56px;
     place-items: center;
-    max-width: 600px;
+    max-width: 800px;
+    text-align: center;
 
     & > p {
         margin-top: -44px;

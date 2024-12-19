@@ -4,6 +4,7 @@ class JdAniUtils {
     public logoDelay: number = 700;
     public taglineDelay: number = 1400;
     public mountDelay: number = (300 + this.taglineDelay) / 1000;
+    private easeDuration: number = 0.4;
 
     public springTransition: Transition = {
         type: 'spring',
@@ -27,15 +28,21 @@ class JdAniUtils {
 
     public baseEase: Transition = {
         ease: cubicBezier(0, 1, 0, 1),
-        duration: 0.2,
+        duration: this.easeDuration,
     };
+
     public baseEaseOut: Transition = {
         ease: cubicBezier(0.5, 0, 1, 0),
-        duration: 0.2,
+        duration: this.easeDuration,
     };
 
     public longEase: Transition = {
         ease: cubicBezier(0, 1, 0, 1),
+        duration: 1,
+    };
+
+    public longEaseOut: Transition = {
+        ease: cubicBezier(1, 0, 1, 0),
         duration: 1,
     };
 
@@ -44,16 +51,11 @@ class JdAniUtils {
         duration: 6,
     };
 
-    public longEaseOut: Transition = {
-        ease: cubicBezier(1, 0, 1, 0),
-        duration: 1,
-    };
-
     public aniElementMount(delay?: number, isOut?: boolean): AnimationProps {
         return {
             initial: { translateY: isOut ? 0 : 100, opacity: 0 },
             animate: { translateY: isOut ? 100 : 0, opacity: 1 },
-            transition: { ...(isOut ? this.baseEaseOut : this.longEase), delay },
+            transition: { ...(isOut ? this.longEaseOut : this.longEase), delay },
         };
     }
 

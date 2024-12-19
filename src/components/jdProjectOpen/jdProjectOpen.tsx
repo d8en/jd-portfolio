@@ -42,8 +42,7 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
         <motion.div
             ref={innerDiv}
             initial={{ translateY: '100vh' }}
-            animate={{ translateY: 0 }}
-            transition={jdAniUtils.baseEase}
+            animate={{ translateY: 0, transition: jdAniUtils.baseEase }}
             exit={{ translateY: '100vh', transition: jdAniUtils.baseEaseOut }}
             className={styles.projectsContainerOpen}
         >
