@@ -54,7 +54,8 @@ export const JdHomeView = observer((): React.JSX.Element => {
                         transition={jdAniUtils.longEase}
                         className={styles.homeSubHeader}
                     >
-                        <strong>Software engineer</strong> and <strong>product designer</strong> with {JdDateUtils.getYearDiff('2015')} of experience. I take abstract ideas and bring them to life!
+                        Software <strong>engineer</strong> and product <strong>designer</strong> with <strong>{JdDateUtils.getYearDiff('2014')}</strong> of experience. I take abstract ideas and bring
+                        them to life!
                     </motion.h2>
                 )}
             </div>
