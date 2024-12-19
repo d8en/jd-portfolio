@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 .homeContainer {
     grid-auto-rows: unset;
@@ -23,6 +23,10 @@
     color: var(--greyText);
     @include font-size-normal;
     @include font-weight-light;
+
+    & > strong {
+        color: var(--link);
+    }
 }
 
 .homeBgContainer {

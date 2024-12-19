@@ -26,8 +26,8 @@ export class JdCompaniesStore {
                     At <JdATag href="https://www.marketaxess.com/">MarketAxess</JdATag>, I'm leading the development of a web app used by 600+ bond traders.
                 </p>
                 <p>
-                    I work with stakeholders and our enterprise architects to design, build, and test new applications and features while contributing towards overall application
-                    strategy / architecture.
+                    I work with stakeholders and our enterprise architects to design, build, and test new applications and features while contributing towards overall application strategy /
+                    architecture.
                 </p>
             </>
         ),
@@ -43,8 +43,8 @@ export class JdCompaniesStore {
         component: (
             <>
                 <p>
-                    At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. These
-                    products helped us secure $1.3 million funding over the course of 2 years.
+                    At <JdATag href="https://boomreturns.io/">Boomerang</JdATag>, I built 5 web apps, 1 native mobile app, and 1 website used by 200+ users across 5+ clients. These products helped us
+                    secure $1.3 million funding over the course of 2 years.
                 </p>
                 <p>I integrate all internal and third party APIs and model database architecture with fellow backend engineers.</p>
                 <p>I am also the lead product designer for all web and mobile apps and marketing content.</p>
@@ -97,8 +97,8 @@ export class JdCompaniesStore {
         component: (
             <>
                 <p>
-                    At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I designed and managed the implementation of 200+ features across 3 flagship products for 120+ clients
-                    and 1.2 million users, including 20+ third party integrations.
+                    At <JdATag href="https://www.cocc.com/">COCC</JdATag>, I designed and managed the implementation of 200+ features across 3 flagship products for 120+ clients and 1.2 million users,
+                    including 20+ third party integrations.
                 </p>
                 <p>I also managed and retained a team of 5 analysts and worked directly with C-level executives on roadmaps, strategy, and growth.</p>
                 <p>The products I was responsible for contributed towards annual revenue growth of 60%.</p>

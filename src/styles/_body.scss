@@ -1,9 +1,9 @@
-@use "./responsive" as *;
-@use "./font" as *;
-@use "./animations" as *;
+@use './responsive' as *;
+@use './font' as *;
+@use './animations' as *;
 
 $globalPadding: 20px;
-$desktopMaxWidth: 720px;
+$desktopMaxWidth: 744px;
 $desktopMaxWidth4k: 1400px;
 
 @mixin bodyPadding {

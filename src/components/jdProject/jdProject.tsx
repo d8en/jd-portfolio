@@ -24,7 +24,7 @@ export const JdProject = observer((props: IJdProject & IJdProjectProps): React.J
         <motion.div
             onClickCapture={onClickProject}
             className={styles.projectsContainer}
-            {...jdAniUtils.aniElementMount(props.idx / 6)}
+            {...jdAniUtils.aniElementMount(props.idx / 8)}
         >
             {/* PREVIEW IMAGE */}
             <motion.div className={styles.projectPreviewImgContainer}>

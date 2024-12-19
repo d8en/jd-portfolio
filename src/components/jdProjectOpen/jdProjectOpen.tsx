@@ -41,11 +41,10 @@ export const JdProjectOpen = observer((props: IJdProject & IJdProjectProps): Rea
     return (
         <motion.div
             ref={innerDiv}
-            initial={{ translateY: 100, opacity: 0.5 }}
-            animate={{ translateY: 0, opacity: 1 }}
-            transition={jdAniUtils.baseEase}
+            initial={{ translateY: '100vh' }}
+            animate={{ translateY: 0, transition: jdAniUtils.baseEase }}
+            exit={{ translateY: '100vh', transition: jdAniUtils.baseEaseOut }}
             className={styles.projectsContainerOpen}
-            exit={{ opacity: 0, translateY: 100, transition: jdAniUtils.baseEaseOut }}
         >
             {/* CLOSE */}
             <JdClose onClick={() => props.onToggleProject()} />

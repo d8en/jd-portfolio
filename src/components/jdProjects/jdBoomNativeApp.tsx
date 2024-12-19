@@ -40,8 +40,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
             <p>
-                How could I integrate with so many stores? What type of integration would we need? What were the major problems around the returns experience for shoppers? How
-                could retailers benefit?
+                How could I integrate with so many stores? What type of integration would we need? What were the major problems around the returns experience for shoppers? How could retailers benefit?
             </p>
 
             {/* NOTES SCREENSHOT */}
@@ -65,15 +64,13 @@ export function JdBoomNativeApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             <p>
-                We identified the top retailers who were likely to have the most returns and found ways to optimize those integration efforts (ex: integrate with a provider that
-                covered many stores).
+                We identified the top retailers who were likely to have the most returns and found ways to optimize those integration efforts (ex: integrate with a provider that covered many stores).
             </p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
             <p>
-                The shopper experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify apps</Link>, so I started with a
-                clean slate.
+                The shopper experience was quite different from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify apps</Link>, so I started with a clean slate.
             </p>
 
             <p>We studied the top retailer returns experiences and came up with a flow that combined all of our favorite parts.</p>
@@ -116,8 +113,7 @@ export function JdBoomNativeApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Live demo of an integrated returns experience</figcaption>
 
             <p className={styles.projectGapReducer}>
-                Our multi-project monorepo architecture from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify app</Link> was beneficial in a few
-                ways:
+                Our multi-project monorepo architecture from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.shopifyApp)}>Shopify app</Link> was beneficial in a few ways:
             </p>
 
             <ul>
@@ -128,19 +124,17 @@ export function JdBoomNativeApp(): React.JSX.Element {
             </ul>
 
             <p>
-                Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. We caught ourselves adding unnecessary
-                complexity in a few places just to share small pieces of code.
+                Overall, big fan of the monorepo structure but it did take some extra time to "draw the line" on what could be shared. We caught ourselves adding unnecessary complexity in a few places
+                just to share small pieces of code.
             </p>
 
-            <p>
-                For example, I initially wanted to share components across web and native. While this is entirely possible, it would have pushed our beta back by at least a month.
-            </p>
+            <p>For example, I initially wanted to share components across web and native. While this is entirely possible, it would have pushed our beta back by at least a month.</p>
 
             <p>It was exponentially more valuable for us to get shopper feedback then to have 100% shared components.</p>
 
             <p>
-                I had a lot of fun implementing a <strong>live-scanning</strong> feature where users could scan return shipping labels to prefill information such as carrier,
-                tracking, and return address.
+                I had a lot of fun implementing a <strong>live-scanning</strong> feature where users could scan return shipping labels to prefill information such as carrier, tracking, and return
+                address.
             </p>
 
             {/* LABEL SCANNING CAMERA */}
@@ -153,8 +147,8 @@ export function JdBoomNativeApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Live demo of real-time OCR scanning with native camera view</figcaption>
 
             <p>
-                It was also quite interesting to implement our own <strong>fully customized webview</strong>, with injections that let users submit a return on a third party site
-                and upload information directly to us.
+                It was also quite interesting to implement our own <strong>fully customized webview</strong>, with injections that let users submit a return on a third party site and upload
+                information directly to us.
             </p>
 
             {/* TAP TO UPLOAD LABEL */}
@@ -178,8 +172,8 @@ export function JdBoomNativeApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Live demo of the contextual help and intro "swipeable" tutorial</figcaption>
 
             <p>
-                Shoppers said the return process was a bit overwhelming so I ended up creating more 'steps' with fewer selections on each step. This seemed to make the process more
-                digestible and less overwhelming.
+                Shoppers said the return process was a bit overwhelming so I ended up creating more 'steps' with fewer selections on each step. This seemed to make the process more digestible and less
+                overwhelming.
             </p>
 
             {/* LIVE SCREENSHOTS */}
@@ -219,8 +213,8 @@ export function JdBoomNativeApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshot of our home page, showing all pending and past returns</figcaption>
 
             <p>
-                We were a few steps away from publishing the app when an <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>exciting opportunity</Link> for one
-                of our other products came up.
+                We were a few steps away from publishing the app when an <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>exciting opportunity</Link> for one of our other
+                products came up.
             </p>
         </>
     );

@@ -18,8 +18,8 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>
-                Build a website that concisely communicates the benefits of <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>our return logistics app</Link>{' '}
-                and get demos booked.
+                Build a website that concisely communicates the benefits of <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>our return logistics app</Link> and get demos
+                booked.
             </p>
 
             {/* FUN FEATURES */}
@@ -75,8 +75,8 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Prototypes of the first "traditional Saas" layout</figcaption>
 
             <p>
-                Our CMO had an excellent idea: lets take the user on a "route" through the old ways of doing things, then the new. I loved this idea and created a new concept that
-                we ended up moving forward with.
+                Our CMO had an excellent idea: lets take the user on a "route" through the old ways of doing things, then the new. I loved this idea and created a new concept that we ended up moving
+                forward with.
             </p>
 
             <div className={styles.multiMedia}>
@@ -126,8 +126,8 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             </p>
 
             <p>
-                In fact, <strong>the page you're on right now</strong> is using some of the same architecture as the <JdATag href="https://boomreturns.io/news">news page</JdATag>,
-                with some improvements and design changes.
+                In fact, <strong>the page you're on right now</strong> is using some of the same architecture as the <JdATag href="https://boomreturns.io/news">news page</JdATag>, with some
+                improvements and design changes.
             </p>
 
             <div className={styles.multiMedia}>
@@ -147,8 +147,8 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshot of the news page and a post</figcaption>
 
             <p>
-                I also enjoy designing and optimizing the interactions around form inputs. Building the <JdATag href="https://boomreturns.io/#letsTalk">contact form</JdATag> and
-                integrating it to send all messages to Hubspot was a surprisingly fun time.
+                I also enjoy designing and optimizing the interactions around form inputs. Building the <JdATag href="https://boomreturns.io/#letsTalk">contact form</JdATag> and integrating it to send
+                all messages to Hubspot was a surprisingly fun time.
             </p>
 
             <JdImg
@@ -174,8 +174,8 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshot of the graphic I created to promote the cost savings around logistics</figcaption>
 
             <p>
-                We were very quickly ready to market our latest <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>smart routing product</Link> and had a ton
-                of positive feedback coming in from our retail partners and prospects.
+                We were very quickly ready to market our latest <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomSmartApp)}>smart routing product</Link> and had a ton of positive feedback
+                coming in from our retail partners and prospects.
             </p>
         </>
     );

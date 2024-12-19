@@ -1,6 +1,6 @@
-@use "./font" as *;
-@use "./body" as *;
-@use "./colors" as *;
+@use './font' as *;
+@use './body' as *;
+@use './colors' as *;
 
 p,
 li {
@@ -43,6 +43,7 @@ a {
     position: relative;
     all: unset;
     color: var(--link);
+    text-decoration: underline;
 
     &:hover {
         cursor: pointer;
@@ -52,7 +53,7 @@ a {
 
 strong {
     @include font-weight-bold;
-    @include textGradient(bottom right);
+    color: var(--primFg);
 }
 
 @mixin jdLineClamp($lines) {

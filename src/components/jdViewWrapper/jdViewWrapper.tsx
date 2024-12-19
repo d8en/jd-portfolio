@@ -3,12 +3,13 @@ import styles from './viewWrapperStyles.module.scss';
 import jdRoutes from '../../utils/jdRoutes';
 import jdStringUtils from '../../utils/jdStringUtils';
 import jdElementUtils from '../../utils/jdElementUtils';
+import React from 'react';
 
 export interface IJdViewWrapperProps {
     divProps?: React.PropsWithChildren & React.HTMLAttributes<HTMLDivElement>;
 }
 
-export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps>): JSX.Element {
+export function JdViewWrapper(props: React.PropsWithChildren<IJdViewWrapperProps>): React.JSX.Element {
     // Scroll view ref
     const divRef = useRef<HTMLDivElement | null>(null);
 

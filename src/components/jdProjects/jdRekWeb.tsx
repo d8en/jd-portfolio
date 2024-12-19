@@ -85,8 +85,8 @@ export function JdRekWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots from the website</figcaption>
 
             <p>
-                Using the <JdATag href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</JdATag> was quite interesting. It was
-                something I had always wanted to explore and I'm glad I didn't reach for a library for the scroll interactions.
+                Using the <JdATag href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</JdATag> was quite interesting. It was something I had
+                always wanted to explore and I'm glad I didn't reach for a library for the scroll interactions.
             </p>
 
             {/* RESULTS */}
@@ -109,8 +109,8 @@ export function JdRekWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots from the app store listing</figcaption>
 
             <p>
-                Users seemed to really love the social aspect around recommendations. Most people didn't care so much about remembering the recommendation but genuinely enjoyed the
-                conversation around it.
+                Users seemed to really love the social aspect around recommendations. Most people didn't care so much about remembering the recommendation but genuinely enjoyed the conversation around
+                it.
             </p>
         </>
     );

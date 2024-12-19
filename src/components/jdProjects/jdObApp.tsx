@@ -9,8 +9,8 @@ export function JdObApp(): React.JSX.Element {
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
             <p>
-                Below is a prototype of the task management dashboard for writers, developers, and designers. This combines meetings, a drag-and-drop prioritization module, and
-                visibility into upcoming work / backlog.
+                Below is a prototype of the task management dashboard for writers, developers, and designers. This combines meetings, a drag-and-drop prioritization module, and visibility into
+                upcoming work / backlog.
             </p>
 
             <JdImg
@@ -24,10 +24,7 @@ export function JdObApp(): React.JSX.Element {
 
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
-            <p>
-                Design a project management application that improves both internal and external communication while increasing revenue, quality of work, and improving work-life
-                balance.
-            </p>
+            <p>Design a project management application that improves both internal and external communication while increasing revenue, quality of work, and improving work-life balance.</p>
 
             {/* FUN FEATURES */}
             <JdProjectSubHeader {...jdStringUtils.favoriteStuff} />
@@ -62,8 +59,8 @@ export function JdObApp(): React.JSX.Element {
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
             <p>
-                The most challenging aspect wasn't generating designs, but establishing an execution plan. Specifically, determining the starting point and defining the
-                intermediate and long-term objectives.
+                The most challenging aspect wasn't generating designs, but establishing an execution plan. Specifically, determining the starting point and defining the intermediate and long-term
+                objectives.
             </p>
 
             <div className={styles.multiMedia}>
@@ -94,8 +91,8 @@ export function JdObApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Prototype for an executive dashboard</figcaption>
 
             <p>
-                I found that a robust search feature was super important to almost all of our persona groups, so I spent quite some time making sure that I had useful filtering
-                options and digestible results.
+                I found that a robust search feature was super important to almost all of our persona groups, so I spent quite some time making sure that I had useful filtering options and digestible
+                results.
             </p>
 
             <JdImg
@@ -110,8 +107,8 @@ export function JdObApp(): React.JSX.Element {
             {/* RESULTS */}
             <JdProjectSubHeader {...jdStringUtils.results} />
             <p>
-                We shipped the app to about <strong>4 large beta clients</strong>, who all had excellent feedback. We met with staff members weekly to solicit honest feedback
-                (formally and adhoc) and tried to make room for incremental changes while maintaining our planned roadmap.
+                We shipped the app to about <strong>4 large beta clients</strong>, who all had excellent feedback. We met with staff members weekly to solicit honest feedback (formally and adhoc) and
+                tried to make room for incremental changes while maintaining our planned roadmap.
             </p>
 
             <JdImg
@@ -125,8 +122,8 @@ export function JdObApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Prototype of the login page on mobile</figcaption>
 
             <p>
-                Clients and internal staff really loved the asset management features, project status interactions (updates), and the ability to search contextually (project,
-                company-wide, client-specific, etc).
+                Clients and internal staff really loved the asset management features, project status interactions (updates), and the ability to search contextually (project, company-wide,
+                client-specific, etc).
             </p>
         </>
     );

@@ -1,4 +1,4 @@
-@use "../../styles/" as *;
+@use '../../styles/' as *;
 
 $iconHeight: 32px;
 
@@ -9,6 +9,7 @@ $iconHeight: 32px;
     padding: 12px;
     @include flexCentered;
     gap: 8px;
+    text-decoration: unset;
 
     &:active {
         .navItemIcon {

@@ -11,7 +11,8 @@ import MongoIcon from '../assets/svg/brands/mongo.svg?react';
 import BrandIcon from '../assets/svg/brands/brand.svg?react';
 import ProductIcon from '../assets/svg/brands/product.svg?react';
 import FramerIcon from '../assets/svg/brands/framer.svg?react';
-import GraphQL from '../assets/svg/brands/graphQL.svg?react';
+import GraphQLIcon from '../assets/svg/brands/graphQL.svg?react';
+import ElectronIcon from '../assets/svg/brands/electron.svg?react';
 import { makeAutoObservable } from 'mobx';
 import jdObjUtils from '../utils/jdObjUtils';
 import { IJdSkillCo } from '../models/iJdSkillCo';
@@ -38,8 +39,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                I've built 10+ end-to-end web applications using React. I have extensive experience with app architecture, lifecycle management, performance, hooks, animations,
-                troubleshooting, refactoring, optimizing, bug fixing, and complex feature development.
+                I've built 10+ end-to-end web applications using React. I have extensive experience with app architecture, lifecycle management, performance, hooks, animations, troubleshooting,
+                refactoring, optimizing, bug fixing, and complex feature development.
             </p>
         ),
     };
@@ -49,10 +50,18 @@ export class JdSkillsStore {
         icon: <ReactIcon />,
         startYear: '2019',
         xpPercentage: 1,
+        component: <p>I have 4 years of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera interactions, share activities, and more.</p>,
+    };
+
+    public electron: IJdSkillCo = {
+        name: 'Electron',
+        icon: <ElectronIcon />,
+        startYear: '2023',
+        xpPercentage: 0.7,
         component: (
             <p>
-                I have {JdDateUtils.getYearDiff('2019')} of experience building end-to-end mobile apps with all sorts of native features like push notifications, camera
-                interactions, share activities, and more.
+                I'm a huge fan of building more native experiences, even if they're an illusion...I mean a PWA. Electron is very fun to work with and I've built a handful of projects both
+                professionally and in my free time.
             </p>
         ),
     };
@@ -67,7 +76,7 @@ export class JdSkillsStore {
 
     public graphQL: IJdSkillCo = {
         name: 'GraphQL',
-        icon: <GraphQL />,
+        icon: <GraphQLIcon />,
         startYear: '2023',
         xpPercentage: 0.5,
         component: <p>While I still believe there is a place in the world for REST, I'm enjoying GraphQL at my current role and plan on using it in future projects.</p>,
@@ -80,8 +89,8 @@ export class JdSkillsStore {
         xpPercentage: 0.9,
         component: (
             <p>
-                I'm a huge fan of MongoDB and I've also experimented with Firebase Realtime DB. The only other major NoSQL db that I'd like to try is DynamoDB, which also seems
-                useful I just don't love being restricted to AWS.
+                I'm a huge fan of MongoDB and I've also experimented with Firebase Realtime DB. The only other major NoSQL db that I'd like to try is DynamoDB, which also seems useful I just don't
+                love being restricted to AWS.
             </p>
         ),
     };
@@ -103,8 +112,8 @@ export class JdSkillsStore {
         xpPercentage: 0.3,
         component: (
             <p>
-                I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get
-                to where I'm at today.
+                I spent my first year of programming learning C#, reading 3 books and building several terminal apps. I'm glad I started here, as the core principles helped me get to where I'm at
+                today.
             </p>
         ),
     };
@@ -124,8 +133,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a
-                less painful language to use.
+                I'm pleasantly surprised by the evolution of CSS. Although compatibility across browsers is a pain, recent features (gap, grid, aspect-ratio, etc.) have made this a less painful
+                language to use.
             </p>
         ),
     };
@@ -137,8 +146,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                I've always wanted to be an "inventor" and I think product designers are exactly that. I have {JdDateUtils.getYearDiff('2017')} of experience across 10+ industries
-                with many happy clients, profitable products, and growing user bases.
+                I've always wanted to be an "inventor" and I think product designers are exactly that. I have 7 years of experience across 10+ industries with many happy clients, profitable products,
+                and growing user bases.
             </p>
         ),
     };
@@ -150,8 +159,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                It's fascinating to see which applications each product designer has gone through. My progression goes something like this: Inkscape, Illustrator, XD, Sketch, then
-                Figma. I can't imagine using anything else, from advanced prototyping and large scale design systems to branding and typeface design, I'm an fanboy and power user.
+                It's fascinating to see which applications each product designer has gone through. My progression goes something like this: Inkscape, Illustrator, XD, Sketch, then Figma. I can't
+                imagine using anything else, from advanced prototyping and large scale design systems to branding and typeface design, I'm an fanboy and power user.
             </p>
         ),
     };
@@ -162,12 +171,7 @@ export class JdSkillsStore {
         startYear: '2014',
         endYear: '2019',
         xpPercentage: 1,
-        component: (
-            <p>
-                My first design projects were logo and branding design. I enjoy word-mark and logo design even to this day, as I got to work on a branding refresh at my most recent
-                gig.
-            </p>
-        ),
+        component: <p>My first design projects were logo and branding design. I enjoy word-mark and logo design even to this day, as I got to work on a branding refresh at my most recent gig.</p>,
     };
 
     public mobX: IJdSkillCo = {
@@ -177,8 +181,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                By far my favorite state management library, I have {JdDateUtils.getYearDiff('2019')} of experience using it with large scale projects. The simplicity and familiar
-                architecture makes this my go-to for all projects.
+                By far my favorite state management library, I have 4 years of experience using it with large scale projects. The simplicity and familiar architecture makes this my go-to for all
+                projects.
             </p>
         ),
     };
@@ -190,8 +194,8 @@ export class JdSkillsStore {
         xpPercentage: 0.5,
         component: (
             <p>
-                I took some time to rewrite about 60% of a production app in Redux to get a feel for how it compared to Mobx. While I prefer Mobx, I enjoyed using Redux and would
-                love to use it in more projects.
+                I took some time to rewrite about 60% of a production app in Redux to get a feel for how it compared to Mobx. While I prefer Mobx, I enjoyed using Redux and would love to use it in
+                more projects.
             </p>
         ),
     };
@@ -203,8 +207,8 @@ export class JdSkillsStore {
         xpPercentage: 0.75,
         component: (
             <p>
-                Software Mansion has built some incredible libraries and this is no exception. I use this library in almost every project and prefer it over the Animated API for
-                almost all animations (responsive pan responders, doughnut loaders, etc.).
+                Software Mansion has built some incredible libraries and this is no exception. I use this library in almost every project and prefer it over the Animated API for almost all animations
+                (responsive pan responders, doughnut loaders, etc.).
             </p>
         ),
     };
@@ -216,8 +220,8 @@ export class JdSkillsStore {
         xpPercentage: 1,
         component: (
             <p>
-                I use css animations and transitions as much as possible but continue to be impressed by the Framer Motion team. This library is incredibly performant and can make
-                lifecycle animations (specifically unmounting) and interpolation super simple.
+                I use css animations and transitions as much as possible but continue to be impressed by the Framer Motion team. This library is incredibly performant and can make lifecycle animations
+                (specifically unmounting) and interpolation super simple.
             </p>
         ),
     };
@@ -228,11 +232,7 @@ export class JdSkillsStore {
         startYear: '2022',
         endYear: '2024',
         xpPercentage: 0.5,
-        component: (
-            <p>
-                Motion design is one of my favorite parts of UI design. After Effects paired with Body Movin and Lotte are extremely powerful tools for more complex svg animations.
-            </p>
-        ),
+        component: <p>Motion design is one of my favorite parts of UI design. After Effects paired with Body Movin and Lotte are extremely powerful tools for more complex svg animations.</p>,
     };
 
     public get skills(): IJdSkillCo[] {

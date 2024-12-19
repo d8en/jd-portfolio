@@ -38,10 +38,7 @@ export function JdCtMassBattle(): React.JSX.Element {
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
-            <p>
-                I wanted to incorporate the states, their major cities, and the Street Fighter characters all in one graphic. This came together nicely and the client was super
-                happy with the idea.
-            </p>
+            <p>I wanted to incorporate the states, their major cities, and the Street Fighter characters all in one graphic. This came together nicely and the client was super happy with the idea.</p>
 
             <JdImg
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/ctMass4.gif?alt=media"

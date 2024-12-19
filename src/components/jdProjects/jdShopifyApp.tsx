@@ -37,8 +37,8 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* GOAL */}
             <JdProjectSubHeader {...jdStringUtils.goal} />
             <p>
-                Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>pilot app</Link> and create a multi-tenant scalable offering
-                for the Shopify ecosystem.
+                Use the lessons learned from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>pilot app</Link> and create a multi-tenant scalable offering for the Shopify
+                ecosystem.
             </p>
 
             {/* FUN FEATURES */}
@@ -72,15 +72,15 @@ export function JdShoifyApp(): React.JSX.Element {
 
             <p>Creating a widespread network of drivers and vehicles in every city/state would be time-consuming and difficult to scale.</p>
             <p>
-                The best economic and eco-friendly option was to use existing logistics providers (UPS, FedEx, USPS). Each of these providers had APIs that offered pickup, most of
-                which were affordable.
+                The best economic and eco-friendly option was to use existing logistics providers (UPS, FedEx, USPS). Each of these providers had APIs that offered pickup, most of which were
+                affordable.
             </p>
 
             {/* DESIGN */}
             <JdProjectSubHeader {...jdStringUtils.design} />
             <p>
-                We had some excellent shopper feedback from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>first returns app</Link>, so we used that to
-                improve interactions, verbiage, code architecture, and overall design.
+                We had some excellent shopper feedback from our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.airshopApp)}>first returns app</Link>, so we used that to improve interactions,
+                verbiage, code architecture, and overall design.
             </p>
 
             <p className={styles.projectGapReducer}>
@@ -159,8 +159,7 @@ export function JdShoifyApp(): React.JSX.Element {
             {/* BUILD */}
             <JdProjectSubHeader {...jdStringUtils.build} />
             <p>
-                We built a <strong>monorepo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods
-                across our apps.
+                We built a <strong>monorepo</strong> using Typescript project references, primarily so that we could share DTOs but also to share state management classes/methods across our apps.
             </p>
 
             {/* SHOPIFY APP WALKTHROUGH */}
@@ -189,8 +188,7 @@ export function JdShoifyApp(): React.JSX.Element {
             </ul>
 
             <p>
-                We shared code across our Shopify admin and shopper experiences, and eventually our{' '}
-                <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.
+                We shared code across our Shopify admin and shopper experiences, and eventually our <Link to={jdProjectStore.getLinkToProject(jdProjectStore.boomNativeApp)}>native mobile app</Link>.
             </p>
 
             {/* SHOPIFY ADMIN WALKTHROUGH */}
@@ -218,8 +216,8 @@ export function JdShoifyApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Video walkthrough of the Shopify app from our first client</figcaption>
 
             <p>
-                Two months later, we had <strong>4 clients</strong> signed with around <strong>30 returns per month</strong> and growing! The product was generating revenue, while
-                getting <JdATag href="https://boomreturns.io/news">great press</JdATag>.
+                Two months later, we had <strong>4 clients</strong> signed with around <strong>30 returns per month</strong> and growing! The product was generating revenue, while getting{' '}
+                <JdATag href="https://boomreturns.io/news">great press</JdATag>.
             </p>
         </>
     );

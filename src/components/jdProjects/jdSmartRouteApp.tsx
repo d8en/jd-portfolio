@@ -39,8 +39,8 @@ export function JdSmartRouteApp(): React.JSX.Element {
             {/* IDEATION */}
             <JdProjectSubHeader {...jdStringUtils.ideation} />
             <p>
-                How could we avoid both overstock and stockouts caused by traditional return routing? Could I build one app that works for any large retailer given the complexity
-                and customizations around return logistics?
+                How could we avoid both overstock and stockouts caused by traditional return routing? Could I build one app that works for any large retailer given the complexity and customizations
+                around return logistics?
             </p>
 
             <div className={styles.multiMedia}>
@@ -65,8 +65,8 @@ export function JdSmartRouteApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshots of our whiteboarding discussions</figcaption>
 
             <p>
-                We worked through several flows, detailing user experience and web service design. The challenges were building the right amount of flexibility and customization
-                and making onboarding simple.
+                We worked through several flows, detailing user experience and web service design. The challenges were building the right amount of flexibility and customization and making onboarding
+                simple.
             </p>
 
             {/* DESIGN */}
@@ -96,10 +96,7 @@ export function JdSmartRouteApp(): React.JSX.Element {
             {/* CAPTION */}
             <figcaption className={styles.projectImageCaption}>Prototypes of the custom conditions screen (two versions)</figcaption>
 
-            <p>
-                The only other complexity around the design was creating intuitive relationships between things like returned items, allowed return destinations, and custom
-                properties.
-            </p>
+            <p>The only other complexity around the design was creating intuitive relationships between things like returned items, allowed return destinations, and custom properties.</p>
 
             <JdImg
                 srcSet="https://firebasestorage.googleapis.com/v0/b/jd-portfolio-334c7.appspot.com/o/smartRouteProto1.webp?alt=media"
@@ -111,8 +108,8 @@ export function JdSmartRouteApp(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Prototype of the rule override screen</figcaption>
 
             <p>
-                When I design dashboards, I want to show actionable data. Both of our co-founders had a ton of experience in return logistics so I worked with them to understand
-                what a retailer needs to do with the data they're presented here. Then, I design the views and iterate with them.
+                When I design dashboards, I want to show actionable data. Both of our co-founders had a ton of experience in return logistics so I worked with them to understand what a retailer needs
+                to do with the data they're presented here. Then, I design the views and iterate with them.
             </p>
 
             <div className={styles.multiMedia}>

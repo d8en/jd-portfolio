@@ -49,8 +49,8 @@ export function JdAqiService(): React.JSX.Element {
             <p>I didn't see any evidence of any webhooks on airnow.gov, so I setup my service to run at a specified interval.</p>
 
             <p>
-                One interesting finding (seems obvious to me now) was that serverless web services can't "stay alive" for polling activities like this. They have built in timeouts
-                that kill services after a specified interval. For this web service, I would need a more traditional instance that can stay alive.
+                One interesting finding (seems obvious to me now) was that serverless web services can't "stay alive" for polling activities like this. They have built in timeouts that kill services
+                after a specified interval. For this web service, I would need a more traditional instance that can stay alive.
             </p>
         </>
     );
