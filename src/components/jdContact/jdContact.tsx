@@ -17,7 +17,7 @@ export const JdContact = observer(() => {
         >
             <div className={styles.contactContainer}>
                 {/* TEXT */}
-                <span>Hit me up!</span>
+                <span>Reach out!</span>
 
                 {/* ICON */}
                 <ContactIcon

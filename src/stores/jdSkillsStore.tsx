@@ -5,7 +5,7 @@ import CssIcon from '../assets/svg/brands/css.svg?react';
 import FigmaIcon from '../assets/svg/brands/figma.svg?react';
 import ReanimatedIcon from '../assets/svg/brands/swm.svg?react';
 import ReduxIcon from '../assets/svg/brands/redux.svg?react';
-import NodeIcon from '../assets/svg/brands/node.svg?react';
+import BunIcon from '../assets/svg/brands/bun.svg?react';
 import AdobeAeIcon from '../assets/svg/brands/ae.svg?react';
 import MongoIcon from '../assets/svg/brands/mongo.svg?react';
 import BrandIcon from '../assets/svg/brands/brand.svg?react';
@@ -16,6 +16,7 @@ import { makeAutoObservable } from 'mobx';
 import jdObjUtils from '../utils/jdObjUtils';
 import { IJdSkillCo } from '../models/iJdSkillCo';
 import styles from './storeStyles.module.scss';
+import { JdDateUtils } from '../utils/jdDateUtilts';
 
 export class JdSkillsStore {
     constructor() {
@@ -27,7 +28,7 @@ export class JdSkillsStore {
         icon: <TsIcon />,
         startYear: '2019',
         xpPercentage: 1,
-        component: <p>My roots in C# were super helpful in picking up Typescript. This is the primary language I've been using for the past 4 years.</p>,
+        component: <p>My roots in C# were super helpful in picking up Typescript. This is the primary language I've been using for the past {JdDateUtils.getYearDiff('2019')}.</p>,
     };
 
     public react: IJdSkillCo = {
@@ -52,11 +53,11 @@ export class JdSkillsStore {
     };
 
     public nodeJs: IJdSkillCo = {
-        name: 'Node.js',
-        icon: <NodeIcon />,
+        name: 'Bun.sh / Node.js',
+        icon: <BunIcon />,
         startYear: '2019',
         xpPercentage: 1,
-        component: <p>I've spent the last few years building the web services to support my web apps as well as a few hobby projects. I'm also a big fan of bun.sh.</p>,
+        component: <p>I'm a big fan of bun.sh and use node.js in several production apps (w/Typescript).</p>,
     };
 
     public graphQL: IJdSkillCo = {
