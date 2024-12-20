@@ -12,7 +12,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             {/* PRODUCT */}
             <JdProjectSubHeader {...jdStringUtils.finished} />
             <p>
-                Here's a <JdATag href="https://boomreturns.io/">link to the website</JdATag> I designed and built!
+                Here's a <JdATag href="https://boomreturns.cc/">link to the website</JdATag> I designed and built!
             </p>
 
             {/* GOAL */}
@@ -109,7 +109,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             </p>
 
             <p>
-                Feel free to checkout the finished website <JdATag href="https://boomreturns.io/">here</JdATag>!
+                Feel free to checkout the finished website <JdATag href="https://boomreturns.cc/">here</JdATag>!
             </p>
 
             <JdImg
@@ -122,11 +122,11 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshot of the first section beneath the fold</figcaption>
 
             <p>
-                For some odd reason, I've always wanted to design and build a blog. The "<JdATag href="https://boomreturns.io/news">news</JdATag>" page was exactly that.
+                For some odd reason, I've always wanted to design and build a blog. The "<JdATag href="https://boomreturns.cc/news">news</JdATag>" page was exactly that.
             </p>
 
             <p>
-                In fact, <strong>the page you're on right now</strong> is using some of the same architecture as the <JdATag href="https://boomreturns.io/news">news page</JdATag>, with some
+                In fact, <strong>the page you're on right now</strong> is using some of the same architecture as the <JdATag href="https://boomreturns.cc/news">news page</JdATag>, with some
                 improvements and design changes.
             </p>
 
@@ -147,7 +147,7 @@ export function JdSmartRouteWeb(): React.JSX.Element {
             <figcaption className={styles.projectImageCaption}>Screenshot of the news page and a post</figcaption>
 
             <p>
-                I also enjoy designing and optimizing the interactions around form inputs. Building the <JdATag href="https://boomreturns.io/#letsTalk">contact form</JdATag> and integrating it to send
+                I also enjoy designing and optimizing the interactions around form inputs. Building the <JdATag href="https://boomreturns.cc/#letsTalk">contact form</JdATag> and integrating it to send
                 all messages to Hubspot was a surprisingly fun time.
             </p>
 

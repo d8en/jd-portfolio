@@ -217,7 +217,7 @@ export function JdShoifyApp(): React.JSX.Element {
 
             <p>
                 Two months later, we had <strong>4 clients</strong> signed with around <strong>30 returns per month</strong> and growing! The product was generating revenue, while getting{' '}
-                <JdATag href="https://boomreturns.io/news">great press</JdATag>.
+                <JdATag href="https://boomreturns.cc/news">great press</JdATag>.
             </p>
         </>
     );
